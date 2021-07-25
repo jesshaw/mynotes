@@ -1,0 +1,79 @@
+site_name: 乐享笔记
+site_description: '为了总结，为了复盘，为了梳理知识结构'
+repo_url: http://github.com/jesshaw/mynotes
+repo_name: mynotes
+edit_uri: edit/main/
+
+theme:
+  language: 'zh'
+  favicon: assets/lx.ico
+  logo: assets/lx.png
+  name: material
+  # custom_dir: overrides
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    # - toc.integrate # Navigation integration
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    # Light mode
+    - green: "(prefers-color-scheme: light)"
+      scheme: lexiangmiao
+      toggle:
+        icon: material/weather-night
+        name: 深色
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 浅色
+
+
+# extra_css:
+#   - stylesheets/extra.css
+
+extra:
+  # generator: false
+  # alternate:
+  #   - name: English
+  #     link: ./en/
+  #     lang: en
+  #   - name: 中文
+  #     link: ./zh/
+  #     lang: zh
+  # search:
+  #   language: 'jp'
+  version:
+    provider: mike
+
+markdown_extensions:
+  - plantuml_markdown:
+      server:  http://localhost:8075
+      format: svg
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  # - meta
+  - abbr
+  - pymdownx.snippets:
+      base_path: docs/includes
+      check_paths: true
+  - admonition
+
+plugins:
+  - awesome-pages:
+      strict: false
+  - search
