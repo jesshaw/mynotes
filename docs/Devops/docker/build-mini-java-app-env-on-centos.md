@@ -1,11 +1,4 @@
----
-title: 如何在CentOS上搭建迷你版的java应用
-tags: linux,CentOS,java,jvm
-categories: 
-  - linux
-
-thumbnail: /gallery/blue-water8.jpg
----
+# 如何在CentOS上搭建迷你版的java应用
 
 开发好一个基本spring-boot和nodejs应用后，如何使用最少的工具在纯净版的CentOS上搭建运行环境。本文提供了一个可行的方案。
 
@@ -115,13 +108,13 @@ npm version
 
 ##### 方法二 通过下载二进制安装nodejs
 
-1 下载 
+1 下载
 
 ``` bash
 wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x86.tar.xz
-``` 
+```
 
-2 解压到指定目录 
+2 解压到指定目录
 
 ``` bash
  sudo mkdir /usr/lib/nodejs
@@ -151,11 +144,3 @@ npm version
 ```
 
 [ref](https://github.com/nodejs/help/wiki/Installation)
-
-
-
-
-
-
-
-

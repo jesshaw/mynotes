@@ -1,11 +1,4 @@
----
-title: maven常用命令
-tags: maven,mvn,maven命令
-categories: 
-  - java
-
-thumbnail: /gallery/blue-water9.jpg
----
+# maven常用命令
 
 收集平时常用的一些maven命令。
 <!-- more -->

@@ -1,11 +1,4 @@
----
-title: 为Spring设置restful基础路径
-tags: java,spring,restful,base path,基础路径
-categories: 
-  - java
-
-thumbnail: /gallery/blue-water7.jpg
----
+# 为Spring设置restful基础路径
 
 由于某些原因，我们会把前端和后端的放在一个站点上，但如果前后端不做分离的话，随着时间推移代码会难以维护。因此就想把静态内容放和后端的接口分开放置，来达到分离的效果。
 <!-- more -->
@@ -18,6 +11,7 @@ thumbnail: /gallery/blue-water7.jpg
 /api/user – rest控制器的所有api放在api下
 
 因为是针对所有的RestControllers增加api，而静态页不变，所以有以下两种思路：
+
 * 基于RestController类增加Spring配置
 * 重写RestController注解
 

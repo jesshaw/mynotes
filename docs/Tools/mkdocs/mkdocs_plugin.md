@@ -73,3 +73,38 @@ for page in self._nav:
         content = self._get_content(soup, page)
         # replace_content(content)
 ```
+
+## mkdocs-material移除生产方
+
+material对支持移除产生存在bug。即使已经配置，还是会生成生产方的信息。
+
+```yaml
+extra:
+  generator: false
+```
+
+需要修复以下文件位置在Python39\Lib\site-packages\material\partials\footer.html
+
+```html
+ <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        {% if config.copyright %}
+          <div class="md-footer-copyright__highlight">
+            {{ config.copyright }}
+          </div>
+        {% endif %}
+        <!-- 开始 -->
+        {% if config.extra.generator %}
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        {% endif %}
+        <!-- 结束 -->
+        {{ extracopyright }}
+      </div>
+      {% include "partials/social.html" %}
+    </div>
+  </div>
+```

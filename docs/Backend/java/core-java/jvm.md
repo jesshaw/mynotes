@@ -15,7 +15,7 @@ JVM：Java Virtual Machine，Java虚拟机，提供执行字节码文件的能�
 
 ## JVM堆内存模型
 
-![JVM堆内存模型图](assets/KpWqlW.png)
+![JVM堆内存模型图](assets/jvm.drawio.svg)
 
 ## 说说JVM的主要组成部分
 

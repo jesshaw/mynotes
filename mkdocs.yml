@@ -4,6 +4,9 @@ repo_url: http://github.com/jesshaw/mynotes
 repo_name: mynotes
 edit_uri: edit/main/
 
+# Copyright
+copyright: Copyright &copy; 2006 - 2021 Jes Shaw
+
 theme:
   language: 'zh'
   favicon: assets/lx.ico
@@ -38,7 +41,7 @@ theme:
 #   - stylesheets/extra.css
 
 extra:
-  # generator: false
+  generator: false
   # alternate:
   #   - name: English
   #     link: ./en/
@@ -76,4 +79,6 @@ markdown_extensions:
 plugins:
   - awesome-pages:
       strict: false
-  - search
+  - search  
+  - codeinclude:
+      title_mode: pymdownx.tabbed 

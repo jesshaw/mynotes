@@ -1,12 +1,4 @@
-title: Spring面试问题
-tags: java,spring,interview,面试
-categories: 
-  - java
-  - spring
-
-thumbnail: /gallery/blue-water6.jpg
----
-
+# Spring面试问题
 
 Spring框架是最受欢迎的Java企业级web应用框架。*依赖注入*和*面象方面*是*Spring框架*的核心。
 <!-- more -->

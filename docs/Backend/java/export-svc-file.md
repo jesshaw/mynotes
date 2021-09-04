@@ -1,11 +1,4 @@
----
-title: 导出csv文件注意事项
-tags: csv,excel
-categories: 
-  - others
-
-thumbnail: /gallery/blue-water12.jpg
----
+# 导出csv文件注意事项
 
 web应用系统开发或多或少的会涉及到导出csv文件，用于excel打开，本文件总结了一些注意事项和解决方法。
 
@@ -34,7 +27,3 @@ web应用系统开发或多或少的会涉及到导出csv文件，用于excel打
 ```java
 outputStream.write(new String(new byte[] { (byte) 0xEF, (byte) 0xBB,(byte) 0xBF }));
 ```
-
-
-
-

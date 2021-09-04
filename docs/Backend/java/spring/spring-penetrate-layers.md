@@ -1,14 +1,6 @@
----
-title: spring中如何穿透多层共享公用信息
-tags: java,spring,share,base path,基础路径
-categories: 
-  - java
-
-thumbnail: /gallery/blue-water13.jpg
----
+# spring中如何穿透多层共享公用信息
 
 在实际应用中较多使用的还是是三层架构，主要是因为在程序员圈中，易理解，通用性高。不过各人理解不同使用起来存在差异，就比方说公用信息共享的问题，展示层共享较好理解，那业务层和数据层怎共享呢？
-<!-- more -->
 
 ## 问题
 

@@ -60,8 +60,11 @@ networks:
 ```
 
 Markdown Preview Enhanced指定到同样的位置即可，因为该插件未明确指定怎样设置plantuml.include.path。于是得看[puml.ts源码](https://github.com/shd101wyy/mume/blob/master/src/puml.ts)最终确定对应设置为configPath。设置完成之后一定要重启vscode。
+
 ```json
 {
   "markdown-preview-enhanced.configPath": "C:\\projects\\github\\javasample\\docker\\plantuml-server\\lib"
 }
 ```
+
+
