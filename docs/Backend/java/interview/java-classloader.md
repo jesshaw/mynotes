@@ -1,11 +1,4 @@
----
-title: Java类加载器
-tags: java,class loader,类加载器
-categories: 
-  - java
-
-thumbnail: /gallery/blue-water5.jpg
----
+# Java类加载器
 
 Java类加载器是项目开发中Java的一个重要但很少使用的组件。就个而言，我从来没有在任何项目中扩展ClassLoader，但有我自己的ClassLoader，可以自定义Java类加载的想法刺激我，写以篇文章。
 <!-- more -->
