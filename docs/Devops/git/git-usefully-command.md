@@ -15,6 +15,14 @@ git clone http://username:password@hostname/path/repository.git
 
 [参考](https://stackoverflow.com/questions/6172719/escape-character-in-git-proxy-password)
 
+## 镜像方式克隆github
+
+把github.com替换成github.com.cnpmjs.org
+
+```bash
+git clone https://github.com.cnpmjs.org/jesshaw/javasample
+```
+
 ## 推送到指定仓库
 
 ```bash
