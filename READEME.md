@@ -2,6 +2,13 @@
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
+## push after check
+
+```bash
+# 显示含有project或Print的文件行号
+git grep -n -e 'project' -e 'Print'
+```
+
 ## Commands
 
 * `mkdocs new [dir-name]` - Create a new project.

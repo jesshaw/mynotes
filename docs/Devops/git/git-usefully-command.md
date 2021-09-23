@@ -1,5 +1,13 @@
 # git常用命令
 
+## 推送之前检查
+
+显示含有project或Print字符的文件并显示行号
+
+```bash
+git grep -n -e 'project' -e 'Print'
+```
+
 ## 指定用户密码拉取http的仓库
 
 ```bash
