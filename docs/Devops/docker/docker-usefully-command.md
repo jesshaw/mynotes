@@ -85,7 +85,7 @@ docker commit
 docker run -v $PWD/images:/images imagename
 
 # 进入容器后准备执行命令,退出后删除容器
-docker run -v $PWD/images:/images --rm -it imagename
+docker run --rm -it -v $PWD/images:/images imagename
 
 # 进入容器后执行ls命令，然后结束运行容器并删除容器
 docker run -v $PWD/images:/images --rm -it imagename ls /images

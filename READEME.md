@@ -1,12 +1,25 @@
-# Welcome to MkDocs
+# 乐享喵
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+![lx](docs/assets/lx.ico)
 
-## push after check
+## Push after check
 
 ```bash
 # 显示含有project或Print的文件行号
 git grep -n -e 'project' -e 'Print'
+```
+
+## Build images
+
+```bash
+# 克隆mkdocs-materia并跳转分支到7.3.0
+git clone  git clone https://github.com.cnpmjs.org//squidfunk/mkdocs-material.git && git checkout 7.3.0
+
+# 复制Dockerfile和requirements.txt到mkdocs-materia目录下
+cp Dockerfile requirements.txt ./mkdocs-material/
+
+# 切换到mkdocs-materia目录，执行镜像构建
+cd  mkdocs-material && docker build -t jesshaw/mkdocs-material:2.0.5 .
 ```
 
 ## Commands
@@ -16,7 +29,23 @@ git grep -n -e 'project' -e 'Print'
 * `mkdocs build` - Build the documentation site.
 * `mkdocs -h` - Print help message and exit.
 
-![lx](assets/lx.png)
+### Docker方式编译和部署
+
+注意：以下3命令可能在git bash运行报Error: Config file 'mkdocs.yml' does not exist. 改用power shell或linux即可
+
+```bash
+# 启动开发服务器 http://localhost:8000
+
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs jesshaw/mkdocs-material:2.0.5
+
+# 编译
+
+docker run --rm -it -v ${PWD}:/docs jesshaw/mkdocs-material:2.0.5 build
+
+# 部署到GitHub Pages
+
+docker run --rm -it -v ~/.ssh:/root/.ssh -v ${PWD}:/docs jesshaw/mkdocs-material:2.0.5 gh-deploy 
+```
 
 ## Project layout
 
