@@ -65,15 +65,23 @@ git push -f
 ## git clone查定分支和目录
 
 ```bash
-git clone
-will give you the whole repository.
 
-After the clone, you can list the tags with 
+git clone url
 
-git tag -l and then checkout a specific tag:
+# 镜像方法快速clone
+
+git clone https://github.com.cnpmjs.org/repsitory
+
+
+# 查看tag分支
+
+git tag -l 
+
+# 切换到批定tag分支
 
 git checkout tags/<tag_name>
-Even better, checkout and create a branch (otherwise you will be on a branch named after the revision number of tag):
+
+# 基于指定tag分支创建分支
 
 git checkout tags/<tag_name> -b <branch_name>
 ```
@@ -99,6 +107,13 @@ git checkout -b dev20170803
 git branch -d localBranchName
 # 删除远程分支
 git push origin -d remoteBranchName
+```
+
+## 切换分支或tag
+
+```bash
+git checkout branch_name
+git checkout tag_name
 ```
 
 ## git bash连接linux

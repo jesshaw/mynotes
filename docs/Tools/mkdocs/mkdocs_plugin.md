@@ -108,3 +108,20 @@ extra:
     </div>
   </div>
 ```
+
+## 如何制定mkdocs-material的镜像
+
+### 克隆mkdocs-material
+
+```bash
+git clone https://github.com/squidfunk/mkdocs-material.git
+git checkout 7.3.0
+```
+
+### 增加需要安装的插件
+
+requirements.txt
+
+```bash
+
+```
