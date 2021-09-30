@@ -58,7 +58,7 @@ markdown_extensions:
   - plantuml_markdown:
   # 打包是在容器内访问plantuml，侧需要查看plantuml服务的docker0地址，如172.21.0.1，通常是网关
   # 若是通过主机访问则通过localhost直接访问就可以。当然也可以直接指定官网，但速度慢
-      server:  http://172.21.0.1:8075
+      server:  http://172.18.0.1:8075
       format: svg
   - toc:
       permalink: true

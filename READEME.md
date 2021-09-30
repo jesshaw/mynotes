@@ -13,13 +13,13 @@ git grep -n -e 'project' -e 'Print'
 
 ```bash
 # 克隆mkdocs-materia并跳转分支到7.3.0
-git clone  git clone https://github.com.cnpmjs.org//squidfunk/mkdocs-material.git && git checkout 7.3.0
+git clone https://github.com.cnpmjs.org/squidfunk/mkdocs-material.git && cd ./mkdocs-material && git checkout 7.3.0
 
 # 复制Dockerfile和requirements.txt到mkdocs-materia目录下
-cp Dockerfile requirements.txt ./mkdocs-material/
+cp ../Dockerfile ../requirements.txt ./
 
 # 切换到mkdocs-materia目录，执行镜像构建
-cd  mkdocs-material && docker build -t jesshaw/mkdocs-material:2.0.5 .
+docker build -t jesshaw/mkdocs-material:2.0.5 .
 ```
 
 ## Commands
