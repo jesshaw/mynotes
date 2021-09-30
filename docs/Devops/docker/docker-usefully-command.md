@@ -27,7 +27,7 @@ docker build -t jes/imagename .
 docker images
 ```
 
-## 镜像重命名
+## 镜像重命名tag
 
 ```bash
 docker image tag --help
@@ -172,7 +172,6 @@ docker cp <containerId>:/file/path/within/container /host/path/targe
 ```bash
 sudo chown -R 1000:1000 /home/docker/jenkins
 ```
-
 
 ## 配置客户端访问私有仓库
 
