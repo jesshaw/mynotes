@@ -6,8 +6,9 @@
 
 ## 各种svg图
 
-www.vectorlogo.zone
+[logosear.ch的logo搜索](https://logosear.ch)
+[vectorlogo的向量logo图搜索](https://www.vectorlogo.zone)
 
-## png到svg的在线转换工具
+## 矢量图转换工具
 
-https://www.aconvert.com/file.php
+[Autotracer是一款免费的在线矢量图转换工具](https://www.autotracer.org/)
