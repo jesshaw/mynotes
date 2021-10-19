@@ -1,5 +1,11 @@
 # Docker日常问题
 
+## docker-compose和docker网络的区别
+
+docker-compose不指定网络会创建以服务名命名的网络
+
+docker不指定网络会使用名为bridge的网络
+
 ## Java应用不能获取到Host的IP
 
 指定hostname和add-host即可
