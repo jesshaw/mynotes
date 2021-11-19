@@ -17,6 +17,7 @@ COPY package.json package.json
 COPY README.md README.md
 COPY requirements.txt requirements.txt
 COPY setup.py setup.py
+COPY fonts /usr/share/fonts/Additional
 
 # Perform build and cleanup artifacts and caches
 # set mirros for apline and python plugins
@@ -29,6 +30,18 @@ RUN \
     git \
     git-fast-import \
     openssh \
+    # WeasyPrint
+    pango zlib-dev jpeg-dev openjpeg-dev g++ libffi-dev \
+    # Headless Chrome
+    udev chromium\
+    # font
+    fontconfig ttf-freefont font-noto terminus-font \
+&&  \
+  chromium-browser --version \
+&& \
+  fc-cache -f \
+&& \
+  fc-list | sort \
 && \
   apk add --no-cache --virtual .build \
     gcc \
@@ -37,6 +50,8 @@ RUN \
   pip config set global.index-url https://mirrors.aliyun.com/pypi/simple/ \
 && \
   pip install --no-cache-dir . \
+&& \
+  sed -i 's/tag.text/tag.string/g' /usr/local/lib/python3.9/site-packages/mkdocs_with_pdf/generator.py  \
 && \
   if [ "${WITH_PLUGINS}" = "true" ]; then \
     pip install --no-cache-dir \
@@ -67,5 +82,5 @@ WORKDIR /docs
 EXPOSE 8000
 
 # Start development server by default
-ENTRYPOINT ["mkdocs"]
-CMD ["serve", "--dev-addr=0.0.0.0:8000"]
+# ENTRYPOINT ["mkdocs"]
+# CMD ["serve", "--dev-addr=0.0.0.0:8000"]

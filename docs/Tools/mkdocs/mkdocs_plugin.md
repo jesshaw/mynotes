@@ -74,6 +74,10 @@ for page in self._nav:
         # replace_content(content)
 ```
 
+## mkdocs-with-pdf 生成dio的图片的乱码
+
+flieName.dio.svg统一改用flieName.dio.png格式即可避免
+
 ## mkdocs-material移除生产方
 
 material对支持移除产生存在bug。即使已经配置，还是会生成生产方的信息。

@@ -26,6 +26,7 @@ thumbnail: /gallery/blue-water2.jpg
 https://github.com/nagyistoce/Csharp2java
 
 ## intellij 嵌入打开bash和弹窗打开bash方式
+
 嵌入打开bash配置路径为
 "C:\Program Files\Git\bin\sh.exe"  -login -i
 弹窗方式打开路径为

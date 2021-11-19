@@ -9,6 +9,9 @@ mkdocs-codeinclude-plugin>=0.2.0
 mkdocs-minify-plugin>=0.4.0
 mkdocs-redirects>=1.0.3
 mkdocs-static-i18n>=0.18
+WeasyPrint>=52.5
+mkdocs-with-pdf>=0.9.3
+qrcode>=7.3.1
+mike>=1.0.1
 
 # mkdocs-extra-sass-plugin>=0.1.0  # install fail
-# mkdocs-with-pdf>=0.9.3  # install fail

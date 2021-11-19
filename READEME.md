@@ -19,7 +19,7 @@ git clone https://github.com.cnpmjs.org/squidfunk/mkdocs-material.git && cd ./mk
 cp ../Dockerfile ../requirements.txt ./
 
 # 切换到mkdocs-materia目录，执行镜像构建
-docker build -t jesshaw/mkdocs-material:2.0.5 .
+docker build -t jesshaw/markdocs-matertial-plantuml-pdf:1.0 .
 ```
 
 ## Commands
@@ -37,6 +37,16 @@ docker build -t jesshaw/mkdocs-material:2.0.5 .
 # 启动开发服务器 http://localhost:8000
 
 docker run --rm -it -p 8000:8000 -v ${PWD}:/docs jesshaw/mkdocs-material:2.0.5
+
+# 不生成离线文档方式运行mkdocker material
+
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs jesshaw/markdocs-matertial-plantuml-pdf:1.0 sh -c "mkdocs serve --dev-addr=0.0.0.0:8000"
+
+
+# 按需生成离线文档
+# 通过指定gen-doc.yml来进行
+
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs jesshaw/markdocs-matertial-plantuml-pdf:1.0 sh -c "ENABLE_PDF_EXPORT=1 mkdocs serve -f gen-doc.yml --dev-addr=0.0.0.0:8000"
 
 # 编译
 

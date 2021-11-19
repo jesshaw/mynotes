@@ -1,4 +1,4 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="201px" height="151px" viewBox="-0.5 -0.5 201 151" content="&lt;mxfile&gt;&lt;diagram id=&quot;w116fUJb8ughXVdjYLyq&quot; name=&quot;Page-1&quot;&gt;rZRNU4MwEIZ/DXcKWturtdZDHQ89eI5kJdHAMmEp4K83NEsB8WtGGQ7Js5uw++YNQbzJmp0VhbpHCSaIQtkE8U0QRRdRFHRvKFsPFmEUepJaLZkN4KDfoE9kWmkJ5SSREA3pYgoTzHNIaMKEtVhP057RTL9aiBRm4JAIM6ePWpLydBVdDfwOdKr6Ly+Wax/JRJ/MnZRKSKxHKN4G8cYikh9lzQZMJ16vi193+0X0XJiFnH6z4ILLoLbvDaRrladoSWGKuTDbgV5brHIJ3Qahmw05e8TCwYWDL0DU8rmJitAhRZnh6LxIrrvEyiZcB3uEhE2Bs2KPugpHy7ixHWAGZFuXYMEI0sfpYQk+8/ScN8jiBqzM5ypxLUdhKt5UuWcmXa00waEQpxZqZ/1p26IsvBmfddPJ97UOR7AEzbc99tFLNhJfpfMVqUe+ZKRGluzZX1SJZ6rMFHH2Lrph0hrtPGNj1/UPKj15d+2fzkAkr+nJcw8VuW2Aeenttbj8HyWj9QclV3Mll/+jpJsON/wUG/0n4+07&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="201px" height="151px" viewBox="-0.5 -0.5 201 151" content="&lt;mxfile&gt;&lt;diagram id=&quot;w116fUJb8ughXVdjYLyq&quot; name=&quot;Page-1&quot;&gt;rZTBcpswEIafRneMYsc+Jg5ND+n04EPPCmyQWsEyYjHQp6+wFgMhaTuTcEH6diV2f/1CyGPRPTpV6W+YgRVxlHVCPog43sT7W/8aSM8kiqNAcmcyZhM4md8wJjJtTAb1IpEQLZlqCVMsS0hpwZRz2C7TXtAuv1qpHFbglCq7pj9MRjrQfXw78a9gcj1+ebM7hEihxmTupNYqw3aGZCLk0SFSGBXdEeyg3qhLWPflnei1MAcl/c+CGy6D+rE3yHyrPEVHGnMslU0meu+wKTMYNoj8bMp5Qqw83Hj4E4h6PjfVEHqkqbAcXRfJddfYuJTriPlclcuBs2RAQ4WzZdzYI2AB5Hqf4MAqMuflYSk+8/yaN8niB6zM2ypxLWdlG95U+2clXasNwalSlxZa7/1l26qughlfTDfI974OZ3AE3V97HKNbNhJfpesVaWe+ZKRnlhzZR1SRK1VEshOHrbiPhsH+QdwlIvHTO3GQK7G886thmPbWeDs56QX5h4DPwXhPz1eg0l/5xY7fG/LbAPM6OG+z/RyR48MrkfdrkXefI7KfTpf/Epv9Q2XyBw==&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
         <path d="M 80 40 L 110 40 L 110 110 L 133.63 110" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
@@ -22,6 +22,22 @@
         </g>
         <path d="M 140 85 C 140 76.72 153.43 70 170 70 C 177.96 70 185.59 71.58 191.21 74.39 C 196.84 77.21 200 81.02 200 85 L 200 135 C 200 143.28 186.57 150 170 150 C 153.43 150 140 143.28 140 135 Z" fill="#ffffff" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
         <path d="M 200 85 C 200 93.28 186.57 100 170 100 C 153.43 100 140 93.28 140 85" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 58px; height: 1px; padding-top: 123px; margin-left: 141px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                数据库
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="170" y="126" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    数据库
+                </text>
+            </switch>
+        </g>
     </g>
     <switch>
         <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>

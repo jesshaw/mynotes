@@ -1,0 +1,125 @@
+site_name: 乐享笔记
+site_description: '总结，重用，梳理知识结构'
+repo_url: http://github.com/jesshaw/mynotes
+repo_name: mynotes
+edit_uri: edit/main/
+
+# Copyright
+copyright: Copyright &copy; 2006 - 2021 Jes Shaw
+
+theme:
+  language: 'zh'
+  favicon: assets/lx.ico
+  logo: assets/lx.png
+  name: material
+  # custom_dir: overrides
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.sections
+    # - toc.integrate # Navigation integration
+  icon:
+    repo: fontawesome/brands/github
+
+  palette:
+    # Light mode
+    - green: "(prefers-color-scheme: light)"
+      scheme: lexiangmiao
+      toggle:
+        icon: material/weather-night
+        name: 深色
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: 浅色
+
+
+# extra_css:
+#   - stylesheets/extra.css
+
+extra:
+  generator: false
+  # alternate:
+  #   - name: English
+  #     link: ./en/
+  #     lang: en
+  #   - name: 中文
+  #     link: ./zh/
+  #     lang: zh
+  # search:
+  #   language: 'jp'
+  version:
+    provider: mike
+
+markdown_extensions:
+  - plantuml_markdown:
+  # 打包是在容器内访问plantuml，侧需要查看plantuml服务的docker0地址，如172.21.0.1，通常是网关
+  # 若是通过主机访问则通过localhost直接访问就可以。当然也可以直接指定官网，但速度慢
+      server: http://172.18.0.1:8075
+      format: png
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - footnotes
+  # - meta
+  - abbr
+  - pymdownx.snippets:
+      base_path: docs/includes
+      check_paths: true
+  - admonition
+
+plugins:
+  # 自动生成导航存在问题，因此在生成离线文档页注释掉如下选项
+  # - awesome-pages:
+  #     strict: false
+  - search  
+  - codeinclude:
+      title_mode: pymdownx.tabbed 
+  - with-pdf:
+      #cover_title:
+      cover_subtitle: Technical documentation that just works
+      # cover_logo: assets/test.png
+      back_cover: true
+      toc_level: 2
+      # excludes_children:
+      #   - 'releases/changelog/:upgrading'
+      # convert_iframe:
+      #   - src: https://streamable.com/e/zmtb00
+      #     img: https://cdn-cf-east.streamable.com/image/zmtb00-screenshot75403.jpg
+      # two_columns_level: 3
+      render_js: true
+      # headless_chrome_path: '/usr/bin/chromium-browser'
+      # headless_chrome_path: google-chrome
+      # headless_chrome_path: 'C:\Users\jes.xiao\AppData\Local\Google\Chrome\Application\chrome.exe'
+      output_path: document.pdf
+      #debug_html: true
+      #verbose: true
+      #show_anchors: true
+      enabled_if_env: ENABLE_PDF_EXPORT
+nav:
+  - index.md
+  - Frontend:
+    - flutter:
+      - Frontend/flutter/flutter_write_your_first_flutter_app.md
+  - Backend:
+    - java:
+      - Backend/java/README.md 
+  - Devops:
+    - docker:
+      - Devops/docker/docker-usefully-command.md
+  - 'Software Engineering':
+    - draw:
+      - SoftwareEngineering/draw/draw.md
+  - Tools:
+    - drawio:
+      - Tools/drawio/drawio.md 

@@ -4,6 +4,11 @@
 
 ```bash
 docker search nginx
+
+# 查找镜像的版本
+
+docker image inspect imagename:latest | grep -i version
+
 ```
 
 ## 拉取镜像
@@ -132,6 +137,21 @@ docker rmi 1232a
 
 ```bash
 docker rmi `docker images | grep  "<none>" | awk '{print $3}'`
+```
+
+## 远程调用
+
+有三种方式
+
+unix:///path/to/sock
+
+tcp://host:port
+
+fd://socketfd
+
+```bash
+# 通过2375连接到192.168.0.2机器，查看docker的基本信息
+docker -H tcp://192.168.0.2:2375 info
 ```
 
 ## docker-compose

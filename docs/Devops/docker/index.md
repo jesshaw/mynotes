@@ -85,7 +85,7 @@ sudo touch /etc/docker/daemon.json
 
 ```json
 {
-"registry-mirrors": ["https://docker.mirrors.ustc.edu.cn", "http://hub-mirror.c.163.com","https://registry.docker-cn.com"],
+"registry-mirrors": ["https://ustc-edu-cn.mirror.aliyuncs.com/", "http://hub-mirror.c.163.com"],
 "max-concurrent-downloads": 10
 }
 ```
