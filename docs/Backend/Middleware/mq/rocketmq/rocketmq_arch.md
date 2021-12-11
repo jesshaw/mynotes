@@ -25,7 +25,7 @@
 ### Namesrv
 
 1. Namesrv用于存储Topic、Broker关系信息，功能简单，稳定性高。多个Namesrv之间相互没有通信，单台Namesrv宕机不影响其他Namesrv与集群；即使整个Namesrv集群宕机，已经正常工作的Producer，Consumer，Broker仍然能正常工作，但新起的Producer, Consumer，Broker就无法工作。
-2. Namesrv压力不会太大，平时主要开销是在维持心跳和提供Topic-Broker的关系数据。但有一点需要注意，Broker向Namesr发心跳时，会带上当前自己所负责的所有Topic信息，如果**Topic个数太多（万级别）**，会导致一次心跳中，就Topic的数据就几十M，网络情况差的话，网络传输失败，心跳失败，导致Namesrv误认为Broker心跳失败。
+2. Namesrv压力不会太大，平时主要开销是在维持心跳和提供Topic-Broker的关系数据。但有一点需要注意，Broker向Namesr发心跳时，会带上当前自己所负责的所有Topic信息，如果**Topic个数太多（万级别）**，会导致一次心跳中，Topic的数据就有几十M，网络情况差的话，网络传输失败，心跳失败，导致Namesrv误认为Broker心跳失败。
 
 ### Broker
 

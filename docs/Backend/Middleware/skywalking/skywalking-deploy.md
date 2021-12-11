@@ -254,9 +254,46 @@ services:
 
 **注意：**
 
-skywalking.plugin.toolkit.log.grpc.reporter配置是用于日志同步，skywalking.agent.service_name用于应用注册到OAP等，因为两个都需要配置。
+skywalking.plugin.toolkit.log.grpc.reporter配置是用于日志同步，skywalking.agent.service_name用于应用注册到OAP（格式为`服务分组名::服务名`）等，因为两个都需要配置。
 
-拉起
+#### 其他重要配置
+
+[官网参考](https://skywalking.apache.org/docs/skywalking-java/latest/en/setup/service-agent/java-agent/configurations/)
+[插件源码结构](https://github.com/apache/skywalking/blob/v6.6.0/docs/en/setup/service-agent/java-agent/README.md)
+
+在agent/config/agent.config中配置
+
+**收集 SQL 参数（默认是 false）**
+`plugin.jdbc.trace_sql_parameters=${SW_JDBC_TRACE_SQL_PARAMETERS:true}`
+​
+**收集 SpringMVC 请求参数（默认是 false）**
+`plugin.springmvc.collect_http_params=${SW_PLUGIN_SPRINGMVC_COLLECT_HTTP_PARAMS:true}`
+​
+**收集 Http 客户端请求参数（默认是 false）**
+`plugin.httpclient.collect_http_params=${SW_PLUGIN_HTTPCLIENT_COLLECT_HTTP_PARAMS:true}`
+​
+**收集 feign 调用的请求 body 参数（默认是 false）**
+`plugin.feign.collect_request_body=${SW_PLUGIN_FEIGN_COLLECT_REQUEST_BODY:true}`
+
+**传输格式化（默认为 true）**
+plugin.toolkit.log.transmit_formatted=${SW_PLUGIN_TOOLKIT_LOG_TRANSMIT_FORMATTED:false}
+
+当设置false时会把日志提出成多个索引加消息内容的形式
+
+**忽略特定的URL跟踪**
+amp-trace-ignore-plugin-8.7.0.jar
+[参考配置](https://github.com/apache/skywalking/blob/v6.6.0/docs/en/setup/service-agent/java-agent/agent-optional-plugins/trace-ignore-plugin.md)
+
+选用方式2
+
+复制/agent/optional-plugins/apm-trace-ignore-plugin/apm-trace-ignore-plugin.config 到 /agent/config/
+trace.ignore_path=/your/path/1/**,/your/path/2/**
+
+#### 相关指标
+
+[相关指标参考](https://www.itmuch.com/books/skywalking/protocols/#query-protocol)
+
+#### 启动
 
 ```bash
 docker-compose up -d

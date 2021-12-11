@@ -87,6 +87,8 @@ curl http://localhost:8001/api/v1/namespaces/default/pods/$POD_NAME/
 
 ## 了解应用
 
+### 查看pods信息
+
 ```bash
 # 查看pods概述
 kubectl get pods
@@ -109,6 +111,58 @@ kubectl get sc
 
 # 查看pv
 kubectl get pv
+```
+
+### 查看配置信息映射
+
+```bash
+# 查看prod命名空间的配置映射。ConfigMap不区分大小写
+kubectl -n prod get ConfigMap
+# 跟以上功能等价
+kubectl -n prod get cm
+
+# 查看broker-config的配置详情，以yaml格式显示
+kubectl get cm broker-config -o yaml
+
+
+# 描述broker-config详情
+kubectl describe cm broker-config
+
+```
+
+### 查看日志
+
+```bash
+# 查看默认命名空间的pod日志
+kubectl logs rocketmq-0
+
+#  pod为多容器时，查看默认命名空间的pod，指定容器的日志
+kubectl logs rocketmq-0 -c rmqbroker
+```
+
+### 进入k8s容器
+
+```bash
+
+# 进入第一个容器
+kubctl exec -it pod-id sh
+
+# pod为多容器时，默认进入第一个容器
+kubctl exec -it pod-id sh
+
+#  pod为多容器时，-c 指定容器名进入指定容器
+kubctl exec -it pod-id -c container-name sh
+```
+
+### 检查node，svc，pod的可达性
+
+进入对应node节点，ping对应ip即可
+
+```bash
+# node
+ssh nodeip "ing
+# svc
+# pod 
 ```
 
 ## 暴露应用
@@ -136,7 +190,7 @@ kubectl get services
 kubectl expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
 ```
 
-### 查看服务说情
+### 查看服务详情
 
 ```bash
 kubectl describe services/kubernetes-bootcamp

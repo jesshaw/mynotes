@@ -4,7 +4,7 @@
 
 https://www.cnblogs.com/crazymakercircle/p/13917517.html
 
-![事务](./transcation.drawio.svg)
+![事务](../../transcation.drawio.svg)
 
 ## 内存模型和GC算法
 
@@ -12,7 +12,7 @@ https://www.cnblogs.com/crazymakercircle/p/14365820.html  搜索 说一下 JVM �
 
 ### JVM内存模型
 
-![JVM内存模型图](../java/core-java/assets/jvm.drawio.svg)
+![JVM内存模型图](../../java/core-java/assets/jvm.drawio.svg)
 
 ### GC算法
 
