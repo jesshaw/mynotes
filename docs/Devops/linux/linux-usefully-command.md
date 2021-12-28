@@ -476,14 +476,36 @@ cat > a.txt << EOF
 aa
 EOF
 
+# 等价与覆盖写
+cat << EOF > a.txt
+aa
+EOF
+
 # 追加写
 cat >> a.txt << EOF
 bb
 EOF
 
-cat a.txt
-aa
+# 等价与追加写
+cat << EOF >> a.txt
 bb
+EOF
+
+
+# 带变量的覆盖写，对第一个EOF加引号即可避免
+
+cat > a.txt << "EOF"
+#!/bin/sh
+BASE_PATH=${0}
+EOF
+
+# sudo写入时的权限问题，解决方法
+
+sudo bash -c 'cat > a.txt << EOF
+aa
+EOF'
+
+
 
 ```
 
@@ -1247,3 +1269,5 @@ vim /etc/sysconfig/iptables-config
 systemctl restart iptables
 
 ```
+
+[linux教程](https://www.runoob.com/linux/linux-tutorial.html)
