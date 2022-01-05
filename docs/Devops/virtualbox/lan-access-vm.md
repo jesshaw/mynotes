@@ -53,6 +53,20 @@ $ resolvectl status
 $ systemctl restart systemd-resolved
 ```
 
+
+network:
+  ethernets:
+    enp0s3:
+      dhcp4: no
+      addresses:
+      - 10.129.223.208/24
+      gateway4: 10.129.223.1
+      nameservers:
+         addresses:
+         - 114.114.114.114
+         - 8.8.8.8
+  version: 2
+
 ## 参考
 
 [VirtualBox 网络设置：完整指南](https://www.nakivo.com/blog/virtualbox-network-setting-guide/)
