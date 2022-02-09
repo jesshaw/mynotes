@@ -10,6 +10,8 @@
 
 mysql 初始化sql : https://github.com/alibaba/nacos/blob/develop/distribution/conf/nacos-mysql.sql
 
+https://raw.githubusercontent.com/alibaba/nacos/develop/distribution/conf/nacos-mysql.sql
+
 nacos.yaml
 
 ```yaml

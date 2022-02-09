@@ -1,15 +1,5 @@
 # k8s rocketmq部署
 
-## 参考
-
-[生产版rocketmq部署](https://github.com/homilly/rocketmq-k8s)
-
-[KUBERNETES部署ROCKETMQ单节点](https://sre.ink/deploy-rocketmq-standalone-on-kubernetes/)
-
-[官方文档](https://github.com/apache/rocketmq/tree/master/docs/cn)
-
-[双主双从配置](https://github.com/foxiswho/k8s-nacos-sentinel-rocketmq-zipkin-elasticsearch-redis-mysql/tree/master/rocketmq)
-
 ## nameserv
 
 ### StatefulSet nameserv
@@ -389,3 +379,13 @@ spec:
     app: rmqui
   type: LoadBalancer
 ```
+
+## 参考
+
+[生产版rocketmq部署](https://github.com/homilly/rocketmq-k8s)
+
+[KUBERNETES部署ROCKETMQ单节点](https://sre.ink/deploy-rocketmq-standalone-on-kubernetes/)
+
+[官方文档](https://github.com/apache/rocketmq/tree/master/docs/cn)
+
+[双主双从配置](https://github.com/foxiswho/k8s-nacos-sentinel-rocketmq-zipkin-elasticsearch-redis-mysql/tree/master/rocketmq)

@@ -39,6 +39,12 @@ sudo /etc/init.d/nfs-kernel-server restart
 echo "test" >> /nfs/test.txt
 ```
 
+### 查看NFS服务状态
+
+```bash
+showmount -e [hostip]
+```
+
 ## NFS Client配置
 
 ```bash
