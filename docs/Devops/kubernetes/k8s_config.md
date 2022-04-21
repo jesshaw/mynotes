@@ -162,6 +162,25 @@ generic为通用类型的密文。与ConfigMap类似只是存储的是密码。
 kubectl create secret generic sys-app-credentials --from-literal username=bob --from-literal password=bobpwd
 ```
 
+## 创建保存授权令牌的 Secret (私有镜像)
+
+```bash
+kubectl create secret docker-registry regcred \
+  --docker-server=<你的镜像仓库服务器> \
+  --docker-username=<你的用户名> \
+  --docker-password=<你的密码> \
+  --docker-email=<你的邮箱地址>
+
+kubectl get secret regcred --output=yaml
+
+## 验证
+
+kubectl get secret regcred --output="jsonpath={.data.\.dockerconfigjson}" | base64 --decode
+
+```
+
+https://kubernetes.io/zh/docs/tasks/configure-pod-container/pull-image-private-registry/
+
 ## 使用ConfigMap和Secrets
 
 ```yaml
@@ -254,3 +273,7 @@ spec:
     targetPort: 9080
     nodePort: 32000
 ````
+
+## Kustomize
+
+[Kustomize文档](https://kubectl.docs.kubernetes.io/zh/)
