@@ -8,7 +8,7 @@ pv是集群级别的基础资源，声明pv时候，使用apply 进行创建是�
 
 pv 不需要指定namespace
 
-pv 需要指定namespace
+pvc 需要指定namespace
 
 Unable to update instance pid: Unable to create directory /nexus-data/instances
 
@@ -37,20 +37,16 @@ items:
     storageClassName: microk8s-hostpath
 ```
 
+## [Kubernetes]安装local-path-provisioner基于HostPath使用动态PV
 
-<link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-1a85854398.css">
-
-<a name="t0"></a><a id="KuberneteslocalpathprovisionerHostPathPV_0"></a>[Kubernetes](https://so.csdn.net/so/search?from=pc_blog_highlight&q=Kubernetes)安装local-path-provisioner基于HostPath使用动态PV
-===============================================================================================================================================================================================
-
-#### <a id="localpathprovisionerhttpsgithubcomrancherlocalpathprovisioner_2"></a>获取[local-path-provisioner](https://github.com/rancher/local-path-provisioner)
+获取[local-path-provisioner](https://github.com/rancher/local-path-provisioner)
 
 ```bash
 git clone https://github.com/rancher/local-path-provisioner.git
 
 ```
 
-#### 修改local-path-storage.yaml
+修改local-path-storage.yaml
 
 ```bash
 vi local-path-provisioner/deploy/local-path-storage.yaml
@@ -247,14 +243,10 @@ kubectl delete -f local-path-provisioner/examples/pod.yaml
 kubectl delete -f local-path-provisioner/examples/pvc.yaml
 ```
 
-#### 设置为default的storageclass
+#### 设置为默认的storageclass
 
 ```bash
 kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'
-```
-
-```bash
-kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storageclass.beta.kubernetes.io/is-default-class":"true"}}}'
 ```
 
 #### 卸载
@@ -262,3 +254,8 @@ kubectl patch storageclass local-path -p '{"metadata": {"annotations":{"storagec
 ```bash
 kubectl delete -f local-path-provisioner/deploy/local-path-storage.yaml
 ```
+
+## 参考
+
+[为pvc创建默认存储类--官网](https://kubernetes.io/zh/docs/tasks/administer-cluster/change-default-storage-class/)
+[k8s持久化存储方案](https://www.jianshu.com/p/4cbc9edef18d)

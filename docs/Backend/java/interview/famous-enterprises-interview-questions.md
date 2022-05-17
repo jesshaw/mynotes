@@ -857,22 +857,14 @@ NESTED：如果一个活动的事务存在，则运行在一个嵌套的事务�
 select name,count(*) from tab group by name having count(*)>1;
 
 
-
-
-
-
-
-
 1.如何调用别人写的接口？自己写的接口，如何让别人调用
 2.中间间
 3.List、set、Map的底层实现原理
-
 
 京东面试题
 1.简单的懒汉式在多线程环境下不是线程安全的。有人提出在getInstance()方法上同步锁，但是锁住一整个方法可能粒度过大，不利于效率。
 单例模式的饿汉式，在定义自身类型的成员变量时就将其实例化，使得在Singleton单例类被系统（姑且这么说）加载时就已经被实例化出一个单例对象，从而一劳永逸地避免了线程安全的问题。
 
-
-
 ## 引用
+
 1. [原文](https://www.journaldev.com/3633/hibernate-interview-questions-and-answers?utm_source=website&utm_medium=menubar&utm_campaign=Top-Menu-Bar)

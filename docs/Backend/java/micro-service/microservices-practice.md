@@ -15,18 +15,17 @@ linux
 
 docker, docker-compose
 
-git 
+git
 
 java
 
 js, react, nodejs
 
-
 ## 物理架构
+
 1 台服务注册机
 1 台站点网关
 1 台微服务应有
-
 
 ## 逻辑架构
 
@@ -40,7 +39,6 @@ docker参考官网安装
 docker-compose安装慢采用国内镜像安装
 git参考官网安装
 
-
 ### 使用docker建自定义私有镜像
 
 因未使用tls认证方式，因此使用简单验证（正式环境不推荐)，使用以下命令生成用户名和密码
@@ -50,16 +48,21 @@ docker run --entrypoint htpasswd registry:2 -Bbn testuser testpassword > ./docke
 ```
 
 在客户端设置允许远程访问,liux下增加如下配置到daemon.json文件中。
+
 ```bash
 {
   "insecure-registries" : ["49.235.132.153:5000"]
 }
 ```
+
 然后重启docker让daemon生效
+
 ```bash
 systemctl restart docker
 ```
+
 docker-compose文件如下
+
 ```bash
 version: '2'
 services:
@@ -83,8 +86,6 @@ services:
 ### 部署微服务注册站 register
 
 docker-compose -f reservation/src/main/docker/jhipster-registry.yml up -d
-
-
 
 ### 部署应用网官 reservation gateway
 
@@ -114,6 +115,7 @@ docker-compose -f reservation/src/main/docker/jhipster-registry.yml up -d
 ```
 
 2. 配置好推送路径
+
 ```bash
  <plugin>
     <groupId>com.google.cloud.tools</groupId>
@@ -130,7 +132,7 @@ docker-compose -f reservation/src/main/docker/jhipster-registry.yml up -d
 </plugin>
 ```
 
-3. 编译打包生成镜像image
+1. 编译打包生成镜像image
 ```bash
  ./mvnw package -Pprod verify jib:dockerBuild
 
