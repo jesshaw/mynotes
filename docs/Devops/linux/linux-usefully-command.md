@@ -1313,3 +1313,5 @@ systemctl restart iptables
 ```
 
 [linux教程](https://www.runoob.com/linux/linux-tutorial.html)
+
+[基本linux命令](https://gnu-linux.readthedocs.io/zh/latest/preface.html)
