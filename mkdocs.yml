@@ -79,6 +79,7 @@ markdown_extensions:
   - admonition
 
 plugins:
+  # 通过.pages文件来定义导航 https://github.com/lukasgeiter/mkdocs-awesome-pages-plugin
   - awesome-pages:
       strict: false
   - search  
