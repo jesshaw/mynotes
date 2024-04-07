@@ -29,7 +29,8 @@ RUN echo '#!/bin/sh' > /usr/local/bin/plantuml && \
     chmod +x /usr/local/bin/plantuml && \
     pip install -e mkdocs-material && \
     pip install plantuml-markdown && \
-    pip install mkdocs-with-pdf
+    pip install mkdocs-with-pdf && \
+    pip install mkdocs-awesome-pages-plugin mkdocs-codeinclude-plugin
 
 # Set working directory
 WORKDIR /docs
