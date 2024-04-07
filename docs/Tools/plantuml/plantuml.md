@@ -18,6 +18,6 @@ docker run -d -p 8000:8080 plantuml/plantuml-server:jetty
 
 ```plantuml
 @startuml
-Bob -> Alice : hello
+张三 -> Alice : hello
 @enduml
 ```

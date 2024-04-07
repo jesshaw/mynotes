@@ -58,14 +58,14 @@ markdown_extensions:
   - plantuml_markdown:
   # 打包是在容器内访问plantuml，侧需要查看plantuml服务的docker0地址，如172.21.0.1，通常是网关
   # 若是通过主机访问则通过localhost直接访问就可以。当然也可以直接指定官网，但速度慢
-      server: http://172.18.0.1:8075
+      # server: http://172.18.0.1:8075
       format: png
   - toc:
       permalink: true
       toc_depth: 3
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - attr_list
   - pymdownx.caret
   - pymdownx.mark
@@ -105,7 +105,7 @@ plugins:
       #debug_html: true
       #verbose: true
       #show_anchors: true
-      enabled_if_env: ENABLE_PDF_EXPORT
+      # enabled_if_env: ENABLE_PDF_EXPORT
 nav:
   - index.md
   - Frontend:
