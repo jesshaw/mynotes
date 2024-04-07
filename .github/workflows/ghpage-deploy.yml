@@ -27,6 +27,6 @@ jobs:
       - name: List Files
         run: ls -al      
       - name: permission
-        run: git config --global --add safe.directory /__w/testactionworkflow/testactionworkflow
+        run: git config --global --add safe.directory /__w/mynotes/mynotes
       - name: Deploy documentation
         run: mkdocs gh-deploy --force
