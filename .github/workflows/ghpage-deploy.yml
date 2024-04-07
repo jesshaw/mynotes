@@ -1,0 +1,32 @@
+name: Gh-pages Deploy
+run-name: ${{ github.actor }} is deploying to github 🚀
+on:
+  push:    
+    branches:
+      - 'main'
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/jesshaw/mynotes:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.github_token }}    
+      # volumes:
+      #   - ${{ github.workspace }}:/docs
+    #   env:
+    #     NODE_ENV: development
+    #   ports:
+    #     - 80
+    #   options: --cpus 1
+    steps:  
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Print Current Directory
+        run: pwd            
+      - name: List Files
+        run: ls -al      
+      - name: permission
+        run: git config --global --add safe.directory /__w/testactionworkflow/testactionworkflow
+      - name: Deploy documentation
+        run: mkdocs gh-deploy --force
