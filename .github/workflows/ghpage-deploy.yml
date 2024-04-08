@@ -40,4 +40,4 @@ jobs:
       - name: Show version list
         run: mike list      
       - name: Delete specify version
-        run: mike delete --push v1.0 v1.1 || true
+        run: mike delete --push v1.1 v1.0 || true
