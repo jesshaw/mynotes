@@ -4,8 +4,8 @@ on:
   push:
     tags:
       - 'v**'   
-    # branches:
-    #   - 'main'
+    branches:
+      - 'main'
 env:
   GIT_COMMITTER_NAME: jesshaw
   GIT_COMMITTER_EMAIL: jesshaw@126.com
@@ -38,7 +38,7 @@ jobs:
       - name: permission
         run: git config --global --add safe.directory /__w/mynotes/mynotes
       - name: Deploy documentation
-        run: mike deploy --update-aliases --push ${{github.action_ref}} latest && mike set-default --push latest
+        run: mike deploy --update-aliases --push v0.9.3 latest && mike set-default --push latest
       - name: Show version list
         run: mike list      
       - name: Delete specify version
