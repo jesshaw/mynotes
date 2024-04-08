@@ -23,7 +23,7 @@ jobs:
     #     - 80
     #   options: --cpus 1
     steps:
-      - name: Check out repository code
+      - name: Check out gh-pages branch repository code
         uses: actions/checkout@v4
         with:
           ref: gh-pages
@@ -36,7 +36,6 @@ jobs:
       - name: permission
         run: git config --global --add safe.directory /__w/mynotes/mynotes
       - name: Deploy documentation
-        run: mike deploy --update-aliases --push  v0.9.2 latest
-        # run: mkdocs gh-deploy --force
+        run: mike deploy --update-aliases --push  v0.9.2 latest && mike set-default latest
       - name: Show version list
         run: mike list
