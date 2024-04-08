@@ -34,5 +34,5 @@ jobs:
       - name: Show version list
         run: mike list
       - name: Deploy documentation
-        run: mike deploy --update-aliases --push  v0.9.0 latest
+        run: mike deploy --update-aliases --push  v0.9.1 latest
         # run: mkdocs gh-deploy --force
