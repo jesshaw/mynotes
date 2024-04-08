@@ -4,6 +4,9 @@ on:
   push:    
     branches:
       - 'main'
+env:
+  GIT_COMMITTER_NAME: jesshaw
+  GIT_COMMITTER_EMAIL: jesshaw@126.com
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -28,7 +31,7 @@ jobs:
         run: ls -al      
       - name: permission
         run: git config --global --add safe.directory /__w/mynotes/mynotes
-      - name: Deploy documentation
+      - name: Show version list
         run: mike list
       - name: Deploy documentation
         run: mike deploy --update-aliases --push  v0.9.0 latest
