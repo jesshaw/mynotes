@@ -38,7 +38,7 @@ jobs:
       - name: permission
         run: git config --global --add safe.directory /__w/mynotes/mynotes
       - name: Deploy documentation
-        run: mike deploy --update-aliases --push v0.9.3 latest && mike set-default --push latest
+        run: mike deploy --update-aliases --push v0.9.4 latest && mike set-default --push latest
       - name: Show version list
         run: mike list      
       - name: Delete specify version
