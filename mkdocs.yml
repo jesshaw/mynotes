@@ -12,7 +12,7 @@ theme:
   favicon: assets/lx.ico
   logo: assets/lx.png
   name: material
-  # custom_dir: overrides
+  custom_dir: overrides
   features:
     - navigation.top
     - navigation.tabs

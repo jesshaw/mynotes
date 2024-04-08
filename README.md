@@ -17,6 +17,32 @@ git tag -d v0.9
 git push --delete origin v0.9
 ```
 
+## 本机打包与发布
+
+```bash
+docker run --rm -it -p 8000:8000 -v ${PWD}:/docs ghcr.io/jesshaw/mynotes bash
+
+# 初始化
+git config --global --add safe.directory /docs && \
+git config user.name 'jesshaw' && 
+git config user.email 'jesshaw@126.com'
+
+# 部署v1.2版本到本地，别名latest
+mike deploy -u  v1.3 latest
+
+# 默认会推送至远程gh-page
+mike deploy -u --push  v1.3 latest
+
+# latest设为默认分支版本
+mike set-default latest
+
+# 查看现有的版本
+mike list
+
+# 本机查看
+mike serve --dev-addr=0.0.0.0:8000
+```
+
 ## Push after check
 
 ```bash
@@ -88,31 +114,3 @@ docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
 
-## 打包和发布
-
-采用mike打包到gh-page分支，通过nginx来部署在线文档
-
-## 部署新版本，且为默认分支版本
-
-```bash
-cd contents
-mike deploy -u  0.1.1 latest
-```
-
-### latest设为默认分支版本
-
-```bash
-mike set-default latest
-```
-
-### 查看现有的版本
-
-```bash
-mike list
-```
-
-### 本机查看
-
-```bash
-mike serve
-```
