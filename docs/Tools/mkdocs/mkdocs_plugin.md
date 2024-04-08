@@ -113,19 +113,13 @@ extra:
   </div>
 ```
 
-## 如何制定mkdocs-material的镜像
+## 如何定制mkdocs-material的镜像
 
-### 克隆mkdocs-material
+参看 mynotes Dockerfile
 
-```bash
-git clone https://github.com/squidfunk/mkdocs-material.git
-git checkout 7.3.0
-```
-
-### 增加需要安装的插件
-
-requirements.txt
-
-```bash
-
-```
+主要实现功能：
+- 支持plantuml生成图片
+- 支持mkdocs-with-pdf生成pdf
+- 支持分页和自动目录
+- 支持多版本
+- [支持非新版本提醒](https://squidfunk.github.io/mkdocs-material/setup/setting-up-versioning/?h=outda#version-warning)
