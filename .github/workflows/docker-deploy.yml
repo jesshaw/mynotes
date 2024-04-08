@@ -1,9 +1,9 @@
 name: Docker Deploy
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
-  push:    
-    tags:
-      - 'v**'
+  push:
+    branches:
+      - 'main'
     paths:
       - 'Dockerfile'
 env:
