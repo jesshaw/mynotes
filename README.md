@@ -2,6 +2,21 @@
 
 ![lx](docs/assets/lx.ico)
 
+## release site
+
+```bash
+# tag and push
+git tag v1.0 -m 'release by github workflow'
+git push 
+
+# list tag
+git tag -ln
+
+# delete tag and push remote
+git tag -d v0.9
+git push --delete origin v0.9
+```
+
 ## Push after check
 
 ```bash
