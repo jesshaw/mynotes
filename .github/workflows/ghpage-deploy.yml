@@ -32,7 +32,7 @@ jobs:
       - name: permission
         run: git config --global --add safe.directory /__w/mynotes/mynotes
       - name: Deploy documentation
-        run: mike deploy --update-aliases --push  v0.9.2 latest
+        run: git pull origin gh-pages && mike deploy --update-aliases --push  v0.9.2 latest
         # run: mkdocs gh-deploy --force
       - name: Show version list
         run: mike list
