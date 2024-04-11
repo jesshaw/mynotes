@@ -37,6 +37,9 @@ RUN echo '#!/bin/sh' > /usr/local/bin/plantuml && \
 # Set working directory
 WORKDIR /docs
 
+RUN git config --global --add safe.directory /docs && \
+    git config --global user.name 'jesshaw'
+
 # Expose MkDocs development server port
 EXPOSE 8000
 
