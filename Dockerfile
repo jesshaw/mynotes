@@ -31,6 +31,7 @@ RUN echo '#!/bin/sh' > /usr/local/bin/plantuml && \
     pip install plantuml-markdown && \
     pip install mkdocs-with-pdf && \
     pip install mkdocs-awesome-pages-plugin mkdocs-codeinclude-plugin && \
+    pip install mkdocs-glightbox && \
     pip install mike
 
 # Set working directory
