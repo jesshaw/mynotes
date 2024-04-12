@@ -1,18 +1,18 @@
 site_name: 乐享笔记
-site_description: '总结，重用，梳理知识结构'
+site_description: '总结，重用，知识结构梳理'
 repo_url: http://github.com/jesshaw/mynotes
 repo_name: mynotes
 edit_uri: edit/main/
 
 # Copyright
-copyright: Copyright &copy; 2006 - 2021 Jes Shaw
+copyright: Copyright &copy; 2006 - 2024 Jes Shaw
 
 theme:
   language: 'zh'
   favicon: assets/lx.ico
   logo: assets/lx.png
   name: material
-  custom_dir: overrides
+  custom_dir: custome_theme/
   features:
     - navigation.top
     - navigation.tabs
@@ -20,7 +20,6 @@ theme:
     # - toc.integrate # Navigation integration
   icon:
     repo: fontawesome/brands/github
-
   palette:
     # Light mode
     - green: "(prefers-color-scheme: light)"
@@ -28,7 +27,6 @@ theme:
       toggle:
         icon: material/weather-night
         name: 深色
-
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -56,17 +54,18 @@ extra:
 
 markdown_extensions:
   - plantuml_markdown:
+      format: svg
   # 打包是在容器内访问plantuml，侧需要查看plantuml服务的docker0地址，如172.21.0.1，通常是网关
   # 若是通过主机访问则通过localhost直接访问就可以。当然也可以直接指定官网，但速度慢
       # server:  http://192.168.232.81:8075
-      # format: svg
   - toc:
       permalink: true
       toc_depth: 3
-  - pymdownx.emoji:
+  - pymdownx.emoji:  # 表情和品牌图标支持
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - attr_list
+  - attr_list # markdown按钮样式支持, 通地属性
+  - md_in_html
   - pymdownx.caret
   - pymdownx.mark
   - pymdownx.tilde
@@ -84,4 +83,5 @@ plugins:
       strict: false
   - search  
   - codeinclude:
-      title_mode: pymdownx.tabbed 
+      title_mode: pymdownx.tabbed  
+  - glightbox

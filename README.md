@@ -17,6 +17,21 @@ git tag -d v0.9
 git push --delete origin v0.9
 ```
 
+## release docker image
+
+```bash
+# tag and push
+git tag 1.0 -m 'release by github workflow'
+git push 
+
+# list tag
+git tag -ln
+
+# delete tag and push remote
+git tag -d 1.0
+git push --delete origin 1.0
+```
+
 ## 本机打包与发布
 
 ```bash
@@ -41,6 +56,8 @@ mike list
 
 # 本机查看
 mike serve --dev-addr=0.0.0.0:8000
+
+mkdocs serve --dev-addr=0.0.0.0:8000
 ```
 
 ## Push after check

@@ -1,0 +1,271 @@
+{% extends "main.html" %}{% block tabs %}{{ super() }}
+<style>
+  .mdj-parallax {
+    /* height: 100vh;
+    margin-top: -2.4rem;
+    overflow: hidden auto;
+    overscroll-behavior-y: none;
+    perspective: var(--md-parallax-perspective);
+    scroll-behavior: smooth;
+    width: 100vw; */
+  }
+
+  .mdj-parallax__group {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-typeset-color);
+    display: block;
+    position: relative;
+    transform-style: preserve-3d
+  }
+
+  [data-mdj-parallax__group=s0] {
+    height: 500px;
+    background-image: url(assets/images/white-sand-beach.jpg);
+    color: #000;
+    background-position: center;
+    align-content: flex-end;
+    padding-bottom: 20px;
+  }
+
+  [data-mdj-parallax__group=s1] {
+    height: 500px;
+    background-image: url(assets/images/white-sand-beach-1.jpg);
+    background-position-y: -120px;
+    align-content: flex-end;
+    padding-bottom: 20px;
+  }
+
+  [data-mdj-parallax__group=s2] {
+    background-image: url(assets/images/white-sand-beach-2.webp);
+    background-position-y: -200px;
+    align-content: flex-end;
+    padding-bottom: 20px;
+  }
+
+  [data-mdj-parallax__group=s2] h1 {
+    padding-top: 300px;
+  }
+
+  .mdj-hero__content {
+    color: #0000008a;
+  }
+
+  .mdj-hero__content h1 {
+    color: #0000008a;
+  }
+
+  .mdj-expect__icon {
+    fill: currentcolor;
+    background-color: var(--md-default-fg-color--lightest);
+    border-radius: 100%;
+    flex-shrink: 0;
+    height: 2.2rem;
+    padding: .4rem;
+    width: 2.2rem;
+  }
+
+  @keyframes hot {
+
+    0%,
+    40%,
+    80%,
+    100% {
+      transform: scale(1);
+    }
+
+    20%,
+    60% {
+      transform: scale(1.15);
+    }
+  }
+
+  .hot {
+    animation: heart 1000ms infinite;
+  }
+
+  .md-typeset .mdj-hot {
+    animation: hot 1s infinite;
+    color: red;
+  }
+</style>
+
+<div class="mdj-parallax">
+  <section class="mdj-parallax__group" data-md-color-scheme="defalut" data-mdj-parallax__group=s1>
+    <div class="md-grid md-typeset">
+      <div class="mdj-hero__content">
+        <h1>不只是记录，还分享乐趣！</h1>
+        <p>{{ config.site_description }}。</p>
+        <a href="#details" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+          进一步了解
+        </a>
+        <a href="{{ 'Backend/jwt' | url }}" title="内容首页" class="md-button">
+          跳转到内容页
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="details" class="mdj-parallax__group" data-md-color-scheme="defalut">
+    <div class="md-grid md-typeset">
+      <div class="grid cards">
+        <ul>
+          <li>
+            <p>
+              <span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M4 1h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m0 8h16a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1M9 5h1V3H9v2m0 8h1v-2H9v2m0 8h1v-2H9v2M5 3v2h2V3H5m0 8v2h2v-2H5m0 8v2h2v-2H5Z">
+                  </path>
+                </svg></span>
+              <strong>后端</strong>
+            </p>
+            <hr>
+            <p>
+              后端负责处理应用程序的业务逻辑和数据存储，包括数据库（如MySQL、MongoDB、<a href="{{ 'Backend/DB/cratedb/cratedb' | url }}">cratedb</a>
+              <a href="{{ 'Backend/DB/mysql' | url }}">mysql</a>）、服务器端编程语言（如Python、Java）、常用架构（如MVC、RESTful）。
+            </p>
+            <p>
+              <a href="{{ 'Backend/jwt' | url }}">
+                <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z">
+                    </path>
+                  </svg></span>
+                前往
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="m12 17.56 4.07-1.13.55-6.1H9.38L9.2 8.3h7.6l.2-1.99H7l.56 6.01h6.89l-.23 2.58-2.22.6-2.22-.6-.14-1.66h-2l.29 3.19L12 17.56M4.07 3h15.86L18.5 19.2 12 21l-6.5-1.8L4.07 3Z">
+                  </path>
+                </svg></span>
+              <strong>前端</strong>
+            </p>
+            <hr>
+            <p>
+              前端研发包括HTML、CSS、JavaScript，主要框架有React、Angular和Vue，用于构建现代Web应用程序的用户界面和交互功能。
+            </p>
+            <p>
+              <a href="{{ 'Frontend/flutter/flutter_write_your_first_flutter_app' | url }}">
+                <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z">
+                    </path>
+                  </svg></span>
+                前往
+              </a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="m22 18-5 4-8-3v3l-4.19-5.75 12.91 1.05V6.34L22 5.65V18M4.81 16.25V8.96l12.91-2.62L10.6 2v2.84L3.97 6.76 2 9.38v5.69l2.81 1.18Z">
+                  </path>
+                </svg></span>
+              <strong>Devops</strong>
+            </p>
+            <hr>
+            <p>
+              DevOps包括自动化、持续集成/持续交付、监控、日志管理、容器化等范围，旨在提高软件交付速度、质量和可靠性，促进开发与运维团队之间的协作和沟通。
+            </p>
+            <p>
+              <a href="{{ 'Devops/ad' | url }}">
+                <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z">
+                    </path>
+                  </svg></span>
+                前往
+              </a>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="M5.12 5h13.75l-.94-1h-12l-.81 1m15.42.23c.29.34.46.77.46 1.27V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6.5c0-.5.17-.93.46-1.27l1.38-1.68C5.12 3.21 5.53 3 6 3h12c.47 0 .88.21 1.15.55l1.39 1.68M6 18h6v-3H6v3Z">
+                  </path>
+                </svg></span>
+              <strong>软件工程</strong>
+            </p>
+            <hr>
+            <p>
+              软件工程包括需求工程、设计、编码、测试、配置管理、项目管理、质量管理和维护等方面，涵盖软件开发生命周期的各个阶段和过程。
+            </p>
+            <p>
+              <a href="{{ 'SoftwareEngineering/domain-model' | url }}">
+                <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z">
+                    </path>
+                  </svg></span>
+                前往
+              </a>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <span class="twemoji lg middle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path
+                    d="m21.71 20.29-1.42 1.42a1 1 0 0 1-1.41 0L7 9.85A3.81 3.81 0 0 1 6 10a4 4 0 0 1-3.78-5.3l2.54 2.54.53-.53 1.42-1.42.53-.53L4.7 2.22A4 4 0 0 1 10 6a3.81 3.81 0 0 1-.15 1l11.86 11.88a1 1 0 0 1 0 1.41M2.29 18.88a1 1 0 0 0 0 1.41l1.42 1.42a1 1 0 0 0 1.41 0l5.47-5.46-2.83-2.83M20 2l-4 2v2l-2.17 2.17 2 2L18 8h2l2-4Z">
+                  </path>
+                </svg></span>
+              <strong>工具</strong>
+            </p>
+            <hr>
+            <p>
+              包括IDE、版本控制、构建、测试、部署等，使开发过程更高效、可靠。
+            </p>
+            <p>
+              <a href="{{ 'Tools/intellij-idea-plugins' | url }}">
+                <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path
+                      d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.749.749 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z">
+                    </path>
+                  </svg></span>
+                前往
+              </a>
+            </p>
+          </li>
+
+
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mdj-parallax__group" data-md-color-scheme="defalut">
+    <div class="md-grid md-typeset">
+      <div>
+        <h1>后记</h1>
+        <p>感谢阅读！乐享笔记致力于分享技术乐趣，重用、总结、知识结构梳理，助您轻松掌握。期待与您共同成长！</p>
+        <p>
+          <span class="twemoji mdj-hot"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="m10.43 7.32-1.57-.9C9.38 5.6 10.11 5 10.94 4.7A.99.99 0 0 0 10 4V2c.77 0 1.47.29 2 .77V4c.45 0 .81.3.94.7-1.11.38-2.01 1.35-2.51 2.62M10 11c0-.77.23-1.5.6-2.09l-1.34-.76C8.5 8.44 8 9.16 8 10v1c0 7.05 4.9 9.8 7.03 10.66C12.41 19.62 10 16.2 10 11M6.43 7.32l-1.57-.9C5.38 5.6 6.11 5 6.94 4.7A.99.99 0 0 0 6 4V2c.77 0 1.47.29 2 .77V4c.45 0 .81.3.94.7-1.11.38-2.01 1.35-2.51 2.62M6 11c0-.77.23-1.5.6-2.09l-1.34-.76C4.5 8.44 4 9.16 4 10v1c0 7.05 4.9 9.8 7.03 10.66C8.41 19.62 6 16.2 6 11m13-2.72L17.75 9 16 8l-1.75 1L13 8.28c-.6.35-1 .99-1 1.72v1c0 9 8 11 8 11V10c0-.73-.4-1.37-1-1.72m-6.27-1.65 1.52.87 1.75-1 1.75 1 1.52-.87c-.55-.97-1.36-1.69-2.3-1.98A2.996 2.996 0 0 0 14 2v2c.44 0 .8.29.94.69-.91.31-1.68 1.01-2.21 1.94Z">
+              </path>
+            </svg></span>
+
+          <a href="{{ 'insiders/' | url }}" title="Material for MkDocs Insiders">
+            plantuml
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
+
+<!-- Content -->
+{% block content %}{% endblock %}
+
+<!-- Application footer -->
+{% block footer %}
+{{ super() }}
+{% endblock %}
