@@ -131,3 +131,8 @@ docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
 
+## 域名
+
+jesshaw.github.io为bolg.lexiangmiao.com的入口。所以可以以路径方式访问其它文档内容。
+
+lexiangmiao.github.io，为froker另一个lexiangmia的账号的源
