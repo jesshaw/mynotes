@@ -227,6 +227,8 @@ kubectl get secret admin-user -n kube-system -o jsonpath={".data.token"} | base6
 
 ### dashborad验证
 
+以下通过转化的方式实现**dashborad的临时验证**
+
 通过当前机器实现转化到services的功能，实现从集群外访问dashboard
 
 集群外输入转化节点IP:8000 -> service -> pod
@@ -234,3 +236,88 @@ kubectl get secret admin-user -n kube-system -o jsonpath={".data.token"} | base6
 ```bash
 kubectl -n kube-system port-forward --address 0.0.0.0  services/kubernetes-dashboard 8000:443
 ```
+
+## 外部转发到内部的ingress上
+
+30080和30443分另转发至80和443
+
+```yml
+# ingress-incoming-forward.yml
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-nginx
+  namespace: ingress-nginx
+spec:
+  type: NodePort
+  selector:
+    app.kubernetes.io/name: ingress-nginx
+    app.kubernetes.io/part-of: ingress-nginx
+  ports:
+  - name: http
+    protocol: TCP
+    port: 80
+    targetPort: 80
+    nodePort: 30080
+  - name: https
+    protocol: TCP
+    port: 443
+    targetPort: 443
+    nodePort: 30443
+```
+
+## Q&A
+
+### 拉取镜像时遇到 429 Too Many Requests 错误
+
+1. [建立离线镜像（推荐）](https://github.com/kubernetes-sigs/kubespray/blob/master/contrib/offline/README.md)
+   可到国内镜像拉取至本地建立离线镜像和离线安装文件
+
+  ```yml
+  gcr_image_repo: "docker.lexiangmiao.com/gcr.io"
+  kube_image_repo: "docker.lexiangmiao.com/registry.k8s.io" 
+  docker_image_repo: "docker.lexiangmiao.com/docker.io"
+  quay_image_repo: "docker.lexiangmiao.com/quay.io"
+  github_image_repo: "docker.lexiangmiao.com/ghcr.io"
+  files_repo: "https://files.lexiangmiao.com"
+  ```
+
+2. 手动拉取
+   因为内容太多且国内节点限流不太容易成功
+
+### 如何更新证书
+
+ref: https://github.com/kubernetes-sigs/kubespray/issues/5464
+
+1. 更新控制节点证书
+
+   ```bash
+   sudo kubeadm certs renew all
+   ```
+
+2. 分发更新的证书
+
+   ```bash
+   sudo tar -cvzf /tmp/certs.tar.gz -C /etc/kubernetes/pki .
+   sudo tar -xvzf /tmp/certs.tar.gz -C /etc/kubernetes/pki
+   ```
+
+3. 重启组件
+   更新证书后，您需要重启相关的 Kubernetes 组件，以使它们加载新的证书。
+
+   ```bash
+   sudo systemctl restart kubelet
+   ```
+
+4. 验证证书更新
+   验证证书是否已成功更新
+
+   ```bash
+   sudo kubeadm certs check-expiration
+   ```
+
+5. 重新运行 Kubespray
+
+   ```bash
+   ansible-playbook -i inventory/mycluster/hosts.yml --become --become-user=root cluster.yml
+   ```

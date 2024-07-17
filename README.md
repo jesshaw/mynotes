@@ -1,6 +1,6 @@
 # 乐享喵
 
-![lx](docs/assets/lx.ico)
+<img src="docs/assets/lx.png" style="background-color: #000;clip-path: circle(50%)"/>
 
 ## release site
 
