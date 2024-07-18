@@ -321,3 +321,11 @@ ref: https://github.com/kubernetes-sigs/kubespray/issues/5464
    ```bash
    ansible-playbook -i inventory/mycluster/hosts.yml --become --become-user=root cluster.yml
    ```
+
+6. 检查组件状态
+
+   ```bash
+   kubectl get nodes
+   kubectl get pods -n kube-system
+   kubectl get componentstatuses
+   ```
