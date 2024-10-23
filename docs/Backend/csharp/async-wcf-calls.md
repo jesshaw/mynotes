@@ -1,11 +1,5 @@
----
-title: 客户端异步wcf调用
-tags: asynchronous,wcf, castle, WcfFacility,异步.
-categories: 
-  - csharp
+# 客户端异步wcf调用
 
-thumbnail: /gallery/blue-water2.jpg
----
 一个无需svcUtil产生异步代码的、客户端异步调用同步wcf服务端的实现方法
 <!-- more -->
 
@@ -23,7 +17,7 @@ thumbnail: /gallery/blue-water2.jpg
 
 目录结构
 
-```
+```bash
 |--Async.Wcf.Calls
    |--Client
       |--app.config
@@ -45,31 +39,31 @@ thumbnail: /gallery/blue-water2.jpg
 契约项目客户端和服务端公用
 
 ```csharp
-    [ServiceContract(Name = "CategoryService", Namespace = "http://northwind.com/categoryservice")]
-    public interface ICategoryService
-    {
-        [OperationContract]
-        string GetCategoryName(int categoryId);
+[ServiceContract(Name = "CategoryService", Namespace = "http://northwind.com/categoryservice")]
+public interface ICategoryService
+{
+    [OperationContract]
+    string GetCategoryName(int categoryId);
 
-        [OperationContract]
-        Category GetCategoryDetails(int categoryId);
-    }
+    [OperationContract]
+    Category GetCategoryDetails(int categoryId);
+}
 
-    [DataContract]
-    public class Category
-    {
-        [DataMember]
-        public int CategoryId { get; set; }
+[DataContract]
+public class Category
+{
+    [DataMember]
+    public int CategoryId { get; set; }
 
-        [DataMember]
-        public string CategoryName { get; set; }
+    [DataMember]
+    public string CategoryName { get; set; }
 
-        [DataMember]
-        public string CategoryDescription { get; set; }
+    [DataMember]
+    public string CategoryDescription { get; set; }
 
-        [DataMember]
-        public string CategoryUrl { get; set; }
-    }    
+    [DataMember]
+    public string CategoryUrl { get; set; }
+}    
 ```
 
 注意这是同步版本的服务端契约。
@@ -77,28 +71,28 @@ thumbnail: /gallery/blue-water2.jpg
 服务端实现如下。
 
 ```csharp
-    [ServiceBehavior(Name = "CategoryService", Namespace = "http://northwind.com/categoryservice")]
-    public class CategoryService : ICategoryService
+[ServiceBehavior(Name = "CategoryService", Namespace = "http://northwind.com/categoryservice")]
+public class CategoryService : ICategoryService
+{
+    public string GetCategoryName(int categoryId)
     {
-        public string GetCategoryName(int categoryId)
-        {
-            Thread.Sleep(5000);
-            return "Beverages";
-        }
-
-        public Category GetCategoryDetails(int categoryId)
-        {
-            var category = new Category
-            {
-                CategoryId = 1,
-                CategoryName = "Beverages",
-                CategoryDescription = "Soft drinks, coffees, teas, beers, and ales",
-                CategoryUrl = "http://northwind.com/Beverages"
-            };
-
-            return category;
-        }
+        Thread.Sleep(5000);
+        return "Beverages";
     }
+
+    public Category GetCategoryDetails(int categoryId)
+    {
+        var category = new Category
+        {
+            CategoryId = 1,
+            CategoryName = "Beverages",
+            CategoryDescription = "Soft drinks, coffees, teas, beers, and ales",
+            CategoryUrl = "http://northwind.com/Beverages"
+        };
+
+        return category;
+    }
+}
 ```
 
 我们使用svc实现自启动服务,服务端的app.config配置如下。
@@ -138,98 +132,95 @@ thumbnail: /gallery/blue-water2.jpg
 
 ``` csharp
 public static class CategoryServiceClient
+{
+    // Windsor 异步版
+    public static Task<string> GetCategoryNameAsync(int categoryId)
     {
-        // Windsor 异步版
-        public static Task<string> GetCategoryNameAsync(int categoryId)
-        {
-            WindsorContainer container = ConfigureContainer();
+        WindsorContainer container = ConfigureContainer();
 
-            var service = container.Resolve<ICategoryService>("categegory");
+        var service = container.Resolve<ICategoryService>("categegory");
 
-            Task<string> taskResult =
-                Task.Factory.FromAsync<string>(service.BeginWcfCall(p => p.GetCategoryName(categoryId)),
-                    service.EndWcfCall<string>);
+        Task<string> taskResult =
+            Task.Factory.FromAsync<string>(service.BeginWcfCall(p => p.GetCategoryName(categoryId)),
+                service.EndWcfCall<string>);
 
-            return taskResult;
-        }
-
-        // Windsor  同步版
-        public static string GetCategoryName(int categoryId)
-        {
-            WindsorContainer container = ConfigureContainer();
-
-            var instance = container.Resolve<ICategoryService>("categegory");
-
-            string categoryName = instance.GetCategoryName(categoryId);
-
-            return categoryName;
-        }
-
-        //ChannelFactory  同步版
-        public static Category GetCategoryDetails(int categoryID)
-        {
-            var category = new Category();
-
-            var myBinding = new WSHttpBinding();
-            var myEndpoint =
-                new EndpointAddress("http://localhost:7741/NorthwindServices/CategoryServices/CategoryService");
-            var myChannelFactory = new ChannelFactory<ICategoryService>(myBinding, myEndpoint);
-
-            ICategoryService instance = myChannelFactory.CreateChannel();
-
-            category = instance.GetCategoryDetails(categoryID);
-
-            myChannelFactory.Close();
-
-            return category;
-        }
-
-
-        private static WindsorContainer ConfigureContainer()
-        {
-            var container = new WindsorContainer();
-            container.AddFacility<WcfFacility>().Register(
-                Component.For<ICategoryService>()
-                    .Named("categegory")
-                    .AsWcfClient(new DefaultClientModel
-                    {
-                        Endpoint =
-                            WcfEndpoint.BoundTo(new WSHttpBinding())
-                                .At("http://localhost:7741/NorthwindServices/CategoryServices/CategoryService")
-                    }));
-            return container;
-        }
+        return taskResult;
     }
- ```   
+
+    // Windsor  同步版
+    public static string GetCategoryName(int categoryId)
+    {
+        WindsorContainer container = ConfigureContainer();
+
+        var instance = container.Resolve<ICategoryService>("categegory");
+
+        string categoryName = instance.GetCategoryName(categoryId);
+
+        return categoryName;
+    }
+
+    //ChannelFactory  同步版
+    public static Category GetCategoryDetails(int categoryID)
+    {
+        var category = new Category();
+
+        var myBinding = new WSHttpBinding();
+        var myEndpoint =
+            new EndpointAddress("http://localhost:7741/NorthwindServices/CategoryServices/CategoryService");
+        var myChannelFactory = new ChannelFactory<ICategoryService>(myBinding, myEndpoint);
+
+        ICategoryService instance = myChannelFactory.CreateChannel();
+
+        category = instance.GetCategoryDetails(categoryID);
+
+        myChannelFactory.Close();
+
+        return category;
+    }
+
+
+    private static WindsorContainer ConfigureContainer()
+    {
+        var container = new WindsorContainer();
+        container.AddFacility<WcfFacility>().Register(
+            Component.For<ICategoryService>()
+                .Named("categegory")
+                .AsWcfClient(new DefaultClientModel
+                {
+                    Endpoint =
+                        WcfEndpoint.BoundTo(new WSHttpBinding())
+                            .At("http://localhost:7741/NorthwindServices/CategoryServices/CategoryService")
+                }));
+        return container;
+    }
+}
+ ```
 
  启动程序
 
  ```csharp
- class Program
+class Program
+{
+    private static void Main(string[] args)
     {
-        private static void Main(string[] args)
-        {
-            var p = new Program();
-            p.ExeSync();
-            Console.Read();
-        }
-
-        private async void ExeSync()
-        {
-            Task<string> taskResult = CategoryServiceClient.GetCategoryNameAsync(10);
-            DoIndependentWork();
-            string result = await taskResult;
-            Console.WriteLine(result);
-        }
-
-        private void DoIndependentWork()
-        {
-            Console.WriteLine("loding...");
-        }
+        var p = new Program();
+        p.ExeSync();
+        Console.Read();
     }
+
+    private async void ExeSync()
+    {
+        Task<string> taskResult = CategoryServiceClient.GetCategoryNameAsync(10);
+        DoIndependentWork();
+        string result = await taskResult;
+        Console.WriteLine(result);
+    }
+
+    private void DoIndependentWork()
+    {
+        Console.WriteLine("loding...");
+    }
+}
  ```
 
- 在配置好Windsor container和WCF Facility后，我们就实现了一个客户端代理。使用WCF Facility就可以奇迹般的异步调用啦。
-
-
-
+在配置好Windsor container和WCF Facility后，我们就实现了一个客户端代理。使用WCF Facility就可以奇迹般的异步调用啦。
