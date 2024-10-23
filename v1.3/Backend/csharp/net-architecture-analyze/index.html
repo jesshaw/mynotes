@@ -22,7 +22,7 @@
     
     
       
-        <title>net架构分析 - 乐享笔记</title>
+        <title>.NET架构分析 - 乐享笔记</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#net" class="md-skip">
           跳转至
         </a>
       
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              net架构分析
+              .NET架构分析
             
           </span>
         </div>
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../SoftwareEngineering/domain-model/" class="md-tabs__link">
+        <a href="../../../SoftwareEngineering/arch/" class="md-tabs__link">
           
   
   Software Engineering
@@ -910,11 +910,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/elastic-search/elastcsearch-knowledge-points/" class="md-nav__link">
+      <a href="../../DB/elastic-search/elastic-stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    ElasticSearch知识点总结
+    Elastic Stack
   </span>
   
 
@@ -931,11 +931,116 @@
   
   
     <li class="md-nav__item">
-      <a href="../../DB/elastic-search/elastic-stack/" class="md-nav__link">
+      <a href="../../DB/elastic-search/es-1-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Elastic Stack
+    ElasticSearch基础知识
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/elastic-search/es-2-write-update-and-delete-process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch的写入、更新与删除流程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/elastic-search/es-3-search-process/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch搜索流程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/elastic-search/es-4-optimization/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch调优方法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/elastic-search/es-5-high-concuurency-consistency/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch高并发如何保证读写一致性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DB/elastic-search/es-6-other/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ElasticSearch
   </span>
   
 
@@ -2867,12 +2972,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    net架构分析
+    .NET架构分析
   </span>
   
 
@@ -2883,7 +2990,7 @@
         
   
   <span class="md-ellipsis">
-    net架构分析
+    .NET架构分析
   </span>
   
 
@@ -2895,6 +3002,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2903,18 +3012,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      清理无关引用
+      1. 理解业务需求
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      生成引用关系图
+      2. 审查架构设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 技术栈与框架分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 数据库设计与访问层分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 性能与扩展性分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 安全性分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-devops-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. DevOps 与 CI/CD 管道分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 监控与日志分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 代码质量与可维护性分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 文档与团队协作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
     </span>
   </a>
   
@@ -5668,6 +5858,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../Devops/kubernetes/kubespray-install-k8s/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装kubernetes集群
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../Devops/kubernetes/vitualbox_k8s/" class="md-nav__link">
         
   
@@ -5701,10 +5912,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9_20" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9_21" >
         
           
-          <label class="md-nav__link" for="__nav_4_9_20" id="__nav_4_9_20_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_9_21" id="__nav_4_9_21_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5715,8 +5926,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_20_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_9_20">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9_21">
             <span class="md-nav__icon md-icon"></span>
             Microk8s
           </label>
@@ -6506,6 +6717,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../SoftwareEngineering/arch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    软件架构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../SoftwareEngineering/domain-model/" class="md-nav__link">
         
   
@@ -6707,10 +6939,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" >
         
           
-          <label class="md-nav__link" for="__nav_5_10" id="__nav_5_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6721,8 +6953,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_10">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_11">
             <span class="md-nav__icon md-icon"></span>
             Draw
           </label>
@@ -6797,10 +7029,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
         
           
-          <label class="md-nav__link" for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6811,8 +7043,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12">
             <span class="md-nav__icon md-icon"></span>
             License
           </label>
@@ -6929,10 +7161,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_13" >
         
           
-          <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_13" id="__nav_5_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6943,8 +7175,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_13">
             <span class="md-nav__icon md-icon"></span>
             Model
           </label>
@@ -7299,6 +7531,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7307,18 +7541,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      清理无关引用
+      1. 理解业务需求
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      生成引用关系图
+      2. 审查架构设计
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 技术栈与框架分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 数据库设计与访问层分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 性能与扩展性分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 安全性分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-devops-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. DevOps 与 CI/CD 管道分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 监控与日志分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 代码质量与可维护性分析
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 文档与团队协作
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
     </span>
   </a>
   
@@ -7342,25 +7657,73 @@
   
 
 
-  <h1>net架构分析</h1>
+<h1 id="net">.NET架构分析<a class="headerlink" href="#net" title="Permanent link">&para;</a></h1>
+<p>进行 .NET 架构分析时，目的是评估应用程序的架构设计是否满足性能、可扩展性、维护性、安全性等关键要求。以下是一些步骤，帮助你对 .NET 架构进行系统化的分析：</p>
+<h2 id="1">1. <strong>理解业务需求</strong><a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>在进行任何技术分析之前，首先要确保你对应用程序的业务需求有全面的了解。这包括：
+   - 业务功能需求
+   - 性能和可扩展性要求
+   - 关键非功能性需求（安全性、稳定性等）</p>
+<p>业务需求将影响系统的各个方面，如数据库设计、服务分层、性能优化等。</p>
+<h2 id="2">2. <strong>审查架构设计</strong><a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>通过架构图或代码审查，分析系统的整体设计结构。通常可以从以下几个方面入手：</p>
+<ul>
+<li><strong>分层架构</strong>：检查是否使用了分层设计（例如MVC、三层架构），每一层的职责是否明确。</li>
+<li><strong>依赖注入</strong>：评估是否实现了依赖注入（Dependency Injection），确保组件之间的松耦合，方便扩展和测试。</li>
+<li><strong>模块化设计</strong>：看系统是否采用模块化设计，例如使用微服务或模块化单体（Modular Monolith）模式，确保可以独立扩展各个模块。</li>
+</ul>
+<h2 id="3">3. <strong>技术栈与框架分析</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>.NET Core vs .NET Framework</strong>：确定项目使用的是 .NET Core 还是 .NET Framework，前者适合跨平台且性能更好，后者则适合老项目和某些特定场景。</li>
+<li><strong>ORM 工具</strong>：如果使用了 ORM（如 Entity Framework），分析数据访问层的设计是否高效，是否需要优化查询性能。</li>
+<li><strong>前端技术栈</strong>：如果项目包含前端部分，了解使用的是 ASP.NET MVC、Blazor 还是其他前端技术栈，并评估其合理性。</li>
+</ul>
+<h2 id="4">4. <strong>数据库设计与访问层分析</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>数据库选择</strong>：评估使用的数据库（SQL Server、MySQL、PostgreSQL 等）是否适合当前需求。</li>
+<li><strong>分库分表</strong>：检查数据库是否使用分库分表、读写分离等策略来应对高并发和大数据量的需求。</li>
+<li><strong>查询性能</strong>：通过审查 SQL 查询、索引设计和缓存策略，分析数据访问性能是否可以优化。</li>
+</ul>
+<h2 id="5">5. <strong>性能与扩展性分析</strong><a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>缓存机制</strong>：评估是否使用了缓存（如 Redis 或内存缓存）来加速常用数据的访问，减少数据库压力。</li>
+<li><strong>负载均衡</strong>：如果是分布式系统，检查是否部署了负载均衡策略来分配流量，确保系统可以处理大规模并发请求。</li>
+<li><strong>异步与并行处理</strong>：评估应用程序是否利用了 .NET 中的异步编程模型（如 <code>async/await</code>）来优化性能，特别是在 I/O 操作密集的场景下。</li>
+</ul>
+<h2 id="6">6. <strong>安全性分析</strong><a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>身份验证与授权</strong>：审查系统是否使用了 OAuth、JWT 或其他身份验证机制，确保用户身份验证和授权的安全性。</li>
+<li><strong>数据保护</strong>：检查敏感数据是否进行了加密，确保符合安全标准，防止数据泄露。</li>
+<li><strong>防护策略</strong>：分析是否实施了必要的安全防护策略，如防止SQL注入、XSS攻击等。</li>
+</ul>
+<h2 id="7-devops-cicd">7. <strong>DevOps 与 CI/CD 管道分析</strong><a class="headerlink" href="#7-devops-cicd" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>构建与发布流程</strong>：评估是否实现了持续集成和持续部署（CI/CD），如使用 Azure DevOps、Jenkins 等工具。良好的 CI/CD 管道可以确保代码在每次更新后自动化测试和部署，减少生产事故的风险。</li>
+<li><strong>自动化测试</strong>：分析是否有完善的自动化单元测试、集成测试和UI测试。</li>
+</ul>
+<h2 id="8">8. <strong>监控与日志分析</strong><a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>日志系统</strong>：查看系统是否具备日志记录机制，使用了如 Serilog、NLog 等工具，帮助跟踪系统的行为并及时发现问题。</li>
+<li><strong>性能监控</strong>：评估是否使用了 Application Insights、Prometheus 等监控工具来监控应用程序的性能，发现性能瓶颈或异常行为。</li>
+</ul>
+<h2 id="9">9. <strong>代码质量与可维护性分析</strong><a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>代码结构</strong>：通过代码审查，评估代码是否具备良好的可读性、可维护性和扩展性。使用静态代码分析工具（如 SonarQube）来发现代码中的潜在问题。</li>
+<li><strong>重用性与封装性</strong>：检查是否使用了合适的设计模式，如依赖倒置、工厂模式等，确保代码具备高复用性和扩展性。</li>
+</ul>
+<h2 id="10">10. <strong>文档与团队协作</strong><a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>文档质量</strong>：检查是否有详细的系统设计文档，便于后续的维护和扩展。</li>
+<li><strong>团队协作工具</strong>：了解是否使用了 Jira、Confluence 等工具，来提高团队的协作和项目的透明度。</li>
+</ul>
+<h2 id="_1">总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>.NET 架构分析是一个系统化、全面的过程，涉及从技术栈、架构设计、性能优化、安全性等多个方面进行审查。通过结合业务需求、技术细节和工程实践，确保架构能够支持系统的长期演进与扩展。</p>
 
-<p>如何快速分析一个项目架构</p>
-<!-- more -->
-
-<p>如何在接手一个大型且多年积累的项目中，快速准确分析架构体系，并针对现有体系进行汇总分析。给出适当的转型方案。</p>
-<p>以下应为可行的方案</p>
-<h2 id="_1">清理无关引用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>通常来讲项目随着年限的增加，或者是因为工程进度等原因，会导致项目中存在大理无关的引用。为了更准备的分析首先使用coderush批量清理无关引用。</p>
-<h2 id="_2">生成引用关系图<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 
 
 
 
 
-
-
-  
-  
 
 
 
