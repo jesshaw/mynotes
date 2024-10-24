@@ -22,7 +22,7 @@
     
     
       
-        <title>Activiti - 乐享笔记</title>
+        <title>java的工作流引擎 - 乐享笔记</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#activiti" class="md-skip">
+        <a href="#java" class="md-skip">
           跳转至
         </a>
       
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Activiti
+              java的工作流引擎
             
           </span>
         </div>
@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DB/mysql/" class="md-nav__link">
+      <a href="../../../DB/mysql/mysql-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2263,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orm/hibernate/hibernate-interview-questions/" class="md-nav__link">
+      <a href="../../orm/hibernate/hibernate-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2332,7 +2332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orm/mybatis/" class="md-nav__link">
+      <a href="../../orm/mybatis/mybatics-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2434,7 +2434,7 @@
         
   
   <span class="md-ellipsis">
-    注册器选择
+    注册中心
   </span>
   
 
@@ -2662,7 +2662,7 @@
         
   
   <span class="md-ellipsis">
-    swagger 自动化文档
+    swagger API文档生成和测试工具
   </span>
   
 
@@ -2811,7 +2811,7 @@
           
   
   <span class="md-ellipsis">
-    Activiti
+    java的工作流引擎
   </span>
   
 
@@ -2822,7 +2822,7 @@
         
   
   <span class="md-ellipsis">
-    Activiti
+    java的工作流引擎
   </span>
   
 
@@ -2844,9 +2844,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、常见Java工作流引擎
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      选型比较
+      二、选型时的考虑因素
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、总结
     </span>
   </a>
   
@@ -7453,9 +7471,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      一、常见Java工作流引擎
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      选型比较
+      二、选型时的考虑因素
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      三、总结
     </span>
   </a>
   
@@ -7479,75 +7515,153 @@
   
 
 
-<h1 id="activiti">Activiti<a class="headerlink" href="#activiti" title="Permanent link">&para;</a></h1>
-<p><a href="https://juejin.cn/post/6844903910356828168">Flowable与Activiti的比较</a></p>
-<h2 id="_1">选型比较<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h1 id="java">java的工作流引擎<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
+<h2 id="java_1">一、常见Java工作流引擎<a class="headerlink" href="#java_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Camunda</strong>  </li>
+<li><strong>特点</strong>: 基于 BPMN 2.0 标准，提供流程管理、任务管理和事件驱动的工作流能力。</li>
+<li><strong>优势</strong>:  <ul>
+<li>易于与 Spring、Spring Boot 集成  </li>
+<li>强大的可视化流程设计器和 REST API 支持  </li>
+<li>支持多实例集群部署，扩展性强  </li>
+</ul>
+</li>
+<li><strong>适用场景</strong>: 企业级流程自动化，微服务架构中的分布式流程。</li>
+</ol>
+<p><a href="https://camunda.com/">官网</a></p>
+<ol>
+<li><strong>Flowable</strong>  </li>
+<li><strong>特点</strong>: 同样基于 BPMN、CMMN 和 DMN 标准，是 Activiti 的一个分支。  </li>
+<li><strong>优势</strong>:  <ul>
+<li>灵活的嵌入式集成  </li>
+<li>专注于轻量级工作流引擎，支持 Spring Boot  </li>
+<li>开源社区活跃  </li>
+</ul>
+</li>
+<li><strong>适用场景</strong>: 需要嵌入式工作流的系统，如订单系统、审批流。  </li>
+</ol>
+<p><a href="https://flowable.com/">官网</a></p>
+<ol>
+<li><strong>Activiti</strong>  </li>
+<li><strong>特点</strong>: 早期非常流行的工作流引擎，后来社区分裂成 Flowable 和 Activiti。  </li>
+<li><strong>优势</strong>:  <ul>
+<li>易于集成  </li>
+<li>轻量级，适合小型项目  </li>
+</ul>
+</li>
+<li><strong>适用场景</strong>: 如果已经使用老版本 Activiti，可以考虑继续沿用。  </li>
+</ol>
+<p><a href="https://www.activiti.org/">官网</a></p>
+<ol>
+<li><strong>jBPM</strong>  </li>
+<li><strong>特点</strong>: Red Hat 旗下的工作流引擎，支持 BPMN 和规则引擎 Drools 的集成。  </li>
+<li><strong>优势</strong>:  <ul>
+<li>强大的规则引擎与流程结合  </li>
+<li>企业支持，适合复杂业务场景  </li>
+</ul>
+</li>
+<li><strong>适用场景</strong>: 需要业务规则与工作流紧密结合的系统，如金融、保险领域。  </li>
+</ol>
+<p><a href="https://www.jbpm.org/">官网</a></p>
+<ol>
+<li><strong>Zeebe</strong>  </li>
+<li><strong>特点</strong>: Camunda 团队开发的专注于微服务编排的新一代工作流引擎。  </li>
+<li><strong>优势</strong>:  <ul>
+<li>事件驱动，支持异步消息编排  </li>
+<li>适合高并发分布式场景  </li>
+</ul>
+</li>
+<li><strong>适用场景</strong>: 微服务、事件驱动架构中的长流程管理。  </li>
+</ol>
+<p><a href="https://zeebe.io/">官网</a></p>
+<ol>
+<li><strong>Conductor (Netflix)</strong>  </li>
+<li><strong>特点</strong>: Netflix 开源的分布式工作流引擎，支持异步和事件驱动流程。  </li>
+<li><strong>优势</strong>:  <ul>
+<li>专为微服务架构设计  </li>
+<li>支持异步任务和长流程  </li>
+</ul>
+</li>
+<li><strong>适用场景</strong>: 微服务编排与 API 聚合，适合流媒体、IoT 系统。  </li>
+</ol>
+<p><a href="https://github.com/Netflix/conductor">GitHub</a></p>
+<h2 id="_1">二、选型时的考虑因素<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>功能需求</strong></li>
+<li><strong>BPMN、CMMN 支持</strong>: 如果需要标准化流程建模工具（如 BPMN 2.0），推荐 Camunda、Flowable 或 jBPM。</li>
+<li>
+<p><strong>规则引擎集成</strong>: 业务规则复杂时，可以选择 <strong>jBPM</strong>（与 Drools 集成）。</p>
+</li>
+<li>
+<p><strong>部署架构</strong></p>
+</li>
+<li><strong>单体应用</strong>: Flowable 和 Activiti 更轻量级，适合嵌入式部署。  </li>
+<li>
+<p><strong>微服务架构</strong>: Zeebe 或 Conductor 更适合支持异步、分布式环境的场景。</p>
+</li>
+<li>
+<p><strong>性能和可扩展性</strong></p>
+</li>
+<li><strong>高并发、分布式任务</strong>: Zeebe 和 Conductor 能处理更高的并发请求。  </li>
+<li>
+<p><strong>小型轻量级系统</strong>: Flowable 或 Activiti 可能更适合。</p>
+</li>
+<li>
+<p><strong>开发生态与社区支持</strong></p>
+</li>
+<li>Camunda、Flowable 社区活跃，文档齐全，适合团队较大或需要长周期支持的项目。</li>
+<li>
+<p>jBPM 企业支持较好，适合对 Red Hat 生态熟悉的团队。</p>
+</li>
+<li>
+<p><strong>企业支持与开源</strong>  </p>
+</li>
+<li><strong>Camunda、jBPM</strong> 提供企业支持版本。</li>
+<li>其他引擎如 <strong>Flowable、Zeebe</strong> 也有开源版本，适合低成本项目。</li>
+</ol>
+<h2 id="_2">三、总结<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
 <th>工作流引擎</th>
-<th>Activiti</th>
-<th>JBoss JBPM 6.5</th>
-<th>FixFlow 5.0</th>
+<th>主要特点</th>
+<th>适用场景</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>简介</td>
-<td>Activiti是由jBPM 的创建者Tom Baeyen离JBoss之后建立的项目，构建在开发 jBPM 版本1到4时积累的多年经验的基础之上，旨在创建下一代的 BPM 解决方案。</td>
-<td>jBPM是公开源代码项目，jBPM在200年10月18日，发布了2.0版本，并在同一天加入了JBoss，成为了JBoss企业中间件平台的一个组成部分，它的名称也改成JBoss jBPM。</td>
-<td>它是一款方正国际自主研发的开源BPM流程引擎。吸纳了 jBPM3和 Activiti5等国际开源流程引擎的精髓，参考了SAP Netwaver、IBM BPM 等重量级BPM产品功能。</td>
+<td><strong>Camunda</strong></td>
+<td>强大的 BPMN 支持，微服务友好</td>
+<td>企业级流程自动化</td>
 </tr>
 <tr>
-<td>文档</td>
-<td>文档丰富，csdn有相应专栏，并且国人贡献了一本《activiti实战》详细的讲解了基于activiti的开发内容，网上教程资源丰富。</td>
-<td>中文文档相对匮乏，网上教程资源参考价值不大。</td>
-<td>官网已关闭，并且很多内容一两年没进行维护，导致文档资源相对缺乏。官方提供一份完整用户向导手册，涵盖了所有FixFlow基本功能和简单操作。</td>
+<td><strong>Flowable</strong></td>
+<td>轻量级，嵌入式</td>
+<td>内嵌审批流、小型系统</td>
 </tr>
 <tr>
-<td>环境部署</td>
-<td>官方提供webapp war包，部署在Tomcat下可快速操作和了解activiti，esclipse提供支持activiti项目的ide插件，总的来说环境支持良好。</td>
-<td></td>
-<td>官方提供快速体验webapp war包，只要部署在本地Tomcat下就能测试。</td>
+<td><strong>Activiti</strong></td>
+<td>经典引擎，适合小型项目</td>
+<td>升级老项目</td>
 </tr>
 <tr>
-<td>学习成本</td>
-<td>Activiti上手比较快，界面也比较简洁、直观，学习周期相对较短。</td>
-<td>功能丰富复杂，众多的api接口，全英文的文档，因此学习周期比较长</td>
-<td>属于国内开源项目，但由于很久没人维护，导致很多资源丢失，网上分享的资源相对单一，学习周期相对较长。</td>
+<td><strong>jBPM</strong></td>
+<td>规则引擎集成，复杂流程</td>
+<td>规则与流程结合</td>
 </tr>
 <tr>
-<td>项目规模及二次开发难度</td>
-<td>代码量大，核心代码改动难度较大，但提供了完整的技术文档，架构良好，网上开发文档较多，一定上降低了二次开发的难度。</td>
-<td>代码量大，核心代码改动难度较大，技术文档少，二次开发难度大。</td>
-<td>整个核心源码大小在10M左右，官方提供几个demo开发教程，并且有相关的BBS论坛，一定上降低了二次开发的难度。</td>
+<td><strong>Zeebe</strong></td>
+<td>分布式、高并发</td>
+<td>微服务、长流程</td>
 </tr>
 <tr>
-<td>可视化流程表单设计器</td>
-<td>支持，用户体验好，但是流程设计器是英文版，还需要汉化。</td>
-<td>支持，但是用户体验不好，设计器属于英文版本，需要汉化。</td>
-<td>支持，用户体验好，设计器属于中文版本。</td>
-</tr>
-<tr>
-<td>表单设计器</td>
-<td>支持多种表单：动态表单，外置表单，普通表单，但表单设计未集成，需要自己集成表单设计。</td>
-<td>用户体验不好。</td>
-<td>不支持，表单需要外部设计，导入绑定。</td>
-</tr>
-<tr>
-<td>功能</td>
-<td>支持绝大部分工作流功能，符合中国国情的审批流程需要在此基础上进行开发。</td>
-<td>支持绝大部分工作流程，符合中国国情的审批需继续二次开发。</td>
-<td>支持绝大部分工作流程，基础功能：前进，后退，转发，转办，加签，跳转，退回，催办，追回，委托代办，自由跳转等。</td>
-</tr>
-<tr>
-<td>官方文档</td>
-<td>http://activiti.org/userguide/index.html</td>
-<td>http://docs.jboss.org/jbpm/v6.2/userguide/</td>
-<td>在源码目录fixflow-master\docbook\userguide\index.xml</td>
+<td><strong>Conductor</strong></td>
+<td>异步、事件驱动</td>
+<td>微服务编排</td>
 </tr>
 </tbody>
 </table>
+<p>选择时可根据<strong>业务规模、部署架构、团队经验</strong>进行综合考虑。如果项目是<strong>微服务架构</strong>，建议优先选择 <strong>Zeebe</strong> 或 <strong>Conductor</strong>；如果是<strong>标准化流程建模</strong>，则 <strong>Camunda</strong> 或 <strong>Flowable</strong> 是更好的选择。</p>
 
 
 

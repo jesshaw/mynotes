@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../../orm-common-pattern/">
+        <link rel="prev" href="../../hibernate/hibernate-qa/">
       
       
-        <link rel="next" href="../../mybatis/">
+        <link rel="next" href="../mybatis-columns-mapping/">
       
       
       <link rel="icon" href="../../../../../assets/lx.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Hibernate面试问题 - 乐享笔记</title>
+        <title>Mybatis - 乐享笔记</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#hibernate" class="md-skip">
+        <a href="#mybatis" class="md-skip">
           跳转至
         </a>
       
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Hibernate面试问题
+              Mybatis
             
           </span>
         </div>
@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/mysql/" class="md-nav__link">
+      <a href="../../../../DB/mysql/mysql-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2222,8 +2222,6 @@
                 
   
   
-    
-  
   
   
     
@@ -2235,11 +2233,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7_2" >
         
           
           <label class="md-nav__link" for="__nav_3_3_7_2" id="__nav_3_3_7_2_label" tabindex="0">
@@ -2253,7 +2251,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_7_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_7_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_7_2">
             <span class="md-nav__icon md-icon"></span>
             Hibernate
@@ -2264,28 +2262,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Hibernate面试问题
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../hibernate/hibernate-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2294,417 +2274,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hibernate面试问题
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hibernate_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Hibernate面试问题答
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hibernate面试问题答">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 什么是Hibernate框架？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-java-persistence-apijpa" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 什么是Java Persistence API（JPA）？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-hibernate-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 使用Hibernate Framework的主要优势是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-hibernatejdbc" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Hibernate相比JDBC有什么优势？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Hibernate框架的一些重要接口的名称是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 什么是Hibernate配置文件？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 什么是Hibernate映射文件？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 用于Hibernate映射的一些重要注解的名称是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-hibernate-sessionfactory" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. 什么是Hibernate SessionFactory以及如何配置它？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-hibernate-sessionfactory" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Hibernate SessionFactory是线程安全的吗？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-hibernate-session" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. 什么是Hibernate Session以及如何获取它？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. Hibernate会话是线程安全的吗？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-opensessiongetcurrentsession" class="md-nav__link">
-    <span class="md-ellipsis">
-      13. openSession和getCurrentSession有什么区别？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-hibernate-session-getload" class="md-nav__link">
-    <span class="md-ellipsis">
-      14. Hibernate Session get（）和load（）方法有什么区别？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-hibernatehibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      15. 什么是Hibernate缓存？解释Hibernate的一级缓存？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-ehcachehibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      16. 如何使用EHCache配置Hibernate二级缓存？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      22. Hibernate中的有哪些集合类型？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      23. 如何在Hibernate中实现连接？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-final" class="md-nav__link">
-    <span class="md-ellipsis">
-      24. 为什么我们不应该让实体类final类？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25-hql" class="md-nav__link">
-    <span class="md-ellipsis">
-      25. 什么是HQL？它有什么好处？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#26-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      26. 什么是Hibernate中的查询缓存？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#27-hibernatesql" class="md-nav__link">
-    <span class="md-ellipsis">
-      27. 我们可以在Hibernate中执行原生的sql查询吗？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#28-sqlhibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      28. 原生SQL查询支持在Hibernate中的好处是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#29-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      29. 什么是命名SQL查询？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#30-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      30. 命名SQL查询有什么好处？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#31-hibernate-criteria-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      31. Hibernate Criteria API有什么好处？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-hibernatesql" class="md-nav__link">
-    <span class="md-ellipsis">
-      32. 如何在日志文件中记录Hibernate生成的sql查询？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-hibernate-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      33. 什么是Hibernate Proxy以及它如何在延迟加载中提供帮助？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      34. 如何在Hibernate中实现关联？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      35. 事务管理如何在Hibernate中工作？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#36" class="md-nav__link">
-    <span class="md-ellipsis">
-      36. 什么是级联，什么是不同类型的级联？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#37-log4jhibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      37. 如何将log4j日志集成到Hibernate应用程序中？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#38-hibernatejndi-datasource" class="md-nav__link">
-    <span class="md-ellipsis">
-      38. 如何在Hibernate框架中使用应用程序服务器JNDI DataSource？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#39-hibernatespring" class="md-nav__link">
-    <span class="md-ellipsis">
-      39. 如何整合Hibernate和Spring框架？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#40-hibernatetemplate" class="md-nav__link">
-    <span class="md-ellipsis">
-      40. 什么是HibernateTemplate类？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#41-hibernateservletstruts2-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      41. 如何将Hibernate与Servlet或Struts2 Web应用程序集成？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      42. Hibernate框架中使用哪些设计模式？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      43. Hibernate框架遵循的最佳实践是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      44. 什么是Hibernate验证框架？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#45-hibernate-tools-eclipse" class="md-nav__link">
-    <span class="md-ellipsis">
-      45. Hibernate Tools Eclipse插件的好处是什么？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      引用
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2722,8 +2291,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -2733,11 +2304,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_7_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3_7_3" id="__nav_3_3_7_3_label" tabindex="0">
@@ -2751,7 +2322,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_7_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_7_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3_7_3">
             <span class="md-nav__icon md-icon"></span>
             Mybatis
@@ -2762,10 +2333,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../mybatis/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Mybatis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2774,6 +2365,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mybatismappers" class="md-nav__link">
+    <span class="md-ellipsis">
+      mybatis加载mappers文件有几种方式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      mybatis有几种执行器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlsession" class="md-nav__link">
+    <span class="md-ellipsis">
+      SqlSession是线程安全的吗
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      说说MyBatis分页插件的原理是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyBatis有哪些分页方式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatisxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyBatis的XML映射文件都有哪些标签
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis-" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyBatis-缓存机制，从一级缓存到二级缓存
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatishibernate" class="md-nav__link">
+    <span class="md-ellipsis">
+      谈谈MyBatis跟Hibernate的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hibernate" class="md-nav__link">
+    <span class="md-ellipsis">
+      hibernate的对象有几种状态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hibernate_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      谈谈hibernate的缓存机制
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何解决SQL注入
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2786,7 +2496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mybatis/mybatis-columns-mapping/" class="md-nav__link">
+      <a href="../mybatis-columns-mapping/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2867,7 +2577,7 @@
         
   
   <span class="md-ellipsis">
-    注册器选择
+    注册中心
   </span>
   
 
@@ -3095,7 +2805,7 @@
         
   
   <span class="md-ellipsis">
-    swagger 自动化文档
+    swagger API文档生成和测试工具
   </span>
   
 
@@ -3229,11 +2939,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../workflow/activiti/" class="md-nav__link">
+      <a href="../../../workflow/java-work-flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Activiti
+    java的工作流引擎
   </span>
   
 
@@ -7825,6 +7535,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7833,9 +7545,81 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#mybatismappers" class="md-nav__link">
+    <span class="md-ellipsis">
+      mybatis加载mappers文件有几种方式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      mybatis有几种执行器
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlsession" class="md-nav__link">
+    <span class="md-ellipsis">
+      SqlSession是线程安全的吗
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      说说MyBatis分页插件的原理是什么
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyBatis有哪些分页方式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatisxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyBatis的XML映射文件都有哪些标签
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatis-" class="md-nav__link">
+    <span class="md-ellipsis">
+      MyBatis-缓存机制，从一级缓存到二级缓存
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mybatishibernate" class="md-nav__link">
+    <span class="md-ellipsis">
+      谈谈MyBatis跟Hibernate的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hibernate" class="md-nav__link">
     <span class="md-ellipsis">
-      Hibernate面试问题
+      hibernate的对象有几种状态
     </span>
   </a>
   
@@ -7844,382 +7628,16 @@
         <li class="md-nav__item">
   <a href="#hibernate_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Hibernate面试问题答
+      谈谈hibernate的缓存机制
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Hibernate面试问题答">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. 什么是Hibernate框架？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-java-persistence-apijpa" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 什么是Java Persistence API（JPA）？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-hibernate-framework" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. 使用Hibernate Framework的主要优势是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-hibernatejdbc" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Hibernate相比JDBC有什么优势？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#5-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Hibernate框架的一些重要接口的名称是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 什么是Hibernate配置文件？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#7-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 什么是Hibernate映射文件？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#8-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 用于Hibernate映射的一些重要注解的名称是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#9-hibernate-sessionfactory" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. 什么是Hibernate SessionFactory以及如何配置它？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#10-hibernate-sessionfactory" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. Hibernate SessionFactory是线程安全的吗？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#11-hibernate-session" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. 什么是Hibernate Session以及如何获取它？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#12-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. Hibernate会话是线程安全的吗？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#13-opensessiongetcurrentsession" class="md-nav__link">
-    <span class="md-ellipsis">
-      13. openSession和getCurrentSession有什么区别？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#14-hibernate-session-getload" class="md-nav__link">
-    <span class="md-ellipsis">
-      14. Hibernate Session get（）和load（）方法有什么区别？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#15-hibernatehibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      15. 什么是Hibernate缓存？解释Hibernate的一级缓存？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#16-ehcachehibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      16. 如何使用EHCache配置Hibernate二级缓存？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#22-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      22. Hibernate中的有哪些集合类型？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#23-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      23. 如何在Hibernate中实现连接？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#24-final" class="md-nav__link">
-    <span class="md-ellipsis">
-      24. 为什么我们不应该让实体类final类？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#25-hql" class="md-nav__link">
-    <span class="md-ellipsis">
-      25. 什么是HQL？它有什么好处？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#26-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      26. 什么是Hibernate中的查询缓存？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#27-hibernatesql" class="md-nav__link">
-    <span class="md-ellipsis">
-      27. 我们可以在Hibernate中执行原生的sql查询吗？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#28-sqlhibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      28. 原生SQL查询支持在Hibernate中的好处是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#29-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      29. 什么是命名SQL查询？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#30-sql" class="md-nav__link">
-    <span class="md-ellipsis">
-      30. 命名SQL查询有什么好处？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#31-hibernate-criteria-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      31. Hibernate Criteria API有什么好处？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#32-hibernatesql" class="md-nav__link">
-    <span class="md-ellipsis">
-      32. 如何在日志文件中记录Hibernate生成的sql查询？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#33-hibernate-proxy" class="md-nav__link">
-    <span class="md-ellipsis">
-      33. 什么是Hibernate Proxy以及它如何在延迟加载中提供帮助？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#34-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      34. 如何在Hibernate中实现关联？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#35-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      35. 事务管理如何在Hibernate中工作？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#36" class="md-nav__link">
-    <span class="md-ellipsis">
-      36. 什么是级联，什么是不同类型的级联？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#37-log4jhibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      37. 如何将log4j日志集成到Hibernate应用程序中？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#38-hibernatejndi-datasource" class="md-nav__link">
-    <span class="md-ellipsis">
-      38. 如何在Hibernate框架中使用应用程序服务器JNDI DataSource？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#39-hibernatespring" class="md-nav__link">
-    <span class="md-ellipsis">
-      39. 如何整合Hibernate和Spring框架？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#40-hibernatetemplate" class="md-nav__link">
-    <span class="md-ellipsis">
-      40. 什么是HibernateTemplate类？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#41-hibernateservletstruts2-web" class="md-nav__link">
-    <span class="md-ellipsis">
-      41. 如何将Hibernate与Servlet或Struts2 Web应用程序集成？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#42-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      42. Hibernate框架中使用哪些设计模式？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#43-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      43. Hibernate框架遵循的最佳实践是什么？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#44-hibernate" class="md-nav__link">
-    <span class="md-ellipsis">
-      44. 什么是Hibernate验证框架？
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#45-hibernate-tools-eclipse" class="md-nav__link">
-    <span class="md-ellipsis">
-      45. Hibernate Tools Eclipse插件的好处是什么？
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#sql" class="md-nav__link">
     <span class="md-ellipsis">
-      引用
+      如何解决SQL注入
     </span>
   </a>
   
@@ -8243,479 +7661,149 @@
   
 
 
-  <h1>Hibernate面试问题</h1>
-
-<p>Hibernate是Java应用程序中使用最广泛的ORM工具之一 用于许多的企业应用程序中的数据库操作。因此我决定写一篇关于Hibernate面试问题的文章，以便在面试前刷新你的相关知识。</p>
-<!-- more -->
-<p>无论你是新手还是老鸟，具有良好的知识或Hibernate的ORM工具有助于破解面试问题。在这里，我提供了重要的Hibernate面试问题和答案，以帮助您提高自己的知识面，并打动面试官 </p>
-<p>最近我写了大量关于Hibernate的文章，其中大多数都包含完整的可下载项目 我会在需要时为他们提供参考，您可以通过他们来刷新您的知识。</p>
-<h2 id="hibernate">Hibernate面试问题<a class="headerlink" href="#hibernate" title="Permanent link">&para;</a></h2>
-<ol>
-<li>什么是Hibernate框架？</li>
-<li>什么是Java Persistence API（JPA）？</li>
-<li>使用Hibernate Framework的主要优势是什么？</li>
-<li>Hibernate相比JDBC有什么优势？</li>
-<li>Hibernate框架的一些重要接口的名称是什么？</li>
-<li>什么是Hibernate配置文件？</li>
-<li>什么是Hibernate映射文件？</li>
-<li>用于Hibernate映射的一些重要注解的名称是什么？</li>
-<li>什么是Hibernate SessionFactory以及如何配置它？</li>
-<li>Hibernate SessionFactory是线程安全的吗？</li>
-<li>什么是Hibernate Session以及如何获取它？</li>
-<li>Hibernate会话是线程安全的吗？</li>
-<li>openSession和getCurrentSession有什么区别？</li>
-<li>Hibernate Session get（）和load（）方法有什么区别？</li>
-<li>什么是Hibernate缓存？ 解释Hibernate的第一级缓存？</li>
-<li>如何使用EHCache配置Hibernate二级缓存？</li>
-<li>实体bean的有些什么不同状态？</li>
-<li>Hibernate Session merge（）用来做什么？</li>
-<li>Hibernate的save（），saveOrUpdate（）和persist（）方法有什么区别？</li>
-<li>如果我们在Entity bean中没有无参数构造函数会发生什么？</li>
-<li>排序集合（sorted collection）和有序集合（ordered collection）之间有什么区别，哪一个更好？</li>
-<li>Hibernate中的有哪些集合类型？</li>
-<li>如何在Hibernate中实现连接？</li>
-<li>为什么我们不应该让实体类final类？</li>
-<li>什么是HQL？它有什么好处？</li>
-<li>什么是Hibernate中的查询缓存？</li>
-<li>我们可以在Hibernate中执行原生的sql查询吗？</li>
-<li>原生SQL查询支持在Hibernate中的好处是什么？</li>
-<li>什么是命名SQL查询？</li>
-<li>命名SQL查询有什么好处？</li>
-<li>Hibernate Criteria API有什么好处？</li>
-<li>如何在日志文件中记录Hibernate生成的sql查询？</li>
-<li>什么是Hibernate Proxy以及它如何在延迟加载中提供帮助？</li>
-<li>如何在Hibernate中实现关联？</li>
-<li>事务管理如何在Hibernate中工作？</li>
-<li>什么是级联，什么是不同类型的级联？</li>
-<li>如何将log4j日志集成到Hibernate应用程序中？</li>
-<li>如何在Hibernate框架中使用应用程序服务器JNDI DataSource？</li>
-<li>如何整合Hibernate和Spring框架？</li>
-<li>什么是HibernateTemplate类？</li>
-<li>如何将Hibernate与Servlet或Struts2 Web应用程序集成？</li>
-<li>Hibernate框架中使用哪些设计模式？</li>
-<li>Hibernate框架遵循的最佳实践是什么？</li>
-<li>什么是Hibernate验证框架？</li>
-<li>Hibernate Tools Eclipse插件的好处是什么？</li>
-</ol>
-<h2 id="hibernate_1">Hibernate面试问题答<a class="headerlink" href="#hibernate_1" title="Permanent link">&para;</a></h2>
-<h3 id="1-hibernate">1. 什么是Hibernate框架？<a class="headerlink" href="#1-hibernate" title="Permanent link">&para;</a></h3>
-<p>对象关系映射或ORM是将应用程序域模型对象映射到关系数据库表的编程技术 Hibernate是基于Java的ORM工具，它提供了将应用程序域对象映射到关系数据库表的框架，反之亦然。</p>
-<p>Hibernate提供了Java Persistence API的引用实现，这使得它成为具有松耦合优势的ORM工具的绝佳选择，我们可以使用Hibernate Persistence API进行CRUD操作，Hibernate框架提供了使用JPA注解以及基于XML的配置将普通的旧java对象映射到传统数据库表的选项。</p>
-<p>同样，Hibernate配置也很灵活，可以通过XML配置文件以及编程方式完成，有关Hibernate框架用法的快速概述，您可以学习Hibernate初学者教程 。</p>
-<h3 id="2-java-persistence-apijpa">2. 什么是Java Persistence API（JPA）？<a class="headerlink" href="#2-java-persistence-apijpa" title="Permanent link">&para;</a></h3>
-<p>Java Persistence API（JPA）提供了管理应用程序中的关系数据的规范，当前JPA 2.1版于2011年7月开始，名为JSR 338. 2013年5月22日，JPA 2.1被批准为最终版。</p>
-<p>JPA规范是在javax.persistence包中，使用注解定义的，使用JPA注解有助于我们编写实现独立（无依赖）的代码。</p>
-<h3 id="3-hibernate-framework">3. 使用Hibernate Framework的主要优势是什么？<a class="headerlink" href="#3-hibernate-framework" title="Permanent link">&para;</a></h3>
-<p>使用Hibernate框架的一些主要优势是：</p>
-<ol>
-<li>Hibernate消除了JDBC附带的所有重复代码并负责管理资源，因此我们可以专注于业务逻辑。</li>
-<li>Hibernate框架提供对XML和JPA注解的支持，这使得我们的代码实现独立。</li>
-<li>Hibernate提供了一种类似于SQL的强大查询语言（HQL），然而，HQL完全是面向对象的，理解继承，多态和关联等概念。</li>
-<li>Hibernate是红帽社区（ Red Hat Community）的一个开源项目，在世界各地都有使用这使得它成为比其他人更好的选择，因为学习曲线很小，并且有大量在线文档和帮助可以在论坛中轻松获得。</li>
-<li>Hibernate很容易与其他Java EE框架集成，它非常流行，因此Spring Framework提供了内置的支持，将Hibernate与Spring应用程序集成在一起。</li>
-<li>Hibernate支持使用代理对象进行延迟初始化，并仅在需要时执行实际的数据库查询。</li>
-<li>Hibernate缓存有助于我们获得更好的性能。</li>
-<li>对于数据库供应商特定的功能，Hibernate是合适的，因为我们也可以执行本机sql查询。</li>
-</ol>
-<p>总体来说，Hibernate是目前ORM工具市场上的最佳选择，它包含了ORM工具所需的所有功能。</p>
-<h3 id="4-hibernatejdbc">4. Hibernate相比JDBC有什么优势？<a class="headerlink" href="#4-hibernatejdbc" title="Permanent link">&para;</a></h3>
-<p>Hibernate框架相对于JDBC的一些主要优势是：</p>
-<ol>
-<li>Hibernate移除了JDBC API附带的大量重复代码，代码看起来更清晰可读。</li>
-<li>Hibernate支持继承，关联和集合 这些功能在JDBC API中不存在。</li>
-<li>Hibernate隐式提供事务管理，事实上大部分查询不能在事务外执行。在JDBC API中，我们需要使用提交和回滚编写事务管理代码，阅读更多关于JDBC事务管理 。</li>
-<li>JDBC API在检测到异常时，会抛出SQLException ，所以我们需要编写大量的try-catch块代码 大多数情况下，在业务管理中，每次JDBC调用调用多次都是冗余的，Hibernate包装JDBC异常并抛出<code>JDBCException</code>或<code>HibernateException</code>未检查异常，所以我们不需要编写代码来处理它，Hibernate内置的事务管理消除了try-catch块的使用。</li>
-<li>Hibernate查询语言（HQL）更加面向对象，接近于Java编程语言，对于JDBC，我们需要编写原生的SQL查询。</li>
-<li>Hibernate支持缓存，性能更好，JDBC查询不会被缓存，因此性能很低。
-7 Hibernate提供了选项，我们也可以通过它来创建数据库表，因为JDBC表必须存在于数据库中。</li>
-<li>Hibernate配置可以帮助我们使用JDBC连接以及连接池的JNDI DataSource，这是企业应用程序中非常重要的特性，但在JDBC API中完全缺失。</li>
-<li>Hibernate支持JPA注解，所以代码与实现无关，可以用其他ORM工具轻松替换，JDBC代码与应用程序耦合非常紧密。</li>
-</ol>
-<h3 id="5-hibernate">5. Hibernate框架的一些重要接口的名称是什么？<a class="headerlink" href="#5-hibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate框架的一些重要接口是：</p>
-<ol>
-<li><strong>SessionFactory（org.Hibernate.SessionFactory）</strong>：SessionFactory是单个数据库的编译映射的不可变线程安全的缓存 我们需要初始化SessionFactory，然后我们可以缓存并重用它，SessionFactory实例用于获取数据库操作的Session对象。</li>
-<li><strong>Session（org.Hibernate.Session）</strong>：Session是一个单线程，暂存的对象，表示应用程序和持久性存储之间的会话，它封装了JDBC<code>java.sql.Connection</code>并作为<code>org.Hibernate.Transaction</code>的工厂工作 我们应该只在需要时才打开会话，并在我们完成使用后立即关闭会话。Session对象是java应用程序代码和Hibernate框架之间的接口，并提供CRUD操作的方法。</li>
-<li><strong>Transaction（org.Hibernate.Transaction）</strong>：Transaction是应用程序用来指定原子工作单元的单线程，暂存对象，它从底层的JDBC或JTA(Java Transaction API)事务中抽象出应用程序，在某些情况下，org.Hibernate.Session可能跨越多个org.Hibernate.Transaction。</li>
-</ol>
-<h3 id="6-hibernate">6. 什么是Hibernate配置文件？<a class="headerlink" href="#6-hibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate配置文件包含特定于数据库的配置并用于初始化SessionFactory，我们在Hibernate配置xml文件中提供数据库凭证或JNDI资源信息。Hibernate配置文件的其他一些重要部分是Dialect信息，以便Hibernate知道数据库类型和映射文件或类的详细信息。</p>
-<h3 id="7-hibernate">7. 什么是Hibernate映射文件？<a class="headerlink" href="#7-hibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate映射文件用于定义实体bean字段和数据库表列映射。我们知道JPA注解可用于映射，但有时在使用第三方类时，XML映射文件可能更方便，而不能使用注解。</p>
-<h3 id="8-hibernate">8. 用于Hibernate映射的一些重要注解的名称是什么？<a class="headerlink" href="#8-hibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate支持JPA注解，并且在org.Hibernate.annotations包中有一些其他注解，使用的一些重要的JPA和Hibernate注解是：</p>
-<ol>
-<li><strong>javax.persistence.Entity</strong> ：与模型类一起使用来指定它们是实体bean。</li>
-<li><strong>javax.persistence.Table</strong> ：与实体bean一起用于在数据库中定义相应的表名。</li>
-<li><strong>javax.persistence.Access</strong> ：用于定义访问类型，字段或属性。默认值是field，如果你想让Hibernate使用getter/setter方法，那么你需要将它设置为属性。</li>
-<li><strong>javax.persistence.Id</strong> ：用于在实体bean中定义主键。</li>
-<li><strong>javax.persistence.EmbeddedId</strong> ：用于在实体bean中定义复合主键。</li>
-<li><strong>javax.persistence.Column</strong> ：用于在数据库表中定义列名。</li>
-<li><strong>javax.persistence.GeneratedValue</strong> ：用于定义用于生成主键的策略 与javax.persistence.GenerationType enum一起使用。</li>
-<li><strong>javax.persistence.OneToOne</strong> ：用于定义两个实体bean之间的一对一映射 我们还有其他类似的注解，如OneToMany，ManyToOne和ManyToMany</li>
-<li><strong>org.Hibernate.annotations.Cascade</strong> ：用于定义两个实体bean之间的级联，与映射一起使用。它与org.Hibernate.annotations.CascadeType一起使用</li>
-<li><strong>javax.persistence.PrimaryKeyJoinColumn</strong> ：用于为外键定义属性。与org.Hibernate.annotations.GenericGenerator和org.Hibernate.annotations.Parameter</li>
-</ol>
-<p>以下是显示这些注解使用情况的两个类。</p>
-<pre><code class="language-java">import javax.persistence.Access;
-import javax.persistence.AccessType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.Cascade;
-
-@Entity
-@Table(name = &quot;EMPLOYEE&quot;)
-@Access(value=AccessType.FIELD)
-public class Employee {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = &quot;emp_id&quot;)
-    private long id;
-
-    @Column(name = &quot;emp_name&quot;)
-    private String name;
-
-    @OneToOne(mappedBy = &quot;employee&quot;)
-    @Cascade(value = org.hibernate.annotations.CascadeType.ALL)
-    private Address address;
-
-    //getter setter methods
+<h1 id="mybatis">Mybatis<a class="headerlink" href="#mybatis" title="Permanent link">&para;</a></h1>
+<h2 id="mybatismappers">mybatis加载mappers文件有几种方式<a class="headerlink" href="#mybatismappers" title="Permanent link">&para;</a></h2>
+<p>有resource, url, class, package4种，package优先级最高。</p>
+<h2 id="mybatis_1">mybatis有几种执行器<a class="headerlink" href="#mybatis_1" title="Permanent link">&para;</a></h2>
+<p>有3种，分别是simple，reuse,  batch。</p>
+<h2 id="sqlsession">SqlSession是线程安全的吗<a class="headerlink" href="#sqlsession" title="Permanent link">&para;</a></h2>
+<p>本身不是线程安全的，但在Spring环境下是线程安全的。Spring通过ThreadLocal，确切的说是通过对象ThreadLocal<Map\<SqlSessionFactory,SqlSessionHolder>>来实现线程安全。</p>
+<h2 id="mybatis_2">说说MyBatis分页插件的原理是什么<a class="headerlink" href="#mybatis_2" title="Permanent link">&para;</a></h2>
+<p>首先，在MyBatis内部定义了一个拦截器接口</p>
+<p>所有的插件都要实现该接口，看看这个接口的定义</p>
+<pre><code class="language-java">public interface Interceptor {
+    Object intercept(Invocation invocation) throws Throwable;
+    Object plugin(Object target);
+    void setProperties(Properties properties);
 }
 </code></pre>
-<pre><code class="language-java">import javax.persistence.Access;
-import javax.persistence.AccessType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
-import javax.persistence.Table;
-
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.Parameter;
-
-@Entity
-@Table(name = &quot;ADDRESS&quot;)
-@Access(value=AccessType.FIELD)
-public class Address {
-
-    @Id
-    @Column(name = &quot;emp_id&quot;, unique = true, nullable = false)
-    @GeneratedValue(generator = &quot;gen&quot;)
-    @GenericGenerator(name = &quot;gen&quot;, strategy = &quot;foreign&quot;, parameters = { @Parameter(name = &quot;property&quot;, value = &quot;employee&quot;) })
-    private long id;
-
-    @Column(name = &quot;address_line1&quot;)
-    private String addressLine1;
-
-    @OneToOne
-    @PrimaryKeyJoinColumn
-    private Employee employee;
-
-    //getter setter methods
-}
+<p>那么其中一个关键的方法就是intercept，从而实现拦截</p>
+<p>分页插件的原理就是使用MyBatis提供的插件接口，实现自定义插件，在插件的拦截方法内，拦截待执行的SQL，然后根据设置的dialect（方言），和设置的分页参数，重写SQL ，生成带有分页语句的SQL，执行重写后的SQL，从而实现分页。</p>
+<p>所以<strong><em>原理还是基于拦截器</em></strong>。</p>
+<h2 id="mybatis_3">MyBatis有哪些分页方式<a class="headerlink" href="#mybatis_3" title="Permanent link">&para;</a></h2>
+<p><strong><em>逻辑分页</em></strong>，是指使用MyBatis自带的RowBounds进行分页，它会一次性查出多条数据，然后再检索分页中的数据，具体一次性查询多少条数据，受封装jdbc配置的fetch-size决定。</p>
+<p>而<strong><em>物理分页</em></strong>，是从数据库中查询指定条数的数据，而我们用的分页插件PageHelper实现的就是物理分页。</p>
+<h2 id="mybatisxml">MyBatis的XML映射文件都有哪些标签<a class="headerlink" href="#mybatisxml" title="Permanent link">&para;</a></h2>
+<p>这道题，主要是看看你是否知道常用的标签，如果没记住，不用慌，翻开XML文件看看即可。</p>
+<p>来，我们罗列下：</p>
+<ol>
+<li>
+<p>基本的CRUD标签，select|insert|updae|delete</p>
+</li>
+<li>
+<p><resultMap>、<parameterMap>、<sql>、<include>、<selectKey></p>
+</li>
+<li>
+<p>动态SQL标签：trim | where | set | foreach | if | choose | when | otherwise | bind等，其中<sql>为sql片段标签，通过<include>标签引入sql片段</p>
+</li>
+</ol>
+<h2 id="mybatis-">MyBatis-缓存机制，从一级缓存到二级缓存<a class="headerlink" href="#mybatis-" title="Permanent link">&para;</a></h2>
+<p>缓存，主要作用是提高了查询性能，减少了跟数据库交互的次数，从而也减轻了数据库承受的压力。</p>
+<p>适用于读多写少的场景，如果数据变化频率非常高，则不适用。</p>
+<p>MyBatis的缓存分为一级缓存和二级缓存。</p>
+<p>下面，我们通过做实验，来掌握MyBatis的一级缓存和二级缓存的特点：</p>
+<ol>
+<li>来，关门，上一级缓存</li>
+</ol>
+<p><a class="glightbox" href="../assets/55ae828faa8be6f38272760640e78036fc8ddb68219069bf0984079ae74783c6.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="picture 39" src="../assets/55ae828faa8be6f38272760640e78036fc8ddb68219069bf0984079ae74783c6.png" /></a>  </p>
+<p>观察执行结果：
+<a class="glightbox" href="../assets/ff224549067b8d3312b1f23bcbf284854940bd13fa3a69f1bcf0abece043f0ef.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="picture 40" src="../assets/ff224549067b8d3312b1f23bcbf284854940bd13fa3a69f1bcf0abece043f0ef.png" /></a>  </p>
+<p>再做一次实验，中间修改对象的信息
+<a class="glightbox" href="../assets/32281475b62f6739f587f803e350511d301f6a0b0881aca34fe6b53e30d90714.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="picture 41" src="../assets/32281475b62f6739f587f803e350511d301f6a0b0881aca34fe6b53e30d90714.png" /></a>  </p>
+<p>再做一次实验，中间新增记录
+<a class="glightbox" href="../assets/71fe4919c454bec18a6e7a2ebbff39dc4ade7e22be1f22b069a16e7fb1e32305.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="picture 42" src="../assets/71fe4919c454bec18a6e7a2ebbff39dc4ade7e22be1f22b069a16e7fb1e32305.png" /></a>  </p>
+<p>一级缓存总结：</p>
+<ol>
+<li>
+<p>一级缓存模式是开启状态</p>
+</li>
+<li>
+<p>一级缓存作用域在于SqlSession（大家可以关闭SqlSession，然后创建一个新的，再获取对象，观察实验结果）</p>
+</li>
+<li>
+<p>如果中间有对数据的更新操作，则将清空一级缓存。</p>
+</li>
+</ol>
+<p>下面，我们来看<strong><em>二级缓存</em></strong>（重点）</p>
+<p>要使用二级缓存，需要经历两个步骤</p>
+<ol>
+<li>
+<p>开启二级缓存（默认处于开启状态）</p>
+<pre><code>&lt;setting name="cacheEnabled" value="true"/&gt;
 </code></pre>
-<h3 id="9-hibernate-sessionfactory">9. 什么是Hibernate SessionFactory以及如何配置它？<a class="headerlink" href="#9-hibernate-sessionfactory" title="Permanent link">&para;</a></h3>
-<p>SessionFactory是用于获取Session对象的工厂类。SessionFactory负责读取Hibernate配置参数并连接到数据库并提供Session对象。通常应用程序具有一个SessionFactory实例，并且服务于客户端请求的线程从该工厂获取Session实例。</p>
-<p>SessionFactory的内部状态是不可变的。一旦它被创建，这个内部状态就被设置了。这个内部状态包括关于对象/关系映射的所有元数据。</p>
-<p>SessionFactory还提供获取Class元数据和Statistics实例以获取查询执行状态，二级缓存详细信息等的方法。</p>
-<h3 id="10-hibernate-sessionfactory">10. Hibernate SessionFactory是线程安全的吗？<a class="headerlink" href="#10-hibernate-sessionfactory" title="Permanent link">&para;</a></h3>
-<p>SessionFactory的内部状态是不可变的，所以它是线程安全的。多个线程可以同时访问它以获取Session实例。</p>
-<h3 id="11-hibernate-session">11. 什么是Hibernate Session以及如何获取它？<a class="headerlink" href="#11-hibernate-session" title="Permanent link">&para;</a></h3>
-<p>Hibernate Session是java应用层和Hibernate之间的接口。这是用来执行数据库操作的核心接口。会话的生命周期受事务开始和结束的约束。</p>
-<p>会话提供方法来执行持久对象的创建，读取，更新和删除操作。我们可以执行HQL查询，SQL本机查询并使用Session对象创建条件。</p>
-<h3 id="12-hibernate">12. Hibernate会话是线程安全的吗？<a class="headerlink" href="#12-hibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate Session对象不是线程安全的，每个线程都应该获得它自己的会话实例，并在工作完成后关闭它。</p>
-<h3 id="13-opensessiongetcurrentsession">13. openSession和getCurrentSession有什么区别？<a class="headerlink" href="#13-opensessiongetcurrentsession" title="Permanent link">&para;</a></h3>
-<p>Hibernate SessionFactory getCurrentSession（）方法返回绑定到上下文的会话。但为了这个工作，我们需要在Hibernate配置文件中配置它。由于这个会话对象属于Hibernate上下文，所以我们不需要关闭它。一旦会话工厂关闭，此会话对象就会关闭。</p>
-<pre><code class="language-xml">&lt;property name=&quot;hibernate.current_session_context_class&quot;&gt;thread&lt;/property&gt;
-</code></pre>
-<p>Hibernate SessionFactory openSession（）方法总是打开一个新的会话。一旦我们完成了所有的数据库操作，我们应该关闭这个会话对象。我们应该在多线程环境中为每个请求打开一个新会话。</p>
-<p>还有另一种方法openStatelessSession（）返回无状态会话，有关示例的更多详细信息，请阅读Hibernate openSession vs getCurrentSession。</p>
-<h3 id="14-hibernate-session-getload">14. Hibernate Session get（）和load（）方法有什么区别？<a class="headerlink" href="#14-hibernate-session-getload" title="Permanent link">&para;</a></h3>
-<p>Hibernate会话有不同的方法来从数据库加载数据。get和load是最常用的方法，首先看起来它们很相似，但它们之间有一些差异。</p>
-<ol>
-<li>get（）在调用数据后立即加载数据，而load（）返回代理对象并仅在实际需要时才加载数据，所以load（）更好，因为它支持延迟加载。</li>
-<li>由于load（）在没有找到数据时抛出异常，所以只有当我们知道数据存在时才应该使用它。（get方法返回null，但load若为null则报异常）</li>
-<li>当我们想要确保数据库中存在数据时，我们应该使用get（）。</li>
+</li>
+<li>
+<p>在Mapper.xml中，配置二级缓存（也支持在接口配置）</p>
+<p>在标签<mapper>下面添加<cache/>标签即可</p>
+<p>默认的二级缓存配置会有如下特点：</p>
+<p>2.1 所有的Select语句将会被缓存</p>
+<p>2.2 所有的更新语句（insert、update、delete）将会刷新缓存</p>
+<p>2.3 缓存将采用LRU（Least Recently Used 最近最少使用）算法来回收</p>
+<p>2.4 缓存会存储1024个对象的引用</p>
+<p>回收算法建议采用LRU，当然，还提供了FIFO（先进先出），SOFT（软引用），WEAK（弱引用）等其他算法。</p>
+</li>
+<li>
+<p>做实验，验证二级缓存的效果：</p>
+</li>
 </ol>
-<p>有关差异的说明，请阅读Hibernate get vs load 。</p>
-<h3 id="15-hibernatehibernate">15. 什么是Hibernate缓存？解释Hibernate的一级缓存？<a class="headerlink" href="#15-hibernatehibernate" title="Permanent link">&para;</a></h3>
-<p>顾名思义，Hibernate缓存查询数据以使我们的应用程序更快。如果使用正确，Hibernate Cache可以在获得快速应用程序性能方面非常有用 缓存背后的想法是减少数据库查询的数量，从而减少应用程序的吞吐时间。</p>
-<p>Hibernate一级缓存与Session对象相关联。Hibernate一级缓存默认启用，无法禁用它。然而，Hibernate提供了一些方法，我们可以通过这些方法从缓存中删除选定的对象或完全清除缓存。</p>
-<p>在会话中缓存的任何对象对其他会话都不可见，并且在会话关闭时，所有缓存的对象也将丢失。</p>
-<p>为了更好的解释，请阅读Hibernate一级缓存 。</p>
-<h3 id="16-ehcachehibernate">16. 如何使用EHCache配置Hibernate二级缓存？<a class="headerlink" href="#16-ehcachehibernate" title="Permanent link">&para;</a></h3>
-<p>EHCache是​​利用Hibernate二级缓存的最佳选择。在Hibernate应用程序中启用EHCache需要执行以下步骤。</p>
-<p>在Maven项目中添加Hibernate-ehcache依赖项，如果它不是maven，则添加相应的jar。</p>
-<pre><code class="language-xml">&lt;dependency&gt;
-        &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
-        &lt;artifactId&gt;hibernate-ehcache&lt;/artifactId&gt;
-        &lt;version&gt;4.3.5.Final&lt;/version&gt;
-&lt;/dependency&gt;
-</code></pre>
-<p>在Hibernate配置文件中添加以下属性。
- ```xml
- <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.EhCacheRegionFactory</property></p>
-<!-- For singleton factory -->
-<!-- <property name="hibernate.cache.region.factory_class">org.hibernate.cache.ehcache.SingletonEhCacheRegionFactory</property>
--->
-
-<!-- enable second level cache and query cache -->
-<p><property name="hibernate.cache.use_second_level_cache">true</property>
-<property name="hibernate.cache.use_query_cache">true</property>
-<property name="net.sf.ehcache.configurationResourceName">/myehcache.xml</property>
- ```
-创建EHCache配置文件，示例文件myehcache.xml如下所示。</p>
-<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;ehcache xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
-    xsi:noNamespaceSchemaLocation=&quot;ehcache.xsd&quot; updateCheck=&quot;true&quot;
-    monitoring=&quot;autodetect&quot; dynamicConfig=&quot;true&quot;&gt;
-
-    &lt;diskStore path=&quot;java.io.tmpdir/ehcache&quot; /&gt;
-
-    &lt;defaultCache maxEntriesLocalHeap=&quot;10000&quot; eternal=&quot;false&quot;
-        timeToIdleSeconds=&quot;120&quot; timeToLiveSeconds=&quot;120&quot; diskSpoolBufferSizeMB=&quot;30&quot;
-        maxEntriesLocalDisk=&quot;10000000&quot; diskExpiryThreadIntervalSeconds=&quot;120&quot;
-        memoryStoreEvictionPolicy=&quot;LRU&quot; statistics=&quot;true&quot;&gt;
-        &lt;persistence strategy=&quot;localTempSwap&quot; /&gt;
-    &lt;/defaultCache&gt;
-
-    &lt;cache name=&quot;employee&quot; maxEntriesLocalHeap=&quot;10000&quot; eternal=&quot;false&quot;
-        timeToIdleSeconds=&quot;5&quot; timeToLiveSeconds=&quot;10&quot;&gt;
-        &lt;persistence strategy=&quot;localTempSwap&quot; /&gt;
-    &lt;/cache&gt;
-
-    &lt;cache name=&quot;org.hibernate.cache.internal.StandardQueryCache&quot;
-        maxEntriesLocalHeap=&quot;5&quot; eternal=&quot;false&quot; timeToLiveSeconds=&quot;120&quot;&gt;
-        &lt;persistence strategy=&quot;localTempSwap&quot; /&gt;
-    &lt;/cache&gt;
-
-    &lt;cache name=&quot;org.hibernate.cache.spi.UpdateTimestampsCache&quot;
-        maxEntriesLocalHeap=&quot;5000&quot; eternal=&quot;true&quot;&gt;
-        &lt;persistence strategy=&quot;localTempSwap&quot; /&gt;
-    &lt;/cache&gt;
-&lt;/ehcache&gt;
-</code></pre>
-<p>使用@Cache注解和缓存策略注解实体bean 例如，</p>
-<pre><code class="language-java">import org.hibernate.annotations.Cache;
-import org.hibernate.annotations.CacheConcurrencyStrategy;
-
-@Entity
-@Table(name = &quot;ADDRESS&quot;)
-@Cache(usage=CacheConcurrencyStrategy.READ_ONLY, region=&quot;employee&quot;)
-public class Address {
-
-}
- ```
-就是这样，我们完成了 Hibernate将使用EHCache进行二级缓存，请阅读Hibernate EHCache示例以获得完整的解释示例。
-
-
-### 17. 实体bean的有些什么不同状态？
-
-实体bean实例可以以下三种状态的其中之一。
-
-1. **瞬时态（Transient）** ：当对象永远不会持久或与任何会话无关联时，它处于瞬态状态。通过调用save（），persist（）或saveOrUpdate（），可以使瞬态实例持久化 通过调用delete（）可以使持久性实例成为暂态。
-2. **持久态（Persistent）** ：当对象与唯一会话关联时，它处于持久状态。由get（）或load（）方法返回的任何实例都是持久的。
-3. **游离态（Detached）** ：当一个对象先前是持久性的，但没有与任何会话相关联时，它处于游离状态。游离的实例可以通过调用update（），saveOrUpdate（），lock（）或replicate（）来持久化。通过调用merge（），瞬时或游离实例的状态也可以作为新的持久实例持久化。
-
-### 18. Hibernate Session merge（）用来做什么？
-
-Hibernate合并可以用来更新现有的值，但是这种方法从传递的实体对象中创建一个副本并返回它。返回的对象是持久化上下文的一部分，并对任何更改进行跟踪，传递的对象不被跟踪。 示例程序，阅读Hibernate合并 。
-
-
-### 19. Hibernate的save（），saveOrUpdate（）和persist（）方法有什么区别？
-
-Hibernate保存可用于将实体保存到数据库。save（）的问题是它可以在没有事务的情况下被调用，如果我们有映射实体，那么只有主对象被保存，导致数据不一致。另外保存立即返回生成的ID。
-
-Hibernate persist与事务保存类似。我觉得它比保存更好，因为我们不能在事务边界外使用它，所以所有的对象映射都被保留下来。此外，persist不会立即返回生成的ID，因此数据持久化发生在需要的时候。
-
-根据提供的数据将Hibernate saveOrUpdate结果插入或更新查询。如果数据存在于数据库中，则执行更新查询。我们也可以在没有事务的情况下使用saveOrUpdate（），但如果会话不刷新，您将再次遇到映射对象未保存的问题。例如使用这些方法，请阅读Hibernate save vs persist 。
-
-
-### 20. 如果我们在Entity bean中没有无参数构造函数会发生什么？
-
-Hibernate使用Reflection API来创建实体bean的实例，通常在调用get（）或load（）方法时 方法Class.newInstance()用于此，它需要无参数构造函数。因此，如果你在实体bean中没有无参数构造函数，Hibernate将无法实例化它，你将得到HibernateException 。
-
-
-### 21. 排序集合（sorted collection）和有序集合（ordered collection）之间有什么区别，哪一个更好？
-
-当我们使用Collection API排序算法对一个集合进行排序时，它被称为排序集合。对于小型集合来说，它没有多少开销，但对于较大的集合，它可能导致性能下降和OutOfMemory错误。另外，实体bean应该实现`Comparable`或`Comparator`接口，以便在Java对象列表排序时进行更多的工作。
-
-如果我们使用Hibernate框架从数据库加载集合数据，我们可以使用它的Criteria API来使用“order by”子句来获得有序列表。下面的代码片段显示了如何获取它。
-
-```java
-List&lt;Employee&gt; empList = session.createCriteria(Employee.class)
-                        .addOrder(Order.desc(&quot;id&quot;)).list();
-</code></pre>
-<p>有序列表比排序列表要好，因为实际的排序是在数据库级完成的，速度很快并且不会导致内存问题。</p>
-<h3 id="22-hibernate">22. Hibernate中的有哪些集合类型？<a class="headerlink" href="#22-hibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate中有五种集合类型用于一对多关系映射。</p>
+<p><a class="glightbox" href="../assets/706599886bd85c65afaedf0c526386e713d51573d4950e056758243365057b8c.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="picture 44" src="../assets/706599886bd85c65afaedf0c526386e713d51573d4950e056758243365057b8c.png" /></a>  </p>
+<p>观察结果：
+<a class="glightbox" href="../assets/4bd36af33cfccb56c57e69d4073e01171b7a3a80d35f5758f9590a4b6811318b.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="picture 43" src="../assets/4bd36af33cfccb56c57e69d4073e01171b7a3a80d35f5758f9590a4b6811318b.png" /></a>  </p>
+<p>二级缓存关键说明：</p>
+<p>当关闭了SqlSession之后，才会将查询数据保存到二级缓存中（SqlSessionFactory）中，所以才有了上述的缓存命中率。MyBatis的二级缓存默认采用的是Map的实现。</p>
 <ol>
-<li>Bag</li>
-<li>Set</li>
-<li>List</li>
-<li>Array</li>
-<li>Map</li>
+<li>衍生</li>
 </ol>
-<h3 id="23-hibernate">23. 如何在Hibernate中实现连接？<a class="headerlink" href="#23-hibernate" title="Permanent link">&para;</a></h3>
-<p>有多种方法可以在Hibernate中实现连接。</p>
+<p>其实，我们在开发中，可以集成第三方的缓存来保存MyBatis的二级缓存，常用的有EhCache和Redis</p>
 <ol>
-<li>使用诸如一对一，一对多等关联。</li>
-<li>在HQL查询中使用JOIN。还有另一种形式“联合提取”来同时加载相关数据，没有延迟加载。</li>
-<li>我们可以触发原生的sql查询并使用join关键字。</li>
+<li>
+<p>EhCache</p>
+<p>MyBatis提供了一个项目实现，ehcache-cache</p>
+<p>学习地址：https://github.com/mybatis/ehcache-cache</p>
+<p>ehcache的配置可以参照：http://www.ehcache.org/ehcache.xml</p>
+</li>
+<li>
+<p>整合Redis</p>
+<p>同样，也提供了项目：https://github.com/mybatis/redis-cache</p>
+<p>不过，目前还只有测试版本，等有稳定版了，推荐采用Redis的方式。</p>
+</li>
 </ol>
-<h3 id="24-final">24. 为什么我们不应该让实体类final类？<a class="headerlink" href="#24-final" title="Permanent link">&para;</a></h3>
-<p>只有在需要的时候，Hibernate才会使用代理类来延迟加载数据。这是通过扩展实体bean来完成的，如果实体bean是final类，那么延迟加载将不可能，因此性能低下。</p>
-<h3 id="25-hql">25. 什么是HQL？它有什么好处？<a class="headerlink" href="#25-hql" title="Permanent link">&para;</a></h3>
-<p>Hibernate Framework带有一个强大的面向对象的查询语言--Hibernate Query Language（HQL）。它与SQL很相似，除了我们使用对象而不是表名，这使得它更接近于面向对象的编程。</p>
-<p>除java类和变量名之外，Hibernate查询语言不区分大小写的。因此，SeLeCT与sELEct与SELECT相同，但com.lexiangmiao.model.Employee与com.lexiangmiao.model.EMPLOYEE不同。</p>
-<p>HQL查询被缓存，但我们应尽可能避免它，否则我们将不得不照顾关联。 然而，由于面向对象的方法，它是比原生SQL查询更好的选择。 阅读HQL示例 。</p>
-<h3 id="26-hibernate">26. 什么是Hibernate中的查询缓存？<a class="headerlink" href="#26-hibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate为查询结果集实现了一个缓存区域，该查询结果集与Hibernate二级缓存紧密集成。</p>
-<p>这是一个可选功能，需要额外的代码步骤。这只对使用相同参数频繁运行的查询很有用。首先我们需要在Hibernate配置文件中配置下面的属性。</p>
-<pre><code class="language-xml">&lt;property name=&quot;hibernate.cache.use_query_cache&quot;&gt;true&lt;/property&gt;
-</code></pre>
-<p>在代码中，我们需要使用Query的setCacheable（true）方法，快速示例如下所示。</p>
-<pre><code class="language-java">Query query = session.createQuery(&quot;from Employee&quot;);
-query.setCacheable(true);
-query.setCacheRegion(&quot;ALL_EMP&quot;);
-</code></pre>
-<h3 id="27-hibernatesql">27. 我们可以在Hibernate中执行原生的sql查询吗？<a class="headerlink" href="#27-hibernatesql" title="Permanent link">&para;</a></h3>
-<p>Hibernate提供了通过使用SQLQuery对象来执行原生SQL查询的选项。</p>
-<p>然而，对于正常情况来说，它不是推荐的方法，因为我们失去了与Hibernate关联和Hibernate一级缓存相关的好处。阅读Hibernate Native SQL查询示例。</p>
-<h3 id="28-sqlhibernate">28. 原生SQL查询支持在Hibernate中的好处是什么？<a class="headerlink" href="#28-sqlhibernate" title="Permanent link">&para;</a></h3>
-<p>当我们想要执行Hibernate API不支持的特定于数据库的查询（如查询提示或Oracle数据库中的CONNECT关键字）时，原生SQL Query便于使用。</p>
-<h3 id="29-sql">29. 什么是命名SQL查询？<a class="headerlink" href="#29-sql" title="Permanent link">&para;</a></h3>
-<p>Hibernate提供了可以在中心位置定义的命名查询（ Named Query），并在代码中的任何地方使用它们。我们可以为HQL和Native SQL创建命名查询。</p>
-<p>Hibernate命名查询可以在Hibernate映射文件中定义，也可以通过使用JPA注角@NamedQuery和@NamedNativeQuery来定义。</p>
-<h3 id="30-sql">30. 命名SQL查询有什么好处？<a class="headerlink" href="#30-sql" title="Permanent link">&para;</a></h3>
+<h2 id="mybatishibernate">谈谈MyBatis跟Hibernate的区别<a class="headerlink" href="#mybatishibernate" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Hibernate命名查询（ Named Query）帮助我们将查询分组在一个中心位置（便于管理），而不是让它们遍布整个代码。 </li>
-<li>在创建Hibernate会话工厂时检查Hibernate命名查询语法，从而在命名查询出现任何错误的情况下使应用程序快速失败。（便于查错） </li>
-<li>Hibernate命名查询是全局的，意味着一旦定义它可以在整个应用程序中使用。 </li>
+<li><strong><em>灵活性</em></strong>，MyBatis我们一般是自己写SQL，所以更灵活，更方便做优化</li>
+<li><strong><em>可移植性</em></strong>，正因为MyBatis我们是自己写SQL，而每个数据库都有自己的SQL扩展，所以在可移植性方面，MyBatis会较差</li>
 </ol>
-<p>然而，命名查询的一个主要缺点是很难调试，因为我们需要找出它的定义位置。</p>
-<h3 id="31-hibernate-criteria-api">31. Hibernate Criteria API有什么好处？<a class="headerlink" href="#31-hibernate-criteria-api" title="Permanent link">&para;</a></h3>
-<p>Hibernate提供的Criteria API更加面向对象，用于查询数据库和获取结果。我们不能使用Criteria来运行更新或删除查询或任何DDL语句。它仅用于使用更多面向对象的方法从数据库中获取结果。</p>
-<p>Criteria API的一些常见用法是：</p>
+<p>所以，在技术的选型上，其实，有时候就是一种取舍。</p>
+<p>一般，我们在追求性能的方面会更倾向选择MyBatis。</p>
+<h2 id="hibernate">hibernate的对象有几种状态<a class="headerlink" href="#hibernate" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Criteria API提供了Projection，我们可以使用sum（），min（），max（）等集合函数。</li>
-<li>Criteria API可以与ProjectionList一起使用来仅提取选定的列。</li>
-<li>Criteria API可以通过连接多个表来用于连接查询，有用的方法是createAlias（），setFetchMode（）和setProjection（）</li>
-<li>Criteria API可用于获取带有条件的结果，有用的方法是add（），我们可以在其中添加限制条件。</li>
-<li>Criteria API提供了可用于排序结果的addOrder（）方法。</li>
+<li>瞬时状态，刚new出来的对象，该对象没有被持久化，也不受session管理</li>
+<li>持久状态，比如，当调用了session的save方法之后</li>
+<li>游离状态，当session关闭之后</li>
 </ol>
-<p>在Hibernate标准示例中学习一些快速示例。</p>
-<h3 id="32-hibernatesql">32. 如何在日志文件中记录Hibernate生成的sql查询？<a class="headerlink" href="#32-hibernatesql" title="Permanent link">&para;</a></h3>
-<p>我们可以在Hibernate配置下面设置属性来记录SQL查询。</p>
-<pre><code class="language-xml">  &lt;property name=&quot;hibernate.show_sql&quot;&gt;true&lt;/property&gt;
-</code></pre>
-<p>但是，我们应该只在开发或测试环境中使用它，并在生产环境中关闭它。</p>
-<h3 id="33-hibernate-proxy">33. 什么是Hibernate Proxy以及它如何在延迟加载中提供帮助？<a class="headerlink" href="#33-hibernate-proxy" title="Permanent link">&para;</a></h3>
-<p>Hibernate使用代理对象来支持延迟加载。基本上，当你从表中加载数据时，Hibernate不加载所有的映射对象。只要通过getter方法引用子对象或查找对象，如果链接的实体不在会话缓存中，则代理代码将转到数据库并加载链接的对象。它使用javassist来有效地动态生成实体对象的子类实现。</p>
-<h3 id="34-hibernate">34. 如何在Hibernate中实现关联？<a class="headerlink" href="#34-hibernate" title="Permanent link">&para;</a></h3>
-<p>我们可以在Hibernate中轻松实现一对一，一对多和多对多的关联。 它可以使用JPA注解以及基于XML的配置来完成 为了更好地理解，你应该阅读以下教程。</p>
+<h2 id="hibernate_1">谈谈hibernate的缓存机制<a class="headerlink" href="#hibernate_1" title="Permanent link">&para;</a></h2>
+<p>一级缓存：session级别的缓存，也称为线程级别的缓存，只在session的范围内有效</p>
+<p>二级缓存：sessionFactory级别的缓存，也称为进程级别的缓存，在所有的session中都有效</p>
+<p>一般需要配置第三方的缓存支持，比如EhCache</p>
+<p>查询缓存：依赖于二级缓存，在HQL的查询语句中生效</p>
+<h2 id="sql">如何解决SQL注入<a class="headerlink" href="#sql" title="Permanent link">&para;</a></h2>
 <ol>
-<li>Hibernate一对一映射</li>
-<li>Hibernate一对多映射</li>
-<li>Hibernate多对多映射</li>
-</ol>
-<h3 id="35-hibernate">35. 事务管理如何在Hibernate中工作？<a class="headerlink" href="#35-hibernate" title="Permanent link">&para;</a></h3>
-<p>在Hibernate中事务管理非常简单，因为大多数操作在事务之外是不允许的。所以在从SessionFactory获得会话之后，我们可以调用会话<code>beginTransaction()</code>来启动事务。此方法返回事务引用，我们稍后可以使用该引用来提交或回滚事务。</p>
-<p>总的来说，Hibernate事务管理比JDBC事务管理要好，因为我们不需要依赖异常来回滚。<strong>会话方法引发的任何异常都会自动回滚事务</strong>。</p>
-<h3 id="36">36. 什么是级联，什么是不同类型的级联？<a class="headerlink" href="#36" title="Permanent link">&para;</a></h3>
-<p>当我们有实体之间的关系时，我们需要定义不同的操作将如何影响另一个实体。这是通过级联完成的，它有不同的类型。</p>
-<p>以下是在主要和次要实体之间应用级联的简单示例。</p>
-<pre><code class="language-java"> import org.hibernate.annotations.Cascade;
-
-@Entity
-@Table(name = &quot;EMPLOYEE&quot;)
-public class Employee {
-
-@OneToOne(mappedBy = &quot;employee&quot;)
-@Cascade(value = org.hibernate.annotations.CascadeType.ALL)
-private Address address;
-
-}
-</code></pre>
-<p>请注意，Hibernate CascadeType枚举常量与JPA <code>javax.persistence.CascadeType</code>稍有不同，因此我们需要使用Hibernate。CascadeType和Cascade批注进行映射，如上例所示 </p>
-<p>CascadeType枚举中定义的常用级联类型有：</p>
-<ol>
-<li>None：没有级联，它不是一种类型，但是当我们没有定义任何级联时，父级没有任何操作会影响孩子。</li>
-<li>ALL：级联save, delete, update, evict, lock, replicate, merge, persist。基本上一切。</li>
-<li>SAVE_UPDATE：级联保存和更新，仅在Hibernate时可用。</li>
-<li>DELETE：仅在Hibernate中对应于Hibernate本机DELETE操作。</li>
-<li>DETATCH，MERGE，PERSIST，REFRESH和REMOVE - 此类类似的操作</li>
-<li>LOCK：对应于Hibernate本地LOCK动作。</li>
-<li>REPLICATE：对应于Hibernate本地REPLICATE操作。</li>
-</ol>
-<h3 id="37-log4jhibernate">37. 如何将log4j日志集成到Hibernate应用程序中？<a class="headerlink" href="#37-log4jhibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate 4使用JBoss日志记录，而不是早期版本中使用的slf4j。对于log4j配置，我们需要遵循以下步骤。</p>
-<ol>
-<li>为maven项目添加log4j依赖项，如果不是maven，则添加相应的jar文件。</li>
-<li>创建log4j.xml配置文件或log4j.properties文件并将其保存在类路径中。无论您想要什么，您都可以保留文件名，因为我们将在下一步中加载它。</li>
-<li>对于独立项目，使用静态块使用DOMConfigurator或PropertyConfigurator配置log4j。对于Web应用程序，您可以使用ServletContextListener来配置它。</li>
-</ol>
-<p>就是这样，我们的设置已经准备就绪。在java类中创建org.apache.log4j.Logger实例并开始记录。对于完整的示例代码，您应该参阅Hibernate log4j示例和Servlet log4j示例。</p>
-<h3 id="38-hibernatejndi-datasource">38. 如何在Hibernate框架中使用应用程序服务器JNDI DataSource？<a class="headerlink" href="#38-hibernatejndi-datasource" title="Permanent link">&para;</a></h3>
-<p>对于Web应用程序，最好允许servlet容器管理连接池。这就是我们为DataSource定义JNDI资源的原因，并且我们可以在Web应用程序中使用它 在Hibernate中使用非常简单，我们需要的是删除所有数据库特定的属性，并使用下面的属性来提供JNDI数据源名称。</p>
-<pre><code class="language-xml">&lt;property name=&quot;hibernate.connection.datasource&quot;&gt;java:comp/env/jdbc/MyLocalDB&lt;/property&gt;
-</code></pre>
-<p>有关完整示例，请参阅Hibernate JNDI数据源示例 。</p>
-<h3 id="39-hibernatespring">39. 如何整合Hibernate和Spring框架？<a class="headerlink" href="#39-hibernatespring" title="Permanent link">&para;</a></h3>
-<p>Spring是最常用的Java EE框架之一，Hibernate是最流行的ORM框架。这就是Spring Hibernate组合在企业应用程序中被广泛使用的原因。Spring最好的部分就是它提供了Spring ORM模块对Hibernate的开箱即用集成支持。将Spring和Hibernate框架集成在一起需要执行以下步骤。</p>
-<ol>
-<li>添加Hibernate-entitymanager，Hibernate-core和spring-orm依赖项。</li>
-<li>为数据库操作创建模型类和相应的DAO实现。 请注意，DAO类将使用将由Spring Bean配置注入的SessionFactory。</li>
-<li>如果您使用Hibernate 3，则需要在Spring Bean配置文件中配置org.springframework.orm.Hibernate3.LocalSessionFactoryBean或org.springframework.orm.Hibernate3.annotation.AnnotationSessionFactoryBean。对于Hibernate 4，应该配置单个类org.springframework.orm.Hibernate4.LocalSessionFactoryBean 。</li>
-<li>请注意，我们不需要使用Hibernate事务管理，我们可以使用@Transactional注解将它留给Spring声明式事务管理。</li>
-</ol>
-<p>有关完整的示例，请参阅Spring Hibernate集成和Spring MVC Hibernate集成 。</p>
-<h3 id="40-hibernatetemplate">40. 什么是HibernateTemplate类？<a class="headerlink" href="#40-hibernatetemplate" title="Permanent link">&para;</a></h3>
-<p>当Spring和Hibernate集成开始时，Spring ORM提供了两个辅助类HibernateDaoSupport和HibernateTemplate。使用它们的原因是从Hibernate获取Session并获得Spring事务管理的好处。 但是从Hibernate 3.0.1开始，我们可以使用SessionFactory getCurrentSession（）方法获取当前会话并使用它来获得Spring事务管理的好处。如果你通过上面的例子，你会看到它是多么容易，这就是为什么我们不应该再使用这些类。</p>
-<p>HibernateTemplate另一个好处是异常转换，但可以通过在服务类中使用@Repository注解轻松实现，如上面的spring mvc示例所示。这是判断你的知识的一个诡计问题，以及你是否知道最近的事态发展。</p>
-<h3 id="41-hibernateservletstruts2-web">41. 如何将Hibernate与Servlet或Struts2 Web应用程序集成？<a class="headerlink" href="#41-hibernateservletstruts2-web" title="Permanent link">&para;</a></h3>
-<p>Hibernate与Servlet或Struts2的集成需要使用ServletContextListener完成，在Hibernate Struts2集成示例中可以找到完整的示例。</p>
-<h3 id="42-hibernate">42. Hibernate框架中使用哪些设计模式？<a class="headerlink" href="#42-hibernate" title="Permanent link">&para;</a></h3>
-<p>Hibernate框架中使用的一些设计模式是：</p>
-<p>领域模型（Domain Model）模式 - 包含行为和数据的领域的对象模型。
-数据映射器（Data Mapper） - 一层映射器，它可以在对象和数据库之间移动数据，同时保持对象和映射器本身的独立性。
-代理模式用于延迟加载
-SessionFactory中的工厂模式</p>
-<h3 id="43-hibernate">43. Hibernate框架遵循的最佳实践是什么？<a class="headerlink" href="#43-hibernate" title="Permanent link">&para;</a></h3>
-<p>在Hibernate中遵循的一些最佳实践是：</p>
-<ol>
-<li>总是检查主键字段的访问权限，如果它是在数据库层生成的，那么你不应该为此设置setter。</li>
-<li>默认情况下，Hibernate直接设置字段值，而不使用setter 所以如果你想让Hibernate使用setter，那么确保正确的访问被定义为<code>@Access(value=AccessType.PROPERTY)</code> 。</li>
-<li>如果访问类型是属性，请确保注解与getter方法而不是setter方法一起使用 避免在提交和获取方法上混合使用注解。</li>
-<li>仅当使用原生SQL查询是在无法使用HQL完成时（例如使用数据库特定功能），才使用原生SQL查询。</li>
-<li>如果您必须对集合进行排序，请使用有序列表，而不要使用Collection API进行排序。</li>
-<li>明智地使用命名查询，将其保存在一个地方以便于调试 仅将它们用于常用查询 对于特定于实体的查询，您可以将它们保留在实体bean本身中。</li>
-<li>对于Web应用程序，总是尝试使用JNDI DataSource而不是配置来在Hibernate中创建连接。</li>
-<li>避免多对多关系，可以使用双向一对多和多对一关系轻松实现。</li>
-<li>对于集合，尝试使用Lists, maps and sets。避免使用array，因为你没有得到延迟加载的好处。</li>
-<li>不要将异常视为可恢复，回滚事务并关闭会话。如果你不这样做，Hibernate不能保证内存状态准确地表示持久状态。</li>
-<li>首选DAO模式来暴露可用于实体bean的不同方法。</li>
-<li>倾向于关联的延迟抓取。</li>
-</ol>
-<h3 id="44-hibernate">44. 什么是Hibernate验证框架？<a class="headerlink" href="#44-hibernate" title="Permanent link">&para;</a></h3>
-<p>数据验证是任何应用程序的组成部分。您将在表示层使用Javascript找到数据验证，然后在处理它之前在服务器端代码，在持久化之前也要进行数据验证，以确保它遵循正确的格式。</p>
-<p>验证是一项横切任务，所以我们应该尽量保持它与业务逻辑的区分。这就是为什么JSR303和JSR349提供通过使用注解来验证bean的规范。Hibernate Validator提供了这两个bean验证规范的参考实现。在Hibernate验证示例中阅读更多内容。</p>
-<h3 id="45-hibernate-tools-eclipse">45. Hibernate Tools Eclipse插件的好处是什么？<a class="headerlink" href="#45-hibernate-tools-eclipse" title="Permanent link">&para;</a></h3>
-<p>Hibernate Tools插件可以帮助我们轻松编写Hibernate配置和映射文件。主要的好处是内容帮助可以帮助我们使用属性或xml标签。它还会根据Hibernate DTD文件来验证它们，所以我们事先知道任何错误。学习如何安装和使用Hibernate Tools Eclipse插件。</p>
-<p>这就是Hibernate面试的问题和答案，我希望它能帮助你作为新人或有经验的人面试。</p>
-<h2 id="_1">引用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<ol>
-<li><a href="https://www.journaldev.com/3633/hibernate-interview-questions-and-answers?utm_source=website&amp;utm_medium=menubar&amp;utm_campaign=Top-Menu-Bar">原文</a></li>
+<li>
+<p>SQL注入，是指通过字符串拼接的方式构成了一种特殊的查询语句</p>
+<p>比如：select * from t_user where usename='' and password=''</p>
+<p>' or 1=1 #</p>
+<p>select * from t_user where usename='' or 1=1 # ' and password=''</p>
+</li>
+<li>
+<p>解决方案</p>
+<p>采用预处理对象，采用PreparedStatement对象，而不是Statement对象</p>
+<p>可以解决SQL注入的问题</p>
+<p>另外也可以提高执行效率，因为是预先编译执行</p>
+<p>SQL执行过程（语法校验-&gt;编译-&gt;执行）</p>
+<p>延伸</p>
+<p>MyBatis如何解决了SQL注入的问题？采用#</p>
+<p>MyBatis的#和$的差异，#可以解决SQL注入，而？号不能解决。</p>
+</li>
 </ol>
 
 
@@ -8723,9 +7811,6 @@ SessionFactory中的工厂模式</p>
 
 
 
-
-  
-  
 
 
 

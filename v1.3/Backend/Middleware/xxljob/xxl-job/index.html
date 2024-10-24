@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../../workflow/activiti/">
+        <link rel="prev" href="../../workflow/java-work-flow/">
       
       
         <link rel="next" href="../../../csharp/async-wcf-calls/">
@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DB/mysql/" class="md-nav__link">
+      <a href="../../../DB/mysql/mysql-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2263,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orm/hibernate/hibernate-interview-questions/" class="md-nav__link">
+      <a href="../../orm/hibernate/hibernate-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2332,7 +2332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orm/mybatis/" class="md-nav__link">
+      <a href="../../orm/mybatis/mybatics-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2434,7 +2434,7 @@
         
   
   <span class="md-ellipsis">
-    注册器选择
+    注册中心
   </span>
   
 
@@ -2662,7 +2662,7 @@
         
   
   <span class="md-ellipsis">
-    swagger 自动化文档
+    swagger API文档生成和测试工具
   </span>
   
 
@@ -2796,11 +2796,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/activiti/" class="md-nav__link">
+      <a href="../../workflow/java-work-flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Activiti
+    java的工作流引擎
   </span>
   
 
@@ -2913,9 +2913,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#xxl-job-admin" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      xxl-job-admin配置步骤
+      概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何保证任务调度的稳定性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考
     </span>
   </a>
   
@@ -7453,9 +7471,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#xxl-job-admin" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      xxl-job-admin配置步骤
+      概念
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      如何保证任务调度的稳定性
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考
     </span>
   </a>
   
@@ -7480,13 +7516,50 @@
 
 
 <h1 id="xxl-job">XXL-JOB<a class="headerlink" href="#xxl-job" title="Permanent link">&para;</a></h1>
-<p>XXL-JOB是一个分布式任务调度平台，其核心设计目标是开发迅速、学习简单、轻量级、易扩展。</p>
+<h2 id="_1">概念<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>XXL-JOB是一个开源的分布式任务调度平台，它的设计目标是让开发者能够快速地进行开发、简单易学、轻量级并且易于扩展。这个平台主要包括两个核心组件：</p>
+<ol>
+<li>
+<p><strong>调度中心</strong>：负责任务的管理和调度逻辑，提供用户界面来管理任务，如添加、删除、修改任务等操作，并且监控任务的状态。</p>
+</li>
+<li>
+<p><strong>任务执行器</strong>：这是部署在各个应用节点上的组件，负责接收调度中心的任务指令，并执行具体的任务逻辑。任务执行器可以部署在任何有业务逻辑的应用中，只要该应用能够与调度中心保持网络通信即可。</p>
+</li>
+</ol>
+<p>XXL-JOB支持多种语言的任务脚本编写，并且提供了丰富的插件来满足不同的需求。它使用Netty HTTP作为通信协议，允许调度中心与执行器之间进行高效的数据交换。此外，XXL-JOB具有良好的可扩展性，允许轻松地扩展调度集群或增加执行器实例。</p>
+<p>对于想要在分布式环境中实现定时任务或者批处理作业的企业来说，XXL-JOB提供了一个相对成熟的解决方案，同时它也是学习和研究分布式任务调度的好例子。</p>
+<h2 id="_2">如何保证任务调度的稳定性<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>XXL-JOB为了保证任务调度的稳定性，采取了多种措施和技术手段：</p>
+<ol>
+<li>
+<p><strong>主备切换机制</strong>：在调度中心这一部分，通常会采用主备模式来部署，当主节点出现问题时，备用节点可以接管调度任务，确保调度服务的连续性。</p>
+</li>
+<li>
+<p><strong>心跳检测</strong>：任务执行器会定期向调度中心发送心跳信息，表明自身的健康状态。如果调度中心长时间没有收到执行器的心跳，则认为该执行器不可用，并可能触发相应的容错机制。</p>
+</li>
+<li>
+<p><strong>重试机制</strong>：当任务执行失败时，系统可以自动进行一定次数的重试，确保重要的任务不会因为一时的异常而丢失。</p>
+</li>
+<li>
+<p><strong>负载均衡</strong>：通过在多个执行器之间分配任务，可以有效避免单点过载的情况，提高整体系统的负载能力。</p>
+</li>
+<li>
+<p><strong>集群部署</strong>：执行器可以部署在多个节点上形成集群，这样即便单个执行器宕机，其他执行器仍然可以继续执行任务，保证任务执行的不间断。</p>
+</li>
+<li>
+<p><strong>故障转移（Failover）</strong>：在检测到某一个任务执行器出现故障后，可以将未完成的任务转移到其他健康的执行器上继续执行。</p>
+</li>
+<li>
+<p><strong>限流与降级</strong>：为了避免系统因过多请求而崩溃，可以设置限流策略；在系统压力过大时，可以选择性地放弃一些非关键任务，以保障重要任务的正常执行。</p>
+</li>
+<li>
+<p><strong>报警机制</strong>：当系统检测到异常情况时，可以通过邮件、短信等方式通知管理员，以便及时处理问题。</p>
+</li>
+</ol>
+<p>通过上述机制，XXL-JOB能够在一定程度上保证任务调度的稳定性和可靠性。当然，实际部署时还需要根据具体环境调整相应的配置参数，以达到最佳效果。</p>
+<h2 id="_3">参考<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><a href="https://github.com/xuxueli/xxl-job">XXL-JOB GitHub</a>
 <a href="https://www.xuxueli.com/xxl-job/">XXL-JOB Docs</a></p>
-<h2 id="xxl-job-admin">xxl-job-admin配置步骤<a class="headerlink" href="#xxl-job-admin" title="Permanent link">&para;</a></h2>
-<ol>
-<li>执行器管理-》新增AppName（与服务配置的名称一致后会自动获取到服务的IP和端口）</li>
-</ol>
 
 
 

@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../DB/mysql/" class="md-nav__link">
+      <a href="../../../DB/mysql/mysql-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2181,9 +2181,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#netty_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netty 的主要特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netty_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netty 的架构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netty_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netty 使用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      文档参考
+      参考
     </span>
   </a>
   
@@ -2314,7 +2341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orm/hibernate/hibernate-interview-questions/" class="md-nav__link">
+      <a href="../../orm/hibernate/hibernate-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2383,7 +2410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../orm/mybatis/" class="md-nav__link">
+      <a href="../../orm/mybatis/mybatics-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2485,7 +2512,7 @@
         
   
   <span class="md-ellipsis">
-    注册器选择
+    注册中心
   </span>
   
 
@@ -2713,7 +2740,7 @@
         
   
   <span class="md-ellipsis">
-    swagger 自动化文档
+    swagger API文档生成和测试工具
   </span>
   
 
@@ -2847,11 +2874,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../workflow/activiti/" class="md-nav__link">
+      <a href="../../workflow/java-work-flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Activiti
+    java的工作流引擎
   </span>
   
 
@@ -7453,9 +7480,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#netty_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netty 的主要特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netty_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netty 的架构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netty_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Netty 使用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      文档参考
+      参考
     </span>
   </a>
   
@@ -7480,8 +7534,31 @@
 
 
 <h1 id="netty">netty<a class="headerlink" href="#netty" title="Permanent link">&para;</a></h1>
-<p>Netty 是一个异步事件驱动的网络应用程序框架， 用于快速开发可维护的高性能协议服务器和客户端。</p>
-<h2 id="_1">文档参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>Netty 是一个异步事件驱动的网络应用程序框架，用于开发高性能、可扩展的服务器和客户端。它基于 Java NIO（New IO）库，旨在简化复杂的网络编程，特别是处理大量并发连接和数据传输。</p>
+<h2 id="netty_1">Netty 的主要特点<a class="headerlink" href="#netty_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>高性能</strong>：Netty 通过异步非阻塞 IO 实现高效的数据传输和处理，特别适合大规模并发应用场景，如即时通讯、游戏服务器、消息中间件等。</li>
+<li><strong>高可扩展性</strong>：其灵活的设计允许轻松扩展和定制。Netty 支持各种协议的实现，开发者可以根据需求实现自己的协议或使用现有的协议库。</li>
+<li><strong>事件驱动模型</strong>：基于事件驱动架构，Netty 将网络事件（如连接建立、消息接收等）分解为不同的处理步骤，通过事件循环机制高效处理。</li>
+<li><strong>内存管理</strong>：Netty 提供了优化的缓冲区管理（ByteBuf），比 Java 的原生 NIO 缓冲区更加灵活和高效。</li>
+<li><strong>协议支持</strong>：Netty 内置了对多种协议的支持，包括 HTTP、WebSocket、SSL/TLS 等。</li>
+</ol>
+<h2 id="netty_2">Netty 的架构<a class="headerlink" href="#netty_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Channel</strong>：表示与网络相关的传输通道，负责数据的读写操作。</li>
+<li><strong>EventLoop</strong>：负责处理 Channel 的 IO 操作，是 Netty 中事件循环的核心。</li>
+<li><strong>ChannelPipeline</strong>：处理数据流的管道，包含了一系列的处理器（Handler），用于对数据进行编码、解码、处理等操作。</li>
+<li><strong>ChannelHandler</strong>：用于处理或拦截 Channel 中的各类事件，如接收消息、连接建立、异常处理等。</li>
+</ol>
+<h2 id="netty_3">Netty 使用场景<a class="headerlink" href="#netty_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>即时通讯服务器</strong>：高并发、多客户端连接场景。</li>
+<li><strong>高性能 HTTP 服务器</strong>：可以用于构建轻量级、高吞吐量的 HTTP 服务器。</li>
+<li><strong>消息队列</strong>：作为消息中间件的底层通信组件，Netty 的高性能适合此类场景。</li>
+<li><strong>WebSocket 应用</strong>：通过 WebSocket 协议进行双向通信的应用，例如实时消息传递和推送。</li>
+</ol>
+<p>Netty 的事件驱动模型和灵活的架构，使其成为许多高性能网络应用的首选框架。</p>
+<h2 id="_1">参考<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p><a href="../../../java/core-java/high-performance-network-model/">高性能网络模型</a></p>
 
 

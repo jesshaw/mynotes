@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../mybatics-qa/">
       
       
         <link rel="next" href="../../../register/register-index/">
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#1-resultsresult" class="md-skip">
+        <a href="#mybatis" class="md-skip">
           跳转至
         </a>
       
@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/mysql/" class="md-nav__link">
+      <a href="../../../../DB/mysql/mysql-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2265,7 +2265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../hibernate/hibernate-interview-questions/" class="md-nav__link">
+      <a href="../../hibernate/hibernate-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2336,7 +2336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../mybatics-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2362,6 +2362,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -2390,6 +2392,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -2519,7 +2523,7 @@
         
   
   <span class="md-ellipsis">
-    注册器选择
+    注册中心
   </span>
   
 
@@ -2747,7 +2751,7 @@
         
   
   <span class="md-ellipsis">
-    swagger 自动化文档
+    swagger API文档生成和测试工具
   </span>
   
 
@@ -2881,11 +2885,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../workflow/activiti/" class="md-nav__link">
+      <a href="../../../workflow/java-work-flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Activiti
+    java的工作流引擎
   </span>
   
 
@@ -7477,6 +7481,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7547,10 +7553,8 @@
   
 
 
-  <h1>mybatis列映射的几种方式</h1>
-
+<h1 id="mybatis">mybatis列映射的几种方式<a class="headerlink" href="#mybatis" title="Permanent link">&para;</a></h1>
 <p>不同于hibernate实现活动记录模式，mybatis实现了数据映射模式，其中列的映射有多种实现方式，有简单的也有复杂的，分别适用不同的业务场景</p>
-<!-- more -->
 <h2 id="1-resultsresult">1. 使用注解@Results和@Result<a class="headerlink" href="#1-resultsresult" title="Permanent link">&para;</a></h2>
 <pre><code class="language-java">@Mapper
 public interface UserDao {
@@ -7606,7 +7610,7 @@ public interface UserDao {
 <p>多人开发，可能带来db命名的不规范</p>
 <h2 id="3">3. 使用全局配置<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p>在application.properties中，增加以下配置</p>
-<pre><code>mybatis.configuration.mapUnderscoreToCamelCase=true
+<pre><code class="language-base">mybatis.configuration.mapUnderscoreToCamelCase=true
 </code></pre>
 <p>或者使用自定义配置Bean</p>
 <pre><code class="language-java">    @Bean
@@ -7666,9 +7670,6 @@ public interface UserDao {
 
 
 
-
-  
-  
 
 
 
