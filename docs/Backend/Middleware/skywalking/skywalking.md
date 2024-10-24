@@ -47,11 +47,11 @@ GUI/CLI通过Receiver Cluster（SkyWaking UI）查看应用系统健康状态。
 
 Sotrage Options选项有很多：ES、MySQL、Sharding Sphere、TiDB、H2
 
-## 相关参考
+## 参考
 
-英文文档：https://github.com/apache/skywalking/tree/master/docs 
+[官方英文文档](https://github.com/apache/skywalking/tree/master/docs) 
 
-中文文档：https://github.com/SkyAPM/document-cn-translation-of-skywalking 
+[官方中文文档](https://github.com/SkyAPM/document-cn-translation-of-skywalking)
 
 [《OpenTracing 官方标准 —— 中文版》](https://github.com/opentracing-contrib/opentracing-specification-zh)
 

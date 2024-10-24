@@ -1,15 +1,7 @@
----
-title: mybatis列映射的几种方式
-tags: java,mybatis,columns mapping,列映射
-categories: 
-  - java
-
-thumbnail: /gallery/blue-water3.jpg
----
+# mybatis列映射的几种方式
 
 不同于hibernate实现活动记录模式，mybatis实现了数据映射模式，其中列的映射有多种实现方式，有简单的也有复杂的，分别适用不同的业务场景
 
-<!-- more -->
 ## 1. 使用注解@Results和@Result
 
 ```java
@@ -28,7 +20,9 @@ public interface UserDao {
     List<User> findUsers1();
 }
 ```
+
 XML配置如下
+
 ```xml
 <resultMap id="BaseResultMap" type="package.for.User">
   <result property = "firstName", column = "first_name" jdbcType="VARCHAR" />
@@ -46,8 +40,8 @@ XML配置如下
 
 避免重复的话，需要与XML配置结合，如此一来，由于使用两种方式感觉麻烦了
 
-
 ## 2. 使用别名
+
 ```java
 @Mapper
 public interface UserDao {
@@ -62,6 +56,7 @@ public interface UserDao {
     List<User> findUsers1();
 }
 ```
+
 * 优点
 
 最直接，简单明了
@@ -71,11 +66,15 @@ public interface UserDao {
 多人开发，可能带来db命名的不规范
 
 ## 3. 使用全局配置
+
 在application.properties中，增加以下配置
-```
+
+```base
 mybatis.configuration.mapUnderscoreToCamelCase=true
 ```
+
 或者使用自定义配置Bean
+
 ```java
     @Bean
     ConfigurationCustomizer mybatisConfigurationCustomizer() {
@@ -96,7 +95,9 @@ mybatis.configuration.mapUnderscoreToCamelCase=true
 对已有老系统无按此规则的db，无法映射
 
 ## 4. 使用XML映射
+
 XML配置如下
+
 ```xml
 <resultMap id="BaseResultMap" type="package.for.User">
   <result property = "firstName", column = "first_name" jdbcType="VARCHAR" />
@@ -110,7 +111,9 @@ XML配置如下
   SELECT * FROM users WHERE ID = #{id}
 </select>
 ```
+
 java就不需要再一一配置了
+
 ```java
 @Mapper
 public interface UserDao {
@@ -119,6 +122,7 @@ public interface UserDao {
 }
 
 ```
+
 * 优点
 
 字段映射关系和对象完全分离
@@ -133,5 +137,3 @@ XML硬编码，维护内容多时容易出错
 
 参考:
 [MyBatis-Spring-Boot-Starter介绍](http://www.mybatis.org/spring-boot-starter/mybatis-spring-boot-autoconfigure/)
-
-
