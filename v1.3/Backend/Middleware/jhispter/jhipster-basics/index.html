@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../../../../DB/tidb/tidb/">
+        <link rel="prev" href="../../fileprocess/ceph/ceph/">
       
       
-        <link rel="next" href="../../redis/">
+        <link rel="next" href="../jhipster-qa/">
       
       
-      <link rel="icon" href="../../../../../assets/lx.ico">
+      <link rel="icon" href="../../../../assets/lx.ico">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
-        <title>J2Cache —— 基于内存和 Redis 的两级 Java 缓存框架 - 乐享笔记</title>
+        <title>jhipster 基础 - 乐享笔记</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -64,7 +64,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#j2cache-redis-java" class="md-skip">
+        <a href="#jhipster" class="md-skip">
           跳转至
         </a>
       
@@ -98,7 +98,7 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../../../../../..">
+  <a href="../../../../..">
     <strong>Click here to go to latest.</strong>
   </a>
 
@@ -113,9 +113,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../../.." title="乐享笔记" class="md-header__button md-logo" aria-label="乐享笔记" data-md-component="logo">
+    <a href="../../../.." title="乐享笔记" class="md-header__button md-logo" aria-label="乐享笔记" data-md-component="logo">
       
-  <img src="../../../../../assets/lx.png" alt="logo">
+  <img src="../../../../assets/lx.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              J2Cache —— 基于内存和 Redis 的两级 Java 缓存框架
+              jhipster 基础
             
           </span>
         </div>
@@ -239,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -264,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Frontend/flutter/flutter_write_your_first_flutter_app/" class="md-tabs__link">
+        <a href="../../../../Frontend/flutter/flutter_write_your_first_flutter_app/" class="md-tabs__link">
           
   
   Frontend
@@ -287,7 +287,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../jwt/" class="md-tabs__link">
+        <a href="../../../jwt/" class="md-tabs__link">
           
   
   Backend
@@ -305,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Devops/ad/" class="md-tabs__link">
+        <a href="../../../../Devops/ad/" class="md-tabs__link">
           
   
   Devops
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../SoftwareEngineering/arch/" class="md-tabs__link">
+        <a href="../../../../SoftwareEngineering/arch/" class="md-tabs__link">
           
   
   Software Engineering
@@ -341,7 +341,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Tools/intellij-idea-plugins/" class="md-tabs__link">
+        <a href="../../../../Tools/intellij-idea-plugins/" class="md-tabs__link">
           
   
   Tools
@@ -374,9 +374,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="乐享笔记" class="md-nav__button md-logo" aria-label="乐享笔记" data-md-component="logo">
+    <a href="../../../.." title="乐享笔记" class="md-nav__button md-logo" aria-label="乐享笔记" data-md-component="logo">
       
-  <img src="../../../../../assets/lx.png" alt="logo">
+  <img src="../../../../assets/lx.png" alt="logo">
 
     </a>
     乐享笔记
@@ -403,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/flutter/flutter_write_your_first_flutter_app/" class="md-nav__link">
+      <a href="../../../../Frontend/flutter/flutter_write_your_first_flutter_app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -572,7 +572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/js/front-end-optimization/" class="md-nav__link">
+      <a href="../../../../Frontend/js/front-end-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -593,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/js/googleapis-images/" class="md-nav__link">
+      <a href="../../../../Frontend/js/googleapis-images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/js/js-date-format/" class="md-nav__link">
+      <a href="../../../../Frontend/js/js-date-format/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -635,7 +635,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/js/js-object-creation-patterns-best-practises/" class="md-nav__link">
+      <a href="../../../../Frontend/js/js-object-creation-patterns-best-practises/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +716,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../jwt/" class="md-nav__link">
+      <a href="../../../jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -780,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/row-and-colum-storage-diff/" class="md-nav__link">
+      <a href="../../../DB/row-and-colum-storage-diff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -841,7 +841,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/cratedb/cratedb/" class="md-nav__link">
+      <a href="../../../DB/cratedb/cratedb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -910,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/elastic-stack/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/elastic-stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-1-basics/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-1-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-2-write-update-and-delete-process/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-2-write-update-and-delete-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-3-search-process/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-3-search-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-4-optimization/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-4-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-5-high-concuurency-consistency/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-5-high-concuurency-consistency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1036,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-6-other/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-6-other/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1105,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/mysql/mysql-basics/" class="md-nav__link">
+      <a href="../../../DB/mysql/mysql-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1174,7 +1174,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/tidb/tidb/" class="md-nav__link">
+      <a href="../../../DB/tidb/tidb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1253,8 +1253,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1266,11 +1264,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
         
           
           <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
@@ -1284,7 +1282,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_1">
             <span class="md-nav__icon md-icon"></span>
             Cache
@@ -1295,8 +1293,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1308,11 +1304,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1_1" >
         
           
           <label class="md-nav__link" for="__nav_3_3_1_1" id="__nav_3_3_1_1_label" tabindex="0">
@@ -1326,7 +1322,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3_1_1">
             <span class="md-nav__icon md-icon"></span>
             J2cache
@@ -1337,28 +1333,18 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../cache/j2cache/j2cache-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    J2Cache —— 基于内存和 Redis 的两级 Java 缓存框架
+    J2Cache
   </span>
   
 
       </a>
-      
     </li>
   
 
@@ -1419,7 +1405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/" class="md-nav__link">
+      <a href="../../cache/redis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1440,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/delay_queue/" class="md-nav__link">
+      <a href="../../cache/redis/delay_queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1461,7 +1447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/nosql/" class="md-nav__link">
+      <a href="../../cache/redis/nosql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1482,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/redis-ha/" class="md-nav__link">
+      <a href="../../cache/redis/redis-ha/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1503,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/redis-knowledge-points/" class="md-nav__link">
+      <a href="../../cache/redis/redis-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1524,7 +1510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/redis-type/" class="md-nav__link">
+      <a href="../../cache/redis/redis-type/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1545,7 +1531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redis/redis/" class="md-nav__link">
+      <a href="../../cache/redis/redis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1622,7 +1608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fileprocess/picture-process/" class="md-nav__link">
+      <a href="../../fileprocess/picture-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1683,7 +1669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fileprocess/alioss/alioss/" class="md-nav__link">
+      <a href="../../fileprocess/alioss/alioss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1752,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../fileprocess/ceph/ceph/" class="md-nav__link">
+      <a href="../../fileprocess/ceph/ceph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1786,8 +1772,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -1797,11 +1785,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
@@ -1815,7 +1803,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_3_3">
             <span class="md-nav__icon md-icon"></span>
             Jhispter
@@ -1826,14 +1814,237 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../jhispter/jhipster-usefully-cmd/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    jhipster 基础
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    jhipster注意事项
+    jhipster 基础
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-jhipster" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. JHipster 的主要特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-jhipster" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. JHipster 安装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. JHipster 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. 安装前置依赖
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. 创建项目
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jhipster" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. JHipster 项目结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 基本功能概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 基本功能概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. 实体生成器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. 身份验证和安全
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. 前端框架
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 微服务支持
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 部署
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Docker 支持
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Kubernetes 支持
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-jhipster-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. JHipster Registry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 常见的生成器命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jhipster-qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jhipster 常见问题
   </span>
   
 
@@ -1850,7 +2061,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../jhispter/rapid-dev-scaffold/" class="md-nav__link">
+      <a href="../rapid-dev-scaffold/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1919,11 +2130,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../liquibase/liquibase-upgrade-db-step/" class="md-nav__link">
+      <a href="../../liquibase/liquibase-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    liquibase实现自动升级数据的步骤
+    liquibase
   </span>
   
 
@@ -1988,7 +2199,49 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mq/" class="md-nav__link">
+      <a href="../../mq/delay-mq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    延时队列
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mq/mq-distributed-transaction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基于MQ的分布式事务实现方案
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mq/mq-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2009,11 +2262,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mq/delay_mq/" class="md-nav__link">
+      <a href="../../mq/stock-overselling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    延时队列
+    库存超卖
   </span>
   
 
@@ -2042,10 +2295,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_3_5_3" id="__nav_3_3_5_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_5_5" id="__nav_3_3_5_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2056,8 +2309,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_5_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5_5">
             <span class="md-nav__icon md-icon"></span>
             Rocketmq
           </label>
@@ -2070,7 +2323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../mq/rocketmq/rocketmq_arch/" class="md-nav__link">
+      <a href="../../mq/rocketmq/rocketmq_arch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2147,7 +2400,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../netty/netty/" class="md-nav__link">
+      <a href="../../netty/netty/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2216,7 +2469,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../orm/orm-common-pattern/" class="md-nav__link">
+      <a href="../../orm/orm-common-pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2277,7 +2530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../orm/hibernate/hibernate-qa/" class="md-nav__link">
+      <a href="../../orm/hibernate/hibernate-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2346,7 +2599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../orm/mybatis/mybatics-qa/" class="md-nav__link">
+      <a href="../../orm/mybatis/mybatics-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2367,7 +2620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../orm/mybatis/mybatis-columns-mapping/" class="md-nav__link">
+      <a href="../../orm/mybatis/mybatis-columns-mapping/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2444,7 +2697,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../register/register-index/" class="md-nav__link">
+      <a href="../../register/register-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2513,7 +2766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../skywalking/skywalking-deploy/" class="md-nav__link">
+      <a href="../../skywalking/skywalking-deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2534,7 +2787,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../skywalking/skywalking/" class="md-nav__link">
+      <a href="../../skywalking/skywalking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2603,7 +2856,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../springcloud/springcloud/" class="md-nav__link">
+      <a href="../../springcloud/springcloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2672,7 +2925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../swagger/swagger-index/" class="md-nav__link">
+      <a href="../../swagger/swagger-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2741,7 +2994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tomcat/" class="md-nav__link">
+      <a href="../../tomcat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2810,7 +3063,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../workflow/java-work-flow/" class="md-nav__link">
+      <a href="../../workflow/java-work-flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2879,7 +3132,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../xxljob/xxl-job/" class="md-nav__link">
+      <a href="../../xxljob/xxl-job/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2959,7 +3212,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../csharp/async-wcf-calls/" class="md-nav__link">
+      <a href="../../../csharp/async-wcf-calls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2980,7 +3233,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../csharp/net-architecture-analyze/" class="md-nav__link">
+      <a href="../../../csharp/net-architecture-analyze/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3052,7 +3305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/" class="md-nav__link">
+      <a href="../../../java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3073,7 +3326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/bloom-filter/" class="md-nav__link">
+      <a href="../../../java/bloom-filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3094,7 +3347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/export-svc-file/" class="md-nav__link">
+      <a href="../../../java/export-svc-file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3115,7 +3368,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/name/" class="md-nav__link">
+      <a href="../../../java/name/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3136,7 +3389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/open-source/" class="md-nav__link">
+      <a href="../../../java/open-source/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3197,7 +3450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/advanced-java/" class="md-nav__link">
+      <a href="../../../java/advanced-java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3266,7 +3519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/algorithms/" class="md-nav__link">
+      <a href="../../../java/algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3335,7 +3588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/" class="md-nav__link">
+      <a href="../../../java/core-java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3356,7 +3609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/basic-java-constructs/" class="md-nav__link">
+      <a href="../../../java/core-java/basic-java-constructs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3377,7 +3630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/collection-framework/" class="md-nav__link">
+      <a href="../../../java/core-java/collection-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3398,7 +3651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/concurrent-collection/" class="md-nav__link">
+      <a href="../../../java/core-java/concurrent-collection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3419,7 +3672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/exception/" class="md-nav__link">
+      <a href="../../../java/core-java/exception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3440,7 +3693,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/generics/" class="md-nav__link">
+      <a href="../../../java/core-java/generics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3461,7 +3714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/high-performance-network-model/" class="md-nav__link">
+      <a href="../../../java/core-java/high-performance-network-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3482,7 +3735,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/io/" class="md-nav__link">
+      <a href="../../../java/core-java/io/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3503,7 +3756,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/jvm-tools/" class="md-nav__link">
+      <a href="../../../java/core-java/jvm-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3524,7 +3777,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/jvm/" class="md-nav__link">
+      <a href="../../../java/core-java/jvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3545,7 +3798,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/multithreading/" class="md-nav__link">
+      <a href="../../../java/core-java/multithreading/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3566,7 +3819,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/oops/" class="md-nav__link">
+      <a href="../../../java/core-java/oops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3587,7 +3840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/serialisation/" class="md-nav__link">
+      <a href="../../../java/core-java/serialisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3608,7 +3861,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/string-handling/" class="md-nav__link">
+      <a href="../../../java/core-java/string-handling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3629,7 +3882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/core-java/synchronisation/" class="md-nav__link">
+      <a href="../../../java/core-java/synchronisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3698,7 +3951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/core-java-interview-questions/" class="md-nav__link">
+      <a href="../../../java/interview/core-java-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3719,7 +3972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/famous-enterprises-interview-questions/" class="md-nav__link">
+      <a href="../../../java/interview/famous-enterprises-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3740,7 +3993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-8-period-and-duration/" class="md-nav__link">
+      <a href="../../../java/interview/java-8-period-and-duration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3761,7 +4014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-all/" class="md-nav__link">
+      <a href="../../../java/interview/java-all/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3782,7 +4035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-classloader/" class="md-nav__link">
+      <a href="../../../java/interview/java-classloader/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3803,7 +4056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-collections-interview-questions/" class="md-nav__link">
+      <a href="../../../java/interview/java-collections-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3824,7 +4077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-dubbo-start/" class="md-nav__link">
+      <a href="../../../java/interview/java-dubbo-start/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3845,7 +4098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-efficient-code/" class="md-nav__link">
+      <a href="../../../java/interview/java-efficient-code/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3866,7 +4119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-exception-interview-questions/" class="md-nav__link">
+      <a href="../../../java/interview/java-exception-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3887,7 +4140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-heap-space-vs-stack-memory/" class="md-nav__link">
+      <a href="../../../java/interview/java-heap-space-vs-stack-memory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3908,7 +4161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-jvm-memory-model-memory-management/" class="md-nav__link">
+      <a href="../../../java/interview/java-jvm-memory-model-memory-management/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3929,7 +4182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-key-points/" class="md-nav__link">
+      <a href="../../../java/interview/java-key-points/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3950,7 +4203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-multithreading-concurrency-interview-questions/" class="md-nav__link">
+      <a href="../../../java/interview/java-multithreading-concurrency-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3971,7 +4224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-programming-interview-questions/" class="md-nav__link">
+      <a href="../../../java/interview/java-programming-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3992,7 +4245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-string-interview-questions/" class="md-nav__link">
+      <a href="../../../java/interview/java-string-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4013,7 +4266,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/java-thread-wait-notify-and-notifyall-example/" class="md-nav__link">
+      <a href="../../../java/interview/java-thread-wait-notify-and-notifyall-example/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4034,7 +4287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/jvm-jre-jdk/" class="md-nav__link">
+      <a href="../../../java/interview/jvm-jre-jdk/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4055,7 +4308,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/interview/telephone-interview/" class="md-nav__link">
+      <a href="../../../java/interview/telephone-interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4124,28 +4377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/micro-service/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    微服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../../java/micro-service/distributed-transcation/" class="md-nav__link">
+      <a href="../../../java/micro-service/distributed-transcation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4166,11 +4398,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/micro-service/microservices-practice/" class="md-nav__link">
+      <a href="../../../java/micro-service/micro-service-best-practice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    微服务实践
+    微服务最佳实践
   </span>
   
 
@@ -4187,7 +4419,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/micro-service/trip_hotel_sub_db_sub_table/" class="md-nav__link">
+      <a href="../../../java/micro-service/micro-service-qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    微服务常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../java/micro-service/trip_hotel_sub_db_sub_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4256,7 +4509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/spring/" class="md-nav__link">
+      <a href="../../../java/spring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4277,7 +4530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/spring/spring-boot-samples/" class="md-nav__link">
+      <a href="../../../java/spring/spring-boot-samples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4298,7 +4551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/spring/spring-hot-deploy/" class="md-nav__link">
+      <a href="../../../java/spring/spring-hot-deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4319,7 +4572,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/spring/spring-interview-questions/" class="md-nav__link">
+      <a href="../../../java/spring/spring-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4340,7 +4593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/spring/spring-penetrate-layers/" class="md-nav__link">
+      <a href="../../../java/spring/spring-penetrate-layers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4361,7 +4614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/spring/spring-restcontrooler-specific-basepath/" class="md-nav__link">
+      <a href="../../../java/spring/spring-restcontrooler-specific-basepath/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4430,7 +4683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../java/web/" class="md-nav__link">
+      <a href="../../../java/web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4510,7 +4763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../nodejs/nodejs-usefully-command/" class="md-nav__link">
+      <a href="../../../nodejs/nodejs-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4586,7 +4839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/ad/" class="md-nav__link">
+      <a href="../../../../Devops/ad/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4607,7 +4860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/devops/" class="md-nav__link">
+      <a href="../../../../Devops/devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4668,7 +4921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/" class="md-nav__link">
+      <a href="../../../../Devops/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4689,7 +4942,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/build-mini-java-app-env-on-centos/" class="md-nav__link">
+      <a href="../../../../Devops/docker/build-mini-java-app-env-on-centos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4710,7 +4963,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-ci-cd-with-jenkins/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-ci-cd-with-jenkins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4731,7 +4984,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-compose-external-links/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-compose-external-links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4752,7 +5005,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-nginx/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4773,7 +5026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-private-repository/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-private-repository/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4794,7 +5047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-qa/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4815,7 +5068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4836,7 +5089,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker_network/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker_network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4857,7 +5110,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/network/" class="md-nav__link">
+      <a href="../../../../Devops/docker/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4878,7 +5131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/running-docker-in-jenkins-in-docker/" class="md-nav__link">
+      <a href="../../../../Devops/docker/running-docker-in-jenkins-in-docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4899,7 +5152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/spring-docker-image-optimization/" class="md-nav__link">
+      <a href="../../../../Devops/docker/spring-docker-image-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4968,7 +5221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/git/git-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/git/git-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5037,7 +5290,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/gitlab/java-check-style/" class="md-nav__link">
+      <a href="../../../../Devops/gitlab/java-check-style/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5106,7 +5359,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/grafana/grafana/" class="md-nav__link">
+      <a href="../../../../Devops/grafana/grafana/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5175,7 +5428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/helm/helm-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/helm/helm-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5196,7 +5449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/helm/helm/" class="md-nav__link">
+      <a href="../../../../Devops/helm/helm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5265,7 +5518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/jenkins/jenkins-qa/" class="md-nav__link">
+      <a href="../../../../Devops/jenkins/jenkins-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5286,7 +5539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/jenkins/k8s-automated-integration-and-deployment-microservices/" class="md-nav__link">
+      <a href="../../../../Devops/jenkins/k8s-automated-integration-and-deployment-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5355,7 +5608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/ali-k8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/ali-k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5376,7 +5629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/deploy-micor-service-in-k8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/deploy-micor-service-in-k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5397,7 +5650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s-add-remove-nodes/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s-add-remove-nodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5418,7 +5671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s-storageclass/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s-storageclass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5439,7 +5692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5460,7 +5713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_access_svc_%20from_outside/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_access_svc_%20from_outside/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5481,7 +5734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_config/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5502,7 +5755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_gitlab_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_gitlab_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5523,7 +5776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_ingress-nginx-controller/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_ingress-nginx-controller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5544,7 +5797,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_jenkins_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_jenkins_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5565,7 +5818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_mysql_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_mysql_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5586,7 +5839,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_nacos_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_nacos_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5607,7 +5860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_nexus_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_nexus_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5628,7 +5881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_nginx_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_nginx_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5649,7 +5902,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_redis_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_redis_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5670,7 +5923,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_rocketmq_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_rocketmq_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5691,7 +5944,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_seata_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_seata_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5712,7 +5965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_xxljob_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_xxljob_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5733,7 +5986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/kubespray-install-k8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/kubespray-install-k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5754,7 +6007,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/vitualbox_k8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/vitualbox_k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5815,7 +6068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/microk8s/microk8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/microk8s/microk8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5892,7 +6145,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kvm/kvm-install/" class="md-nav__link">
+      <a href="../../../../Devops/kvm/kvm-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5961,7 +6214,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5982,7 +6235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/linux/" class="md-nav__link">
+      <a href="../../../../Devops/linux/linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6003,7 +6256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/makefile/" class="md-nav__link">
+      <a href="../../../../Devops/linux/makefile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6024,7 +6277,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/nfs/" class="md-nav__link">
+      <a href="../../../../Devops/linux/nfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6045,7 +6298,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/run-backgroud-process-sereral-ways/" class="md-nav__link">
+      <a href="../../../../Devops/linux/run-backgroud-process-sereral-ways/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6066,7 +6319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/shell/" class="md-nav__link">
+      <a href="../../../../Devops/linux/shell/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6135,7 +6388,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/maven/maven-qa/" class="md-nav__link">
+      <a href="../../../../Devops/maven/maven-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6156,7 +6409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/maven/maven-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/maven/maven-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6177,7 +6430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/maven/maven/" class="md-nav__link">
+      <a href="../../../../Devops/maven/maven/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6246,7 +6499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/powershell/power-shell-usefully-cmd/" class="md-nav__link">
+      <a href="../../../../Devops/powershell/power-shell-usefully-cmd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6315,7 +6568,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/scancode-toolkit/" class="md-nav__link">
+      <a href="../../../../Devops/scancode-toolkit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6384,7 +6637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/vagrant/" class="md-nav__link">
+      <a href="../../../../Devops/vagrant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6453,7 +6706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/virtualbox/access-virtualbox-centos7-site-on-win7-setting/" class="md-nav__link">
+      <a href="../../../../Devops/virtualbox/access-virtualbox-centos7-site-on-win7-setting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6474,7 +6727,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/virtualbox/lan-access-vm/" class="md-nav__link">
+      <a href="../../../../Devops/virtualbox/lan-access-vm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6495,7 +6748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/virtualbox/quickly-set-up-linux-in-virtualbox/" class="md-nav__link">
+      <a href="../../../../Devops/virtualbox/quickly-set-up-linux-in-virtualbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6516,7 +6769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/virtualbox/shared-folder/" class="md-nav__link">
+      <a href="../../../../Devops/virtualbox/shared-folder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6592,7 +6845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/arch/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/arch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6613,7 +6866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/domain-model/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/domain-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6634,7 +6887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/level3-guarantee/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/level3-guarantee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6655,7 +6908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/mall/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/mall/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6676,7 +6929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/middel-officel-arch-article-collection/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/middel-officel-arch-article-collection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6697,7 +6950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/model/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6718,7 +6971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/product_arch/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/product_arch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6739,7 +6992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/product_arch_sample/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/product_arch_sample/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6760,7 +7013,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/qps/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/qps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6781,7 +7034,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/research-and-development-personnel-performance-appraisal/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/research-and-development-personnel-performance-appraisal/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6842,7 +7095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/draw/deploy/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/draw/deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6863,7 +7116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/draw/draw/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/draw/draw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6932,7 +7185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/license/agpl-3.0/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/license/agpl-3.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6953,7 +7206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/license/apache-2.0/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/license/apache-2.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6974,7 +7227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/license/gpl-2.0/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/license/gpl-2.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6995,7 +7248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/license/mit/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/license/mit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7064,7 +7317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7140,7 +7393,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/intellij-idea-plugins/" class="md-nav__link">
+      <a href="../../../../Tools/intellij-idea-plugins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7201,7 +7454,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/drawio/drawio/" class="md-nav__link">
+      <a href="../../../../Tools/drawio/drawio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7270,7 +7523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/mkdocs/mkdocs_plugin/" class="md-nav__link">
+      <a href="../../../../Tools/mkdocs/mkdocs_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7339,7 +7592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/plantuml/markdown_plantuml/" class="md-nav__link">
+      <a href="../../../../Tools/plantuml/markdown_plantuml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7360,7 +7613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/plantuml/plantuml/" class="md-nav__link">
+      <a href="../../../../Tools/plantuml/plantuml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7409,6 +7662,176 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-jhipster" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. JHipster 的主要特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-jhipster" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. JHipster 安装
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. JHipster 安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. 安装前置依赖
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. 创建项目
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-jhipster" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. JHipster 项目结构
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 基本功能概述
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 基本功能概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. 实体生成器
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. 身份验证和安全
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3. 前端框架
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 微服务支持
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 部署
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. 部署">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Docker 支持
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-kubernetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2. Kubernetes 支持
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-jhipster-registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. JHipster Registry
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 常见的生成器命令
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7425,8 +7848,104 @@
   
 
 
-<h1 id="j2cache-redis-java">J2Cache —— 基于内存和 Redis 的两级 Java 缓存框架<a class="headerlink" href="#j2cache-redis-java" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/oschina/J2Cache">github J2Cache</a></p>
+<h1 id="jhipster">jhipster 基础<a class="headerlink" href="#jhipster" title="Permanent link">&para;</a></h1>
+<p><strong>JHipster</strong> 是一个快速开发平台，结合了前端和后端的脚手架工具，帮助开发者轻松构建现代的 Web 应用程序和微服务架构。它集成了多种框架、工具和库，例如 Spring Boot、Angular 或 React、Spring Cloud、Docker、Kubernetes 等，旨在提高开发效率和代码质量。</p>
+<h2 id="1-jhipster">1. JHipster 的主要特点<a class="headerlink" href="#1-jhipster" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>全栈生成器</strong>：能够生成前端（Angular、React、Vue）和后端（Spring Boot）的代码。</li>
+<li><strong>微服务支持</strong>：支持生成微服务架构，包括网关和服务发现等。</li>
+<li><strong>数据库管理</strong>：支持多种数据库（SQL 和 NoSQL），并集成了 Liquibase 来进行数据库版本控制。</li>
+<li><strong>DevOps 集成</strong>：内置 Docker 和 Kubernetes 配置文件，方便部署应用。</li>
+<li><strong>安全性</strong>：支持 OAuth2、JWT 等多种身份验证方式。</li>
+</ul>
+<h2 id="2-jhipster">2. JHipster 安装<a class="headerlink" href="#2-jhipster" title="Permanent link">&para;</a></h2>
+<h3 id="21">2.1. 安装前置依赖<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<p>确保已安装 <strong>Node.js</strong>、<strong>npm</strong>、<strong>Java Development Kit (JDK)</strong> 和 <strong>Git</strong>。此外，<strong>Yeoman</strong>（脚手架工具）也是必备的：</p>
+<pre><code class="language-bash"># 安装 Yeoman 和 JHipster
+npm install -g yo
+npm install -g generator-jhipster
+</code></pre>
+<h3 id="22">2.2. 创建项目<a class="headerlink" href="#22" title="Permanent link">&para;</a></h3>
+<p>安装完成后，可以使用 <code>jhipster</code> 命令创建一个新项目：</p>
+<pre><code class="language-bash"># 进入工作目录
+mkdir my-app &amp;&amp; cd my-app
+
+# 生成项目
+jhipster
+</code></pre>
+<p>执行命令后，JHipster 会启动一个交互式配置向导，要求选择应用的配置选项，比如应用类型、身份验证方式、前端框架、数据库类型等。</p>
+<hr />
+<h2 id="3-jhipster">3. JHipster 项目结构<a class="headerlink" href="#3-jhipster" title="Permanent link">&para;</a></h2>
+<p>生成的 JHipster 项目具有清晰的结构，以下是主要文件夹和内容：</p>
+<ul>
+<li><strong>src/main/java</strong>：后端 Java 代码目录，包含 Spring Boot 的业务逻辑。</li>
+<li><strong>src/main/webapp</strong>：前端代码目录，默认使用 Angular 或者其他选择的前端框架。</li>
+<li><strong>src/main/resources/config</strong>：配置文件目录，包含 <code>application.yml</code> 文件，定义了数据库连接、缓存、消息队列等配置。</li>
+<li><strong>src/test</strong>：测试代码目录，包含后端和前端的测试代码。</li>
+<li><strong>docker</strong>：包含 Docker 配置文件，用于容器化部署。</li>
+</ul>
+<hr />
+<h2 id="4">4. 基本功能概述<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1. 实体生成器<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>JHipster 提供了实体生成器，可以自动生成数据库实体以及对应的 CRUD 接口、服务和前端界面。</p>
+<pre><code class="language-bash"># 生成实体
+jhipster entity &lt;entityName&gt;
+</code></pre>
+<p>生成实体时会进入交互模式，设置字段、类型、关系等信息。生成完后，可以查看代码和界面：</p>
+<pre><code class="language-java">// 示例 Java 实体
+@Entity
+public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String name;
+    private Double price;
+    // getter 和 setter
+}
+</code></pre>
+<p>生成的实体包含后端 API、前端表单和表格展示页面。</p>
+<h3 id="42">4.2. 身份验证和安全<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>JHipster 支持多种认证机制，包括 JWT、OAuth2 和基于 Session 的身份验证方式。默认情况下，JHipster 会在项目中启用 JWT 认证。</p>
+<p>安全配置文件通常位于 <code>SecurityConfiguration.java</code> 中，可以在其中定义角色、权限和 API 路径的安全策略。</p>
+<h3 id="43">4.3. 前端框架<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p>JHipster 支持 <strong>Angular</strong>、<strong>React</strong> 和 <strong>Vue</strong>，可以根据需求选择合适的前端框架。生成的前端代码包括表单、表格和导航栏等基础功能。JHipster 会将 API 和前端组件绑定在一起，简化数据的双向绑定。</p>
+<h2 id="5">5. 微服务支持<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>JHipster 提供了多种微服务架构的支持，如基于 Spring Cloud 和 Netflix OSS 的微服务框架，包括服务发现（Eureka）、配置管理（Spring Cloud Config）、API 网关（Zuul 或 Spring Cloud Gateway）等。</p>
+<ul>
+<li><strong>Gateway</strong>：前端网关应用，用于接收用户请求并分发到不同的微服务。</li>
+<li><strong>Registry</strong>：服务注册中心，负责微服务的注册和发现。</li>
+<li><strong>Microservices</strong>：具体的业务服务模块，每个微服务可以独立开发和部署。</li>
+</ul>
+<p>生成微服务项目时，JHipster 会提示选择微服务或网关，并配置 Spring Cloud 服务注册和负载均衡。</p>
+<h2 id="6">6. 部署<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="61-docker">6.1. Docker 支持<a class="headerlink" href="#61-docker" title="Permanent link">&para;</a></h3>
+<p>JHipster 默认生成 Docker 配置文件，可以直接使用 Docker 容器化应用：</p>
+<pre><code class="language-bash"># 启动 Docker 容器
+docker-compose up -d
+</code></pre>
+<h3 id="62-kubernetes">6.2. Kubernetes 支持<a class="headerlink" href="#62-kubernetes" title="Permanent link">&para;</a></h3>
+<p>JHipster 也支持生成 Kubernetes 配置文件，方便应用在 Kubernetes 集群中部署。</p>
+<pre><code class="language-bash"># 生成 Kubernetes 配置文件
+jhipster kubernetes
+</code></pre>
+<p>生成的配置文件位于 <code>kubernetes/</code> 文件夹，包含了服务、部署和配置映射等资源定义。</p>
+<hr />
+<h2 id="7-jhipster-registry">7. JHipster Registry<a class="headerlink" href="#7-jhipster-registry" title="Permanent link">&para;</a></h2>
+<p><strong>JHipster Registry</strong> 是一个基于 Spring Cloud Netflix Eureka 的服务注册中心，用于管理和监控 JHipster 微服务。它提供了一个管理控制台，可以查看微服务的健康状态、日志、配置信息等。</p>
+<p>可以通过以下命令运行 JHipster Registry：</p>
+<pre><code class="language-bash"># 使用 Docker 启动 JHipster Registry
+docker run -d -p 8761:8761 jhipster/jhipster-registry
+</code></pre>
+<h2 id="8">8. 常见的生成器命令<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>创建新应用</strong>：<code>jhipster</code></li>
+<li><strong>生成新实体</strong>：<code>jhipster entity &lt;entityName&gt;</code></li>
+<li><strong>生成 Kubernetes 配置</strong>：<code>jhipster kubernetes</code></li>
+<li><strong>生成 CI 配置文件</strong>：<code>jhipster ci-cd</code></li>
+</ul>
+<h2 id="_1">总结<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>JHipster 提供了全面的全栈开发解决方案，通过丰富的集成和生成器功能，能够快速搭建 Web 应用和微服务项目。对于需要快速开发且涉及多技术栈的项目，JHipster 是一个高效的选择。</p>
 
 
 
@@ -7478,10 +7997,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>

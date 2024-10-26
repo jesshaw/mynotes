@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../../liquibase/liquibase-basics/">
       
       
-        <link rel="next" href="../rocketmq/rocketmq_arch/">
+        <link rel="next" href="../mq-distributed-transaction/">
       
       
       <link rel="icon" href="../../../../assets/lx.ico">
@@ -1336,11 +1336,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cache/j2cache/j2cache/" class="md-nav__link">
+      <a href="../../cache/j2cache/j2cache-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    J2Cache —— 基于内存和 Redis 的两级 Java 缓存框架
+    J2Cache
   </span>
   
 
@@ -1489,7 +1489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cache/redis/redis-knowledge-points/" class="md-nav__link">
+      <a href="../../cache/redis/redis-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1815,11 +1815,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jhispter/jhipster-usefully-cmd/" class="md-nav__link">
+      <a href="../../jhispter/jhipster-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    jhipster注意事项
+    jhipster 基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../jhispter/jhipster-qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jhipster 常见问题
   </span>
   
 
@@ -1905,11 +1926,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../liquibase/liquibase-upgrade-db-step/" class="md-nav__link">
+      <a href="../../liquibase/liquibase-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    liquibase实现自动升级数据的步骤
+    liquibase
   </span>
   
 
@@ -1973,27 +1994,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    队例
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2043,27 +2043,111 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      背景
+      1. 延时队列的工作原理
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      可能的方案
+      2. 延时队列的实现方式
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. 延时队列的实现方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-rabbitmq" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. 使用 RabbitMQ 的延时插件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-redis-zset" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. 使用 Redis 的 ZSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. 使用 Kafka 的定时消息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-rocketmq" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. 使用rocketmq的延迟消息
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 应用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 延时队列的优缺点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 延时队列的优缺点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      架构
+      总结
     </span>
   </a>
   
@@ -2073,6 +2157,69 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mq-distributed-transaction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基于MQ的分布式事务实现方案
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mq-qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    队例
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stock-overselling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    库存超卖
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2097,10 +2244,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_3_5_3" id="__nav_3_3_5_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3_5_5" id="__nav_3_3_5_5_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -2111,8 +2258,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_5_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_3_5_3">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_3_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5_5">
             <span class="md-nav__icon md-icon"></span>
             Rocketmq
           </label>
@@ -4179,27 +4326,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../java/micro-service/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    微服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../java/micro-service/distributed-transcation/" class="md-nav__link">
         
   
@@ -4221,11 +4347,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../java/micro-service/microservices-practice/" class="md-nav__link">
+      <a href="../../../java/micro-service/micro-service-best-practice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    微服务实践
+    微服务最佳实践
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../java/micro-service/micro-service-qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    微服务常见问题
   </span>
   
 
@@ -7471,27 +7618,111 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      背景
+      1. 延时队列的工作原理
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      可能的方案
+      2. 延时队列的实现方式
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="2. 延时队列的实现方式">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-rabbitmq" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. 使用 RabbitMQ 的延时插件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-redis-zset" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. 使用 Redis 的 ZSet
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-kafka" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. 使用 Kafka 的定时消息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-rocketmq" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. 使用rocketmq的延迟消息
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 应用场景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 延时队列的优缺点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 延时队列的优缺点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      架构
+      总结
     </span>
   </a>
   
@@ -7516,19 +7747,53 @@
 
 
 <h1 id="_1">延时队列<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">背景<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>业务中会有很多定时执行的任务，如定时生日提醒，定时促销推广或是业务要求更高的定时发布产品，定时回复。</p>
-<p>传统的定时任务一般的job就能解决，丢消息也可以接受，如促销推广，但对于产品发布和定时回复则要求更高，所以需要满足量大，高性能，可靠等必要条件。</p>
-<h2 id="_3">可能的方案<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>延时队列</strong>是一种特殊的消息队列，能够让消息在指定的延时后才被消费，用于需要<strong>延迟执行</strong>的场景。例如订单超时取消、活动延迟开始、延迟通知等。</p>
+<h2 id="1">1. 延时队列的工作原理<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>延时队列的核心是将消息存储在队列中，并在消息创建时设置<strong>延迟时间</strong>。在延时结束后，消息才会被投递给消费者。很多消息中间件原生支持延时队列功能，比如 RabbitMQ 的延时插件、Kafka 的定时消息、Redis 的 ZSet 等。</p>
+<h2 id="2">2. 延时队列的实现方式<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21-rabbitmq">2.1. 使用 RabbitMQ 的延时插件<a class="headerlink" href="#21-rabbitmq" title="Permanent link">&para;</a></h3>
+<p>RabbitMQ 可以通过<strong>TTL（Time-To-Live）</strong>和<strong>死信交换器（Dead Letter Exchange, DLX）</strong>实现延时队列。具体实现如下：</p>
 <ul>
-<li>使用数据库定时任务，每隔几秒扫描数据表，找出符合延迟条件的消息处理。</li>
-<li>使用spring的@Scheduled注解启动定时任务或者使用Quartz任务管理器，定时触发任务，处理延迟消息。</li>
-<li>使用消息中间件，ActiveMQ或者RocketMQ 都提供了延迟消息队列，下单后往延迟消息队列中发消息，超时后，消费端会接收到一条延迟的消息，并做相应处理。</li>
-<li>在用户查询的时候，检测延迟消息进处处理。</li>
-<li>使用DelayQueue来实现。</li>
-<li>其他方式。</li>
+<li><strong>TTL（消息生存时间）</strong>：设置队列或消息的 TTL，使消息在指定时间后过期。</li>
+<li><strong>DLX（死信交换器）</strong>：当消息过期后自动转发到死信交换器，由另一个消费者消费。</li>
 </ul>
-<h2 id="_4">架构<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p><strong>实现步骤</strong>：</p>
+<ol>
+<li>创建一个具有 TTL 设置的普通队列，例如 <code>delay_queue</code>，将其消息的 TTL 设置为延迟时间。</li>
+<li>设置 <code>delay_queue</code> 的 DLX 为目标交换器（例如 <code>dlx_exchange</code>）。</li>
+<li>在 <code>dlx_exchange</code> 上创建一个正常队列 <code>process_queue</code>，用于消费过期消息。</li>
+</ol>
+<p>代码示例：</p>
+<pre><code class="language-java">// 设置 delay_queue 的 TTL 和 DLX 参数
+Map&lt;String, Object&gt; args = new HashMap&lt;&gt;();
+args.put(&quot;x-message-ttl&quot;, 60000); // 消息延迟 60 秒
+args.put(&quot;x-dead-letter-exchange&quot;, &quot;dlx_exchange&quot;);
+
+Channel channel = connection.createChannel();
+channel.queueDeclare(&quot;delay_queue&quot;, true, false, false, args);
+channel.exchangeDeclare(&quot;dlx_exchange&quot;, &quot;direct&quot;);
+channel.queueDeclare(&quot;process_queue&quot;, true, false, false, null);
+channel.queueBind(&quot;process_queue&quot;, &quot;dlx_exchange&quot;, &quot;&quot;); // 绑定队列
+</code></pre>
+<p>这样，消息将在 <code>delay_queue</code> 中停留 60 秒后转发到 <code>dlx_exchange</code>，并最终进入 <code>process_queue</code> 进行消费。</p>
+<h3 id="22-redis-zset">2.2. 使用 Redis 的 ZSet<a class="headerlink" href="#22-redis-zset" title="Permanent link">&para;</a></h3>
+<p>Redis 的 <strong>ZSet（有序集合）</strong> 也可以作为延时队列。将每条消息存储在 ZSet 中，并使用<strong>时间戳</strong>作为分数，表示消息的到期时间。消费者定期从 ZSet 中检查到期的消息并处理。</p>
+<pre><code class="language-java">// 添加消息到延时队列
+long delay = 60000; // 60秒
+long timestamp = System.currentTimeMillis() + delay;
+redisTemplate.opsForZSet().add(&quot;delay_queue&quot;, message, timestamp);
+
+// 定期轮询消费到期消息
+Set&lt;Object&gt; messages = redisTemplate.opsForZSet().rangeByScore(&quot;delay_queue&quot;, 0, System.currentTimeMillis());
+for (Object msg : messages) {
+    // 处理消息
+    processMessage(msg);
+    redisTemplate.opsForZSet().remove(&quot;delay_queue&quot;, msg);
+}
+</code></pre>
+<h3 id="23-kafka">2.3. 使用 Kafka 的定时消息<a class="headerlink" href="#23-kafka" title="Permanent link">&para;</a></h3>
+<p>Kafka 支持<strong>延时投递</strong>，可以通过设置<strong>定时消息</strong>或借助外部调度器（如 Kafka Streams 或定时任务）来实现。Kafka 的每条消息可以设定延迟时间，从而延迟消息的消费。</p>
+<h3 id="24-rocketmq">2.4. 使用rocketmq的延迟消息<a class="headerlink" href="#24-rocketmq" title="Permanent link">&para;</a></h3>
 <p>本想使用rocketmq的延迟消息特性，但延迟的范围有限，仅支持
 1s 5s 10s 30s
 1m 2m 3m 4m
@@ -7536,10 +7801,26 @@
 9m 10m 20m 30m
 1h 2h
 这18个等级，之外的延迟时间不支持，本文是为了说明如何利用rocketmq的延迟消息实现任意时间的消息延迟，如何进行扩展的</p>
-<p><a class="glightbox" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXMtYXNjaWkiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSI0MjRweCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgc3R5bGU9IndpZHRoOjU3MnB4O2hlaWdodDo0MjRweDtiYWNrZ3JvdW5kOiNGRkZGRkY7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1NzIgNDI0IiB3aWR0aD0iNTcycHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48ZWxsaXBzZSBjeD0iMjgzIiBjeT0iMjAiIGZpbGw9IiMyMjIyMjIiIHJ4PSIxMCIgcnk9IjEwIiBzdHlsZT0ic3Ryb2tlOiMyMjIyMjI7c3Ryb2tlLXdpZHRoOjEuMDsiLz48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iODkiIHg9IjIzOC41IiB5PSI1MCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjY5IiB4PSIyNDguNSIgeT0iNzEuMTM4NyI+TVFQcm9kdWVyPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiNGMUYxRjEiIHBvaW50cz0iMzIsMTAzLjk2ODgsNzIsMTAzLjk2ODgsODQsMTE1Ljk2ODgsNzIsMTI3Ljk2ODgsMzIsMTI3Ljk2ODgsMjAsMTE1Ljk2ODgsMzIsMTAzLjk2ODgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjIwIiB4PSI1NiIgeT0iMTM4LjE3OTIiPnllczwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MCIgeD0iMzIiIHk9IjExOS43NzY5Ij4xJiMyMDk5ODsmIzM4MDQ3OyYjMjA4Njk7PC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiNGMUYxRjEiIHBvaW50cz0iMTE2LDEwMy45Njg4LDE4NSwxMDMuOTY4OCwxOTcsMTE1Ljk2ODgsMTg1LDEyNy45Njg4LDExNiwxMjcuOTY4OCwxMDQsMTE1Ljk2ODgsMTE2LDEwMy45Njg4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIyMCIgeD0iMTU0LjUiIHk9IjEzOC4xNzkyIj55ZXM8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNjkiIHg9IjExNiIgeT0iMTE5Ljc3NjkiPiYjMjIzMTI7MTgmIzE5OTc4OyYjMzg0NTQ7JiMyNzU3MzsmIzE5OTc4OzwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MiIgeD0iMTk3IiB5PSIxMTMuMzc0NSI+bm90aGluZzwvdGV4dD48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMjIxIiB4PSIyNzciIHk9IjE4Ny4xNjk5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjAxIiB4PSIyODciIHk9IjIwOC4zMDg2Ij5SZXBlYXRNUUNvbnN1bWVyQW5kUHJvZHVlcjwvdGV4dD48cG9seWdvbiBmaWxsPSIjRjFGMUYxIiBwb2ludHM9IjI1MywxNDMuMTY5OSw1MjIsMTQzLjE2OTksNTM0LDE1NS4xNjk5LDUyMiwxNjcuMTY5OSwyNTMsMTY3LjE2OTksMjQxLDE1NS4xNjk5LDI1MywxNDMuMTY5OSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjY5IiB4PSIyNTMiIHk9IjE1OC45NzgiPjomIzI1Mjg2OyYjMjA5OTg7JiM2NTI4ODsyMSYjMjA5OTg7JiMzODA0NzsmIzI2MTU5OzE1JiMzODQ1NDsmIzI3NTczOysxJiMyMDk5ODsmIzM4MDQ3OyYjNjUyOTI7MiYjMjI4MjU7JiMyNjE1OTsyNCYjMjAwMTA7MiYjMjM1Njc7JiMyNjEwMjsmIzY1Mjg5Oz88L3RleHQ+PHJlY3QgZmlsbD0iI0YxRjFGMSIgaGVpZ2h0PSIzMy45Njg4IiByeD0iMTIuNSIgcnk9IjEyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9Ijc5IiB4PSIyNDMuNSIgeT0iMjgzLjEzODciLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1OSIgeD0iMjUzLjUiIHk9IjMwNC4yNzczIj5NUVNlcnZlcjwvdGV4dD48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMTAyIiB4PSIyMzIiIHk9IjMzNy4xMDc0Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODIiIHg9IjI0MiIgeT0iMzU4LjI0NjEiPk1RQ29uc3VtZXI8L3RleHQ+PGVsbGlwc2UgY3g9IjI4MyIgY3k9IjQwMi4wNzYyIiBmaWxsPSJub25lIiByeD0iMTEiIHJ5PSIxMSIgc3R5bGU9InN0cm9rZTojMjIyMjIyO3N0cm9rZS13aWR0aDoxLjA7Ii8+PGVsbGlwc2UgY3g9IjI4MyIgY3k9IjQwMi4wNzYyIiBmaWxsPSIjMjIyMjIyIiByeD0iNiIgcnk9IjYiIHN0eWxlPSJzdHJva2U6IzIyMjIyMjtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4MyIgeDI9IjI4MyIgeTE9IjMwIiB5Mj0iNTAiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI3OSw0MCwyODMsNTAsMjg3LDQwLDI4Myw0NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMzg3LjUiIHgyPSIzODcuNSIgeTE9IjE2Ny4xNjk5IiB5Mj0iMTg3LjE2OTkiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjM4My41LDE3Ny4xNjk5LDM4Ny41LDE4Ny4xNjk5LDM5MS41LDE3Ny4xNjk5LDM4Ny41LDE4MS4xNjk5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzODcuNSIgeDI9IjM4Ny41IiB5MT0iMjIxLjEzODciIHkyPSIyMzEuMTM4NyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjM4Ny41IiB4Mj0iNTQ2IiB5MT0iMjMxLjEzODciIHkyPSIyMzEuMTM4NyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTQyLDIwMi4xNTQzLDU0NiwxOTIuMTU0Myw1NTAsMjAyLjE1NDMsNTQ2LDE5OC4xNTQzIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI1NDYiIHgyPSI1NDYiIHkxPSIxNTUuMTY5OSIgeTI9IjIzMS4xMzg3Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTQ2IiB4Mj0iNTM0IiB5MT0iMTU1LjE2OTkiIHkyPSIxNTUuMTY5OSIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTQ0LDE1MS4xNjk5LDUzNCwxNTUuMTY5OSw1NDQsMTU5LjE2OTksNTQwLDE1NS4xNjk5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyNDEiIHgyPSIyMjkiIHkxPSIxNTUuMTY5OSIgeTI9IjE1NS4xNjk5Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyMjUsMTg4LjE1NDMsMjI5LDE5OC4xNTQzLDIzMywxODguMTU0MywyMjksMTkyLjE1NDMiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjIyOSIgeDI9IjIyOSIgeTE9IjE1NS4xNjk5IiB5Mj0iMjQzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyMjkiIHgyPSIzODcuNSIgeTE9IjI0My4xMzg3IiB5Mj0iMjQzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzODcuNSIgeDI9IjM4Ny41IiB5MT0iMjQzLjEzODciIHkyPSIyNjMuMTM4NyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMzgzLjUsMjUzLjEzODcsMzg3LjUsMjYzLjEzODcsMzkxLjUsMjUzLjEzODcsMzg3LjUsMjU3LjEzODciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjUyIiB4Mj0iNTIiIHkxPSIxMjcuOTY4OCIgeTI9IjI2My4xMzg3Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI0OCwyNTMuMTM4Nyw1MiwyNjMuMTM4Nyw1NiwyNTMuMTM4Nyw1MiwyNTcuMTM4NyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMTUwLjUiIHgyPSIxNTAuNSIgeTE9IjEyNy45Njg4IiB5Mj0iMjYzLjEzODciLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjE0Ni41LDI1My4xMzg3LDE1MC41LDI2My4xMzg3LDE1NC41LDI1My4xMzg3LDE1MC41LDI1Ny4xMzg3IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI4NCIgeDI9IjEwNCIgeTE9IjExNS45Njg4IiB5Mj0iMTE1Ljk2ODgiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9Ijk0LDExMS45Njg4LDEwNCwxMTUuOTY4OCw5NCwxMTkuOTY4OCw5OCwxMTUuOTY4OCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iODMuOTY4OCIgeTI9Ijg4Ljk2ODgiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODMiIHgyPSI1MiIgeTE9Ijg4Ljk2ODgiIHkyPSI4OC45Njg4Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTIiIHgyPSI1MiIgeTE9Ijg4Ljk2ODgiIHkyPSIxMDMuOTY4OCIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDgsOTMuOTY4OCw1MiwxMDMuOTY4OCw1Niw5My45Njg4LDUyLDk3Ljk2ODgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjE5NyIgeDI9IjM4Ny41IiB5MT0iMTE1Ljk2ODgiIHkyPSIxMTUuOTY4OCIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjM4Ny41IiB4Mj0iMzg3LjUiIHkxPSIxMTUuOTY4OCIgeTI9IjE0My4xNjk5Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIzODMuNSwxMzMuMTY5OSwzODcuNSwxNDMuMTY5OSwzOTEuNSwxMzMuMTY5OSwzODcuNSwxMzcuMTY5OSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTIiIHgyPSIzODcuNSIgeTE9IjI2My4xMzg3IiB5Mj0iMjYzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODMiIHgyPSIyODMiIHkxPSIyNjMuMTM4NyIgeTI9IjI4My4xMzg3Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyNzksMjczLjEzODcsMjgzLDI4My4xMzg3LDI4NywyNzMuMTM4NywyODMsMjc3LjEzODciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4MyIgeDI9IjI4MyIgeTE9IjMxNy4xMDc0IiB5Mj0iMzM3LjEwNzQiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI3OSwzMjcuMTA3NCwyODMsMzM3LjEwNzQsMjg3LDMyNy4xMDc0LDI4MywzMzEuMTA3NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iMzcxLjA3NjIiIHkyPSIzOTEuMDc2MiIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMjc5LDM4MS4wNzYyLDI4MywzOTEuMDc2MiwyODcsMzgxLjA3NjIsMjgzLDM4NS4wNzYyIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48IS0tU1JDPVtQTDNCSVdDbjVEdGRBeDlwV1kzQ2UyM0pISDUxTHVNc1ZpN0drVEM2ZmljT1Aybi1XQUstRzcxWjV1OFI1LWYydExZd3dFVHExaGhnQnZXcVpSTkVBaGR0dDdGa0VMVWdJMlk0bWFRaEFOWVNXd1dYY2MzRkJxUjNuU0RwQ1JtWU1GTTBPVXlJOTQ0OEtXYTZCdnZVX1NGdno2T25kZkdWdF9mSjdTQ1V1d2Y3TVBVV0dPLWNrV3hCc3c3TU5TdjZtTGdfNzdfdzFyUFpUenJRcGt3MnVrTEQ4eTctVkZlVTU1X3R2VURhRVJrazRuSXM4T0Q4RExoN2RDY3kzLUE4blItc1dTTWhGVVAzNHZGZTNDSTVHTFJuNzRNTkVwWktoMHY4WUprU0FTNUpNVEREYXlsS2JFTTBDcGtXeFRUVERDUTlkZkFBUF9nbklvbzlvWVFOZ2h2cjBoQ1p3aThVUG1ScFk1ZFdobDhORkdLN2hXS1RxRE9ENERrTzVLV1lfUDFfN2NBRTFTSEtHQVRnbjA0a2JGRW9lSVBTMzI4SEx2V2RqZy1icHRFR2dYQjJjaUlQamVtTHpCQ3FLaDBuUjR4cjBtMDBdLS0+PC9nPjwvc3ZnPg==" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXMtYXNjaWkiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSI0MjRweCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgc3R5bGU9IndpZHRoOjU3MnB4O2hlaWdodDo0MjRweDtiYWNrZ3JvdW5kOiNGRkZGRkY7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1NzIgNDI0IiB3aWR0aD0iNTcycHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48ZWxsaXBzZSBjeD0iMjgzIiBjeT0iMjAiIGZpbGw9IiMyMjIyMjIiIHJ4PSIxMCIgcnk9IjEwIiBzdHlsZT0ic3Ryb2tlOiMyMjIyMjI7c3Ryb2tlLXdpZHRoOjEuMDsiLz48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iODkiIHg9IjIzOC41IiB5PSI1MCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjY5IiB4PSIyNDguNSIgeT0iNzEuMTM4NyI+TVFQcm9kdWVyPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiNGMUYxRjEiIHBvaW50cz0iMzIsMTAzLjk2ODgsNzIsMTAzLjk2ODgsODQsMTE1Ljk2ODgsNzIsMTI3Ljk2ODgsMzIsMTI3Ljk2ODgsMjAsMTE1Ljk2ODgsMzIsMTAzLjk2ODgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjIwIiB4PSI1NiIgeT0iMTM4LjE3OTIiPnllczwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MCIgeD0iMzIiIHk9IjExOS43NzY5Ij4xJiMyMDk5ODsmIzM4MDQ3OyYjMjA4Njk7PC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiNGMUYxRjEiIHBvaW50cz0iMTE2LDEwMy45Njg4LDE4NSwxMDMuOTY4OCwxOTcsMTE1Ljk2ODgsMTg1LDEyNy45Njg4LDExNiwxMjcuOTY4OCwxMDQsMTE1Ljk2ODgsMTE2LDEwMy45Njg4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIyMCIgeD0iMTU0LjUiIHk9IjEzOC4xNzkyIj55ZXM8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNjkiIHg9IjExNiIgeT0iMTE5Ljc3NjkiPiYjMjIzMTI7MTgmIzE5OTc4OyYjMzg0NTQ7JiMyNzU3MzsmIzE5OTc4OzwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MiIgeD0iMTk3IiB5PSIxMTMuMzc0NSI+bm90aGluZzwvdGV4dD48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMjIxIiB4PSIyNzciIHk9IjE4Ny4xNjk5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjAxIiB4PSIyODciIHk9IjIwOC4zMDg2Ij5SZXBlYXRNUUNvbnN1bWVyQW5kUHJvZHVlcjwvdGV4dD48cG9seWdvbiBmaWxsPSIjRjFGMUYxIiBwb2ludHM9IjI1MywxNDMuMTY5OSw1MjIsMTQzLjE2OTksNTM0LDE1NS4xNjk5LDUyMiwxNjcuMTY5OSwyNTMsMTY3LjE2OTksMjQxLDE1NS4xNjk5LDI1MywxNDMuMTY5OSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjY5IiB4PSIyNTMiIHk9IjE1OC45NzgiPjomIzI1Mjg2OyYjMjA5OTg7JiM2NTI4ODsyMSYjMjA5OTg7JiMzODA0NzsmIzI2MTU5OzE1JiMzODQ1NDsmIzI3NTczOysxJiMyMDk5ODsmIzM4MDQ3OyYjNjUyOTI7MiYjMjI4MjU7JiMyNjE1OTsyNCYjMjAwMTA7MiYjMjM1Njc7JiMyNjEwMjsmIzY1Mjg5Oz88L3RleHQ+PHJlY3QgZmlsbD0iI0YxRjFGMSIgaGVpZ2h0PSIzMy45Njg4IiByeD0iMTIuNSIgcnk9IjEyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9Ijc5IiB4PSIyNDMuNSIgeT0iMjgzLjEzODciLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1OSIgeD0iMjUzLjUiIHk9IjMwNC4yNzczIj5NUVNlcnZlcjwvdGV4dD48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMTAyIiB4PSIyMzIiIHk9IjMzNy4xMDc0Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODIiIHg9IjI0MiIgeT0iMzU4LjI0NjEiPk1RQ29uc3VtZXI8L3RleHQ+PGVsbGlwc2UgY3g9IjI4MyIgY3k9IjQwMi4wNzYyIiBmaWxsPSJub25lIiByeD0iMTEiIHJ5PSIxMSIgc3R5bGU9InN0cm9rZTojMjIyMjIyO3N0cm9rZS13aWR0aDoxLjA7Ii8+PGVsbGlwc2UgY3g9IjI4MyIgY3k9IjQwMi4wNzYyIiBmaWxsPSIjMjIyMjIyIiByeD0iNiIgcnk9IjYiIHN0eWxlPSJzdHJva2U6IzIyMjIyMjtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4MyIgeDI9IjI4MyIgeTE9IjMwIiB5Mj0iNTAiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI3OSw0MCwyODMsNTAsMjg3LDQwLDI4Myw0NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMzg3LjUiIHgyPSIzODcuNSIgeTE9IjE2Ny4xNjk5IiB5Mj0iMTg3LjE2OTkiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjM4My41LDE3Ny4xNjk5LDM4Ny41LDE4Ny4xNjk5LDM5MS41LDE3Ny4xNjk5LDM4Ny41LDE4MS4xNjk5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzODcuNSIgeDI9IjM4Ny41IiB5MT0iMjIxLjEzODciIHkyPSIyMzEuMTM4NyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjM4Ny41IiB4Mj0iNTQ2IiB5MT0iMjMxLjEzODciIHkyPSIyMzEuMTM4NyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTQyLDIwMi4xNTQzLDU0NiwxOTIuMTU0Myw1NTAsMjAyLjE1NDMsNTQ2LDE5OC4xNTQzIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI1NDYiIHgyPSI1NDYiIHkxPSIxNTUuMTY5OSIgeTI9IjIzMS4xMzg3Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTQ2IiB4Mj0iNTM0IiB5MT0iMTU1LjE2OTkiIHkyPSIxNTUuMTY5OSIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTQ0LDE1MS4xNjk5LDUzNCwxNTUuMTY5OSw1NDQsMTU5LjE2OTksNTQwLDE1NS4xNjk5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyNDEiIHgyPSIyMjkiIHkxPSIxNTUuMTY5OSIgeTI9IjE1NS4xNjk5Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyMjUsMTg4LjE1NDMsMjI5LDE5OC4xNTQzLDIzMywxODguMTU0MywyMjksMTkyLjE1NDMiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjIyOSIgeDI9IjIyOSIgeTE9IjE1NS4xNjk5IiB5Mj0iMjQzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyMjkiIHgyPSIzODcuNSIgeTE9IjI0My4xMzg3IiB5Mj0iMjQzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzODcuNSIgeDI9IjM4Ny41IiB5MT0iMjQzLjEzODciIHkyPSIyNjMuMTM4NyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMzgzLjUsMjUzLjEzODcsMzg3LjUsMjYzLjEzODcsMzkxLjUsMjUzLjEzODcsMzg3LjUsMjU3LjEzODciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjUyIiB4Mj0iNTIiIHkxPSIxMjcuOTY4OCIgeTI9IjI2My4xMzg3Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI0OCwyNTMuMTM4Nyw1MiwyNjMuMTM4Nyw1NiwyNTMuMTM4Nyw1MiwyNTcuMTM4NyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMTUwLjUiIHgyPSIxNTAuNSIgeTE9IjEyNy45Njg4IiB5Mj0iMjYzLjEzODciLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjE0Ni41LDI1My4xMzg3LDE1MC41LDI2My4xMzg3LDE1NC41LDI1My4xMzg3LDE1MC41LDI1Ny4xMzg3IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI4NCIgeDI9IjEwNCIgeTE9IjExNS45Njg4IiB5Mj0iMTE1Ljk2ODgiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9Ijk0LDExMS45Njg4LDEwNCwxMTUuOTY4OCw5NCwxMTkuOTY4OCw5OCwxMTUuOTY4OCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iODMuOTY4OCIgeTI9Ijg4Ljk2ODgiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODMiIHgyPSI1MiIgeTE9Ijg4Ljk2ODgiIHkyPSI4OC45Njg4Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTIiIHgyPSI1MiIgeTE9Ijg4Ljk2ODgiIHkyPSIxMDMuOTY4OCIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDgsOTMuOTY4OCw1MiwxMDMuOTY4OCw1Niw5My45Njg4LDUyLDk3Ljk2ODgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjE5NyIgeDI9IjM4Ny41IiB5MT0iMTE1Ljk2ODgiIHkyPSIxMTUuOTY4OCIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjM4Ny41IiB4Mj0iMzg3LjUiIHkxPSIxMTUuOTY4OCIgeTI9IjE0My4xNjk5Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIzODMuNSwxMzMuMTY5OSwzODcuNSwxNDMuMTY5OSwzOTEuNSwxMzMuMTY5OSwzODcuNSwxMzcuMTY5OSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTIiIHgyPSIzODcuNSIgeTE9IjI2My4xMzg3IiB5Mj0iMjYzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODMiIHgyPSIyODMiIHkxPSIyNjMuMTM4NyIgeTI9IjI4My4xMzg3Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyNzksMjczLjEzODcsMjgzLDI4My4xMzg3LDI4NywyNzMuMTM4NywyODMsMjc3LjEzODciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4MyIgeDI9IjI4MyIgeTE9IjMxNy4xMDc0IiB5Mj0iMzM3LjEwNzQiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI3OSwzMjcuMTA3NCwyODMsMzM3LjEwNzQsMjg3LDMyNy4xMDc0LDI4MywzMzEuMTA3NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iMzcxLjA3NjIiIHkyPSIzOTEuMDc2MiIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMjc5LDM4MS4wNzYyLDI4MywzOTEuMDc2MiwyODcsMzgxLjA3NjIsMjgzLDM4NS4wNzYyIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48IS0tU1JDPVtQTDNCSVdDbjVEdGRBeDlwV1kzQ2UyM0pISDUxTHVNc1ZpN0drVEM2ZmljT1Aybi1XQUstRzcxWjV1OFI1LWYydExZd3dFVHExaGhnQnZXcVpSTkVBaGR0dDdGa0VMVWdJMlk0bWFRaEFOWVNXd1dYY2MzRkJxUjNuU0RwQ1JtWU1GTTBPVXlJOTQ0OEtXYTZCdnZVX1NGdno2T25kZkdWdF9mSjdTQ1V1d2Y3TVBVV0dPLWNrV3hCc3c3TU5TdjZtTGdfNzdfdzFyUFpUenJRcGt3MnVrTEQ4eTctVkZlVTU1X3R2VURhRVJrazRuSXM4T0Q4RExoN2RDY3kzLUE4blItc1dTTWhGVVAzNHZGZTNDSTVHTFJuNzRNTkVwWktoMHY4WUprU0FTNUpNVEREYXlsS2JFTTBDcGtXeFRUVERDUTlkZkFBUF9nbklvbzlvWVFOZ2h2cjBoQ1p3aThVUG1ScFk1ZFdobDhORkdLN2hXS1RxRE9ENERrTzVLV1lfUDFfN2NBRTFTSEtHQVRnbjA0a2JGRW9lSVBTMzI4SEx2V2RqZy1icHRFR2dYQjJjaUlQamVtTHpCQ3FLaDBuUjR4cjBtMDBdLS0+PC9nPjwvc3ZnPg==" class="uml" alt="uml diagram" title="" /></a></p>
-<p><a class="glightbox" href="../delay_mq.drawio.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="延时队列" src="../delay_mq.drawio.svg" /></a></p>
-<p>[1]: RocketMQ如何做延时队列 https://zhuanlan.zhihu.com/p/142441996
-[2]: RocketMQ做任何时段的延时队列方案 https://blog.csdn.net/qq_16485855/article/details/1064521386</p>
+<p><a class="glightbox" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXMtYXNjaWkiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSI0MjRweCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgc3R5bGU9IndpZHRoOjU3MnB4O2hlaWdodDo0MjRweDtiYWNrZ3JvdW5kOiNGRkZGRkY7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1NzIgNDI0IiB3aWR0aD0iNTcycHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48ZWxsaXBzZSBjeD0iMjgzIiBjeT0iMjAiIGZpbGw9IiMyMjIyMjIiIHJ4PSIxMCIgcnk9IjEwIiBzdHlsZT0ic3Ryb2tlOiMyMjIyMjI7c3Ryb2tlLXdpZHRoOjEuMDsiLz48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iODkiIHg9IjIzOC41IiB5PSI1MCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjY5IiB4PSIyNDguNSIgeT0iNzEuMTM4NyI+TVFQcm9kdWVyPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiNGMUYxRjEiIHBvaW50cz0iMzIsMTAzLjk2ODgsNzIsMTAzLjk2ODgsODQsMTE1Ljk2ODgsNzIsMTI3Ljk2ODgsMzIsMTI3Ljk2ODgsMjAsMTE1Ljk2ODgsMzIsMTAzLjk2ODgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjIwIiB4PSI1NiIgeT0iMTM4LjE3OTIiPnllczwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MCIgeD0iMzIiIHk9IjExOS43NzY5Ij4xJiMyMDk5ODsmIzM4MDQ3OyYjMjA4Njk7PC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiNGMUYxRjEiIHBvaW50cz0iMTE2LDEwMy45Njg4LDE4NSwxMDMuOTY4OCwxOTcsMTE1Ljk2ODgsMTg1LDEyNy45Njg4LDExNiwxMjcuOTY4OCwxMDQsMTE1Ljk2ODgsMTE2LDEwMy45Njg4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIyMCIgeD0iMTU0LjUiIHk9IjEzOC4xNzkyIj55ZXM8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNjkiIHg9IjExNiIgeT0iMTE5Ljc3NjkiPiYjMjIzMTI7MTgmIzE5OTc4OyYjMzg0NTQ7JiMyNzU3MzsmIzE5OTc4OzwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MiIgeD0iMTk3IiB5PSIxMTMuMzc0NSI+bm90aGluZzwvdGV4dD48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMjIxIiB4PSIyNzciIHk9IjE4Ny4xNjk5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjAxIiB4PSIyODciIHk9IjIwOC4zMDg2Ij5SZXBlYXRNUUNvbnN1bWVyQW5kUHJvZHVlcjwvdGV4dD48cG9seWdvbiBmaWxsPSIjRjFGMUYxIiBwb2ludHM9IjI1MywxNDMuMTY5OSw1MjIsMTQzLjE2OTksNTM0LDE1NS4xNjk5LDUyMiwxNjcuMTY5OSwyNTMsMTY3LjE2OTksMjQxLDE1NS4xNjk5LDI1MywxNDMuMTY5OSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjY5IiB4PSIyNTMiIHk9IjE1OC45NzgiPjomIzI1Mjg2OyYjMjA5OTg7JiM2NTI4ODsyMSYjMjA5OTg7JiMzODA0NzsmIzI2MTU5OzE1JiMzODQ1NDsmIzI3NTczOysxJiMyMDk5ODsmIzM4MDQ3OyYjNjUyOTI7MiYjMjI4MjU7JiMyNjE1OTsyNCYjMjAwMTA7MiYjMjM1Njc7JiMyNjEwMjsmIzY1Mjg5Oz88L3RleHQ+PHJlY3QgZmlsbD0iI0YxRjFGMSIgaGVpZ2h0PSIzMy45Njg4IiByeD0iMTIuNSIgcnk9IjEyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9Ijc5IiB4PSIyNDMuNSIgeT0iMjgzLjEzODciLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1OSIgeD0iMjUzLjUiIHk9IjMwNC4yNzczIj5NUVNlcnZlcjwvdGV4dD48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMTAyIiB4PSIyMzIiIHk9IjMzNy4xMDc0Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODIiIHg9IjI0MiIgeT0iMzU4LjI0NjEiPk1RQ29uc3VtZXI8L3RleHQ+PGVsbGlwc2UgY3g9IjI4MyIgY3k9IjQwMi4wNzYyIiBmaWxsPSJub25lIiByeD0iMTEiIHJ5PSIxMSIgc3R5bGU9InN0cm9rZTojMjIyMjIyO3N0cm9rZS13aWR0aDoxLjA7Ii8+PGVsbGlwc2UgY3g9IjI4MyIgY3k9IjQwMi4wNzYyIiBmaWxsPSIjMjIyMjIyIiByeD0iNiIgcnk9IjYiIHN0eWxlPSJzdHJva2U6IzIyMjIyMjtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4MyIgeDI9IjI4MyIgeTE9IjMwIiB5Mj0iNTAiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI3OSw0MCwyODMsNTAsMjg3LDQwLDI4Myw0NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMzg3LjUiIHgyPSIzODcuNSIgeTE9IjE2Ny4xNjk5IiB5Mj0iMTg3LjE2OTkiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjM4My41LDE3Ny4xNjk5LDM4Ny41LDE4Ny4xNjk5LDM5MS41LDE3Ny4xNjk5LDM4Ny41LDE4MS4xNjk5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzODcuNSIgeDI9IjM4Ny41IiB5MT0iMjIxLjEzODciIHkyPSIyMzEuMTM4NyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjM4Ny41IiB4Mj0iNTQ2IiB5MT0iMjMxLjEzODciIHkyPSIyMzEuMTM4NyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTQyLDIwMi4xNTQzLDU0NiwxOTIuMTU0Myw1NTAsMjAyLjE1NDMsNTQ2LDE5OC4xNTQzIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI1NDYiIHgyPSI1NDYiIHkxPSIxNTUuMTY5OSIgeTI9IjIzMS4xMzg3Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTQ2IiB4Mj0iNTM0IiB5MT0iMTU1LjE2OTkiIHkyPSIxNTUuMTY5OSIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTQ0LDE1MS4xNjk5LDUzNCwxNTUuMTY5OSw1NDQsMTU5LjE2OTksNTQwLDE1NS4xNjk5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyNDEiIHgyPSIyMjkiIHkxPSIxNTUuMTY5OSIgeTI9IjE1NS4xNjk5Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyMjUsMTg4LjE1NDMsMjI5LDE5OC4xNTQzLDIzMywxODguMTU0MywyMjksMTkyLjE1NDMiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjIyOSIgeDI9IjIyOSIgeTE9IjE1NS4xNjk5IiB5Mj0iMjQzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyMjkiIHgyPSIzODcuNSIgeTE9IjI0My4xMzg3IiB5Mj0iMjQzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzODcuNSIgeDI9IjM4Ny41IiB5MT0iMjQzLjEzODciIHkyPSIyNjMuMTM4NyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMzgzLjUsMjUzLjEzODcsMzg3LjUsMjYzLjEzODcsMzkxLjUsMjUzLjEzODcsMzg3LjUsMjU3LjEzODciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjUyIiB4Mj0iNTIiIHkxPSIxMjcuOTY4OCIgeTI9IjI2My4xMzg3Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI0OCwyNTMuMTM4Nyw1MiwyNjMuMTM4Nyw1NiwyNTMuMTM4Nyw1MiwyNTcuMTM4NyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMTUwLjUiIHgyPSIxNTAuNSIgeTE9IjEyNy45Njg4IiB5Mj0iMjYzLjEzODciLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjE0Ni41LDI1My4xMzg3LDE1MC41LDI2My4xMzg3LDE1NC41LDI1My4xMzg3LDE1MC41LDI1Ny4xMzg3IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI4NCIgeDI9IjEwNCIgeTE9IjExNS45Njg4IiB5Mj0iMTE1Ljk2ODgiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9Ijk0LDExMS45Njg4LDEwNCwxMTUuOTY4OCw5NCwxMTkuOTY4OCw5OCwxMTUuOTY4OCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iODMuOTY4OCIgeTI9Ijg4Ljk2ODgiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODMiIHgyPSI1MiIgeTE9Ijg4Ljk2ODgiIHkyPSI4OC45Njg4Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTIiIHgyPSI1MiIgeTE9Ijg4Ljk2ODgiIHkyPSIxMDMuOTY4OCIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDgsOTMuOTY4OCw1MiwxMDMuOTY4OCw1Niw5My45Njg4LDUyLDk3Ljk2ODgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjE5NyIgeDI9IjM4Ny41IiB5MT0iMTE1Ljk2ODgiIHkyPSIxMTUuOTY4OCIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjM4Ny41IiB4Mj0iMzg3LjUiIHkxPSIxMTUuOTY4OCIgeTI9IjE0My4xNjk5Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIzODMuNSwxMzMuMTY5OSwzODcuNSwxNDMuMTY5OSwzOTEuNSwxMzMuMTY5OSwzODcuNSwxMzcuMTY5OSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTIiIHgyPSIzODcuNSIgeTE9IjI2My4xMzg3IiB5Mj0iMjYzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODMiIHgyPSIyODMiIHkxPSIyNjMuMTM4NyIgeTI9IjI4My4xMzg3Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyNzksMjczLjEzODcsMjgzLDI4My4xMzg3LDI4NywyNzMuMTM4NywyODMsMjc3LjEzODciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4MyIgeDI9IjI4MyIgeTE9IjMxNy4xMDc0IiB5Mj0iMzM3LjEwNzQiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI3OSwzMjcuMTA3NCwyODMsMzM3LjEwNzQsMjg3LDMyNy4xMDc0LDI4MywzMzEuMTA3NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iMzcxLjA3NjIiIHkyPSIzOTEuMDc2MiIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMjc5LDM4MS4wNzYyLDI4MywzOTEuMDc2MiwyODcsMzgxLjA3NjIsMjgzLDM4NS4wNzYyIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48IS0tU1JDPVtBb3Y5QjJoWGlsOEQzMlpBSm9iREJSQmNvYW5KcTMxeXNqN3NTakJ5ZnNzamNXZWI2UWJ2MlhnTGdTTVFONW9mRVNNZjhGY2RTck9PTVpwUHFWTG9uaFBkd3hPMjZQWkE1M0pveWFpb0NsRklEUmRBQ3A5cFc3b2hQenJqRzdGVngtYW1XZmhfUkNQd0dyRTg2VGZHZVZUeFVlb1VCYmE5YjM0b1VSOVpiVDdKM1Z0RmZjenhsd1ZKTmZGQkFZWXI4M01ubjNWR0VKLWxrM0d0alNXbkJtTmt4REl5NUIwejg0UGM2aVg3bVFiNVBJMFBBdUc2UXd4WWFsbTIwMDAwXS0tPjwvZz48L3N2Zz4=" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXMtYXNjaWkiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBjb250ZW50U3R5bGVUeXBlPSJ0ZXh0L2NzcyIgaGVpZ2h0PSI0MjRweCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSIgc3R5bGU9IndpZHRoOjU3MnB4O2hlaWdodDo0MjRweDtiYWNrZ3JvdW5kOiNGRkZGRkY7IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1NzIgNDI0IiB3aWR0aD0iNTcycHgiIHpvb21BbmRQYW49Im1hZ25pZnkiPjxkZWZzLz48Zz48ZWxsaXBzZSBjeD0iMjgzIiBjeT0iMjAiIGZpbGw9IiMyMjIyMjIiIHJ4PSIxMCIgcnk9IjEwIiBzdHlsZT0ic3Ryb2tlOiMyMjIyMjI7c3Ryb2tlLXdpZHRoOjEuMDsiLz48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iODkiIHg9IjIzOC41IiB5PSI1MCIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjY5IiB4PSIyNDguNSIgeT0iNzEuMTM4NyI+TVFQcm9kdWVyPC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiNGMUYxRjEiIHBvaW50cz0iMzIsMTAzLjk2ODgsNzIsMTAzLjk2ODgsODQsMTE1Ljk2ODgsNzIsMTI3Ljk2ODgsMzIsMTI3Ljk2ODgsMjAsMTE1Ljk2ODgsMzIsMTAzLjk2ODgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIvPjx0ZXh0IGZpbGw9IiMwMDAwMDAiIGZvbnQtZmFtaWx5PSJzYW5zLXNlcmlmIiBmb250LXNpemU9IjExIiBsZW5ndGhBZGp1c3Q9InNwYWNpbmciIHRleHRMZW5ndGg9IjIwIiB4PSI1NiIgeT0iMTM4LjE3OTIiPnllczwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MCIgeD0iMzIiIHk9IjExOS43NzY5Ij4xJiMyMDk5ODsmIzM4MDQ3OyYjMjA4Njk7PC90ZXh0Pjxwb2x5Z29uIGZpbGw9IiNGMUYxRjEiIHBvaW50cz0iMTE2LDEwMy45Njg4LDE4NSwxMDMuOTY4OCwxOTcsMTE1Ljk2ODgsMTg1LDEyNy45Njg4LDExNiwxMjcuOTY4OCwxMDQsMTE1Ljk2ODgsMTE2LDEwMy45Njg4IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjAuNTsiLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSIyMCIgeD0iMTU0LjUiIHk9IjEzOC4xNzkyIj55ZXM8L3RleHQ+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iNjkiIHg9IjExNiIgeT0iMTE5Ljc3NjkiPiYjMjIzMTI7MTgmIzE5OTc4OyYjMzg0NTQ7JiMyNzU3MzsmIzE5OTc4OzwvdGV4dD48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMSIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI0MiIgeD0iMTk3IiB5PSIxMTMuMzc0NSI+bm90aGluZzwvdGV4dD48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMjIxIiB4PSIyNzciIHk9IjE4Ny4xNjk5Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjAxIiB4PSIyODciIHk9IjIwOC4zMDg2Ij5SZXBlYXRNUUNvbnN1bWVyQW5kUHJvZHVlcjwvdGV4dD48cG9seWdvbiBmaWxsPSIjRjFGMUYxIiBwb2ludHM9IjI1MywxNDMuMTY5OSw1MjIsMTQzLjE2OTksNTM0LDE1NS4xNjk5LDUyMiwxNjcuMTY5OSwyNTMsMTY3LjE2OTksMjQxLDE1NS4xNjk5LDI1MywxNDMuMTY5OSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTEiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iMjY5IiB4PSIyNTMiIHk9IjE1OC45NzgiPjomIzI1Mjg2OyYjMjA5OTg7JiM2NTI4ODsyMSYjMjA5OTg7JiMzODA0NzsmIzI2MTU5OzE1JiMzODQ1NDsmIzI3NTczOysxJiMyMDk5ODsmIzM4MDQ3OyYjNjUyOTI7MiYjMjI4MjU7JiMyNjE1OTsyNCYjMjAwMTA7MiYjMjM1Njc7JiMyNjEwMjsmIzY1Mjg5Oz88L3RleHQ+PHJlY3QgZmlsbD0iI0YxRjFGMSIgaGVpZ2h0PSIzMy45Njg4IiByeD0iMTIuNSIgcnk9IjEyLjUiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MC41OyIgd2lkdGg9Ijc5IiB4PSIyNDMuNSIgeT0iMjgzLjEzODciLz48dGV4dCBmaWxsPSIjMDAwMDAwIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgbGVuZ3RoQWRqdXN0PSJzcGFjaW5nIiB0ZXh0TGVuZ3RoPSI1OSIgeD0iMjUzLjUiIHk9IjMwNC4yNzczIj5NUVNlcnZlcjwvdGV4dD48cmVjdCBmaWxsPSIjRjFGMUYxIiBoZWlnaHQ9IjMzLjk2ODgiIHJ4PSIxMi41IiByeT0iMTIuNSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDowLjU7IiB3aWR0aD0iMTAyIiB4PSIyMzIiIHk9IjMzNy4xMDc0Ii8+PHRleHQgZmlsbD0iIzAwMDAwMCIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTIiIGxlbmd0aEFkanVzdD0ic3BhY2luZyIgdGV4dExlbmd0aD0iODIiIHg9IjI0MiIgeT0iMzU4LjI0NjEiPk1RQ29uc3VtZXI8L3RleHQ+PGVsbGlwc2UgY3g9IjI4MyIgY3k9IjQwMi4wNzYyIiBmaWxsPSJub25lIiByeD0iMTEiIHJ5PSIxMSIgc3R5bGU9InN0cm9rZTojMjIyMjIyO3N0cm9rZS13aWR0aDoxLjA7Ii8+PGVsbGlwc2UgY3g9IjI4MyIgY3k9IjQwMi4wNzYyIiBmaWxsPSIjMjIyMjIyIiByeD0iNiIgcnk9IjYiIHN0eWxlPSJzdHJva2U6IzIyMjIyMjtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4MyIgeDI9IjI4MyIgeTE9IjMwIiB5Mj0iNTAiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI3OSw0MCwyODMsNTAsMjg3LDQwLDI4Myw0NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMzg3LjUiIHgyPSIzODcuNSIgeTE9IjE2Ny4xNjk5IiB5Mj0iMTg3LjE2OTkiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjM4My41LDE3Ny4xNjk5LDM4Ny41LDE4Ny4xNjk5LDM5MS41LDE3Ny4xNjk5LDM4Ny41LDE4MS4xNjk5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzODcuNSIgeDI9IjM4Ny41IiB5MT0iMjIxLjEzODciIHkyPSIyMzEuMTM4NyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjM4Ny41IiB4Mj0iNTQ2IiB5MT0iMjMxLjEzODciIHkyPSIyMzEuMTM4NyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTQyLDIwMi4xNTQzLDU0NiwxOTIuMTU0Myw1NTAsMjAyLjE1NDMsNTQ2LDE5OC4xNTQzIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI1NDYiIHgyPSI1NDYiIHkxPSIxNTUuMTY5OSIgeTI9IjIzMS4xMzg3Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTQ2IiB4Mj0iNTM0IiB5MT0iMTU1LjE2OTkiIHkyPSIxNTUuMTY5OSIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNTQ0LDE1MS4xNjk5LDUzNCwxNTUuMTY5OSw1NDQsMTU5LjE2OTksNTQwLDE1NS4xNjk5IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyNDEiIHgyPSIyMjkiIHkxPSIxNTUuMTY5OSIgeTI9IjE1NS4xNjk5Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyMjUsMTg4LjE1NDMsMjI5LDE5OC4xNTQzLDIzMywxODguMTU0MywyMjksMTkyLjE1NDMiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjIyOSIgeDI9IjIyOSIgeTE9IjE1NS4xNjk5IiB5Mj0iMjQzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyMjkiIHgyPSIzODcuNSIgeTE9IjI0My4xMzg3IiB5Mj0iMjQzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIzODcuNSIgeDI9IjM4Ny41IiB5MT0iMjQzLjEzODciIHkyPSIyNjMuMTM4NyIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMzgzLjUsMjUzLjEzODcsMzg3LjUsMjYzLjEzODcsMzkxLjUsMjUzLjEzODcsMzg3LjUsMjU3LjEzODciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjUyIiB4Mj0iNTIiIHkxPSIxMjcuOTY4OCIgeTI9IjI2My4xMzg3Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSI0OCwyNTMuMTM4Nyw1MiwyNjMuMTM4Nyw1NiwyNTMuMTM4Nyw1MiwyNTcuMTM4NyIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMTUwLjUiIHgyPSIxNTAuNSIgeTE9IjEyNy45Njg4IiB5Mj0iMjYzLjEzODciLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjE0Ni41LDI1My4xMzg3LDE1MC41LDI2My4xMzg3LDE1NC41LDI1My4xMzg3LDE1MC41LDI1Ny4xMzg3IiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSI4NCIgeDI9IjEwNCIgeTE9IjExNS45Njg4IiB5Mj0iMTE1Ljk2ODgiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9Ijk0LDExMS45Njg4LDEwNCwxMTUuOTY4OCw5NCwxMTkuOTY4OCw5OCwxMTUuOTY4OCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iODMuOTY4OCIgeTI9Ijg4Ljk2ODgiLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODMiIHgyPSI1MiIgeTE9Ijg4Ljk2ODgiIHkyPSI4OC45Njg4Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTIiIHgyPSI1MiIgeTE9Ijg4Ljk2ODgiIHkyPSIxMDMuOTY4OCIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iNDgsOTMuOTY4OCw1MiwxMDMuOTY4OCw1Niw5My45Njg4LDUyLDk3Ljk2ODgiIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjE5NyIgeDI9IjM4Ny41IiB5MT0iMTE1Ljk2ODgiIHkyPSIxMTUuOTY4OCIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjM4Ny41IiB4Mj0iMzg3LjUiIHkxPSIxMTUuOTY4OCIgeTI9IjE0My4xNjk5Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIzODMuNSwxMzMuMTY5OSwzODcuNSwxNDMuMTY5OSwzOTEuNSwxMzMuMTY5OSwzODcuNSwxMzcuMTY5OSIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iNTIiIHgyPSIzODcuNSIgeTE9IjI2My4xMzg3IiB5Mj0iMjYzLjEzODciLz48bGluZSBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiIHgxPSIyODMiIHgyPSIyODMiIHkxPSIyNjMuMTM4NyIgeTI9IjI4My4xMzg3Ii8+PHBvbHlnb24gZmlsbD0iIzE4MTgxOCIgcG9pbnRzPSIyNzksMjczLjEzODcsMjgzLDI4My4xMzg3LDI4NywyNzMuMTM4NywyODMsMjc3LjEzODciIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIvPjxsaW5lIHN0eWxlPSJzdHJva2U6IzE4MTgxODtzdHJva2Utd2lkdGg6MS4wOyIgeDE9IjI4MyIgeDI9IjI4MyIgeTE9IjMxNy4xMDc0IiB5Mj0iMzM3LjEwNzQiLz48cG9seWdvbiBmaWxsPSIjMTgxODE4IiBwb2ludHM9IjI3OSwzMjcuMTA3NCwyODMsMzM3LjEwNzQsMjg3LDMyNy4xMDc0LDI4MywzMzEuMTA3NCIgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7Ii8+PGxpbmUgc3R5bGU9InN0cm9rZTojMTgxODE4O3N0cm9rZS13aWR0aDoxLjA7IiB4MT0iMjgzIiB4Mj0iMjgzIiB5MT0iMzcxLjA3NjIiIHkyPSIzOTEuMDc2MiIvPjxwb2x5Z29uIGZpbGw9IiMxODE4MTgiIHBvaW50cz0iMjc5LDM4MS4wNzYyLDI4MywzOTEuMDc2MiwyODcsMzgxLjA3NjIsMjgzLDM4NS4wNzYyIiBzdHlsZT0ic3Ryb2tlOiMxODE4MTg7c3Ryb2tlLXdpZHRoOjEuMDsiLz48IS0tU1JDPVtBb3Y5QjJoWGlsOEQzMlpBSm9iREJSQmNvYW5KcTMxeXNqN3NTakJ5ZnNzamNXZWI2UWJ2MlhnTGdTTVFONW9mRVNNZjhGY2RTck9PTVpwUHFWTG9uaFBkd3hPMjZQWkE1M0pveWFpb0NsRklEUmRBQ3A5cFc3b2hQenJqRzdGVngtYW1XZmhfUkNQd0dyRTg2VGZHZVZUeFVlb1VCYmE5YjM0b1VSOVpiVDdKM1Z0RmZjenhsd1ZKTmZGQkFZWXI4M01ubjNWR0VKLWxrM0d0alNXbkJtTmt4REl5NUIwejg0UGM2aVg3bVFiNVBJMFBBdUc2UXd4WWFsbTIwMDAwXS0tPjwvZz48L3N2Zz4=" class="uml" alt="uml diagram" title="" /></a></p>
+<h2 id="3">3. 应用场景<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>订单超时取消</strong>：电商订单支付超时自动取消。</li>
+<li><strong>活动延迟开始</strong>：活动开始前延迟推送通知，活动结束后自动清理数据。</li>
+<li><strong>延迟重试</strong>：消息消费失败后延迟重试，避免因系统故障导致频繁重试。</li>
+</ul>
+<h2 id="4">4. 延时队列的优缺点<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="_2">优点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>降低系统压力</strong>：避免频繁轮询，在恰当的时间触发操作。</li>
+<li><strong>简化异步操作</strong>：满足业务的异步需求，适合用于定时任务和超时处理。</li>
+</ul>
+<h3 id="_3">缺点<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>时间精度受限</strong>：延时的精确性依赖于中间件的时间粒度。</li>
+<li><strong>数据积压风险</strong>：如果队列中延迟消息大量堆积，可能导致内存和磁盘压力。</li>
+</ul>
+<h2 id="_4">总结<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>延时队列在消息延迟处理方面非常有效，通过 RabbitMQ、Redis、Kafka 等实现可以灵活应用于不同场景。选择合适的延时队列方案时，应结合消息量、延迟精度要求以及系统资源情况，确保系统的稳定性和高效性。</p>
 
 
 
