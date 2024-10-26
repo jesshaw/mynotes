@@ -37,7 +37,7 @@ SkyWalking 是一个可观察性分析平台和应用程序性能管理系统。
 - 日志。
 - Zipkin v1/v2 跟踪。（无分析）
 
-### 整体架构[^2]
+## 整体架构[^2]
 
 ![SkyWalking架构图](assets/skywaking-arch.png)
 

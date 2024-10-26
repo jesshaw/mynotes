@@ -9,9 +9,7 @@
 
 ## 集群部署架构
 
-<!-- ![](https://static.oschina.net/uploads/space/2016/1217/180742_VCL8_942558.png) -->
-
-![rocketmq架构](https://rocketmq.apache.org/assets/images/rmq-basic-arc.png)
+![rocketmq架构](../assets/rocketmq-deploy-arch.png)
 
 结合部署结构图，描述集群工作流程：
 1，启动Namesrv，Namesrv起来后监听端口，等待Broker、Produer、Consumer连上来，相当于一个路由控制中心。
