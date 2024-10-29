@@ -1,13 +1,45 @@
 # 软件工程中常用命名方式
 
-## 命令示例
+在软件工程中，良好的命名规范有助于提高代码的可读性和可维护性。以下是一些常用的命名方式：
 
-camelCase
-PascalCase
-snake_case
-kebab-case
+## 1. **camelCase（驼峰命名法）**
 
-## 引用
+- 规则：第一个单词的首字母小写，后续单词的首字母大写。
+- 用途：常用于变量名、方法名。
+- 示例：`userName`, `getUserInfo`
 
-[ref](https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841)
+## 2. **PascalCase（帕斯卡命名法）**
 
+- 规则：每个单词的首字母均大写。
+- 用途：类名、接口名。
+- 示例：`UserInfo`, `DataProcessor`
+
+## 3. **snake_case（蛇形命名法）**
+
+- 规则：单词间用下划线连接，全小写。
+- 用途：数据库字段名、配置文件中的键名。
+- 示例：`user_name`, `total_price`
+
+## 4. **kebab-case（短横命名法）**
+
+- 规则：单词间用短横线连接，全小写。
+- 用途：URL路径、CSS类名。
+- 示例：`user-name`, `product-list`
+
+## 5. **SCREAMING_SNAKE_CASE（全大写蛇形命名法）**
+
+- 规则：所有字母大写，单词间用下划线分隔。
+- 用途：常量。
+- 示例：`MAX_VALUE`, `DEFAULT_TIMEOUT`
+
+## 6. **匈牙利命名法（Hungarian Notation）**
+
+- 规则：前缀表示变量类型或作用域，后跟变量名。
+- 用途：多用于早期C语言、WinAPI等。
+- 示例：`strUserName`（字符串）、`intCount`（整数）
+
+## 总结
+
+1. 避免使用缩写，除非是通用缩写，如`URL`, `ID`。
+2. 保持一致性，一个项目内遵循相同的命名约定。
+3. 简洁清晰，见名知义，不要过度简化。

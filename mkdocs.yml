@@ -9,8 +9,8 @@ copyright: Copyright &copy; 2006 - 2024 Jes Shaw
 
 theme:
   language: 'zh'
-  favicon: assets/lx.ico
-  logo: assets/lx.png
+  favicon: assets/logo-32x32-white.png
+  logo: assets/logo-180x180-white.png
   name: material
   custom_dir: custome_theme/
   features:
