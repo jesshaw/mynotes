@@ -17,7 +17,7 @@
         <link rel="next" href="../open-source/">
       
       
-      <link rel="icon" href="../../../assets/lx.ico">
+      <link rel="icon" href="../../../assets/logo-32x32-white.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
@@ -115,7 +115,7 @@
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="../../.." title="乐享笔记" class="md-header__button md-logo" aria-label="乐享笔记" data-md-component="logo">
       
-  <img src="../../../assets/lx.png" alt="logo">
+  <img src="../../../assets/logo-180x180-white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -376,7 +376,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="乐享笔记" class="md-nav__button md-logo" aria-label="乐享笔记" data-md-component="logo">
       
-  <img src="../../../assets/lx.png" alt="logo">
+  <img src="../../../assets/logo-180x180-white.png" alt="logo">
 
     </a>
     乐享笔记
@@ -1395,27 +1395,6 @@
             Redis
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Middleware/cache/redis/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Redis
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -3210,18 +3189,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#1-camelcase" class="md-nav__link">
     <span class="md-ellipsis">
-      命令示例
+      1. camelCase（驼峰命名法）
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#2-pascalcase" class="md-nav__link">
     <span class="md-ellipsis">
-      引用
+      2. PascalCase（帕斯卡命名法）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-snake_case" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. snake_case（蛇形命名法）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-kebab-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. kebab-case（短横命名法）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-screaming_snake_case" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. SCREAMING_SNAKE_CASE（全大写蛇形命名法）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-hungarian-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 匈牙利命名法（Hungarian Notation）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
     </span>
   </a>
   
@@ -7523,18 +7547,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#1-camelcase" class="md-nav__link">
     <span class="md-ellipsis">
-      命令示例
+      1. camelCase（驼峰命名法）
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#2-pascalcase" class="md-nav__link">
     <span class="md-ellipsis">
-      引用
+      2. PascalCase（帕斯卡命名法）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-snake_case" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. snake_case（蛇形命名法）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-kebab-case" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. kebab-case（短横命名法）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-screaming_snake_case" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. SCREAMING_SNAKE_CASE（全大写蛇形命名法）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-hungarian-notation" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 匈牙利命名法（Hungarian Notation）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      总结
     </span>
   </a>
   
@@ -7559,13 +7628,49 @@
 
 
 <h1 id="_1">软件工程中常用命名方式<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">命令示例<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>camelCase
-PascalCase
-snake_case
-kebab-case</p>
-<h2 id="_3">引用<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><a href="https://medium.com/better-programming/string-case-styles-camel-pascal-snake-and-kebab-case-981407998841">ref</a></p>
+<p>在软件工程中，良好的命名规范有助于提高代码的可读性和可维护性。以下是一些常用的命名方式：</p>
+<h2 id="1-camelcase">1. <strong>camelCase（驼峰命名法）</strong><a class="headerlink" href="#1-camelcase" title="Permanent link">&para;</a></h2>
+<ul>
+<li>规则：第一个单词的首字母小写，后续单词的首字母大写。</li>
+<li>用途：常用于变量名、方法名。</li>
+<li>示例：<code>userName</code>, <code>getUserInfo</code></li>
+</ul>
+<h2 id="2-pascalcase">2. <strong>PascalCase（帕斯卡命名法）</strong><a class="headerlink" href="#2-pascalcase" title="Permanent link">&para;</a></h2>
+<ul>
+<li>规则：每个单词的首字母均大写。</li>
+<li>用途：类名、接口名。</li>
+<li>示例：<code>UserInfo</code>, <code>DataProcessor</code></li>
+</ul>
+<h2 id="3-snake_case">3. <strong>snake_case（蛇形命名法）</strong><a class="headerlink" href="#3-snake_case" title="Permanent link">&para;</a></h2>
+<ul>
+<li>规则：单词间用下划线连接，全小写。</li>
+<li>用途：数据库字段名、配置文件中的键名。</li>
+<li>示例：<code>user_name</code>, <code>total_price</code></li>
+</ul>
+<h2 id="4-kebab-case">4. <strong>kebab-case（短横命名法）</strong><a class="headerlink" href="#4-kebab-case" title="Permanent link">&para;</a></h2>
+<ul>
+<li>规则：单词间用短横线连接，全小写。</li>
+<li>用途：URL路径、CSS类名。</li>
+<li>示例：<code>user-name</code>, <code>product-list</code></li>
+</ul>
+<h2 id="5-screaming_snake_case">5. <strong>SCREAMING_SNAKE_CASE（全大写蛇形命名法）</strong><a class="headerlink" href="#5-screaming_snake_case" title="Permanent link">&para;</a></h2>
+<ul>
+<li>规则：所有字母大写，单词间用下划线分隔。</li>
+<li>用途：常量。</li>
+<li>示例：<code>MAX_VALUE</code>, <code>DEFAULT_TIMEOUT</code></li>
+</ul>
+<h2 id="6-hungarian-notation">6. <strong>匈牙利命名法（Hungarian Notation）</strong><a class="headerlink" href="#6-hungarian-notation" title="Permanent link">&para;</a></h2>
+<ul>
+<li>规则：前缀表示变量类型或作用域，后跟变量名。</li>
+<li>用途：多用于早期C语言、WinAPI等。</li>
+<li>示例：<code>strUserName</code>（字符串）、<code>intCount</code>（整数）</li>
+</ul>
+<h2 id="_2">总结<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>避免使用缩写，除非是通用缩写，如<code>URL</code>, <code>ID</code>。</li>
+<li>保持一致性，一个项目内遵循相同的命名约定。</li>
+<li>简洁清晰，见名知义，不要过度简化。</li>
+</ol>
 
 
 
