@@ -1,6 +1,6 @@
 # java面试题集
 
-https://www.zhihu.com/column/c_1050762683808403456
+
 
 102，谈谈微服务注册中心zookeeper&Eureka
 
@@ -656,7 +656,6 @@ ehcache的配置可以参照：http://www.ehcache.org/ehcache.xml
 每次对数据的更新操作，都会对version+1，这样提交更新操作时，如果version的值已被更改，则更新失败。
 3，乐观锁的实现为什么要选择version字段，如果选择其他字段，比如业务字段store（库存），那么可能会出现所谓的ABA问题
 如下图所示：
-
 
 75，什么是事务的传播特性及Spring支持的特性有哪些？
 
