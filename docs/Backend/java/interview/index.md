@@ -58,18 +58,18 @@
 - Spring Cloud组件（Eureka、Ribbon、Feign、Hystrix、Zuul等）
 - Spring Security的基础配置和认证授权机制
 
-## 9. [微服务架构](./microservices-architecture.md)
+## 9. [设计模式](./design-patterns.md)
+
+- 常用设计模式（单例、工厂、代理、策略、观察者等）的原理及应用场景
+- 设计模式在实际开发中的运用（结合Spring框架，理解AOP与代理模式的关系等）
+- SOLID原则和编写可扩展、易维护代码的设计思想
+
+## 10. [微服务架构](./microservices-architecture.md)
 
 - 微服务架构的设计原则和优缺点
 - 服务治理、熔断、限流等策略
 - 分布式事务处理（TCC、SAGA、MQ等解决方案）
 - 服务注册与发现、负载均衡、配置管理等
-
-## 10. [设计模式](./design-patterns.md)
-
-- 常用设计模式（单例、工厂、代理、策略、观察者等）的原理及应用场景
-- 设计模式在实际开发中的运用（结合Spring框架，理解AOP与代理模式的关系等）
-- SOLID原则和编写可扩展、易维护代码的设计思想
 
 ## 11. [分布式系统与中间件](./distributed-systems-and-middleware.md)
 

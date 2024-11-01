@@ -8,7 +8,7 @@ nav:
   - new-features-in-java8-and-above.md
   - database-and-orm-frameworks.md
   - spring-ecossystem.md
-  - microservices-architecture.md
   - design-patterns.md
+  - microservices-architecture.md
   - distributed-systems-and-middleware.md
   - performance-optimization-and-tuning.md
