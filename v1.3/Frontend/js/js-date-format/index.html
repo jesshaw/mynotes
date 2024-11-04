@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../googleapis-images/">
+        <link rel="prev" href="../front-end-optimization/">
       
       
         <link rel="next" href="../js-object-creation-patterns-best-practises/">
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#js" class="md-skip">
           跳转至
         </a>
       
@@ -268,7 +268,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../flutter/flutter_write_your_first_flutter_app/" class="md-tabs__link">
+        <a href="../front-end-optimization/" class="md-tabs__link">
           
   
   Frontend
@@ -307,7 +307,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../Devops/ad/" class="md-tabs__link">
+        <a href="../../../Devops/" class="md-tabs__link">
           
   
   Devops
@@ -325,7 +325,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../SoftwareEngineering/arch/" class="md-tabs__link">
+        <a href="../../../SoftwareEngineering/" class="md-tabs__link">
           
   
   Software Engineering
@@ -467,78 +467,6 @@
                 
   
   
-  
-  
-    
-    
-    
-      
-      
-        
-          
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    Flutter
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_1">
-            <span class="md-nav__icon md-icon"></span>
-            Flutter
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../flutter/flutter_write_your_first_flutter_app/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    写我的首个flutter app
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -559,10 +487,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -573,8 +501,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Js
           </label>
@@ -605,27 +533,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../googleapis-images/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Googleapis公共库中科大镜像
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -634,6 +541,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
@@ -663,6 +572,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -671,27 +582,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 使用原生 Date 对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-intldatetimeformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 使用 Intl.DateTimeFormat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tolocaledatestring" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 使用 toLocaleDateString
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-date-fns" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 使用第三方库：date-fns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-momentjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 使用第三方库：moment.js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      方法一
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      方法二
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      方法三
+      常见格式化符号
     </span>
   </a>
   
@@ -717,7 +655,79 @@
         
   
   <span class="md-ellipsis">
-    js对象创建：模式和最佳实践
+    js对象创建
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Flutter
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Flutter
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flutter/flutter_write_your_first_flutter_app/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Flutter应用场景与优势
   </span>
   
 
@@ -4586,11 +4596,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Devops/ad/" class="md-nav__link">
+      <a href="../../../Devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    统一认证
+    DevOps
   </span>
   
 
@@ -4607,11 +4617,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Devops/devops/" class="md-nav__link">
+      <a href="../../../Devops/devops-categories/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    运维研发
+    DevOps分类
   </span>
   
 
@@ -4647,7 +4657,7 @@
             
   
   <span class="md-ellipsis">
-    Docker
+    Git
   </span>
   
 
@@ -4656,6 +4666,234 @@
         
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Devops/git/git-usefully-command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    git常用命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Gitlab
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            Gitlab
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Devops/gitlab/java-check-style/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    GitLab代码规范检查
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jenkins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            Jenkins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Devops/jenkins/jenkins-qa/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jenkins常见问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Devops/jenkins/k8s-automated-integration-and-deployment-microservices/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    jenkins和k8s自动部署微服务
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docker
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
             <span class="md-nav__icon md-icon"></span>
             Docker
           </label>
@@ -4940,397 +5178,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Git
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_4">
-            <span class="md-nav__icon md-icon"></span>
-            Git
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Devops/git/git-usefully-command/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    git常用命令
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Gitlab
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_5">
-            <span class="md-nav__icon md-icon"></span>
-            Gitlab
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Devops/gitlab/java-check-style/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    GitLab代码规范检查
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Grafana
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_6">
-            <span class="md-nav__icon md-icon"></span>
-            Grafana
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Devops/grafana/grafana/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Grafana
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7" >
         
           
           <label class="md-nav__link" for="__nav_4_7" id="__nav_4_7_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Helm
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_7">
-            <span class="md-nav__icon md-icon"></span>
-            Helm
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Devops/helm/helm-usefully-command/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    helm常用命令
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Devops/helm/helm/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    helm
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Jenkins
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_8">
-            <span class="md-nav__icon md-icon"></span>
-            Jenkins
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Devops/jenkins/jenkins-qa/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    jenkins常见问题
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../../Devops/jenkins/k8s-automated-integration-and-deployment-microservices/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    jenkins和k8s自动部署微服务
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5341,8 +5192,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_9">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
           </label>
@@ -5787,10 +5638,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9_21" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_7_21" >
         
           
-          <label class="md-nav__link" for="__nav_4_9_21" id="__nav_4_9_21_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_7_21" id="__nav_4_7_21_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -5801,8 +5652,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_9_21_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_9_21">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_7_21_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_7_21">
             <span class="md-nav__icon md-icon"></span>
             Microk8s
           </label>
@@ -5832,6 +5683,165 @@
           </ul>
         </nav>
       
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_8" id="__nav_4_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_8">
+            <span class="md-nav__icon md-icon"></span>
+            Grafana
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Devops/grafana/grafana/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Grafana
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_9" id="__nav_4_9_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Helm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_9">
+            <span class="md-nav__icon md-icon"></span>
+            Helm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Devops/helm/helm-usefully-command/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    helm常用命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Devops/helm/helm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    helm
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -6592,11 +6602,74 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../SoftwareEngineering/arch/" class="md-nav__link">
+      <a href="../../../SoftwareEngineering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    软件架构
+    软件工程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SoftwareEngineering/togaf-arch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TOGAF架构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SoftwareEngineering/4a-arch/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4A 架构
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SoftwareEngineering/performance-evaluation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    研发人员如何做绩效考核
   </span>
   
 
@@ -6697,27 +6770,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../SoftwareEngineering/model/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    model
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../SoftwareEngineering/product_arch/" class="md-nav__link">
         
   
@@ -6780,27 +6832,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../../SoftwareEngineering/research-and-development-personnel-performance-appraisal/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    研发人员的绩效考核
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
     
@@ -6814,10 +6845,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
         
           
-          <label class="md-nav__link" for="__nav_5_11" id="__nav_5_11_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6828,8 +6859,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_11_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_11">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_12">
             <span class="md-nav__icon md-icon"></span>
             Draw
           </label>
@@ -6904,10 +6935,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_12" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_13" >
         
           
-          <label class="md-nav__link" for="__nav_5_12" id="__nav_5_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_13" id="__nav_5_13_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -6918,8 +6949,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_12_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_12">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_13">
             <span class="md-nav__icon md-icon"></span>
             License
           </label>
@@ -7036,10 +7067,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_14" >
         
           
-          <label class="md-nav__link" for="__nav_5_13" id="__nav_5_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_5_14" id="__nav_5_14_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -7050,8 +7081,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5_13">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_14">
             <span class="md-nav__icon md-icon"></span>
             Model
           </label>
@@ -7069,6 +7100,27 @@
   
   <span class="md-ellipsis">
     RBAC
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SoftwareEngineering/model/retail-model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    电商模型
   </span>
   
 
@@ -7406,6 +7458,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -7414,27 +7468,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#1-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 使用原生 Date 对象
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-intldatetimeformat" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 使用 Intl.DateTimeFormat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-tolocaledatestring" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 使用 toLocaleDateString
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-date-fns" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 使用第三方库：date-fns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-momentjs" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 使用第三方库：moment.js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      方法一
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      方法二
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      方法三
+      常见格式化符号
     </span>
   </a>
   
@@ -7458,220 +7539,97 @@
   
 
 
-  <h1>js日期格式化</h1>
+<h1 id="js">js日期格式化<a class="headerlink" href="#js" title="Permanent link">&para;</a></h1>
+<p>在JavaScript中，日期格式化常用的方式包括内置的<code>Date</code>方法、<code>Intl.DateTimeFormat</code>、以及常用库如<code>moment.js</code>、<code>date-fns</code>等。以下是一些常见的格式化方式：</p>
+<h2 id="1-date">1. <strong>使用原生 <code>Date</code> 对象</strong><a class="headerlink" href="#1-date" title="Permanent link">&para;</a></h2>
+<p>JavaScript的<code>Date</code>对象没有直接的格式化方法，但可以组合日期部分来格式化。</p>
+<pre><code class="language-javascript">const date = new Date();
 
-<p>js原生提供了不少的格式化，但因业务需要不能满足需求。因此下面给出一些新的格式化方法，作为原生日期格式化的补充。</p>
-<!-- more -->
+// 年月日格式
+const formattedDate = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
 
-<h2 id="_1">方法一<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>使用以下占位符自定义格式化</p>
-<p>月(M)、日(d)、小时(h)、分(m)、秒(s)、季度(q) 可以用 1-2 个占位符，年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字) 。</p>
-<pre><code class="language-js">Date.prototype.format = function (fmt) { //author: meizz 
-    var o = {
-        &quot;M+&quot;: this.getMonth() + 1, //月份 
-        &quot;d+&quot;: this.getDate(), //日 
-        &quot;h+&quot;: this.getHours(), //小时 
-        &quot;m+&quot;: this.getMinutes(), //分 
-        &quot;s+&quot;: this.getSeconds(), //秒 
-        &quot;q+&quot;: Math.floor((this.getMonth() + 3) / 3), //季度 
-        &quot;S&quot;: this.getMilliseconds() //毫秒 
-    };
-    if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + &quot;&quot;).substr(4 - RegExp.$1.length));
-    for (var k in o)
-    if (new RegExp(&quot;(&quot; + k + &quot;)&quot;).test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : ((&quot;00&quot; + o[k]).substr((&quot;&quot; + o[k]).length)));
-    return fmt;
-}
-
-// e.g.
-var now=new Date();
-
-console.log(now.format(&quot;yyyy年MM-dd&quot;));
-//print 2017年01-03
-
-console.log(now.format(&quot;yyyy-MM-dd HH:mm:ss&quot;)); 
-//print 2017-01-03 23:02:03
-
+// 输出示例: &quot;2024-11-04&quot;
 </code></pre>
-<h2 id="_2">方法二<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>使用以下占位符自定义格式化</p>
-<p>月(M)、日(d)、12小时(h)、24小时(H)、分(m)、秒(s)、周(E)、季度(q)可以用 1-2 个占位符 * 年(y)可以用 1-4 个占位符，毫秒(S)只能用 1 个占位符(是 1-3 位的数字)</p>
-<pre><code class="language-js">Date.prototype.pattern=function(fmt) {         
-    var o = {         
-    &quot;M+&quot; : this.getMonth()+1, //月份         
-    &quot;d+&quot; : this.getDate(), //日         
-    &quot;h+&quot; : this.getHours()%12 == 0 ? 12 : this.getHours()%12, //小时         
-    &quot;H+&quot; : this.getHours(), //小时         
-    &quot;m+&quot; : this.getMinutes(), //分         
-    &quot;s+&quot; : this.getSeconds(), //秒         
-    &quot;q+&quot; : Math.floor((this.getMonth()+3)/3), //季度         
-    &quot;S&quot; : this.getMilliseconds() //毫秒         
-    };         
-    var week = {         
-    &quot;0&quot; : &quot;/u65e5&quot;,         
-    &quot;1&quot; : &quot;/u4e00&quot;,         
-    &quot;2&quot; : &quot;/u4e8c&quot;,         
-    &quot;3&quot; : &quot;/u4e09&quot;,         
-    &quot;4&quot; : &quot;/u56db&quot;,         
-    &quot;5&quot; : &quot;/u4e94&quot;,         
-    &quot;6&quot; : &quot;/u516d&quot;        
-    };         
-    if(/(y+)/.test(fmt)){         
-        fmt=fmt.replace(RegExp.$1, (this.getFullYear()+&quot;&quot;).substr(4 - RegExp.$1.length));         
-    }         
-    if(/(E+)/.test(fmt)){         
-        fmt=fmt.replace(RegExp.$1, ((RegExp.$1.length&gt;1) ? (RegExp.$1.length&gt;2 ? &quot;/u661f/u671f&quot; : &quot;/u5468&quot;) : &quot;&quot;)+week[this.getDay()+&quot;&quot;]);         
-    }         
-    for(var k in o){         
-        if(new RegExp(&quot;(&quot;+ k +&quot;)&quot;).test(fmt)){         
-            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : ((&quot;00&quot;+ o[k]).substr((&quot;&quot;+ o[k]).length)));         
-        }         
-    }         
-    return fmt;         
-}       
-
-// e.g.
-var now=new Date();
-
-console.log(now.format(&quot;yyyy年MM-dd&quot;));
-//print 2017年01-03
-
-console.log(now.format(&quot;yyyy-MM-dd HH:mm:ss&quot;)); 
-//print 2017-01-03 23:02:03
-
+<h2 id="2-intldatetimeformat">2. <strong>使用 <code>Intl.DateTimeFormat</code></strong><a class="headerlink" href="#2-intldatetimeformat" title="Permanent link">&para;</a></h2>
+<p><code>Intl.DateTimeFormat</code>是现代浏览器支持的国际化格式化方法，可以很方便地格式化日期。</p>
+<pre><code class="language-javascript">const date = new Date();
+const formatter = new Intl.DateTimeFormat('en-GB', {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+});
+console.log(formatter.format(date));  // 输出示例: &quot;04/11/2024&quot;
 </code></pre>
-<h2 id="_3">方法三<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>使用以下占位符自定义格式化</p>
-<p>月(M)、日(d)、12小时(h)、24小时(H)、分(m)、秒(s)、周(E)、季度(q)可以用 1-2 个占位符 * 年(y)可以用 1-4 个占位符，毫秒(l)只能用 1 个占位符(是 1-3 位的数字)</p>
-<pre><code class="language-js">Date.prototype.format = function (mask) { 
-    var d = this;
-
-    var zeroize = function (value, length) {
-
-            if (!length) length = 2;
-
-            value = String(value);
-
-            for (var i = 0, zeros = ''; i &lt; (length - value.length); i++) {
-
-                zeros += '0';
-
-            }
-
-            return zeros + value;
-
-        };
-
-    return mask.replace(/&quot;[^&quot;]*&quot;|'[^']*'|/b ( ? : d {
-        1, 4
-    } | m {
-        1, 4
-    } | yy( ? : yy) ? | ([hHMstT]) / 1 ? | [lLZ]) / b / g, function ($0) {
-
-        switch ($0) {
-
-        case 'd':
-            return d.getDate();
-
-        case 'dd':
-            return zeroize(d.getDate());
-
-        case 'ddd':
-            return ['Sun', 'Mon', 'Tue', 'Wed', 'Thr', 'Fri', 'Sat'][d.getDay()];
-
-        case 'dddd':
-            return ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][d.getDay()];
-
-        case 'M':
-            return d.getMonth() + 1;
-
-        case 'MM':
-            return zeroize(d.getMonth() + 1);
-
-        case 'MMM':
-            return ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][d.getMonth()];
-
-        case 'MMMM':
-            return ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][d.getMonth()];
-
-        case 'yy':
-            return String(d.getFullYear()).substr(2);
-
-        case 'yyyy':
-            return d.getFullYear();
-
-        case 'h':
-            return d.getHours() % 12 || 12;
-
-        case 'hh':
-            return zeroize(d.getHours() % 12 || 12);
-
-        case 'H':
-            return d.getHours();
-
-        case 'HH':
-            return zeroize(d.getHours());
-
-        case 'm':
-            return d.getMinutes();
-
-        case 'mm':
-            return zeroize(d.getMinutes());
-
-        case 's':
-            return d.getSeconds();
-
-        case 'ss':
-            return zeroize(d.getSeconds());
-
-        case 'l':
-            return zeroize(d.getMilliseconds(), 3);
-
-        case 'L':
-            var m = d.getMilliseconds();
-
-            if (m &gt; 99) m = Math.round(m / 10);
-
-            return zeroize(m);
-
-        case 'tt':
-            return d.getHours() &lt; 12 ? 'am' : 'pm';
-
-        case 'TT':
-            return d.getHours() &lt; 12 ? 'AM' : 'PM';
-
-        case 'Z':
-            return d.toUTCString().match(/[A-Z]+$/);
-
-            // Return quoted strings with the surrounding quotes removed      
-
-        default:
-            return $0.substr(1, $0.length - 2);
-
-        }
-
-    });
-
-};
-
-// e.g.
-var now=new Date();
-
-console.log(now.format(&quot;yyyy年MM-dd&quot;));
-//print 2017年01-03
-
-console.log(now.format(&quot;yyyy-MM-dd HH:mm:ss&quot;)); 
-//print 2017-01-03 23:02:03
-
+<h2 id="3-tolocaledatestring">3. <strong>使用 <code>toLocaleDateString</code></strong><a class="headerlink" href="#3-tolocaledatestring" title="Permanent link">&para;</a></h2>
+<p><code>toLocaleDateString</code>方法可按指定的区域设置来格式化日期。</p>
+<pre><code class="language-javascript">const date = new Date();
+console.log(date.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit' }));
+// 输出示例: &quot;2024-11-04&quot;
 </code></pre>
+<h2 id="4-date-fns">4. <strong>使用第三方库：<code>date-fns</code></strong><a class="headerlink" href="#4-date-fns" title="Permanent link">&para;</a></h2>
+<p><code>date-fns</code>是轻量级日期处理库，支持各种日期格式化功能。</p>
+<pre><code class="language-javascript">import { format } from 'date-fns';
+
+const date = new Date();
+const formattedDate = format(date, 'yyyy-MM-dd');
+console.log(formattedDate);  // 输出示例: &quot;2024-11-04&quot;
+</code></pre>
+<h2 id="5-momentjs">5. <strong>使用第三方库：<code>moment.js</code></strong><a class="headerlink" href="#5-momentjs" title="Permanent link">&para;</a></h2>
+<p><code>moment.js</code>功能强大，格式化日期十分简单，但库较大。</p>
+<pre><code class="language-javascript">import moment from 'moment';
+
+const date = moment().format('YYYY-MM-DD');
+console.log(date);  // 输出示例: &quot;2024-11-04&quot;
+</code></pre>
+<h2 id="_1">常见格式化符号<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>含义</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>YYYY</code></td>
+<td>年</td>
+<td>2024</td>
+</tr>
+<tr>
+<td><code>MM</code></td>
+<td>月（补零）</td>
+<td>11</td>
+</tr>
+<tr>
+<td><code>DD</code></td>
+<td>日（补零）</td>
+<td>04</td>
+</tr>
+<tr>
+<td><code>HH</code></td>
+<td>时（24小时）</td>
+<td>15</td>
+</tr>
+<tr>
+<td><code>mm</code></td>
+<td>分（补零）</td>
+<td>09</td>
+</tr>
+<tr>
+<td><code>ss</code></td>
+<td>秒（补零）</td>
+<td>05</td>
+</tr>
+</tbody>
+</table>
+<p>根据项目需求和环境，选择合适的方法进行日期格式化。</p>
 
 
 
 
 
 
-
-  
-  
 
 
 
