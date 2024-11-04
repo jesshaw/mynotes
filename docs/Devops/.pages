@@ -1,0 +1,9 @@
+nav:
+  - index.md
+  - devops-categories.md
+  - git
+  - gitlab
+  - jenkins
+  - docker
+  - kubernetes
+  - ...
