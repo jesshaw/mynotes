@@ -5,6 +5,9 @@
 ## release site
 
 ```bash
+# add doc an release doc
+git add . && git commit -m 'Update the doc' && git push && git push origin -d v1.3 && git tag -d v1.3 &&  git tag v1.3 -m 'Update the doc' && git push origin v1.3 
+
 # tag and push
 git tag v1.0 -m 'release by github workflow'
 git push 
