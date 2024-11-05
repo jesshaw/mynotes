@@ -3876,6 +3876,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#3-javastackheap" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 在Java中，为什么说栈（Stack）通常比堆（Heap）更快？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-java" class="md-nav__link">
     <span class="md-ellipsis">
       3. Java中的哪些区域会发生垃圾回收？
@@ -7915,6 +7924,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#3-javastackheap" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 在Java中，为什么说栈（Stack）通常比堆（Heap）更快？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#3-java" class="md-nav__link">
     <span class="md-ellipsis">
       3. Java中的哪些区域会发生垃圾回收？
@@ -8380,6 +8398,23 @@ JVM内存模型分为五个主要部分：</p>
 <h2 id="2">2. 什么是堆内存和栈内存？它们的区别是什么？<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
 栈内存用于存储局部变量和方法调用信息，线程独有，存取速度快。堆内存是线程共享的区域，用于存放对象实例，生命周期由GC控制。栈中存储的变量数据量较小，而堆中存储的对象生命周期较长。</p>
+<h2 id="3-javastackheap">3. 在Java中，为什么说栈（Stack）通常比堆（Heap）更快？<a class="headerlink" href="#3-javastackheap" title="Permanent link">&para;</a></h2>
+<p><strong>答案</strong>：原因主要有以下几点：</p>
+<ol>
+<li><strong>内存分配方式</strong></li>
+<li><strong>栈内存</strong>：栈的内存分配是连续的、基于指针的操作。在调用方法时，栈上会分配一个新的栈帧，当方法结束时，栈帧被直接释放。由于栈的分配和释放非常简单，通常只涉及栈指针的移动，因此非常快速。</li>
+<li><strong>堆内存</strong>：堆的内存分配则更为复杂，内存位置不一定是连续的。分配和释放堆内存可能涉及到内存管理算法和垃圾回收（GC），因此速度相对较慢。</li>
+<li><strong>缓存局部性</strong></li>
+<li><strong>栈内存的数据是局部的</strong>，且访问模式连续，这种特性利用了CPU缓存的局部性原理，可以极大提高访问速度。</li>
+<li><strong>堆中的对象分布较为分散</strong>，访问时更容易导致缓存未命中（cache miss），从而降低了访问速度。</li>
+<li><strong>垃圾回收的影响</strong></li>
+<li><strong>栈上内存的释放由方法调用结束自动处理</strong>，无需GC干预。</li>
+<li><strong>堆上的对象生命周期不确定，需要通过GC进行管理，这增加了额外的开销</strong>。GC需要扫描堆内存中无用的对象，并回收其内存空间，这对性能有一定影响。</li>
+<li><strong>线程隔离</strong></li>
+<li><strong>栈是线程私有的</strong>，每个<strong>线程有独立</strong>的栈空间，<strong>彼此不干扰</strong>，这样在栈上的操作不会有线程安全问题。</li>
+<li><strong>堆是线程共享的</strong>，因此在堆上的对象可能<strong>需要同步机制</strong>来防止多线程竞争资源，这也会带来一定的性能损耗。</li>
+</ol>
+<p>总之，栈因其内存分配方式简单、访问模式连续、无需GC管理且线程隔离等特性，使得它在大多数情况下比堆更高效。</p>
 <h2 id="3-java">3. Java中的哪些区域会发生垃圾回收？<a class="headerlink" href="#3-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
 垃圾回收主要发生在堆内存的年轻代（包括Eden区和Survivor区）和老年代。此外，方法区的部分实现（如永久代）在类卸载时也会被回收。</p>
