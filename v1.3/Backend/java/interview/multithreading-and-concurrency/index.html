@@ -7892,7 +7892,7 @@
 </ul>
 <h2 id="3">3. <strong>什么是线程安全？如何保证线程安全？</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-线程安全指多个线程同时访问共享资源时，程序行为仍然符合预期。常见的线程安全实现方法：</p>
+线程安全指<strong>多个线程同时访问共享资源时</strong>，程序行为<strong>仍然符合预期</strong>。常见的线程安全实现方法：</p>
 <ul>
 <li>使用同步块（<code>synchronized</code>关键字）。</li>
 <li>使用并发类（如<code>ConcurrentHashMap</code>）。</li>
@@ -7901,17 +7901,17 @@
 </ul>
 <h2 id="4-synchronized">4. <strong>synchronized的原理是什么？</strong><a class="headerlink" href="#4-synchronized" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-<code>synchronized</code>通过对象的内置锁（或称监视器）来保证方法或代码块在同一时刻只能被一个线程执行，防止多线程同时访问共享资源。JVM中的Monitor（监视器）锁实现了<code>synchronized</code>，每个对象有一个监视器锁。</p>
+<code>synchronized</code>通过<strong>对象的内置锁（或称监视器）来保证方法或代码块在同一时刻只能被一个线程执行</strong>，防止多线程同时访问共享资源。JVM中的Monitor（监视器）锁实现了<code>synchronized</code>，每个对象有一个监视器锁。</p>
 <h2 id="5-javasynchronizedreentrantlock">5. <strong>Java中<code>synchronized</code>和<code>ReentrantLock</code>的区别？</strong><a class="headerlink" href="#5-javasynchronizedreentrantlock" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
-<li><code>ReentrantLock</code>提供了更灵活的锁机制，支持公平锁、非公平锁选择，提供了锁的超时获取、可中断和多条件锁等功能。</li>
-<li><code>synchronized</code>是JVM层面实现，性能在JDK 1.6后优化。</li>
-<li><code>ReentrantLock</code>需要手动释放锁，而<code>synchronized</code>是自动的。</li>
+<li><code>ReentrantLock</code>提供了<strong>更灵活的锁机制</strong>，支持公平锁、非公平锁选择，提供了锁的超时获取、可中断和多条件锁等功能。</li>
+<li><code>synchronized</code>是<strong>JVM层面实现</strong>，性能在JDK 1.6后优化。</li>
+<li><code>ReentrantLock</code>需要<strong>手动释放锁</strong>，而<code>synchronized</code>是<strong>自动</strong>的。</li>
 </ul>
 <h2 id="6">6. <strong>什么是线程池？为什么使用线程池？</strong><a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-线程池管理并复用固定数量的线程，避免频繁创建和销毁线程带来的性能开销。它提高了程序的并发性、资源利用率，避免线程过多导致系统性能下降。</p>
+线程池<strong>管理并复用固定数量的线程，避免频繁创建和销毁线程带来的性能开销</strong>。它提高了程序的并发性、资源利用率，避免线程过多导致系统性能下降。</p>
 <h2 id="7">7. <strong>线程池的几种常见类型？</strong><a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
@@ -7924,14 +7924,14 @@
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong><code>Callable</code></strong>：与<code>Runnable</code>类似，但可以返回结果并抛出异常。</li>
-<li><strong><code>Future</code></strong>：表示异步任务的结果，提供了检查任务完成状态、获取结果和取消任务的方法。</li>
+<li><strong><code>Future</code></strong>：表示<strong>异步任务的结果</strong>，提供了检查任务完成状态、获取结果和取消任务的方法。</li>
 </ul>
 <h2 id="9-volatile">9. <strong>volatile关键字的作用是什么？</strong><a class="headerlink" href="#9-volatile" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-<code>volatile</code>保证了变量的可见性，即当一个线程修改了变量的值，其他线程立即可见。<code>volatile</code>不会保证操作的原子性，所以仅在非复合操作的共享变量使用。</p>
+<code>volatile</code><strong>保证了变量的可见性</strong>，即当一个线程修改了变量的值，其他线程立即可见。<code>volatile</code>不会保证操作的原子性，所以仅在非复合操作的共享变量使用。</p>
 <h2 id="10">10. <strong>什么是死锁？如何避免死锁？</strong><a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-死锁是指两个或多个线程相互持有对方所需的锁，导致无法继续执行。避免死锁的方法包括：</p>
+死锁是指<strong>两个或多个线程相互持有对方所需的锁</strong>，导致无法继续执行。避免死锁的方法包括：</p>
 <ul>
 <li>避免嵌套锁定。</li>
 <li>使用<code>tryLock()</code>等带超时功能的锁。</li>
@@ -7940,7 +7940,7 @@
 </ul>
 <h2 id="11-java">11. <strong>Java中的原子类是什么？</strong><a class="headerlink" href="#11-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-原子类（<code>AtomicInteger</code>、<code>AtomicLong</code>等）提供了一种锁机制外的线程安全方式，使用CAS（Compare and Swap）操作保证操作的原子性，适合高并发场景。</p>
+原子类（<code>AtomicInteger</code>、<code>AtomicLong</code>等）提供了一种锁机制外的线程安全方式，<strong>使用CAS（Compare and Swap）操作保证操作的原子性</strong>，适合高并发场景。</p>
 <h2 id="12-cas">12. <strong>什么是CAS操作？</strong><a class="headerlink" href="#12-cas" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
 CAS是Compare-And-Swap的简称，通过比较和交换值确保更新操作的原子性。CAS包含三个参数：内存值、期望值和更新值。当内存值与期望值相等时才将其更新为新值，否则重试。</p>
