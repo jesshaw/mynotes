@@ -3993,15 +3993,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#16" class="md-nav__link">
-    <span class="md-ellipsis">
-      16. 什么是逃逸分析？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#17-jvm-xms-xmx-xss" class="md-nav__link">
     <span class="md-ellipsis">
       17. JVM参数中-Xms、-Xmx、-Xss是什么意思？
@@ -4227,9 +4218,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-jvm" class="md-nav__link">
+  <a href="#42-jvmcompiler-optimization-barrier" class="md-nav__link">
     <span class="md-ellipsis">
-      42. 如何理解JVM中的“编译器优化屏障”？
+      42. 如何理解JVM中的“编译器优化屏障”（Compiler Optimization Barrier）？
     </span>
   </a>
   
@@ -8041,15 +8032,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#16" class="md-nav__link">
-    <span class="md-ellipsis">
-      16. 什么是逃逸分析？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#17-jvm-xms-xmx-xss" class="md-nav__link">
     <span class="md-ellipsis">
       17. JVM参数中-Xms、-Xmx、-Xss是什么意思？
@@ -8275,9 +8257,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#42-jvm" class="md-nav__link">
+  <a href="#42-jvmcompiler-optimization-barrier" class="md-nav__link">
     <span class="md-ellipsis">
-      42. 如何理解JVM中的“编译器优化屏障”？
+      42. 如何理解JVM中的“编译器优化屏障”（Compiler Optimization Barrier）？
     </span>
   </a>
   
@@ -8417,7 +8399,8 @@ JVM内存模型分为五个主要部分：</p>
 <p>总之，栈因其内存分配方式简单、访问模式连续、无需GC管理且线程隔离等特性，使得它在大多数情况下比堆更高效。</p>
 <h2 id="4-java">4. Java中的哪些区域会发生垃圾回收？<a class="headerlink" href="#4-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-垃圾回收主要发生在堆内存的年轻代（包括Eden区和Survivor区）和老年代。此外，方法区的部分实现（如永久代）在类卸载时也会被回收。</p>
+垃圾回收主要发生在堆内存的年轻代（包括Eden区和Survivor区）和老年代。此外，方法区的部分实现（如永久代）在类卸载时也会被回收。
+<a class="glightbox" href="../../assets/jvm.drawio.svg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="jvm gc" src="../../assets/jvm.drawio.svg" /></a></p>
 <h2 id="5-gcgc">5. 什么是垃圾回收（GC）？GC的目的是什么？<a class="headerlink" href="#5-gcgc" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
 垃圾回收是自动管理内存的机制，用于清除不再使用的对象，释放内存空间。GC的主要目的是防止内存泄漏和提高内存利用率，使程序在有限内存中长期稳定运行。</p>
@@ -8478,16 +8461,13 @@ JVM使用<strong>可达性分析算法</strong>，从GC Roots（如栈中的局�
 双亲委派模型是类加载器的工作机制，类加载器先将类加载请求委托给父类加载器，父类加载失败后才由当前类加载器加载。这种机制避免了重复加载核心类的风险，确保了核心类安全。</p>
 <h2 id="15">15. 如何打破双亲委派模型？<a class="headerlink" href="#15" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-打破双亲委派通常通过自定义类加载器实现，使其不再调用父类加载器的<code>loadClass()</code>，而是直接加载需要的类。某些框架（如<code>SPI</code>、<code>OSGi</code>）使用这种机制实现隔离和动态加载。</p>
-<h2 id="16">16. 什么是逃逸分析？<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
-<p><strong>答案</strong>：
-逃逸分析是JIT编译器的优化手段，分析对象是否会逃逸出方法或线程。若对象未逃逸，JVM可对其进行栈上分配（减少GC压力）或消除同步锁（提高并发性能）。</p>
-<h2 id="17-jvm-xms-xmx-xss">17. JVM参数中<code>-Xms</code>、<code>-Xmx</code>、<code>-Xss</code>是什么意思？<a class="headerlink" href="#17-jvm-xms-xmx-xss" title="Permanent link">&para;</a></h2>
+打破双亲委派通常通过<strong>自定义类加载器实现</strong>，使其不再调用父类加载器的<code>loadClass()</code>，而是直接加载需要的类。某些框架（如<code>SPI</code>、<code>OSGi</code>）使用这种机制实现隔离和动态加载。</p>
+<h2 id="17-jvm-xms-xmx-xss">17. JVM参数中-Xms、-Xmx、-Xss是什么意思？<a class="headerlink" href="#17-jvm-xms-xmx-xss" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
-<li><strong><code>-Xms</code></strong>：设置堆的初始大小。</li>
-<li><strong><code>-Xmx</code></strong>：设置堆的最大大小。</li>
-<li><strong><code>-Xss</code></strong>：设置每个线程的栈大小。</li>
+<li><strong><code>-Xms(Minimum heap Size)</code></strong>：设置堆的初始大小。</li>
+<li><strong><code>-Xmx(MaXimum heap size)</code></strong>：设置堆的最大大小。</li>
+<li><strong><code>-Xss(thread Stack Size)</code></strong>：设置每个线程的栈大小。</li>
 </ul>
 <h2 id="18-jvm">18. 如何查看并分析JVM内存使用情况？<a class="headerlink" href="#18-jvm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：可以使用JVM提供的工具，如：</p>
@@ -8498,9 +8478,9 @@ JVM使用<strong>可达性分析算法</strong>，从GC Roots（如栈中的局�
 <li><strong><code>jconsole</code>/<code>VisualVM</code></strong>：图形化监控工具，查看内存、线程等实时信息。</li>
 </ul>
 <h2 id="19">19. 什么是内存泄漏？如何排查内存泄漏？<a class="headerlink" href="#19" title="Permanent link">&para;</a></h2>
-<p><strong>答案</strong>：内存泄漏是指不再使用的对象未被GC回收，导致堆内存持续增长，最终引发<code>OutOfMemoryError</code>。排查方法：</p>
+<p><strong>答案</strong>：内存泄漏是指<strong>不再使用的对象未被GC回收</strong>，导致堆内存持续增长，最终引发<code>OutOfMemoryError</code>。排查方法：</p>
 <ul>
-<li>使用<code>jmap</code>生成堆转储文件，使用<code>MAT</code>分析堆转储。</li>
+<li>使用<code>jmap</code>生成堆转储文件（heap dump），使用<code>MAT</code>( Eclipse Memory Analyzer Tool)分析堆转储。</li>
 <li>使用<code>jconsole</code>或<code>VisualVM</code>观察对象增长情况。</li>
 </ul>
 <h2 id="20-oomoutofmemoryerror">20. 常见的OOM（OutOfMemoryError）有哪些？<a class="headerlink" href="#20-oomoutofmemoryerror" title="Permanent link">&para;</a></h2>
@@ -8514,7 +8494,7 @@ JVM使用<strong>可达性分析算法</strong>，从GC Roots（如栈中的局�
 </ul>
 <h2 id="21-jvm">21. 如何进行JVM性能调优？<a class="headerlink" href="#21-jvm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-性能调优主要从内存分配、GC策略和参数优化等方面入手。</p>
+性能调优主要从<strong>内存分配、GC策略和参数优化等</strong>方面入手。</p>
 <ul>
 <li>增大堆内存、调整新生代和老年代比例。</li>
 <li>选择合适的垃圾回收器（如<code>G1</code>适合低延迟应用）。</li>
@@ -8523,10 +8503,10 @@ JVM使用<strong>可达性分析算法</strong>，从GC Roots（如栈中的局�
 </ul>
 <h2 id="22-classloader">22. 什么是ClassLoader中的“上下文类加载器”？<a class="headerlink" href="#22-classloader" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-上下文类加载器（Context ClassLoader）是线程关联的类加载器，它允许从不同类加载器中加载类。Java在某些情况下允许我们通过设置和获取上下文类加载器（<code>Thread.setContextClassLoader()</code>）来动态指定加载的类，以适应模块化和插件化的需求。</p>
+上下文类加载器（Context ClassLoader）是<strong>线程关联的类加载器</strong>，它允许从不同类加载器中加载类。Java在某些情况下允许我们通过设置和获取上下文类加载器（<code>Thread.setContextClassLoader()</code>）来动态指定加载的类，以适应<strong>模块化和插件化</strong>的需求。</p>
 <h2 id="23-jitjit">23. 什么是即时编译（JIT）？JIT编译有哪些优化？<a class="headerlink" href="#23-jitjit" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-JIT（Just-In-Time）编译是将字节码转换为机器码的实时编译过程，它可以大幅提升Java应用的性能。JIT优化主要包括：</p>
+JIT（Just-In-Time）编译是<strong>将字节码转换为机器码的实时编译过程</strong>，它可以<strong>大幅提升</strong>Java应用的<strong>性能</strong>。JIT优化主要包括：</p>
 <ul>
 <li><strong>内联</strong>：将频繁调用的小方法直接嵌入调用点，减少方法调用开销。</li>
 <li><strong>逃逸分析</strong>：将局部对象分配在栈上而非堆中。</li>
@@ -8535,10 +8515,10 @@ JIT（Just-In-Time）编译是将字节码转换为机器码的实时编译过�
 </ul>
 <h2 id="24-javajmm">24. 什么是Java内存模型（JMM）？<a class="headerlink" href="#24-javajmm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-Java内存模型（Java Memory Model，JMM）定义了多线程环境下共享变量的可见性和有序性规则。JMM规定了如何通过<code>volatile</code>、<code>synchronized</code>和<code>final</code>关键字保证线程间的可见性、原子性和有序性，以确保并发的正确性。</p>
+Java内存模型（Java Memory Model，JMM）定义了多线程环境下共享变量的可见性和有序性规则。JMM规定了如何通过<code>volatile</code>、<code>synchronized</code>和<code>final</code>关键字保证线程间的<strong>可见性、原子性和有序性</strong>，以确保并发的正确性。</p>
 <h2 id="25-generational-collectionjvm">25. 什么是分代收集（Generational Collection），为什么JVM选择这种方式？<a class="headerlink" href="#25-generational-collectionjvm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-分代收集是将对象分为不同代并采用不同GC策略的方式。根据对象生命周期的特点，将对象分为新生代、老年代等。短生命周期的对象主要位于新生代，通过快速GC清理，减少了内存开销，而长生命周期的对象进入老年代，以较低频率进行清理。</p>
+分代收集是<strong>将对象分为不同代并采用不同GC策略的方式</strong>。根据对象生命周期的特点，将对象分为新生代、老年代等。短生命周期的对象主要位于新生代，通过快速GC清理，减少了内存开销，而长生命周期的对象进入老年代，以较低频率进行清理。</p>
 <h2 id="26-full-gcfull-gc">26. 哪些情况会导致Full GC？如何避免频繁Full GC？<a class="headerlink" href="#26-full-gcfull-gc" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：Full GC通常在以下情况触发：</p>
 <ul>
@@ -8589,15 +8569,15 @@ JVM通过<strong>可达性分析</strong>算法来判断对象是否可回收。
 <h2 id="33-jvm">33. JVM如何优化锁的性能？<a class="headerlink" href="#33-jvm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：JVM通过以下几种优化方式来提高锁的性能：</p>
 <ul>
-<li><strong>偏向锁</strong>：优化无锁竞争的情况，将锁偏向第一个获得的线程，减少锁开销。</li>
-<li><strong>轻量级锁</strong>：线程尝试CAS操作获取锁，避免了重锁的开销。</li>
-<li><strong>自旋锁</strong>：在短时间等待锁的情况下，线程会自旋等待而不是直接进入阻塞状态，减少上下文切换的开销。</li>
-<li><strong>锁粗化</strong>：将小范围的锁扩展到更大的范围，减少多次锁解锁的开销。</li>
-<li><strong>锁消除</strong>：在JIT编译时消除不必要的锁，进一步提高并发性能。</li>
+<li><strong>偏向锁</strong>：优化无锁竞争的情况，将锁<strong>偏向第一个</strong>获得的线程，减少锁开销。</li>
+<li><strong>轻量级锁</strong>：线程尝试<strong>CAS操作获取锁</strong>，避免了重锁的开销。</li>
+<li><strong>自旋锁</strong>：在短时间等待锁的情况下，线程会<strong>自旋等待而不是直接进入阻塞状态</strong>，减少上下文切换的开销。</li>
+<li><strong>锁粗化</strong>：将小范围的锁<strong>扩展到更大</strong>的范围，减少多次锁解锁的开销。</li>
+<li><strong>锁消除</strong>：在JIT编译时<strong>消除不必要</strong>的锁，进一步提高并发性能。</li>
 </ul>
 <h2 id="34-jvm">34. 什么是对象的分配过程？JVM如何决定对象分配在栈上还是堆上？<a class="headerlink" href="#34-jvm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-通常情况下，Java对象分配在堆上。然而，通过<strong>逃逸分析</strong>，JVM能确定对象是否会逃逸出方法。如果对象在方法中局部使用且不逃逸，可以直接分配在栈上，这样在方法结束后即可直接回收，减少了堆的压力。</p>
+通常情况下，Java对象分配在堆上。然而，通过<strong>逃逸分析</strong>，JVM能确定对象是否会逃逸出方法。如果<strong>对象在方法中局部使用且不逃逸，可以直接分配在栈上</strong>，这样在方法结束后即可直接回收，减少了堆的压力。</p>
 <h2 id="35">35. 类加载器有哪些典型的应用场景？<a class="headerlink" href="#35" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：类加载器主要应用于以下场景：</p>
 <ul>
@@ -8637,10 +8617,10 @@ Java提供了不同级别的引用类型来支持GC管理：</p>
 </ul>
 <h2 id="41-jvmthread-local-storage-tls">41. JVM如何管理线程的本地存储（Thread Local Storage, TLS）？<a class="headerlink" href="#41-jvmthread-local-storage-tls" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-JVM通过<code>ThreadLocal</code>类提供线程本地存储，使变量仅对某一线程可见。每个线程都有一个独立的<code>ThreadLocal</code>实例，JVM通过<code>ThreadLocalMap</code>来存储变量，确保线程隔离，常用于数据库连接、会话信息等场景。要注意的是，<code>ThreadLocal</code>可能会导致内存泄漏，需要在不使用时清除。</p>
-<h2 id="42-jvm">42. 如何理解JVM中的“编译器优化屏障”？<a class="headerlink" href="#42-jvm" title="Permanent link">&para;</a></h2>
+JVM通过<code>ThreadLocal</code>类提供线程本地存储，使变量仅对某一线程可见。每个线程都有一个独立的<code>ThreadLocal</code>实例，JVM通过<strong>ThreadLocalMap</strong>来存储变量，确保线程隔离，常用于数据库连接、会话信息等场景。要注意的是，<code>ThreadLocal</code>可能会导致内存泄漏，需要在不使用时清除。</p>
+<h2 id="42-jvmcompiler-optimization-barrier">42. 如何理解JVM中的“编译器优化屏障”（Compiler Optimization Barrier）？<a class="headerlink" href="#42-jvmcompiler-optimization-barrier" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-编译器优化屏障（Compiler Optimization Barrier）是一种指令，阻止编译器对特定代码块进行重排序或优化，确保代码的有序性。Java中的<code>volatile</code>关键字就包含了屏障效果，通过内存屏障来保证变量的可见性和有序性，避免CPU优化导致的乱序执行。</p>
+编译器优化屏障（Compiler Optimization Barrier）是<strong>一种指令，阻止编译器对特定代码块进行重排序或优化，确保代码的有序性</strong>。Java中的<code>volatile</code>关键字就包含了屏障效果，通过内存屏障来保证变量的<strong>可见性和有序性</strong>，避免CPU优化导致的乱序执行。</p>
 <h2 id="43-memory-barrierjvm">43. 什么是内存屏障（Memory Barrier）？JVM如何利用内存屏障保证线程安全？<a class="headerlink" href="#43-memory-barrierjvm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
 内存屏障是指令序列中的同步点，用于确保指令的执行顺序和内存可见性。JVM通过内存屏障实现Java内存模型（JMM）的有序性和可见性。例如，<code>volatile</code>变量的读写会插入内存屏障，防止重排序，确保各线程看到的是最新值。</p>
@@ -8652,16 +8632,16 @@ JVM通过<code>ThreadLocal</code>类提供线程本地存储，使变量仅对�
 去优化是JVM将已优化的机器代码回退到解释执行的过程。当JIT编译的假设不再成立（如类的加载和方法的动态变化），JVM会将已编译代码还原为字节码，重新解释执行。这种机制确保代码的动态适应性和安全性。</p>
 <h2 id="46-g1">46. 什么是G1垃圾收集器的“分区”概念？<a class="headerlink" href="#46-g1" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-G1垃圾收集器将内存划分为若干大小相同的分区（Region），新生代和老年代动态划分在这些分区中。G1的垃圾收集是基于分区的，优先清理垃圾最多的分区，减少了单次GC的时间，适合低停顿和大内存场景。</p>
+G1垃圾收集器将内存划分为若干大小相同的分区（Region），新生代和老年代动态划分在这些分区中。G1的垃圾收集是基于分区的，优先清理垃圾最多的分区，减少了单次GC的时间，适合<strong>低延迟</strong>和<strong>大内存</strong>场景。</p>
 <h2 id="47-cmsg1">47. CMS和G1垃圾收集器的区别是什么？<a class="headerlink" href="#47-cmsg1" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
-<li><strong>CMS</strong>：是并发低停顿收集器，适合老年代GC，通过标记-清除算法，可能产生内存碎片，主要用于低延迟应用。</li>
-<li><strong>G1</strong>：是分区化的垃圾收集器，通过分区和优先级排序回收，减少单次GC停顿时间，适合大内存、低延迟场景。相比CMS，G1避免了碎片化，更适合长时间运行的应用。</li>
+<li><strong>CMS</strong>：是<strong>并发低停顿收集器</strong>，适合老年代GC，通过标记-清除算法，可能产生内存碎片，主要用于低延迟应用。</li>
+<li><strong>G1</strong>：是<strong>分区化的垃圾收集器</strong>，通过分区和优先级排序回收，减少单次GC停顿时间，适合大内存、低延迟场景。相比CMS，<strong>G1避免了碎片化</strong>，更适合长时间运行的应用。</li>
 </ul>
 <h2 id="48-javabiased-locking">48. 什么是Java的偏向锁（Biased Locking）？在什么场景下适合使用？<a class="headerlink" href="#48-javabiased-locking" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-偏向锁是一种优化锁操作的机制，适用于无竞争的同步场景。当锁第一次被线程获取后，偏向锁会将锁“偏向”该线程，后续的同一线程操作无需加锁。适合单线程访问频繁、不涉及并发竞争的场景，减少了锁获取和释放的开销。</p>
+偏向锁是<strong>一种优化锁操作的机制，适用于无竞争的同步场景</strong>。当锁第一次被线程获取后，偏向锁会将锁“偏向”该线程，后续的同一线程操作无需加锁。<strong>适合单线程访问频繁、不涉及并发竞争的场景</strong>，减少了锁获取和释放的开销。</p>
 <h2 id="49-metaspace-oom">49. 解释“Metaspace OOM”及解决方法<a class="headerlink" href="#49-metaspace-oom" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
 Metaspace OOM（OutOfMemoryError）错误是因为类元数据占用的本地内存（Metaspace）耗尽引起的。可以通过增大<code>-XX:MaxMetaspaceSize</code>参数、减少类加载、避免动态生成类来缓解此问题。</p>
@@ -8670,7 +8650,7 @@ Metaspace OOM（OutOfMemoryError）错误是因为类元数据占用的本地内
 代码缓存用于存储JIT编译生成的机器代码，减少对字节码的重复编译。若代码缓存满了，JVM无法进一步优化方法，影响性能。可以调整<code>-XX:ReservedCodeCacheSize</code>来设置缓存大小。</p>
 <h2 id="51-jvmmemory-alignment">51. JVM如何处理内存对齐（Memory Alignment）？<a class="headerlink" href="#51-jvmmemory-alignment" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-内存对齐是JVM按对齐边界存储对象数据，提高访问效率。JVM会填充对象数据，使对象大小是8字节的倍数。对齐操作避免了跨内存块访问数据的开销，有助于CPU缓存优化。</p>
+内存对齐是JVM按对齐边界存储对象数据，提高访问效率。JVM会填充对象数据，<strong>使对象大小是8字节的倍数。对齐操作避免了跨内存块访问数据的开销，有助于CPU缓存优化</strong>。</p>
 
 
 
