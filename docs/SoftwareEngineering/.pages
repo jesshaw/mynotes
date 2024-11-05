@@ -3,4 +3,5 @@ nav:
   - togaf-arch.md
   - 4a-arch.md
   - performance-evaluation.md
+  - mes.md
   - ...
