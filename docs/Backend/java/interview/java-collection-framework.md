@@ -52,6 +52,45 @@ class ConcurrentHashMap implements Map
 @enduml
 ```
 
+```plantuml
+@startmindmap
+* Java Collection Framework
+** Collection
+*** List
+**** ArrayList
+**** LinkedList
+**** Vector
+***** Stack
+*** Set
+**** HashSet
+**** LinkedHashSet
+**** TreeSet
+*** Queue
+**** PriorityQueue
+**** LinkedList
+** Map
+*** HashMap
+*** LinkedHashMap
+*** TreeMap
+*** WeakHashMap
+*** Hashtable
+**** Properties
+** Utility Classes
+*** Collections
+*** Arrays
+@endmindmap
+```
+
+### 解释
+- **Collection** 是集合框架中的根接口，包含了三大主要接口：**List**、**Set** 和 **Queue**。
+  - **List** 接口表示有序的、可重复的集合，如 `ArrayList`、`LinkedList`、`Vector` 等。
+    - `Stack` 继承自 `Vector`，用于表示栈结构。
+  - **Set** 接口表示不允许重复元素的集合，如 `HashSet`、`LinkedHashSet`、`TreeSet`。
+  - **Queue** 接口用于表示先进先出的队列结构，如 `PriorityQueue`、`LinkedList`（可同时用于实现 `List` 和 `Queue`）。
+- **Map** 接口不属于 `Collection`，但通常被视为集合框架的一部分，用于键值对存储，如 `HashMap`、`LinkedHashMap`、`TreeMap`、`WeakHashMap`、`Hashtable`。
+  - `Properties` 是 `Hashtable` 的子类，通常用于配置文件的读取。
+- **Utility Classes** 提供集合操作的实用工具类，如 **Collections** 和 **Arrays**，用于集合排序、搜索、转换等操作。
+
 ## 2. 如何对`ArrayList`进行排序？
 
 **答案**：
