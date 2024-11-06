@@ -105,19 +105,23 @@ class ConcurrentHashMap implements Map
 - 使用`Collections.synchronizedMap()`包装`HashMap`。
 - 使用`ConcurrentHashMap`，它是Java集合中线程安全、效率较高的`Map`实现，采用分段锁机制实现高并发。
 
-## 8. **`ConcurrentHashMap`的工作原理是什么？**
+![hash map struct](../core-java/assets/hashmap-struct.png)
+
+## 8. **`HashMap`在扩容时可能会出现什么问题？**
+
+**答案**：
+
+- **数据丢失**：扩容期间，其他线程修改可能导致数据丢失。
+- **死循环**：高并发下链表形成环导致死循环（Java 7之前）。Java 8优化后不易出现。
+
+## 9. **`ConcurrentHashMap`的工作原理是什么？**
 
 **答案**：
 
 - `ConcurrentHashMap`基于分段锁（Java 8之前）和CAS操作（Java 8及以后），减少锁的粒度，提高并发性能。
 - 在Java 8中，使用CAS和synchronized配合，基于数组+链表+红黑树实现高效的线程安全`Map`。
 
-## 9. **`HashMap`在扩容时可能会出现什么问题？**
-
-**答案**：
-
-- **数据丢失**：扩容期间，其他线程修改可能导致数据丢失。
-- **死循环**：高并发下链表形成环导致死循环（Java 7之前）。Java 8优化后不易出现。
+![concurrent hash map struct](../core-java/assets/concurrenthashmap-struct.png)
 
 ## 10. **`TreeMap`和`HashMap`的区别是什么？**
 
