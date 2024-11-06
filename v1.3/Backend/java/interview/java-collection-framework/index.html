@@ -9005,7 +9005,8 @@
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>HashMap</code>基于数组+链表+红黑树实现。存储时通过键的<code>hashCode()</code>确定存储桶位置，若发生哈希冲突则以链表存储，链表长度超过阈值（默认8）后转换为红黑树，提高查询效率。</li>
-<li><code>HashMap</code>的默认负载因子为0.75，超过容量的75%会进行扩容。</li>
+<li><code>HashMap</code>的默认容量为16，默认负载因子为0.75，超过容量的75%会进行扩容。</li>
+<li><code>HashMap</code>查询和写入在Java 8以前平均时间复杂度均为O(1)，最坏时间复杂度为O(n)，Java 8以后最坏时间复杂度优化到O(log n)。</li>
 </ul>
 <p><a class="glightbox" href="../../core-java/assets/hashmap-struct.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="hash map struct" src="../../core-java/assets/hashmap-struct.png" /></a></p>
 <h2 id="5-hashmaphashtable">5. <strong><code>HashMap</code>和<code>Hashtable</code>的区别是什么？</strong><a class="headerlink" href="#5-hashmaphashtable" title="Permanent link">&para;</a></h2>
