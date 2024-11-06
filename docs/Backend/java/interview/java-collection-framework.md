@@ -79,7 +79,8 @@ class ConcurrentHashMap implements Map
 **答案**：
 
 - `HashMap`基于数组+链表+红黑树实现。存储时通过键的`hashCode()`确定存储桶位置，若发生哈希冲突则以链表存储，链表长度超过阈值（默认8）后转换为红黑树，提高查询效率。
-- `HashMap`的默认负载因子为0.75，超过容量的75%会进行扩容。
+- `HashMap`的默认容量为16，默认负载因子为0.75，超过容量的75%会进行扩容。
+- `HashMap`查询和写入在Java 8以前平均时间复杂度均为O(1)，最坏时间复杂度为O(n)，Java 8以后最坏时间复杂度优化到O(log n)。
 
 ![hash map struct](../core-java/assets/hashmap-struct.png)
 
