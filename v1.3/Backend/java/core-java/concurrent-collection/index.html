@@ -7598,9 +7598,9 @@
 <ul>
 <li>数据结构：JDK1.7中ConcurrentHashMap使用分段数组+链表结构，HashTable使用数组+链表结构。链表主要是为解决哈希冲突而存在。到了JDK1.8时ConcurrentHashMap采用Node数组+链表+红黑树的结构。</li>
 <li>线程安全的实现方式：在JDK1.7时，ConcurrentHashMap使用分段锁对整个桶数组进行分段，多线程访问不同数组段就不存在锁竞争，提高了并发效率。到了JDK1.8时直接用Node数组+链表+红黑树实现，并发使用synchronized和CAS来操作。JDK1.8可以看到Segment结构是为了兼容旧版。HashTable是使用synchronized来保证线程安全，效率较低，高并发时可能会进入阻塞和轮询状态。
-<a class="glightbox" href="../assets/335ebbd17e8725ecd99da18478102730854fabb631a5772acf0a5198a9dad879.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HashTable全表锁" src="../assets/335ebbd17e8725ecd99da18478102730854fabb631a5772acf0a5198a9dad879.png" /></a>
-<a class="glightbox" href="../assets/615483ebe9930e78df2646ea33beb7790f7d33e76fe59c99bff60010546997a1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ConcurrentHashMap分段锁" src="../assets/615483ebe9930e78df2646ea33beb7790f7d33e76fe59c99bff60010546997a1.png" /></a><br />
-<a class="glightbox" href="../assets/709c0a6828526fe74267ac2933f91ebd30d35170844f14c85814b723455c4fb2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Java 8 HashMap结构" src="../assets/709c0a6828526fe74267ac2933f91ebd30d35170844f14c85814b723455c4fb2.png" /></a>  </li>
+<a class="glightbox" href="assets/335ebbd17e8725ecd99da18478102730854fabb631a5772acf0a5198a9dad879.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HashTable全表锁" src="assets/335ebbd17e8725ecd99da18478102730854fabb631a5772acf0a5198a9dad879.png" /></a>
+<a class="glightbox" href="assets/615483ebe9930e78df2646ea33beb7790f7d33e76fe59c99bff60010546997a1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ConcurrentHashMap分段锁" src="assets/615483ebe9930e78df2646ea33beb7790f7d33e76fe59c99bff60010546997a1.png" /></a><br />
+<a class="glightbox" href="assets/709c0a6828526fe74267ac2933f91ebd30d35170844f14c85814b723455c4fb2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Java 8 HashMap结构" src="assets/709c0a6828526fe74267ac2933f91ebd30d35170844f14c85814b723455c4fb2.png" /></a>  </li>
 </ul>
 <h2 id="copyonwritearraylist">CopyOnWriteArrayList是如何做到读取完全不用加锁，而且写入不阻塞读取操作的呢<a class="headerlink" href="#copyonwritearraylist" title="Permanent link">&para;</a></h2>
 <p>读取不会修改数据，因此没有进行同步控制或加锁操作，通过volatile保证可见性。写入的时候加了ReentrantLock可重入锁来保证同步，避免多线写的时候拷贝多个副本。</p>
