@@ -2,7 +2,6 @@
 
 以下是 Java 中与数据库操作及 ORM 框架相关的常见面试题及答案，涵盖了 JDBC、Hibernate、MyBatis 等技术：
 
-
 ## 1. **什么是 JDBC？它的工作原理是什么？**
 
 **答案**：
@@ -116,7 +115,6 @@ private Long id;
 - 适用于跨事务和会话的数据缓存，提高读操作性能。
 - 常用实现：EHCache、Infinispan 等。
 
-
 ## 8. **MyBatis 中的 #{} 和 ${} 有什么区别？**
 
 **答案**：
@@ -135,12 +133,12 @@ private Long id;
 
 **答案**：
 
-- **\<select>**：定义查询语句。
-- **\<insert>**：定义插入语句。
-- **\<update>**：定义更新语句。
-- **\<delete>**：定义删除语句。
-- **\<resultMap>**：映射查询结果到 Java 对象。
-- **\<if>**、**\<choose>**、**\<foreach>** 等：用于动态 SQL 生成。
+- **`<select>`**：定义查询语句。
+- **`<insert>`**：定义插入语句。
+- **`<update>`**：定义更新语句。
+- **`<delete>`**：定义删除语句。
+- **`<resultMap>`**：映射查询结果到 Java 对象。
+- **`<if>`**、**`<choose>`**、**`<foreach>`** 等：用于动态 SQL 生成。
 
 ## 10. **什么是 JPA？Hibernate 是 JPA 的实现吗？**
 

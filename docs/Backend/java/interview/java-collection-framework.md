@@ -119,7 +119,7 @@ class ConcurrentHashMap implements Map
 
 **答案**：
 
-- `ConcurrentHashMap`基于分段锁（Java 8之前）和CAS操作（Java 8及以后），减少锁的粒度，提高并发性能。
+- `ConcurrentHashMap`基于**分段锁（Java 8之前）**和**CAS操作（Java 8及以后）**，减少锁的粒度，提高并发性能。
 - 在Java 8中，使用CAS和synchronized配合，基于数组+链表+红黑树实现高效的线程安全`Map`。
 
 ![concurrent hash map struct](../core-java/assets/concurrenthashmap-struct.png)
