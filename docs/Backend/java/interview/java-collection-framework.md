@@ -81,6 +81,8 @@ class ConcurrentHashMap implements Map
 - `HashMap`基于数组+链表+红黑树实现。存储时通过键的`hashCode()`确定存储桶位置，若发生哈希冲突则以链表存储，链表长度超过阈值（默认8）后转换为红黑树，提高查询效率。
 - `HashMap`的默认负载因子为0.75，超过容量的75%会进行扩容。
 
+![hash map struct](../core-java/assets/hashmap-struct.png)
+
 ## 5. **`HashMap`和`Hashtable`的区别是什么？**
 
 **答案**：
@@ -104,8 +106,6 @@ class ConcurrentHashMap implements Map
 
 - 使用`Collections.synchronizedMap()`包装`HashMap`。
 - 使用`ConcurrentHashMap`，它是Java集合中线程安全、效率较高的`Map`实现，采用分段锁机制实现高并发。
-
-![hash map struct](../core-java/assets/hashmap-struct.png)
 
 ## 8. **`HashMap`在扩容时可能会出现什么问题？**
 
