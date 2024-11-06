@@ -9039,7 +9039,7 @@
 <h2 id="9-concurrenthashmap">9. <strong><code>ConcurrentHashMap</code>的工作原理是什么？</strong><a class="headerlink" href="#9-concurrenthashmap" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
-<li><code>ConcurrentHashMap</code>基于分段锁（Java 8之前）和CAS操作（Java 8及以后），减少锁的粒度，提高并发性能。</li>
+<li><code>ConcurrentHashMap</code>基于<strong>分段锁（Java 8之前）</strong>和<strong>CAS操作（Java 8及以后）</strong>，减少锁的粒度，提高并发性能。</li>
 <li>在Java 8中，使用CAS和synchronized配合，基于数组+链表+红黑树实现高效的线程安全<code>Map</code>。</li>
 </ul>
 <p><a class="glightbox" href="../../core-java/assets/concurrenthashmap-struct.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="concurrent hash map struct" src="../../core-java/assets/concurrenthashmap-struct.png" /></a></p>
