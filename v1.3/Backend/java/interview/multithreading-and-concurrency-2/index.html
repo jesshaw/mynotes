@@ -14,7 +14,7 @@
         <link rel="prev" href="../multithreading-and-concurrency/">
       
       
-        <link rel="next" href="../new-features-in-java8-and-above/">
+        <link rel="next" href="../jvm/">
       
       
       <link rel="icon" href="../../../../assets/logo-32x32-white.png">
@@ -3863,6 +3863,421 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    多线程与并发-2
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    多线程与并发-2
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java多线程
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Java多线程">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 进程和线程有什么区别？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 多线程编程有哪些好处？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 用户线程和守护线程有什么区别？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 我们如何在Java中创建一个线程？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 线程生命周期中有什么不同的状态？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-threadrun" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 我们可以调用Thread类的run()方法吗？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 我们如何在特定时间暂停线程执行？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 你对线程优先级有什么了解？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 什么是线程计划和时间切片？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 什么是多线程中的上下文切换？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11-mainjava" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 我们如何确保main()是Java程序中完成的最后一个线程？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. 线程间如何通信？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-waitnotifynotifyallobject" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. 为什么线程通信方法wait()，notify()和notifyAll()都在Object类中？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-waitnotifynotifyallsynchronized" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. 为什么wait()，notify()和notifyAll()方法必须从synchronized方法或块调用？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15-sleepyield" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. 为什么线程sleep()和yield()方法是静态的？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. 我们如何在Java中实现线程安全？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-javavolatile" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 在Java中的volatile关键字是什么？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. 同步方法或同步块哪个是更优选择？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. 如何在Java中创建守护进程线程？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20-threadlocal" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 什么是ThreadLocal？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 什么是线程组？ 为什么建议不要使用它？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-javadumpjavadump" class="md-nav__link">
+    <span class="md-ellipsis">
+      22. 什么是Java线程Dump，我们如何获得程序的Java线程Dump？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      23. 什么是死锁？ 如何分析和避免死锁的情形？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-java-timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. Java Timer类是什么？ 如何安排任务在特定间隔时间后运行？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      25. 什么是线程池？ 我们如何在Java中创建线程池？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26-run" class="md-nav__link">
+    <span class="md-ellipsis">
+      26. 如果我们不覆盖线程类run()方法，会发生什么？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java并发
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Java并发">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-javaapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 什么是原子操作？ Java并发API中的原子类是什么？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-javaapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 什么是Java并发API中的锁接口？ 与同步相比有什么好处？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-executors" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 什么是Executors框架？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 什么是阻塞队列？ 我们如何使用阻塞队列实现生产者-消费者问题？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-callablefuture" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 什么是Callable和Future？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-futuretask" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 什么是FutureTask类？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-concurrent-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 什么是Concurrent Collection类？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-executors" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 什么是Executors类？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-java-8api" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Java 8中的并发API的一些改进是什么？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
