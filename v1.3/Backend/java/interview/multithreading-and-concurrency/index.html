@@ -3770,6 +3770,69 @@
   
   
     <li class="md-nav__item">
+      <a href="../java-string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    java字符串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java异常面试问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    java编程面试问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../java-collection-framework/" class="md-nav__link">
         
   
@@ -4043,6 +4106,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#24-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. java应用的线程数定义多少合适？
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -4064,6 +4136,27 @@
   
   <span class="md-ellipsis">
     JVM（Java虚拟机）
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-heap-space-vs-stack-memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java堆VS栈-Java中的内存分配
   </span>
   
 
@@ -7860,6 +7953,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#24-java" class="md-nav__link">
+    <span class="md-ellipsis">
+      24. java应用的线程数定义多少合适？
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -7995,6 +8097,34 @@ CAS是Compare-And-Swap的简称，通过比较和交换值确保更新操作的�
 <h2 id="23-reentrantreadwritelock">23. <strong>什么是读写锁？如何使用<code>ReentrantReadWriteLock</code>？</strong><a class="headerlink" href="#23-reentrantreadwritelock" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
 读写锁分为读锁和写锁，多个线程可以并发获取读锁，但写锁是独占的。使用`ReentrantReadWriteLock</p>
+<h2 id="24-java">24. <strong>java应用的线程数定义多少合适？</strong><a class="headerlink" href="#24-java" title="Permanent link">&para;</a></h2>
+<p><strong>答案</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>应用类型</th>
+<th>推荐线程数设置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CPU密集型应用</td>
+<td>CPU核心数 + 1</td>
+</tr>
+<tr>
+<td>I/O密集型应用</td>
+<td><code>CPU核心数 * 2</code> 或更高 / CPU核心数 / (1 - 阻塞系数默认为0.5)</td>
+</tr>
+<tr>
+<td>Web服务器</td>
+<td><code>CPU核心数 * 2</code> 到 <code>CPU核心数 * 4</code></td>
+</tr>
+<tr>
+<td>后台任务/队列处理</td>
+<td><code>根据测试逐步增加，保持系统稳定</code></td>
+</tr>
+</tbody>
+</table>
 
 
 

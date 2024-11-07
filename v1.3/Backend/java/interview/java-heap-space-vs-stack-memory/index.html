@@ -11,25 +11,25 @@
       
       
       
-        <link rel="prev" href="../../spring-framework/">
+        <link rel="prev" href="../jvm/">
       
       
-        <link rel="next" href="../famous-enterprises-interview-questions/">
+        <link rel="next" href="../java-io-and-nio/">
       
       
-      <link rel="icon" href="../../../../../assets/logo-32x32-white.png">
+      <link rel="icon" href="../../../../assets/logo-32x32-white.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.15">
     
     
       
-        <title>java核心技术面试问题 - 乐享笔记</title>
+        <title>Java堆VS栈-Java中的内存分配 - 乐享笔记</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.7e359304.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,14 +48,14 @@
       
     
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
     
     
     
-   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
@@ -64,7 +64,7 @@
     .gdesc-inner { font-size: 0.75rem; }
     body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
     body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#java" class="md-skip">
+        <a href="#javavs-java" class="md-skip">
           跳转至
         </a>
       
@@ -98,7 +98,7 @@
             <div class="md-banner__inner md-grid md-typeset">
               
   You're not viewing the latest version.
-  <a href="../../../../../..">
+  <a href="../../../../..">
     <strong>Click here to go to latest.</strong>
   </a>
 
@@ -113,9 +113,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../../../../.." title="乐享笔记" class="md-header__button md-logo" aria-label="乐享笔记" data-md-component="logo">
+    <a href="../../../.." title="乐享笔记" class="md-header__button md-logo" aria-label="乐享笔记" data-md-component="logo">
       
-  <img src="../../../../../assets/logo-180x180-white.png" alt="logo">
+  <img src="../../../../assets/logo-180x180-white.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              java核心技术面试问题
+              Java堆VS栈-Java中的内存分配
             
           </span>
         </div>
@@ -239,7 +239,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../.." class="md-tabs__link">
+      <a href="../../../.." class="md-tabs__link">
         
   
     
@@ -264,7 +264,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Frontend/js/front-end-optimization/" class="md-tabs__link">
+        <a href="../../../../Frontend/js/front-end-optimization/" class="md-tabs__link">
           
   
   Frontend
@@ -287,7 +287,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../../../../jwt/" class="md-tabs__link">
+        <a href="../../../jwt/" class="md-tabs__link">
           
   
   Backend
@@ -305,7 +305,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Devops/" class="md-tabs__link">
+        <a href="../../../../Devops/" class="md-tabs__link">
           
   
   Devops
@@ -323,7 +323,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../SoftwareEngineering/" class="md-tabs__link">
+        <a href="../../../../SoftwareEngineering/" class="md-tabs__link">
           
   
   Software Engineering
@@ -341,7 +341,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../../../../Tools/intellij-idea-plugins/" class="md-tabs__link">
+        <a href="../../../../Tools/intellij-idea-plugins/" class="md-tabs__link">
           
   
   Tools
@@ -374,9 +374,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="乐享笔记" class="md-nav__button md-logo" aria-label="乐享笔记" data-md-component="logo">
+    <a href="../../../.." title="乐享笔记" class="md-nav__button md-logo" aria-label="乐享笔记" data-md-component="logo">
       
-  <img src="../../../../../assets/logo-180x180-white.png" alt="logo">
+  <img src="../../../../assets/logo-180x180-white.png" alt="logo">
 
     </a>
     乐享笔记
@@ -403,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -503,7 +503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/js/front-end-optimization/" class="md-nav__link">
+      <a href="../../../../Frontend/js/front-end-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -524,7 +524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/js/js-date-format/" class="md-nav__link">
+      <a href="../../../../Frontend/js/js-date-format/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -545,7 +545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/js/js-object-creation-patterns-best-practises/" class="md-nav__link">
+      <a href="../../../../Frontend/js/js-object-creation-patterns-best-practises/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -614,7 +614,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Frontend/flutter/flutter_write_your_first_flutter_app/" class="md-nav__link">
+      <a href="../../../../Frontend/flutter/flutter_write_your_first_flutter_app/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../jwt/" class="md-nav__link">
+      <a href="../../../jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -759,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/row-and-colum-storage-diff/" class="md-nav__link">
+      <a href="../../../DB/row-and-colum-storage-diff/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -820,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/cratedb/cratedb/" class="md-nav__link">
+      <a href="../../../DB/cratedb/cratedb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -889,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/elastic-stack/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/elastic-stack/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -910,7 +910,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-1-basics/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-1-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -931,7 +931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-2-write-update-and-delete-process/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-2-write-update-and-delete-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -952,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-3-search-process/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-3-search-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-4-optimization/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-4-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +994,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-5-high-concuurency-consistency/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-5-high-concuurency-consistency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +1015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/elastic-search/es-6-other/" class="md-nav__link">
+      <a href="../../../DB/elastic-search/es-6-other/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1084,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/mysql/mysql-basics/" class="md-nav__link">
+      <a href="../../../DB/mysql/mysql-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1153,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../DB/tidb/tidb/" class="md-nav__link">
+      <a href="../../../DB/tidb/tidb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1313,7 +1313,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/cache/j2cache/j2cache-basics/" class="md-nav__link">
+      <a href="../../../Middleware/cache/j2cache/j2cache-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1382,7 +1382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/cache/redis/delay_queue/" class="md-nav__link">
+      <a href="../../../Middleware/cache/redis/delay_queue/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1403,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/cache/redis/nosql/" class="md-nav__link">
+      <a href="../../../Middleware/cache/redis/nosql/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1424,7 +1424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/cache/redis/redis-ha/" class="md-nav__link">
+      <a href="../../../Middleware/cache/redis/redis-ha/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1445,7 +1445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/cache/redis/redis-qa/" class="md-nav__link">
+      <a href="../../../Middleware/cache/redis/redis-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1466,7 +1466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/cache/redis/redis-type/" class="md-nav__link">
+      <a href="../../../Middleware/cache/redis/redis-type/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1487,7 +1487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/cache/redis/redis/" class="md-nav__link">
+      <a href="../../../Middleware/cache/redis/redis/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1564,7 +1564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/fileprocess/picture-process/" class="md-nav__link">
+      <a href="../../../Middleware/fileprocess/picture-process/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1625,7 +1625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/fileprocess/alioss/alioss/" class="md-nav__link">
+      <a href="../../../Middleware/fileprocess/alioss/alioss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1694,7 +1694,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/fileprocess/ceph/ceph/" class="md-nav__link">
+      <a href="../../../Middleware/fileprocess/ceph/ceph/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1771,7 +1771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/jhispter/jhipster-basics/" class="md-nav__link">
+      <a href="../../../Middleware/jhispter/jhipster-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1792,7 +1792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/jhispter/jhipster-qa/" class="md-nav__link">
+      <a href="../../../Middleware/jhispter/jhipster-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1813,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/jhispter/rapid-dev-scaffold/" class="md-nav__link">
+      <a href="../../../Middleware/jhispter/rapid-dev-scaffold/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1882,7 +1882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/liquibase/liquibase-basics/" class="md-nav__link">
+      <a href="../../../Middleware/liquibase/liquibase-basics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1951,7 +1951,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/mq/delay-mq/" class="md-nav__link">
+      <a href="../../../Middleware/mq/delay-mq/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1972,7 +1972,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/mq/mq-distributed-transaction/" class="md-nav__link">
+      <a href="../../../Middleware/mq/mq-distributed-transaction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1993,7 +1993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/mq/mq-qa/" class="md-nav__link">
+      <a href="../../../Middleware/mq/mq-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2014,7 +2014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/mq/stock-overselling/" class="md-nav__link">
+      <a href="../../../Middleware/mq/stock-overselling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2075,7 +2075,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/mq/rocketmq/rocketmq_arch/" class="md-nav__link">
+      <a href="../../../Middleware/mq/rocketmq/rocketmq_arch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2152,7 +2152,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/netty/netty/" class="md-nav__link">
+      <a href="../../../Middleware/netty/netty/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2221,7 +2221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/orm/orm-common-pattern/" class="md-nav__link">
+      <a href="../../../Middleware/orm/orm-common-pattern/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2282,7 +2282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/orm/hibernate/hibernate-qa/" class="md-nav__link">
+      <a href="../../../Middleware/orm/hibernate/hibernate-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2351,7 +2351,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/orm/mybatis/mybatics-qa/" class="md-nav__link">
+      <a href="../../../Middleware/orm/mybatis/mybatics-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2372,7 +2372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/orm/mybatis/mybatis-columns-mapping/" class="md-nav__link">
+      <a href="../../../Middleware/orm/mybatis/mybatis-columns-mapping/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2449,7 +2449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/register/register-index/" class="md-nav__link">
+      <a href="../../../Middleware/register/register-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2518,7 +2518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/skywalking/skywalking-deploy/" class="md-nav__link">
+      <a href="../../../Middleware/skywalking/skywalking-deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2539,7 +2539,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/skywalking/skywalking/" class="md-nav__link">
+      <a href="../../../Middleware/skywalking/skywalking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2608,7 +2608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/springcloud/springcloud/" class="md-nav__link">
+      <a href="../../../Middleware/springcloud/springcloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2677,7 +2677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/swagger/swagger-index/" class="md-nav__link">
+      <a href="../../../Middleware/swagger/swagger-index/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2746,7 +2746,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/tomcat/" class="md-nav__link">
+      <a href="../../../Middleware/tomcat/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2815,7 +2815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/workflow/java-work-flow/" class="md-nav__link">
+      <a href="../../../Middleware/workflow/java-work-flow/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2884,7 +2884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../Middleware/xxljob/xxl-job/" class="md-nav__link">
+      <a href="../../../Middleware/xxljob/xxl-job/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2964,7 +2964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../csharp/async-wcf-calls/" class="md-nav__link">
+      <a href="../../../csharp/async-wcf-calls/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2985,7 +2985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../csharp/net-architecture-analyze/" class="md-nav__link">
+      <a href="../../../csharp/net-architecture-analyze/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3059,7 +3059,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3080,7 +3080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../bloom-filter/" class="md-nav__link">
+      <a href="../../bloom-filter/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3101,7 +3101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../export-svc-file/" class="md-nav__link">
+      <a href="../../export-svc-file/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3122,7 +3122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../java-key-points/" class="md-nav__link">
+      <a href="../../java-key-points/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3143,7 +3143,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../name/" class="md-nav__link">
+      <a href="../../name/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3164,7 +3164,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../open-source/" class="md-nav__link">
+      <a href="../../open-source/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3225,7 +3225,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../advanced-java/" class="md-nav__link">
+      <a href="../../advanced-java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3294,7 +3294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../algorithms/" class="md-nav__link">
+      <a href="../../algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3363,7 +3363,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/" class="md-nav__link">
+      <a href="../../core-java/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3384,7 +3384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/basic-java-constructs/" class="md-nav__link">
+      <a href="../../core-java/basic-java-constructs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3405,7 +3405,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/collection-framework/" class="md-nav__link">
+      <a href="../../core-java/collection-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3426,7 +3426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/concurrent-collection/" class="md-nav__link">
+      <a href="../../core-java/concurrent-collection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3447,7 +3447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/exception/" class="md-nav__link">
+      <a href="../../core-java/exception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3468,7 +3468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/generics/" class="md-nav__link">
+      <a href="../../core-java/generics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3489,7 +3489,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/high-performance-network-model/" class="md-nav__link">
+      <a href="../../core-java/high-performance-network-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3510,7 +3510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/io/" class="md-nav__link">
+      <a href="../../core-java/io/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3531,7 +3531,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/jvm-tools/" class="md-nav__link">
+      <a href="../../core-java/jvm-tools/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3552,7 +3552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/jvm/" class="md-nav__link">
+      <a href="../../core-java/jvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3573,7 +3573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/multithreading/" class="md-nav__link">
+      <a href="../../core-java/multithreading/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3594,7 +3594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/oops/" class="md-nav__link">
+      <a href="../../core-java/oops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3615,7 +3615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/serialisation/" class="md-nav__link">
+      <a href="../../core-java/serialisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3636,7 +3636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/string-handling/" class="md-nav__link">
+      <a href="../../core-java/string-handling/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3657,7 +3657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../core-java/synchronisation/" class="md-nav__link">
+      <a href="../../core-java/synchronisation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3728,7 +3728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3749,7 +3749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java-fundamentals/" class="md-nav__link">
+      <a href="../java-fundamentals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3770,7 +3770,70 @@
   
   
     <li class="md-nav__item">
-      <a href="../../java-collection-framework/" class="md-nav__link">
+      <a href="../java-string/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    java字符串
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Java异常面试问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-programming/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    java编程面试问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../java-collection-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3791,7 +3854,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../multithreading-and-concurrency/" class="md-nav__link">
+      <a href="../multithreading-and-concurrency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3812,7 +3875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../jvm/" class="md-nav__link">
+      <a href="../jvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3830,10 +3893,116 @@
                 
   
   
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Java堆VS栈-Java中的内存分配
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Java堆VS栈-Java中的内存分配
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java堆空间
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java堆栈内存
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java程序中堆和栈内存的分配
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Java堆空间和栈内存的区别
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      引用
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
   
   
     <li class="md-nav__item">
-      <a href="../../java-io-and-nio/" class="md-nav__link">
+      <a href="../java-io-and-nio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3854,7 +4023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../new-features-in-java8-and-above/" class="md-nav__link">
+      <a href="../new-features-in-java8-and-above/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3875,7 +4044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../database-and-orm-frameworks/" class="md-nav__link">
+      <a href="../database-and-orm-frameworks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3896,7 +4065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../spring-ecossystem/" class="md-nav__link">
+      <a href="../spring-ecossystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3917,7 +4086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../design-patterns/" class="md-nav__link">
+      <a href="../design-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3938,7 +4107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../microservices-architecture/" class="md-nav__link">
+      <a href="../microservices-architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3959,7 +4128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../distributed-systems-and-middleware/" class="md-nav__link">
+      <a href="../distributed-systems-and-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3980,7 +4149,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../performance-optimization-and-tuning/" class="md-nav__link">
+      <a href="../performance-optimization-and-tuning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4049,7 +4218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spring/" class="md-nav__link">
+      <a href="../../spring/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4070,7 +4239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spring/spring-boot-samples/" class="md-nav__link">
+      <a href="../../spring/spring-boot-samples/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4091,7 +4260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spring/spring-hot-deploy/" class="md-nav__link">
+      <a href="../../spring/spring-hot-deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4112,7 +4281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spring/spring-interview-questions/" class="md-nav__link">
+      <a href="../../spring/spring-interview-questions/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4133,7 +4302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spring/spring-penetrate-layers/" class="md-nav__link">
+      <a href="../../spring/spring-penetrate-layers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4154,7 +4323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../spring/spring-restcontrooler-specific-basepath/" class="md-nav__link">
+      <a href="../../spring/spring-restcontrooler-specific-basepath/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4223,7 +4392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../web/" class="md-nav__link">
+      <a href="../../web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4303,7 +4472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../micro-service/distributed-transcation/" class="md-nav__link">
+      <a href="../../../micro-service/distributed-transcation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4324,7 +4493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../micro-service/micro-service-best-practice/" class="md-nav__link">
+      <a href="../../../micro-service/micro-service-best-practice/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4345,7 +4514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../micro-service/micro-service-qa/" class="md-nav__link">
+      <a href="../../../micro-service/micro-service-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4366,7 +4535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../micro-service/trip_hotel_sub_db_sub_table/" class="md-nav__link">
+      <a href="../../../micro-service/trip_hotel_sub_db_sub_table/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4438,7 +4607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../nodejs/nodejs-usefully-command/" class="md-nav__link">
+      <a href="../../../nodejs/nodejs-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4514,7 +4683,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/" class="md-nav__link">
+      <a href="../../../../Devops/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4535,7 +4704,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/devops-categories/" class="md-nav__link">
+      <a href="../../../../Devops/devops-categories/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4596,7 +4765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/git/git-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/git/git-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4665,7 +4834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/gitlab/java-check-style/" class="md-nav__link">
+      <a href="../../../../Devops/gitlab/java-check-style/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4734,7 +4903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/jenkins/jenkins-qa/" class="md-nav__link">
+      <a href="../../../../Devops/jenkins/jenkins-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4755,7 +4924,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/jenkins/k8s-automated-integration-and-deployment-microservices/" class="md-nav__link">
+      <a href="../../../../Devops/jenkins/k8s-automated-integration-and-deployment-microservices/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4824,7 +4993,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/" class="md-nav__link">
+      <a href="../../../../Devops/docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4845,7 +5014,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/build-mini-java-app-env-on-centos/" class="md-nav__link">
+      <a href="../../../../Devops/docker/build-mini-java-app-env-on-centos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4866,7 +5035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-ci-cd-with-jenkins/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-ci-cd-with-jenkins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4887,7 +5056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-compose-external-links/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-compose-external-links/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4908,7 +5077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-nginx/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4929,7 +5098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-private-repository/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-private-repository/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4950,7 +5119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-qa/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4971,7 +5140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4992,7 +5161,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/docker_network/" class="md-nav__link">
+      <a href="../../../../Devops/docker/docker_network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5013,7 +5182,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/network/" class="md-nav__link">
+      <a href="../../../../Devops/docker/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5034,7 +5203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/running-docker-in-jenkins-in-docker/" class="md-nav__link">
+      <a href="../../../../Devops/docker/running-docker-in-jenkins-in-docker/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5055,7 +5224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/docker/spring-docker-image-optimization/" class="md-nav__link">
+      <a href="../../../../Devops/docker/spring-docker-image-optimization/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5124,7 +5293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/ali-k8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/ali-k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5145,7 +5314,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/deploy-micor-service-in-k8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/deploy-micor-service-in-k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5166,7 +5335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s-add-remove-nodes/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s-add-remove-nodes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5187,7 +5356,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s-storageclass/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s-storageclass/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5208,7 +5377,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5229,7 +5398,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_access_svc_%20from_outside/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_access_svc_%20from_outside/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5250,7 +5419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_config/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_config/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5271,7 +5440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_gitlab_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_gitlab_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5292,7 +5461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_ingress-nginx-controller/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_ingress-nginx-controller/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5313,7 +5482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_jenkins_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_jenkins_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5334,7 +5503,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_mysql_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_mysql_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5355,7 +5524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_nacos_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_nacos_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5376,7 +5545,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_nexus_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_nexus_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5397,7 +5566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_nginx_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_nginx_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5418,7 +5587,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_redis_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_redis_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5439,7 +5608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_rocketmq_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_rocketmq_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5460,7 +5629,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_seata_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_seata_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5481,7 +5650,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/k8s_xxljob_deployment/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/k8s_xxljob_deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5502,7 +5671,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/kubespray-install-k8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/kubespray-install-k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5523,7 +5692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/vitualbox_k8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/vitualbox_k8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5584,7 +5753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kubernetes/microk8s/microk8s/" class="md-nav__link">
+      <a href="../../../../Devops/kubernetes/microk8s/microk8s/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5661,7 +5830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/grafana/grafana/" class="md-nav__link">
+      <a href="../../../../Devops/grafana/grafana/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5730,7 +5899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/helm/helm-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/helm/helm-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5751,7 +5920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/helm/helm/" class="md-nav__link">
+      <a href="../../../../Devops/helm/helm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5820,7 +5989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/kvm/kvm-install/" class="md-nav__link">
+      <a href="../../../../Devops/kvm/kvm-install/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5889,7 +6058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5910,7 +6079,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/linux/" class="md-nav__link">
+      <a href="../../../../Devops/linux/linux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5931,7 +6100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/makefile/" class="md-nav__link">
+      <a href="../../../../Devops/linux/makefile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5952,7 +6121,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/nfs/" class="md-nav__link">
+      <a href="../../../../Devops/linux/nfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5973,7 +6142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/run-backgroud-process-sereral-ways/" class="md-nav__link">
+      <a href="../../../../Devops/linux/run-backgroud-process-sereral-ways/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -5994,7 +6163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/linux/shell/" class="md-nav__link">
+      <a href="../../../../Devops/linux/shell/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6063,7 +6232,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/maven/maven-qa/" class="md-nav__link">
+      <a href="../../../../Devops/maven/maven-qa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6084,7 +6253,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/maven/maven-usefully-command/" class="md-nav__link">
+      <a href="../../../../Devops/maven/maven-usefully-command/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6105,7 +6274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/maven/maven/" class="md-nav__link">
+      <a href="../../../../Devops/maven/maven/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6174,7 +6343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/powershell/power-shell-usefully-cmd/" class="md-nav__link">
+      <a href="../../../../Devops/powershell/power-shell-usefully-cmd/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6243,7 +6412,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/scancode-toolkit/" class="md-nav__link">
+      <a href="../../../../Devops/scancode-toolkit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6312,7 +6481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/vagrant/" class="md-nav__link">
+      <a href="../../../../Devops/vagrant/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6381,7 +6550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/virtualbox/access-virtualbox-centos7-site-on-win7-setting/" class="md-nav__link">
+      <a href="../../../../Devops/virtualbox/access-virtualbox-centos7-site-on-win7-setting/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6402,7 +6571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/virtualbox/lan-access-vm/" class="md-nav__link">
+      <a href="../../../../Devops/virtualbox/lan-access-vm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6423,7 +6592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/virtualbox/quickly-set-up-linux-in-virtualbox/" class="md-nav__link">
+      <a href="../../../../Devops/virtualbox/quickly-set-up-linux-in-virtualbox/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6444,7 +6613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Devops/virtualbox/shared-folder/" class="md-nav__link">
+      <a href="../../../../Devops/virtualbox/shared-folder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6520,7 +6689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6541,7 +6710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/togaf-arch/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/togaf-arch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6562,7 +6731,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/4a-arch/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/4a-arch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6583,7 +6752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/performance-evaluation/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/performance-evaluation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6604,7 +6773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/mes/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/mes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6625,7 +6794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/domain-model/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/domain-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6646,7 +6815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/level3-guarantee/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/level3-guarantee/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6667,7 +6836,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/mall/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/mall/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6688,7 +6857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/middel-officel-arch-article-collection/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/middel-officel-arch-article-collection/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6709,7 +6878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/product_arch/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/product_arch/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6730,7 +6899,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/product_arch_sample/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/product_arch_sample/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6751,7 +6920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/qps/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/qps/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6812,7 +6981,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/draw/deploy/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/draw/deploy/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6833,7 +7002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/draw/draw/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/draw/draw/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6902,7 +7071,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/license/agpl-3.0/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/license/agpl-3.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6923,7 +7092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/license/apache-2.0/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/license/apache-2.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6944,7 +7113,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/license/gpl-2.0/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/license/gpl-2.0/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -6965,7 +7134,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/license/mit/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/license/mit/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7034,7 +7203,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7055,7 +7224,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../SoftwareEngineering/model/retail-model/" class="md-nav__link">
+      <a href="../../../../SoftwareEngineering/model/retail-model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7131,7 +7300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/intellij-idea-plugins/" class="md-nav__link">
+      <a href="../../../../Tools/intellij-idea-plugins/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7192,7 +7361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/drawio/drawio/" class="md-nav__link">
+      <a href="../../../../Tools/drawio/drawio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7261,7 +7430,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/mkdocs/mkdocs_plugin/" class="md-nav__link">
+      <a href="../../../../Tools/mkdocs/mkdocs_plugin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7330,7 +7499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/plantuml/markdown_plantuml/" class="md-nav__link">
+      <a href="../../../../Tools/plantuml/markdown_plantuml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7351,7 +7520,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Tools/plantuml/plantuml/" class="md-nav__link">
+      <a href="../../../../Tools/plantuml/plantuml/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7407,540 +7576,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-java" class="md-nav__link">
+  <a href="#java" class="md-nav__link">
     <span class="md-ellipsis">
-      1. java发布了什么重要特性？
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="1. java发布了什么重要特性？">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#java-23" class="md-nav__link">
-    <span class="md-ellipsis">
-      java 23
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#java-8" class="md-nav__link">
-    <span class="md-ellipsis">
-      java 8
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-javaplatform-independence" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. 你对java的平台独立性Platform independence的理解是什么？
+      Java堆空间
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-jvmjvm" class="md-nav__link">
+  <a href="#java_1" class="md-nav__link">
     <span class="md-ellipsis">
-      3. JVM是什么？JVM是平台独立的吗？
+      Java堆栈内存
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-jdkjvm" class="md-nav__link">
+  <a href="#java_2" class="md-nav__link">
     <span class="md-ellipsis">
-      4. JDK和JVM的区别是什么？
+      Java程序中堆和栈内存的分配
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-jvmjre" class="md-nav__link">
+  <a href="#java_3" class="md-nav__link">
     <span class="md-ellipsis">
-      5. JVM和JRE的区别是什么？
+      Java堆空间和栈内存的区别
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#6" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. 所有类的的超类是哪个类？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. 为什么java不支持多继承？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. 为什么java不是纯面向对象的语言？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#9-pathclasspath" class="md-nav__link">
-    <span class="md-ellipsis">
-      9. PATH和CLASSPATH变量的区别是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#10-javamain" class="md-nav__link">
-    <span class="md-ellipsis">
-      10. java中main方法的重要性是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#11-main" class="md-nav__link">
-    <span class="md-ellipsis">
-      11. 能重载main方法吗？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#12-javaoverloadingoverriding" class="md-nav__link">
-    <span class="md-ellipsis">
-      12. java中的重载overloading和覆载overriding是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#13-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      13. 在一个java源文件中能有多个公共类吗？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#14-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      14. java包是什么？那个包默认被引入？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#15-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      15. java的访问修饰符有哪些？
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="15. java的访问修饰符有哪些？">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      注意
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#16-final" class="md-nav__link">
-    <span class="md-ellipsis">
-      16. final关键字有什么作用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#17-static" class="md-nav__link">
-    <span class="md-ellipsis">
-      17. static关键字有什么作用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#18-javafinallyfinalize" class="md-nav__link">
-    <span class="md-ellipsis">
-      18. java中的finally和finalize有什么作用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#19-java-try-with-resources" class="md-nav__link">
-    <span class="md-ellipsis">
-      19. java try-with-resources语句是什么，有什么作用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#20-javacatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      20. java的多个catch语句块是什么，有什么作用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#21" class="md-nav__link">
-    <span class="md-ellipsis">
-      21. 接口是什么，有什么作用?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#22" class="md-nav__link">
-    <span class="md-ellipsis">
-      22. 抽象类是什么，有什么作用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      23. 抽象类和接口有什么区别？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#24" class="md-nav__link">
-    <span class="md-ellipsis">
-      24. 接口能否实现或扩展另一个接口？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#25-marker-interface" class="md-nav__link">
-    <span class="md-ellipsis">
-      25. 标记接口Marker interface是什么，有什么作用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#26" class="md-nav__link">
-    <span class="md-ellipsis">
-      26. 包装类是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#27-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      27. java中的枚举是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#28-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      28. java注解是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#29-javaapi" class="md-nav__link">
-    <span class="md-ellipsis">
-      29. java反射API是什么？为什么有它非常重要？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#30-javacomposition" class="md-nav__link">
-    <span class="md-ellipsis">
-      30. java中的组合（Composition）是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#31" class="md-nav__link">
-    <span class="md-ellipsis">
-      31. 组合相对与继承有什么好处？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#32-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      32. java中怎样对自定义对象集合进行排序？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#33-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      33. java中的内部类是什么?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#34" class="md-nav__link">
-    <span class="md-ellipsis">
-      34. 匿名内部类是什么？
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="34. 匿名内部类是什么？">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      匿名内部类的特点
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      创建匿名内部类的步骤
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#35-javaclassloader" class="md-nav__link">
-    <span class="md-ellipsis">
-      35. java类加载器Classloader是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#36" class="md-nav__link">
-    <span class="md-ellipsis">
-      36. 类加载器的不同类型是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#37-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      37. java中的三元操作符是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#38-super" class="md-nav__link">
-    <span class="md-ellipsis">
-      38. super关键字做什么用的？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#39-breakcontinue" class="md-nav__link">
-    <span class="md-ellipsis">
-      39. break和continue语句是什么，怎么用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#40-this" class="md-nav__link">
-    <span class="md-ellipsis">
-      40. this关键字是什么，怎么用？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#41" class="md-nav__link">
-    <span class="md-ellipsis">
-      41. 默认构造器是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#42-trycatch" class="md-nav__link">
-    <span class="md-ellipsis">
-      42. try可以不带catch语句块吗？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#43-garbage-collection" class="md-nav__link">
-    <span class="md-ellipsis">
-      43. 垃圾收集器Garbage Collection是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#44-serializationdeserialization" class="md-nav__link">
-    <span class="md-ellipsis">
-      44. 序列化Serialization和反序列化Deserialization是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#45-jar" class="md-nav__link">
-    <span class="md-ellipsis">
-      45. 通过命令提示行怎样运行JAR文件？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#46-system" class="md-nav__link">
-    <span class="md-ellipsis">
-      46. System类的用途是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#47-instanceof" class="md-nav__link">
-    <span class="md-ellipsis">
-      47. instanceof关键字的用途是什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#48-switch-case" class="md-nav__link">
-    <span class="md-ellipsis">
-      48. switch case语句中能使用字符串类型吗？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#49-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      49. java在方法调用时是通过值传递还是通过引用传递？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#50-heapstack" class="md-nav__link">
-    <span class="md-ellipsis">
-      50. 堆Heap和栈Stack内存有什么区别？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#51-javajdkjrejvm" class="md-nav__link">
-    <span class="md-ellipsis">
-      51. java编译器是存储在JDK，JRE或JVM哪一个中？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#52" class="md-nav__link">
-    <span class="md-ellipsis">
-      52. 如下程序将输出什么？
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      参考
+      引用
     </span>
   </a>
   
@@ -7964,305 +7638,63 @@
   
 
 
-<h1 id="java">java核心技术面试问题<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
-<p>在许多面试中，java核心技术是喜欢考察的知识点，并且在决定你的面试结果中扮演关键的角色。这篇文章关于java核心技术的问题，它直接来自于我10多年java编程和许多面试经历。</p>
-<p>我已经写过许多java面试问题的具体文章，如字符串String，集合Collections和多线程Multithreading等主题。</p>
-<p>这里我先给出一些重要的java核心技术面试问题。</p>
-<h2 id="1-java">1. java发布了什么重要特性？<a class="headerlink" href="#1-java" title="Permanent link">&para;</a></h2>
-<h3 id="java-23">java 23<a class="headerlink" href="#java-23" title="Permanent link">&para;</a></h3>
-<p>Java 23 带来了许多新特性和改进，以下是一些重要的更新：</p>
-<ol>
-<li>
-<p><strong>模式匹配中使用原始类型</strong> (<code>JEP 455</code>)：这是模式匹配功能的一个预览特性，允许在模式匹配、<code>instanceof</code> 和 <code>switch</code> 表达式中使用原始类型，这样可以使代码更加简洁和易读。</p>
-</li>
-<li>
-<p><strong>类文件API</strong> (<code>JEP 466</code>)：这是一个处于第二次预览阶段的功能，提供了操作类文件的API，这可能对那些需要处理字节码的工具非常有用。</p>
-</li>
-<li>
-<p><strong>Markdown格式文档注释</strong> (<code>JEP 467</code>)：允许使用Markdown语法来编写Javadoc，使得API文档更容易编写和阅读。</p>
-</li>
-<li>
-<p><strong>向量API</strong> (<code>JEP 469</code>)：这是一个正处于第八次孵化阶段的功能，旨在提供硬件加速的向量计算支持，从而改善数值计算的性能。</p>
-</li>
-<li>
-<p><strong>流收集器</strong> (<code>JEP 473</code>)：这个特性也是处于第二次预览阶段，它允许创建自定义的流中间操作，增强流API的功能。</p>
-</li>
-<li>
-<p><strong>标记sun.misc.Unsafe中的内存管理方法为过时</strong> (<code>JEP 471</code>)：为了提升安全性，<code>sun.misc.Unsafe</code>类中的内存管理方法被标记为过时，并计划移除。</p>
-</li>
-<li>
-<p><strong>ZGC：默认分代收集模式</strong> (<code>JEP 474</code>)：ZGC垃圾收集器现在默认启用分代收集模式，这可以改善应用程序的垃圾回收性能。</p>
-</li>
-<li>
-<p><strong>模块导入声明</strong> (<code>JEP 476</code>)：这是一个预览特性，简化了模块间的依赖声明，使得模块化应用程序更加容易管理。</p>
-</li>
-<li>
-<p><strong>隐式声明的类和实例主方法</strong> (<code>JEP 477</code>)：这是第三个预览版本，允许更简便地创建和使用类。</p>
-</li>
-<li>
-<p><strong>结构化并发</strong> (<code>JEP 480</code>)：这是结构化并发特性的第三个预览版本，简化了并发编程，并提高了错误处理的能力和可观察性。</p>
-</li>
-<li>
-<p><strong>作用域值</strong> (<code>JEP 481</code>)：这是一个处于第三次预览的功能，提供了作用域值的概念，可能用于线程局部存储或其他需要隔离状态的场景。</p>
-</li>
-<li>
-<p><strong>灵活的构造函数主体</strong> (<code>JEP 482</code>)：这是处于第二次预览的功能，允许构造函数在调用超类构造器之前执行代码，增加了构造函数的灵活性。</p>
-</li>
-</ol>
-<p>除了这些语言层面的特性外，Java 23 还包括了一些性能上的改进和其他API上的增强，以及对工具和服务的支持，比如Java Management Service (JMS) 9.0。这些改进都旨在提升开发者的生产力，并且更好地服务于企业和开发者的需求。</p>
-<h3 id="java-8">java 8<a class="headerlink" href="#java-8" title="Permanent link">&para;</a></h3>
-<p>java 8于2014年3月发布，因此是java面试中的热点问题。如果你清楚的回答这个问题，将展示出你对新技术的关注度。</p>
-<p>在java 5引入注解和泛型后，java 8是最大（变化）的发布版之一。 java 8有如下重要新特性：</p>
-<ol>
-<li><a href="https://www.journaldev.com/2752/java-8-interface-changes-static-method-default-method">接口可以带默认和静态方法。</a></li>
-<li><a href="https://www.journaldev.com/2763/java-8-functional-interfaces">函数式接口和Lambda表达式。</a></li>
-<li><a href="https://www.journaldev.com/2774/java-8-stream">为集合引入的java Stream API。</a></li>
-<li><a href="https://www.journaldev.com/2800/java-8-date-localdate-localdatetime-instant">java 新的日期时间API。</a></li>
-</ol>
-<p>强烈推荐打开链接了作深入理解，也可以看一下java 8的新特性。</p>
-<h2 id="2-javaplatform-independence">2. 你对java的平台独立性Platform independence的理解是什么？<a class="headerlink" href="#2-javaplatform-independence" title="Permanent link">&para;</a></h2>
-<p>平台独立性意思是在任何操作系统中运行同样的java程序。例如你可以在Windows上写java程序运行在Mac OS上。</p>
-<h2 id="3-jvmjvm">3. JVM是什么？JVM是平台独立的吗？<a class="headerlink" href="#3-jvmjvm" title="Permanent link">&para;</a></h2>
-<p>JVM是java虚拟机（Java Virtual Machine）的缩写，它是java语言的核心。JVM的责任就是转换字节码到可读的机器码。JVM不是平台独立的，也是为什么我们在不同的操作系统需要不同的JVM的原因。我们用java可选项可以自定义分配内存最小和最大值。java虚拟机之所以被叫做虚拟，是因为他提了一个不依赖于底层操作系统的接口。</p>
-<h2 id="4-jdkjvm">4. JDK和JVM的区别是什么？<a class="headerlink" href="#4-jdkjvm" title="Permanent link">&para;</a></h2>
-<p>JDK是java开发工具包（java Development Kit）的缩写，它是用于开发目的工具集合。JVM是执行java程序的部分。  </p>
-<p>JDK除了包含了一批用于Java开发的组件，还包含JRE,java运行时环境，也包括了用于产品环境的各种库类，如基础类库rt.jar，以及给开发人员使用的补充库，如国际化与本地化的类库、IDL库等等。JDK中还包括各种样例程序，用以展示Java API中的各部分。</p>
-<p>JVM是java平台的可执行的部分。JVM屏蔽了与具体操作系统平台相关的信息，使得Java程序只需生成在Java虚拟机上运行的目标代码（字节码），就可以在多种平台上不加修改地运行。由于JVM并不是专为Java所实现的运行时，实际上只要有其他编程语言的编译器能生成正确Java bytecode文件，则这个语言也能实现在JVM上运行。</p>
-<h2 id="5-jvmjre">5. JVM和JRE的区别是什么？<a class="headerlink" href="#5-jvmjre" title="Permanent link">&para;</a></h2>
-<p>JRE是java运行时环境的缩写（Java Runtime Environment），它是JVM的一种实现。JRE由JVM,java二节文件和其他成功执行任何程序的其他类组成。JRE不包含任何像编译器、调试器等那样的开发工具。如果你想执行任何java程序，你应当安装JRE。</p>
-<h2 id="6">6. 所有类的的超类是哪个类？<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<p><code>java.lang.Object</code>是所有类的根类，不需要扩展它。</p>
-<h2 id="7-java">7. 为什么java不支持多继承？<a class="headerlink" href="#7-java" title="Permanent link">&para;</a></h2>
-<p>因是“钻石问题（菱形继承问题）” 导致java类不支持多继承。想了解更多“钻石问题”，请阅读<a href="https://www.journaldev.com/1775/multiple-inheritance-in-java">java中的多继承</a>。</p>
-<p>然后多继承在接口中是支持的。一个接口可以扩展多个接口，因为仅仅是声明方法，实现类中将实现它接口的方法。因此在接口中就没有“
-钻石问题（菱形继承问题）”了。</p>
-<h2 id="8-java">8. 为什么java不是纯面向对象的语言？<a class="headerlink" href="#8-java" title="Permanent link">&para;</a></h2>
-<p>说java不是纯面向对象语言，是因为它支持如int、byte、short、long等<strong>原始类型</strong>。我相信在写代码时它带来了简捷性。很显然地java有原始类型对应的包装类型表示，众所周知，包装类型除了添加了一些方法，它们没有带来任何好处。</p>
-<h2 id="9-pathclasspath">9. PATH和CLASSPATH变量的区别是什么？<a class="headerlink" href="#9-pathclasspath" title="Permanent link">&para;</a></h2>
-<p><code>PATH</code>是一个用在操作系统中定位可执行文件的环境变量（不仅java可执行文件，还有其他如C#,C++等可执行文件）。这就是为什么在安装java时或想任何可执行文件被找到时，我们需要配置目录路径到Path变量的原因。</p>
-<p><code>CLASSPATH</code>是为java指定的用于java可执行文件定位class字节文件的路径变量。在运行java应用程序时将查找这个<code>CLASSPATH</code>路径，它可以是目录、ZIP文件、JAR文件等。</p>
-<h2 id="10-javamain">10. java中main方法的重要性是什么？<a class="headerlink" href="#10-javamain" title="Permanent link">&para;</a></h2>
-<p>main()方法是任何独立的java应用程序的入口点。main的语法是：<code>public static void main(String args[])</code>.</p>
-<p>main方法是公用且静态的，输入参数是数组，可以转入运行时参数给它。</p>
-<h2 id="11-main">11. 能重载main方法吗？<a class="headerlink" href="#11-main" title="Permanent link">&para;</a></h2>
-<p>可以，在类中可以有多个main名字的方法。然而运行时的入口仅查找这个方法<code>public static void main(String args[])</code>.</p>
-<h2 id="12-javaoverloadingoverriding">12. java中的重载overloading和覆载overriding是什么？<a class="headerlink" href="#12-javaoverloadingoverriding" title="Permanent link">&para;</a></h2>
-<p>在一个类中有相同名称的方法、不同参时，我们称它为<code>重载overloading</code>。</p>
-<p><code>覆载overriding</code>指的是父子类之间存在相同签名的方法。在子类中可以使用@Override注解覆盖父类的方法。</p>
-<h2 id="13-java">13. 在一个java源文件中能有多个公共类吗？<a class="headerlink" href="#13-java" title="Permanent link">&para;</a></h2>
-<p>在单个java源文件中，不能超过一个公共类。但单个源文件中可以有多个非公共的类。</p>
-<h2 id="14-java">14. java包是什么？那个包默认被引入？<a class="headerlink" href="#14-java" title="Permanent link">&para;</a></h2>
-<p>java包是组织java类文件的一种机制。这个组织逻辑可以基于功能或模块。一个类的完整类名应包含包及类名，例如，<code>java.lang.Object</code>是Object类的完整类名，它是java.lang包的一部分。</p>
-<p><code>java.lang</code>包是被默认引入的，任何类中它不需要明确引入。</p>
-<h2 id="15-java">15. java的访问修饰符有哪些？<a class="headerlink" href="#15-java" title="Permanent link">&para;</a></h2>
-<p>Java 中的访问修饰符是用来控制类、成员变量、方法和构造函数的可见性和访问级别的关键字。Java 支持四种主要的访问级别：private, default(无修饰符), protected, public。</p>
-<h3 id="_1">注意<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
-<ul>
-<li><strong>构造函数的访问级别</strong>：构造函数的访问级别应该至少与类本身的访问级别一样。</li>
-<li><strong>静态成员</strong>：静态成员（static）可以具有上述任何一种访问级别。</li>
-<li><strong>类的访问级别</strong>：类本身也可以有 <code>public</code> 或者 <code>default</code>（无修饰符）两种访问级别。<code>public</code> 类可以在任何地方被访问，而 <code>default</code> 类只能在其所在包内被访问。</li>
-</ul>
-<p>正确选择访问修饰符可以帮助你实现良好的封装原则，保护类的内部状态，并且只暴露必要的公共接口。这对于维护软件的安全性和稳定性至关重要。</p>
-<h2 id="16-final">16. final关键字有什么作用？<a class="headerlink" href="#16-final" title="Permanent link">&para;</a></h2>
-<p>在 Java 中，<code>final</code> 关键字是一个非常有用的修饰符，它可以应用于类、变量（包括局部变量、实例变量和类变量）、方法等。<code>final</code> 的使用目的是为了保证某些特性一旦被设定就不可改变，或者防止某些类型的重写或继承。</p>
-<p>java接口的变量默认就是final且静态static的。</p>
-<h2 id="17-static">17. static关键字有什么作用？<a class="headerlink" href="#17-static" title="Permanent link">&para;</a></h2>
-<p>在 Java 中，<code>static</code> 关键字用于声明类成员（变量、方法、嵌套类等）为类级别的，而不是实例级别的。这意味着它们不属于任何特定的对象实例，而是属于类本身。以下是 <code>static</code> 关键字的一些主要用途：</p>
-<ul>
-<li>
-<p><strong>static 变量（静态变量）</strong></p>
-<p><code>static</code> 变量是在类级别声明的变量，而不是对象级别的。这意味着所有该类的实例共享同一个 <code>static</code> 变量，而不是每个对象都有自己的副本。</p>
-</li>
-<li>
-<p><strong>static 方法（静态方法）</strong></p>
-<p><code>static</code> 方法是在类级别声明的方法。这些方法可以通过类名直接调用，而不需要创建类的实例。此外，<code>static</code> 方法只能访问 <code>static</code> 变量，因为非 <code>static</code> 变量和方法属于具体的对象实例，在 <code>static</code> 方法中是没有对象实例的上下文的。</p>
-</li>
-<li>
-<p><strong>static 嵌套类（静态嵌套类）</strong></p>
-<p><code>static</code> 类是定义在一个类内部的类，但它不是内部类（inner class）的实例成员。因此，你可以不用外部类的实例就能创建 <code>static</code> 类的实例。</p>
-</li>
-<li>
-<p><strong>static 块（静态块）</strong></p>
-<p><code>static</code> 块在类被加载到 JVM 时只执行一次，主要用于初始化类的静态成员。</p>
-</li>
-<li>
-<p><strong>static 导入（静态导入）</strong></p>
-<p><code>static</code> 导入允许你在不使用类名前缀的情况下直接使用类的静态成员。</p>
-</li>
-</ul>
-<p><strong>合理使用 <code>static</code> 可以优化内存使用</strong>，减少不必要的重复，同时也可以简化代码逻辑。然而，<strong>过度使用 <code>static</code> 可能会导致代码难以测试和维护</strong>，特别是在涉及依赖注入和模拟对象（mock object）的情况下。</p>
-<h2 id="18-javafinallyfinalize">18. java中的finally和finalize有什么作用？<a class="headerlink" href="#18-javafinallyfinalize" title="Permanent link">&para;</a></h2>
-<p><code>finally</code>块用作在try-catch块之后你总想执行的东西。甚至在抛出异常时也会执行。它大多用来释放在try块中创建的资源，如关闭文件流、数据库连接或者网络连接等。</p>
-<p><code>finalize()</code>是一个Object的protected方法，允许对象在被垃圾回收前执行一些清理工作。然而，由于其实现的不确定性和现代更好的替代方案的存在，如 try-with-resources。finalize() 方法在java9中已被废弃，不推荐使用。</p>
-<h2 id="19-java-try-with-resources">19. java <code>try-with-resources</code>语句是什么，有什么作用？<a class="headerlink" href="#19-java-try-with-resources" title="Permanent link">&para;</a></h2>
-<p>java 7的新特性,带资源的try语句，用于自动释放资源，相当于try-catch语句块执行了finnaly块。</p>
-<h2 id="20-javacatch">20. java的多个catch语句块是什么，有什么作用？<a class="headerlink" href="#20-javacatch" title="Permanent link">&para;</a></h2>
-<p>如果一个try块中有多个异常要被捕获，catch块中的代码会变丑陋的同时还要用多余的代码来记录异常。有鉴于此，java 7的一个新特征是：一个catch子句中可以捕获多个异常。使用管道符(|),如'catch(IOException | SQLException | Exception ex)'捕获异常。</p>
-<h2 id="21">21. 接口是什么，有什么作用?<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
-<p>接口是java语言的核心部分，不但用在许多JDK中而且也用在许多框架、工具和java设计模式中。在java中，<strong>接口提供了一用实现方式的抽象</strong>，用来定义子类需要实现的契约。</p>
-<p>在代码中，<strong>接口有利于定义类型起始点和创建顶层结构</strong>。自从java接口能实现多个接口后，在许多场景下，使用<strong>接口更优于超类</strong>。</p>
-<h2 id="22">22. 抽象类是什么，有什么作用？<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
-<p>抽象类为子类<strong>创建一些默认方法的实现</strong>。抽象类可以<strong>有未实现的抽象方法</strong>。</p>
-<p>abstract关键字用来创建抽象类。抽象类不能被实例化，大多是用于<strong>子类的扩展</strong>。</p>
-<h2 id="23">23. 抽象类和接口有什么区别？<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
-<ol>
-<li>abstract用于创建抽象类，而interface用来创建接口。</li>
-<li>子类用extends扩展抽象类，而接口使用implements实现接口。</li>
-<li>抽象类可以有实现方法，但接口没有。</li>
-<li>抽象类有构造器，但接口没有。</li>
-<li>抽象类的方法有public, private, protected, static修饰符，但接口的方法是隐式的public和abstract，不需要使用任何的修饰符。</li>
-<li>一个类只能扩展最多一个抽象类，但接口可以扩展一个或多个接口。</li>
-<li>抽象类可以扩展其他类和实现其他接口，但接口只能扩展其他接口。</li>
-<li>抽象类有main入口方法，是可以运行的，但时接口不能。</li>
-<li>接口常用来定义契约，但抽象定义契约的同时还可以有方法实现。</li>
-</ol>
-<h2 id="24">24. 接口能否实现或扩展另一个接口？<a class="headerlink" href="#24" title="Permanent link">&para;</a></h2>
-<p>接口<strong>不能实现另一个接口，但可以扩展它</strong>。因为接口没有实现就没有“钻石问题”。</p>
-<h2 id="25-marker-interface">25. 标记接口Marker interface是什么，有什么作用？<a class="headerlink" href="#25-marker-interface" title="Permanent link">&para;</a></h2>
-<p>标记接口是一个<strong>没有任何方法实现的空接口</strong>，用于<strong>标记实现类有某些功能</strong>。从所周知的Serializable和Cloneable就是标记接口。</p>
-<h2 id="26">26. 包装类是什么？<a class="headerlink" href="#26" title="Permanent link">&para;</a></h2>
-<p>java包装类是8个原始类型对应的对象表示形式。所有的包装类都是不能被继承final和一成不变immutable的。</p>
-<h2 id="27-java">27. java中的枚举是什么？<a class="headerlink" href="#27-java" title="Permanent link">&para;</a></h2>
-<p>枚举作为一个新类型，在java 1.5版本引入。它的域由一些固定的常量构成。如，在java中可以使用EAST, WEST, NORTH, SOUTH创建Direction方向的枚举。</p>
-<p>与类相似，我们使用enum关键字用于创建一个枚举类型。枚举常量是隐式的静态不能继承的。</p>
-<h2 id="28-java">28. java注解是什么？<a class="headerlink" href="#28-java" title="Permanent link">&para;</a></h2>
-<p>java注解提供关于代码的描述信息。它不直接影响代码。注解在java5中被引入。注解是关于嵌套在程序自己中的元数据。可以用过注解解析工具或编译器解析。我们常指定注释在编译时或者在运行时可用。java盎的注解有@Override, @Deprecated and @SuppressWarnings。 </p>
-<h2 id="29-javaapi">29. java反射API是什么？为什么有它非常重要？<a class="headerlink" href="#29-javaapi" title="Permanent link">&para;</a></h2>
-<p>java反射API<strong>提供查看和修改java应用程序的运行时行为</strong>的能力。我们可以查看java类，接口，枚举和它们的方法和域的详情。反射API是一个高级主题，一般的应用中应当避免它。反射API用于反设计模式的场景，如单例模式中调用私有构造器，建返访问修饰调用。</p>
-<p>即然一般的应用中应当避免使用反射API，但有它的话还是非常重要。因为我们不能没有如Spring，Hibernate或者Tomcat服务，JBoss之类的框架。它们通过反射API调用适当的方法和实体，使用它做了许多处理。</p>
-<h2 id="30-javacomposition">30. java中的组合（Composition）是什么？<a class="headerlink" href="#30-javacomposition" title="Permanent link">&para;</a></h2>
-<p>组合是在类中<strong>实现<code>有has-a</code>关系的一种设计</strong>技术。使用对象组合是为了代码重用。</p>
-<p>java组合通过引用其他对象的实例变量实现的。使用组合的好处是，我们<strong>能够控制其他对象的可见性</strong>，在我们需要的时候重用。</p>
-<h2 id="31">31. 组合相对与继承有什么好处？<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
-<p>java编程的最佳实践之一是<strong>组合（Composition）优于继承（Inheritance）</strong>。有以下原因：</p>
-<ul>
-<li>尽管我们可以不使用超类的方法，但在超类中的任何改变也可能影响到子类。例如，假如我们在子类中有一个方法<code>test()</code>，突然某人在父类引入一个方法<code>test()</code>，那么我们在子类中出现编译错误。组合从没有这种问题，是因为我们仅在需要方法时才使用。</li>
-<li>若我们在设计超类时没有掌控，继承会暴露了所有超类的方法和变量到客户端，这样也能导致安全漏洞。组合允许我们对方法提供限制的访问，因此更加安全。</li>
-<li>在组合中我们可以运行时绑定，继承绑定是在编译时。因此组合的方法调用更加灵活。</li>
-</ul>
-<p>你可以在<a href="https://www.journaldev.com/1775/multiple-inheritance-in-java">java组合vs继承</a>一文中，阅读更多关于组合优于继承的知识。</p>
-<h2 id="32-java">32. java中怎样对自定义对象集合进行排序？<a class="headerlink" href="#32-java" title="Permanent link">&para;</a></h2>
-<p>在 Java 中，对自定义对象的集合进行排序有几种常见的方式。这些方法可以根据你使用的集合类型和个人偏好来选择。下面列出了一些常见的排序方法：</p>
-<ol>
-<li>实现 <code>Comparable</code> 接口实现<code>compareTo</code> 方法</li>
-<li>使用 <code>Comparator</code>接口的<code>compare</code> 方法</li>
-</ol>
-<h2 id="33-java">33. java中的内部类是什么?<a class="headerlink" href="#33-java" title="Permanent link">&para;</a></h2>
-<p>我们把定义在类的内部的类称为嵌套类。任何<strong>非静态的嵌套类被称之为内部类</strong>。内部类与类的对象实例相关。它能访问所有变量和外部类的方法。即然内部类是与实例相关，那么它就没有任何静态变量。</p>
-<p>在类的内部，可以有本地内部类和匿名内部类。详情请阅读<a href="https://www.journaldev.com/996/java-inner-class">java内部类</a>。</p>
-<h2 id="34">34. 匿名内部类是什么？<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
-<p>在 Java 中，<strong>匿名内部类</strong>（Anonymous Inner Class）是一种特殊的内部类，它没有名字并且没有显式的构造函数。匿名内部类通常用于在创建一个类的实例的同时定义该类，这种类只在创建时使用一次，因此不需要给它命名。匿名内部类通常用于实现接口或者继承一个类，并且只需要覆盖其中的一个或几个方法。</p>
-<h3 id="_2">匿名内部类的特点<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<ol>
-<li><strong>没有名称</strong>：由于匿名内部类没有名字，因此它不能被重复使用。</li>
-<li><strong>没有构造函数</strong>：匿名内部类没有构造函数，它的构造逻辑包含在类定义本身中。</li>
-<li><strong>自动实现接口或继承类</strong>：匿名内部类可以实现一个接口或继承一个类，并覆盖所需的抽象方法。</li>
-<li><strong>方便简短</strong>：适合快速定义一些简单逻辑的小型类，尤其是在需要立即使用的地方。</li>
-</ol>
-<h3 id="_3">创建匿名内部类的步骤<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>创建匿名内部类的基本步骤如下：</p>
-<ol>
-<li>定义一个接口或父类。</li>
-<li>在需要使用该类的地方，直接使用 <code>new</code> 关键字加上接口或父类的名字，接着是一个类体。</li>
-</ol>
-<h2 id="35-javaclassloader">35. java类加载器Classloader是什么？<a class="headerlink" href="#35-javaclassloader" title="Permanent link">&para;</a></h2>
-<p>java类加载器是在我们想访问任何类时，加载字节码程序到内存的一种程序。我们也可以扩展ClassLoader类和覆载loadClass(String name)方法定义自己的类加载器。了解更多关于<a href="https://www.journaldev.com/349/java-classloader">java类加器</a>。</p>
-<h2 id="36">36. 类加载器的不同类型是什么？<a class="headerlink" href="#36" title="Permanent link">&para;</a></h2>
-<p>在java中提供以下三个内建的类加载器：</p>
-<ol>
-<li>引导类加载器（Bootstrap Class Loader）：它用来加载JDK内存类，典型的加载rt.jar和其他核心类。它是用原生代码来实现的，并不继承自 java.lang.ClassLoader。</li>
-<li>扩展类加载器（Extensions Class Loader）：它用来加载 JDK 的扩展库。常常加载$jAVA_HOME/lib/ext目录库。</li>
-<li>系统类加载器（System Class Loader）：它根据 java 应用的类路径（CLASSPATH）来加载 java 类。一般来说，java 应用的类都是由它来完成加载的。可以通过 ClassLoader.getSystemClassLoader()来获取它。</li>
-</ol>
-<h2 id="37-java">37. java中的三元操作符是什么？<a class="headerlink" href="#37-java" title="Permanent link">&para;</a></h2>
-<p>java三元操作符仅是一个带三个表达式的条件操作符。可以使用if-then-else语句替换。例如<code>a==b?a:b</code>。</p>
-<h2 id="38-super">38. super关键字做什么用的？<a class="headerlink" href="#38-super" title="Permanent link">&para;</a></h2>
-<p>super 关键字在 Java 中主要用于以下方面：</p>
-<ol>
-<li>访问父类的成员变量。</li>
-<li>调用父类的方法。</li>
-<li>调用父类的构造函数。</li>
-<li>区分子类和父类中同名的成员变量或方法。</li>
-</ol>
-<p>访问构造器<strong>须放在第一条语句</strong>且<strong>只能在构造器中访问</strong>。</p>
-<h2 id="39-breakcontinue">39. break和continue语句是什么，怎么用？<a class="headerlink" href="#39-breakcontinue" title="Permanent link">&para;</a></h2>
-<p>放在循环语句中用来结束循环，break结束整个循环，continue结束本次循环。</p>
-<h2 id="40-this">40. this关键字是什么，怎么用？<a class="headerlink" href="#40-this" title="Permanent link">&para;</a></h2>
-<p>用于访问当前对象的引用。大多被用于确保是当前对象的变量（相对于入参变量来说），也可以用来调用当前对象的其他构造器。</p>
-<h2 id="41">41. 默认构造器是什么？<a class="headerlink" href="#41" title="Permanent link">&para;</a></h2>
-<p>类的<strong>无参构造器被称为默认构造器</strong>。在我们<strong>没有定义任何类构造器时，java编译器会自动创建类的默认无参构造器</strong>。如果定义了有其他构造器，则编译器不会为我们创建默认构造器。</p>
-<h2 id="42-trycatch">42. try可以不带catch语句块吗？<a class="headerlink" href="#42-trycatch" title="Permanent link">&para;</a></h2>
-<p>可以。可以有try-finally语句块，于是就避免带catch语句块了。</p>
-<h2 id="43-garbage-collection">43. 垃圾收集器Garbage Collection是什么？<a class="headerlink" href="#43-garbage-collection" title="Permanent link">&para;</a></h2>
-<p>垃圾收集器查看<strong>堆内存的处理器</strong>，识别哪个对象在使用中和哪个不在使用中，然后删除不使用的对象。销毁内存是通过垃圾收集器自动进行处理的。</p>
-<p>我们可以使用代码<code>Runtime.getRuntime().gc()</code>或者使用工具方法<code>System.gc()</code>运行垃圾收集器。更多堆内存和垃圾收集器详细分析，请阅读“<a href="https://www.journaldev.com/2856/java-jvm-memory-model-memory-management-in-java">垃圾收集器</a>”。</p>
-<h2 id="44-serializationdeserialization">44. 序列化Serialization和反序列化Deserialization是什么？<a class="headerlink" href="#44-serializationdeserialization" title="Permanent link">&para;</a></h2>
-<p>我们把java对象转换成二进制流的过程被称做为序列化。一旦一个对象被转换成二进制流，它就可以写入到文件或通过网络发送或在套接字连接中使用。</p>
-<p>对象应当实现序列化Serializable接口，这样我们就可以使用<code>java.io.ObjectOutputStream</code>写入对象到文件或者任何输出流OutputStream对象了。阅读更多<a href="https://www.journaldev.com/927/objectoutputstream-java-write-object-file">java序列化</a>知识。</p>
-<p>把二进制流数据转换成对象的过程被称做为反序列化。阅读更多<a href="https://www.journaldev.com/933/objectinputstream-java-read-object-file">java反序列化</a>知识。</p>
-<h2 id="45-jar">45. 通过命令提示行怎样运行JAR文件？<a class="headerlink" href="#45-jar" title="Permanent link">&para;</a></h2>
-<p>能使用命令行运行jar包文件，但需要在jar清单文件中有Main入口类。含Main的类是jar包的入口点，用来通过java命令执行。</p>
-<h2 id="46-system">46. System类的用途是什么？<a class="headerlink" href="#46-system" title="Permanent link">&para;</a></h2>
-<p>java System类是核心类之一，<code>System.out.print()</code>是其中一个方法。在调试时，它是最简单的记录日志信息的方法。</p>
-<p>System类被声明为final的。因此无法被子类继承和覆盖其行为。也不提供任何公共构造器，因此也不能实例化这个类。也是为什么它的所有方法是静态static的原因。</p>
-<p>System类<strong>提供了数组拷贝、获取当前时间、读环境变量等助手类</strong>方法。阅读更多<a href="https://www.journaldev.com/1847/java-system-java-lang-system-class">java System类</a>知识。</p>
-<h2 id="47-instanceof">47. instanceof关键字的用途是什么？<a class="headerlink" href="#47-instanceof" title="Permanent link">&para;</a></h2>
-<p>instanceof关键字用来检测是否属于某个类。我们应当尽可能的避免使用它。</p>
-<h2 id="48-switch-case">48. switch case语句中能使用字符串类型吗？<a class="headerlink" href="#48-switch-case" title="Permanent link">&para;</a></h2>
-<p>java 7引入的新特性之一，switch case语句中可以使用字符串类型。因此java 7或更高版本可以使用。</p>
-<h2 id="49-java">49. java在方法调用时是通过值传递还是通过引用传递？<a class="headerlink" href="#49-java" title="Permanent link">&para;</a></h2>
-<p>这个问题非常具有迷惑性。我们知道对象变量在堆空间中包含引用的对象。在我们调用任何方法时，这个变量的拷贝被转递并存储在方法的栈内存中。我们能够检测到任何语言它是通过引用或通过值传递通过一个简单的交换方法，请阅读<a href="https://www.journaldev.com/3884/java-is-pass-by-value-and-not-pass-by-reference">更多</a>。由此我们得出<strong>java方法调用是通过值传递</strong>而不是通过引用传递的。</p>
-<h2 id="50-heapstack">50. 堆Heap和栈Stack内存有什么区别？<a class="headerlink" href="#50-heapstack" title="Permanent link">&para;</a></h2>
-<p>堆和栈主要的区别如下：</p>
-<ul>
-<li>所有应用的部分都使用堆内存，然而<strong>只有执行线程使用栈内存</strong>。</li>
-<li>每当对象被创建时，它总是存在堆空间中，栈内存包含它的引用。<strong>栈内存仅包括本地的原始变量和在堆空间中的对象的引用变量</strong>。</li>
-<li><strong>栈内存是通后进先出LIFO的方法管理</strong>的，然而在堆内存中因为它是全局使用，所以它的管理方式更加复杂。</li>
-</ul>
-<p>在同一程序中更加详细的解释，请阅读<a href="https://www.journaldev.com/4098/java-heap-space-vs-stack-memory">java堆vs栈内存</a></p>
-<h2 id="51-javajdkjrejvm">51. java编译器是存储在JDK，JRE或JVM哪一个中？<a class="headerlink" href="#51-javajdkjrejvm" title="Permanent link">&para;</a></h2>
-<p>java编译器的任务是转换java程序到字节码，我们使用<code>javac</code>命令执行即可实现。因此它必须要存在JDK中。</p>
-<h2 id="52">52. 如下程序将输出什么？<a class="headerlink" href="#52" title="Permanent link">&para;</a></h2>
-<ul>
-<li>在类中的静态方法</li>
-</ul>
-<pre><code class="language-java">package tests;
+<h1 id="javavs-java">Java堆VS栈-Java中的内存分配<a class="headerlink" href="#javavs-java" title="Permanent link">&para;</a></h1>
+<h2 id="java">Java堆空间<a class="headerlink" href="#java" title="Permanent link">&para;</a></h2>
+<p>Java运行时使用Java堆空间将内存分配给对象和JRE类。 每当我们创建任何对象，它总是在堆空间中创建。</p>
+<p>垃圾回收器在堆内存上运行以释放没有任何引用的对象所使用的内存。 在堆空间中创建的任何对象都具有全局访问权限，并且可以从应用程序的任何位置引用。</p>
+<h2 id="java_1">Java堆栈内存<a class="headerlink" href="#java_1" title="Permanent link">&para;</a></h2>
+<p>Java堆栈内存用于执行线程。 它们包含特定于方法的值，这些值是短暂的，并引用堆中从该方法引用的其他对象。</p>
+<p>堆栈内存始终以LIFO（后进先出）顺序引用。 无论何时调用方法，都会在堆栈内存中为方法创建一个新的块，以保存本地原始值并引用该方法中的其他对象。</p>
+<p>一旦方法结束，该块将变为未使用状态，并可用于下一个方法。与堆内存相比，堆栈内存的大小非常小。</p>
+<h2 id="java_2">Java程序中堆和栈内存的分配<a class="headerlink" href="#java_2" title="Permanent link">&para;</a></h2>
+<p>让我们用一个简单的程序来理解堆和堆栈的内存使用情况。</p>
+<pre><code class="language-java">package com.journaldev.test;
 
-public class Test {
+public class Memory {
 
-    public static String toString(){
-        System.out.println(&quot;Test toString called&quot;);
-        return &quot;&quot;;
-    }
+    public static void main(String[] args) { // Line 1
+        int i=1; // Line 2
+        Object obj = new Object(); // Line 3
+        Memory mem = new Memory(); // Line 4
+        mem.foo(obj); // Line 5
+    } // Line 9
 
-    public static void main(String args[]){
-        System.out.println(toString());
-    }
+    private void foo(Object param) { // Line 6
+        String str = param.toString(); //// Line 7
+        System.out.println(str);
+    } // Line 8
+
 }
 </code></pre>
-<p>答：以上代码不能编译。因为所有类对继承根对象类Object。以上会编译错误提示静态方法不能覆盖实例方法。</p>
+<p>下面的图片显示了参考上述程序的堆栈和堆内存以及它们如何被用来存储原类型值，对象和引用变量。</p>
+<p><a class="glightbox" href="../../assets/Java-Heap-Stack-Memory.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Java堆和栈内存的分配" src="../../assets/Java-Heap-Stack-Memory.png" title="Java堆和栈内存的分配" /></a></p>
+<p>让我们来看看执行程序的步骤。</p>
 <ul>
-<li>静态方法调用</li>
+<li>一旦我们运行该程序，它将所有运行时类加载到堆空间中。 当在第1行找到main（）方法时，Java运行时将创建堆栈内存以供main（）方法线程使用。</li>
+<li>我们在第2行创建了原始局部变量，所以它被创建并存储在main（）方法的堆栈内存中。</li>
+<li>由于我们在第3行创建了一个对象，因此它在堆内存中创建，并且堆栈内存包含它的引用。 当我们在第4行创建Memory对象时会发生类似的过程。</li>
+<li>现在当我们在第5行中调用foo（）方法时，堆栈顶部的一个块被创建，以供foo（）方法使用。由于Java是按值传递的，因此在第6行的foo（）堆栈块中创建了对Object的新引用。</li>
+<li>在第7行中创建一个字符串，它将进入堆空间中的字符串池 ，并在foo（）堆栈空间中为其创建引用。</li>
+<li>foo（）方法在第8行终止，此时为堆栈中的foo（）分配的内存块变为空闲。</li>
+<li>在第9行中，main（）方法终止，为main（）方法创建的堆栈内存被销毁。 程序也结束在这一行，因此Java运行时释放所有内存并结束程序的执行。</li>
 </ul>
-<pre><code class="language-java">package tests;
-
-public class Test {
-
-    public static String foo(){
-        System.out.println(&quot;Test foo called&quot;);
-        return &quot;&quot;;
-    }
-
-    public static void main(String args[]){
-        Test obj = null;
-        System.out.println(obj.foo());
-    }
-}
-</code></pre>
-<p>答：这是个奇怪的使用场景。NULL空对象调用方法是总会报<code>NullPointerException</code>异常，且该方法是属于类的静态方法，但该程序能工作并打印"Test foo called"。</p>
-<p>原因是编译器做了编译优化。在java编译转换成字节码时，它指向的foo()是静态方法，而不是对象方法，因此编译从<code>obj.foo()</code>调整到<code>Test.foo()</code>，于是也没有了<code>NullPointerException</code>异常。</p>
-<h2 id="_4">参考<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.journaldev.com/2366/core-java-interview-questions-and-answers#public-class">原文</a></p>
+<h2 id="java_3">Java堆空间和栈内存的区别<a class="headerlink" href="#java_3" title="Permanent link">&para;</a></h2>
+<p>基于上面的解释，我们可以很容易地得出堆和堆内存之间的差异。</p>
+<ol>
+<li>堆内存由应用程序的所有部分使用，而堆栈内存仅由一个执行线程使用。</li>
+<li>每当创建一个对象时，它总是存储在堆空间中，并且堆栈存储器包含对它的引用。 堆栈内存只包含局部基本变量和引用变量到堆空间中的对象。</li>
+<li>存储在堆中的对象是全局可访问的，而堆栈存储器不能被其他线程访问。</li>
+<li>堆栈中的内存管理以LIFO方式完成，而堆内存中的内存管理更为复杂，因为它是全局使用的。 在Java垃圾收集中 ，堆内存分为年轻一代，旧一代等。</li>
+<li>堆栈内存是短暂的，而堆内存从开始到应用程序执行结束。</li>
+<li>我们可以使用-Xms和-Xmx JVM选项来定义堆内存的启动大小和最大大小。 我们可以使用-Xss来定义堆栈的内存大小。</li>
+<li>当堆栈内存已满时，Java运行时会抛出java.lang.StackOverFlowError而如果堆内存已满，则会抛出java.lang.OutOfMemoryError: Java Heap Space错误。</li>
+<li>与堆内存相比，堆栈内存的大小非常小。由于内存分配（LIFO）简单，与堆内存相比，堆栈内存非常快。</li>
+</ol>
+<p>这是所有的堆空间和堆栈内存在java应用程序中的对比，希望能消除你关于Java程序执行时内存分配的疑虑。</p>
+<h2 id="_1">引用<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ol>
+<li><a href="https://www.journaldev.com/4098/java-heap-space-vs-stack-memory">原文</a></li>
+</ol>
 
 
 
@@ -8314,10 +7746,10 @@ public class Test {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.top", "navigation.tabs", "navigation.sections"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.bd41221c.min.js"></script>
       
     
   <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
