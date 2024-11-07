@@ -1,9 +1,14 @@
 nav:
   - index.md
   - java-fundamentals.md
+  - java-string.md
+  - java-exception.md
+  - java-programming.md
   - java-collection-framework.md
   - multithreading-and-concurrency.md
+  - multithreading-and-concurrency-2.md
   - jvm.md
+  - java-heap-space-vs-stack-memory.md
   - java-io-and-nio.md
   - new-features-in-java8-and-above.md
   - database-and-orm-frameworks.md

@@ -263,3 +263,85 @@
 
 - **浅拷贝**：直接复制对象，原对象字段引用不变。
 - **深拷贝**：需要实现`Cloneable`接口并重写`clone()`方法，将对象及其引用的对象均复制。
+
+## 35. 如下程序将输出什么？
+
+在类中的静态方法
+
+```java
+package tests;
+
+public class Test {
+
+    public static String toString(){
+        System.out.println("Test toString called");
+        return "";
+    }
+    
+    public static void main(String args[]){
+        System.out.println(toString());
+    }
+}
+```
+
+**答案**：
+以上**代码不能编译**。因为所有类对继承根对象类Object。以上会编译错误提示静态方法不能覆盖实例方法。
+
+## 36. 如下程序将输出什么？
+
+静态方法调用
+
+```java
+package tests;
+
+public class Test {
+
+    public static String foo(){
+        System.out.println("Test foo called");
+        return "";
+    }
+    
+    public static void main(String args[]){
+        Test obj = null;
+        System.out.println(obj.foo());
+    }
+}
+```
+
+**答案**：
+**编译器做了编译优化**。在java编译转换成字节码时，它指向的foo()是静态方法，而不是对象方法，因此**编译从`obj.foo()`调整到`Test.foo()`**，于是就没有了`NullPointerException`异常。
+
+## 37. java在方法调用时是通过值传递还是引用传递？
+
+**答案**：
+值传递
+
+## 38. System类的用途是什么？
+
+**答案**：
+
+System类是核心类之一，它被声明为final的。因此无法被子类继承和覆盖其行为。也不提供任何公共构造器，因此也不能实例化这个类。也是为什么它的所有方法是静态static的原因。提供了**打印日志、数组拷贝、获取当前时间、读环境变量等助手**的方法
+
+## 38. java反射API是什么？为什么有它非常重要？
+
+**答案**：
+java反射API**提供查看和修改java应用程序的运行时行为**的能力。我们可以查看java类，接口，枚举和它们的方法和域的详情。反射API是一个高级主题，一般的应用中应当避免它。反射API用于反设计模式的场景，如单例模式中调用私有构造器，建返访问修饰调用。
+
+即然一般的应用中应当避免使用反射API，但有它的话还是非常重要。因为我们不能没有如Spring，Hibernate或者Tomcat服务，JBoss之类的框架。它们通过反射API调用适当的方法和实体，使用它做了许多处理。
+
+## 39. java中main方法的重要性是什么？
+
+**答案**：
+main()方法是任何独立的java应用程序的入口点。main的语法是：`public static void main(String args[])`.
+
+main方法是公用且静态的，输入参数是数组，可以转入运行时参数给它。
+
+## 40. 能重载main方法吗？
+
+**答案**：
+可以，在类中可以有多个main名字的方法。然而运行时的入口仅查找这个方法`public static void main(String args[])`.
+
+## 41. 序列化Serialization和反序列化Deserialization是什么？
+
+**答案**：
+java对象转换成二进制流的过程被称做为序列化，把二进制流数据转换成对象的过程被称做为反序列化。对象序列化后就可以通过`java.io.ObjectOutputStream`写入对象到文件或者任何输出流OutputStream对象，实现网络发磅或套接字连接使用

@@ -1,32 +1,5 @@
----
-title: Java异常面试问题
-tags: java,exception,interview,异常,面试
-categories: 
-  - java
+# Java异常面试问题
 
-thumbnail: /gallery/blue-water4.jpg
----
-Java提供了一种强大的、面向对象的途径，用于处理异常的场景，它即被称为**Java异常处理**。
-<!-- more -->
-以前我写过一篇关于Java异常处理的文章，今天我列出了一些重要的Java异常问题和答案，以帮助你顺利通过面试。
-
-1. Java中的异常是什么？
-2. Java中的异常处理关键字是什么？
-3. 解释Java异常层次结构？
-4. 什么是Java异常类的重要方法？
-5. 说明Java 7 ARM功能和多catch块？
-6. Java中的Checked和Unchecked Exception之间有什么区别？
-7. 在Java中throw和throws关键字有什么区别？
-8. Java中编写自定义异常？
-9. 什么是Java中的OutOfMemoryError？
-10. 导致“主线程中的异常”的不同情况是什么？
-11. 在Java中final，finally和finalize有什么区别？
-12. 当main方法抛出异常时会发生什么？
-13. 我们可以有一个空的catch块吗？
-14. 提供一些Java异常处理最佳实践？
-15. 下面的程序有什么问题，我们如何解决？
-
- 
 ## 1. Java中的异常是什么？
 
 异常是在执行程序期间可能发生的错误事件，并中断它的正常流程。异常情况可能由用户输入的错误数据，硬件故障，网络连接故障等不同情况引起。
@@ -98,7 +71,6 @@ try (MyResource mr = new MyResource()) {
 ## 7. 在Java中throw和throws关键字有什么区别？
 
 throws关键字与方法签名一起使用来声明方法可能抛出的异常，而throw关键字用于中断程序流并将异常对象移交给运行时处理。
-
 
 ## 8. 如何在Java中编写自定义异常？
 

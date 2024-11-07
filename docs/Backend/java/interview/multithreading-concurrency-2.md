@@ -1,59 +1,6 @@
----
-title: java多线程、并发常见面试问题
-tags: java, Multithreading, Concurrency, interview,多线程, 并发, 面试
-categories: 
-  - java
+# 多线程与并发-2
 
-thumbnail: /gallery/blue-water12.jpg
----
-
-今天我们将通过研究java多线程面试问题同时也研究并发面试问题，因为多线程和并发密不可分。线程是Java面试中的热门话题之一。在这里我从面试的角度列出了大部分重要的java多线程面试问题，不过您应该对java线程有很好的了解，才能应付以下问题。
-
-<!-- more -->
-
-## Java多线程面试问题
-
-1. 进程和线程有什么区别？
-2. 多线程编程有哪些好处？
-3. 用户线程和守护线程有什么区别？
-4. 我们如何在Java中创建一个线程？
-5. 线程生命周期中有什么不同的状态？
-6. 我们可以调用Thread类的run()方法吗？
-7. 我们如何在特定时间暂停线程执行？
-8. 你对线程优先级有什么了解？
-9. 什么是线程计划和时间切片？
-10. 什么是多线程中的上下文切换？
-11. 我们如何确保main()是Java程序中完成的最后一个线程？
-12. 线程如何相互通信？
-13. 为什么线程通信方法wait()，notify()和notifyAll()都在Object类中？
-14. 为什么wait()，notify()和notifyAll()方法必须从synchronized方法或块调用？
-15. 为什么线程sleep()和yield()方法是静态的？
-16. 我们如何在Java中实现线程安全？
-17. 在Java中的volatile关键字是什么？
-18. 同步方法或同步块哪个是更优选择？
-19. 如何在Java中创建守护进程线程？
-20. 什么是ThreadLocal？
-21. 什么是线程组？ 为什么建议不要使用它？
-22. 什么是Java线程Dump，我们如何获得程序的Java线程Dump？
-23. 什么是死锁？ 如何分析和避免死锁的情形？
-24. 什么是Java时间类？ 如何安排任务在特定间隔时间后运行？
-25. 什么是线程池？ 我们如何在Java中创建线程池？
-26. 如果我们不覆盖线程类run()方法，会发生什么？
-
-## Java并发访问问题
-
-1. 什么是原子操作？ Java并发API中的原子类是什么？
-2. 什么是Java并发API中的锁接口？ 与同步相比有什么好处？
-3. 什么是Executors框架？
-4. 什么是阻塞队列？ 我们如何使用阻塞队列实现生产者-消费者问题？
-5. 什么是Callable和Future？
-6. 什么是FutureTask类？
-7. 什么是Concurrent Collection类？
-8. 什么是Executors类？
-9. Java 8中的并发API的一些改进是什么？
-
-
-## Java多线程面试问题答案
+## Java多线程
 
 ### 1. 进程和线程有什么区别？
 
@@ -142,6 +89,7 @@ Java ThreadLocal用于创建线程局部变量。 我们知道一个对象的所
 ### 21. 什么是线程组？ 为什么建议不要使用它？
 
 线程组(ThreadGroup)是一个类，旨在提供有关线程组的信息。 ThreadGroup API很弱，并没有任何Thread提供的功能。 它的主要特点是获取线程组中的活动线程列表，并为线程设置未捕获的异常处理程序。 但Java 1.5添加了setUncaughtExceptionHandler（UncaughtExceptionHandler eh）方法，我们可以向线程添加未捕获的异常处理程序。 所以ThreadGroup已经过时了，因此不建议再使用了。
+
 ```java
 t1.setUncaughtExceptionHandler(new UncaughtExceptionHandler(){
 
@@ -184,6 +132,7 @@ java.util.concurrent.Executors提供java.util.concurrent.Executor接口的实现
 ### 26. 如果我们不覆盖线程类run()方法，会发生什么？
 
 线程类run()方法的代码如下所示。
+
 ```java
 public void run() {
     if (target != null) {
@@ -191,7 +140,9 @@ public void run() {
     }
 }
 ```
+
 以上目标设置在Thread类的init()方法中，如果我们创建一个Thread类的实例作为new TestThread() ，它设置为null。 所以如果我们不覆盖run()方法，就不会发生任何事情。 下面是一个简单的例子来说明这一点。
+
 ```java
 public class TestThread extends Thread {
 
@@ -206,14 +157,12 @@ public class TestThread extends Thread {
     }
 }
 ```
+
 它将仅打印输出和终止。
-```
 Before starting thread
 After starting thread
-```
 
-
-## Java并发访问问题答案
+## Java并发
 
 ### 1. 什么是原子操作？ Java并发API中的原子类是什么？
 
@@ -225,7 +174,8 @@ int++不是原子操作。 所以当一个线程读取它的值并将其增加�
 
 ### 2. 什么是Java并发API中的锁接口？ 与同步相比有什么好处？
 
-锁定界面提供比使用synchronized方法和语句可以获得的更广泛的锁定操作。 它们允许更灵活的结构化，可能具有完全不同的属性，并且可以支持多个相关联的Condition对象。 
+锁定界面提供比使用synchronized方法和语句可以获得的更广泛的锁定操作。 它们允许更灵活的结构化，可能具有完全不同的属性，并且可以支持多个相关联的Condition对象。
+
 锁的优点是
 
 * 有可能使他们公平
@@ -242,7 +192,6 @@ int++不是原子操作。 所以当一个线程读取它的值并将其增加�
 
 创建许多线程没有限制到最大阈值可能导致应用程序用尽堆内存。 所以，创建一个ThreadPool是一个更好的解决方案，因为有限数量的线程可以被汇集和重用。 执行器框架促进了在Java中创建线程池的过程。 查看这篇文章，学习使用Executors框架创建线程池的示例代码。
 
-
 ### 4. 什么是阻塞队列？ 我们如何使用阻塞队列实现生产者-消费者问题？
 
 java.util.concurrent.BlockingQueue是一个队列，支持在检索和删除元素时等待队列变为非空的操作，并在添加元素时等待队列中的空间变得可用。
@@ -251,22 +200,19 @@ java.util.concurrent.BlockingQueue是一个队列，支持在检索和删除元�
 
 BlockingQueue实现是线程安全的。 所有排队方法本质上都是原子的，并使用内部锁或其他形式的并发控制。
 
-BlockingQueue接口是java集合框架的一部分，它主要用于实现生产者消费者问题。 
-使用BlockingQueue检查此帖子的生产者 - 消费者问题实现 。
+BlockingQueue接口是java集合框架的一部分，它主要用于实现生产者消费者问题。
 
+使用BlockingQueue检查此帖子的生产者 - 消费者问题实现 。
 
 ### 5. 什么是Callable和Future？
 
 Java 5在Concurrency包中引入了类似于Runnable接口的java.util.concurrent.Callable接口，但它可以返回任何Object并且能够抛出异常。
 
-可调用接口使用Generic来定义Object的返回类型。 执行器类提供了有用的方法来在线程池中执行Callable。 由于可调用任务并行运行，我们必须等待返回的对象。 可调用任务返回java.util.concurrent.Future对象。 使用未来，我们可以找到可调用任务的状态并获取返回的对象。 它提供可以等待Callable完成的get（）方法，然后返回结果。 
-检查这个帖子可以调用未来的例子 。
-
+可调用接口使用Generic来定义Object的返回类型。 执行器类提供了有用的方法来在线程池中执行Callable。 由于可调用任务并行运行，我们必须等待返回的对象。 可调用任务返回java.util.concurrent.Future对象。 使用未来，我们可以找到可调用任务的状态并获取返回的对象。 它提供可以等待Callable完成的get（）方法，然后返回结果。
 
 ### 6. 什么是FutureTask类？
 
 FutureTask是Future接口的基本实现类，我们可以使用Executors进行异步处理。 大多数情况下，我们不需要使用FutureTask类，但如果我们想覆盖Future接口的某些方法并希望保留大部分的基本实现，那么它将非常方便。 我们只能扩展这个类，并根据我们的要求重写方法。 查看Java FutureTask示例文章，了解如何使用它，以及其具有的不同方法。
-
 
 ### 7. 什么是Concurrent Collection类？
 
@@ -274,7 +220,6 @@ Java集合类是故障快速的，这意味着如果在某些线程使用迭代�
 
 并发收集类支持检索的完全并发性和可更新的可预期并发性。 
 主要类是ConcurrentHashMap，CopyOnWriteArrayList和CopyOnWriteArraySet，请检查此帖子，以了解如何在使用迭代器时避免ConcurrentModificationException异常 。
-
 
 ### 8. 什么是Executors类？
 
@@ -290,8 +235,6 @@ ConcurrentHashMap compute（），forEach（），forEachEntry（），forEachKe
 可以明确完成的CompletableFuture（设置其值和状态）。
 执行者newWorkStealingPool（）方法创建使用所有可用处理器作为其目标并行级别的工作窃取线程池。
 
+## 参考
+
 [原文](https://www.journaldev.com/1162/java-multithreading-concurrency-interview-questions-answers)
-
-
-
-

@@ -400,7 +400,7 @@ List<Integer> list = new ArrayList<>(Arrays.asList(array));
 - **Set**：不允许重复元素，无序集合或按特定顺序排列，如`HashSet`、`TreeSet`。
 - **Map**：键值对存储，不允许重复键，如`HashMap`、`TreeMap`。
 
-## 44. 如何使用`Collections.synchronizedList()`和`Collections.synconizedMap()`？**
+## 44. 如何使用`Collections.synchronizedList()`和`Collections.synconizedMap()`？
 
 **答案**：
 

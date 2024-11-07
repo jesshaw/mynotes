@@ -1,20 +1,4 @@
----
-title: Java堆VS栈-Java中的内存分配
-tags: heap space, stack memory, memory allocation，堆空间,堆栈,栈内存,内存分配
-categories: 
-  - java
-
-thumbnail: /gallery/green-water3.jpg
----
-前些时候，在我写了一些关于{% post_link java-jvm-memory-model-memory-management Java垃圾回收 %}和Java是按价值传递的文章之后，收到了很多电子邮件说解释一下Java堆空间 ， Java栈内存，Java内存分配以及它们之间的区别。
-<!-- more -->
-在Java EE书籍和java教程中都能看到很多关于堆和栈的描述，从程序运行时的角度如何理解堆内存和栈到底是什么呢？
-
-本文目录
-1. Java堆空间
-2. Java堆栈内存
-3. Java程序中堆和栈内存的分配
-4. Java堆空间和栈内存的区别
+# Java堆VS栈-Java中的内存分配
 
 ## Java堆空间
 
@@ -56,7 +40,7 @@ public class Memory {
 
 下面的图片显示了参考上述程序的堆栈和堆内存以及它们如何被用来存储原类型值，对象和引用变量。
 
-![Java堆和栈内存的分配](/gallery/Java-Heap-Stack-Memory.png "Java堆和栈内存的分配")
+![Java堆和栈内存的分配](../assets/Java-Heap-Stack-Memory.png "Java堆和栈内存的分配")
 
 让我们来看看执行程序的步骤。
 
