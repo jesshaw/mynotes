@@ -1,4 +1,4 @@
-# Java堆VS栈-Java中的内存分配
+# Java堆VS栈及内存分配
 
 ## Java堆空间
 
