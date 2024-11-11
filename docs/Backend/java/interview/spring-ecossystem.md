@@ -2,7 +2,7 @@
 
 以下是关于 Spring 生态系统的常见面试题及答案，涵盖了 Spring 核心、Spring Boot、Spring MVC、Spring Data 和 Spring Cloud 等技术：
 
-## 1. **什么是 Spring 框架？Spring 框架的主要特性有哪些？**
+## 1. 什么是 Spring 框架？Spring 框架的主要特性有哪些？
 
 **答案**：
 
@@ -15,7 +15,7 @@
   - **集成测试**：支持单元测试和集成测试。
   - **Spring Cloud**：提供了分布式系统所需的组件（如注册中心、负载均衡等）。
 
-## 2. **什么是依赖注入（DI）？Spring 框架如何实现 DI？**
+## 2. 什么是依赖注入（DI）？Spring 框架如何实现 DI？
 
 **答案**：
 
@@ -25,7 +25,7 @@
   - **Setter 注入**：通过 Setter 方法注入依赖对象。
 - Spring 的 XML 配置文件、注解（如 `@Autowired`）、Java 配置类都可以实现依赖注入。
 
-## 3. **什么是 Spring 的 IoC 容器？常见的 IoC 容器有哪些？**
+## 3. 什么是 Spring 的 IoC 容器？常见的 IoC 容器有哪些？
 
 **答案**：
 
@@ -34,7 +34,7 @@
   - **BeanFactory**：基础的 IoC 容器，延迟初始化，只在对象被调用时创建实例。
   - **ApplicationContext**：功能更丰富，支持事件监听、国际化等。常见实现包括 `ClassPathXmlApplicationContext` 和 `AnnotationConfigApplicationContext`。
 
-## 4. **Spring Bean 的作用域有哪些？**
+## 4. Spring Bean 的作用域有哪些？
 
 **答案**：
 
@@ -44,7 +44,7 @@
 - **session**：在每个 HTTP 会话中创建一个实例（仅适用于 Web 应用）。
 - **global-session**：跨会话使用单例实例。
 
-## 5. **Spring 中的 AOP 是什么？有何作用？**
+## 5. Spring 中的 AOP 是什么？有何作用？
 
 **答案**：
 
@@ -56,7 +56,7 @@
   - **Pointcut**：定义在哪里应用 Advice。
   - **Weaving**：将 Advice 应用到 Join Point 的过程。
 
-## 6. **什么是 Spring Boot？Spring Boot 的主要优点是什么？**
+## 6. 什么是 Spring Boot？Spring Boot 的主要优点是什么？
 
 **答案**：
 
@@ -68,14 +68,14 @@
   - 丰富的 Spring Boot Starter 依赖，简化了依赖管理。
   - 支持自动配置，根据项目中的依赖自动设置配置。
 
-## 7. **Spring Boot 的自动配置原理是什么？**
+## 7. Spring Boot 的自动配置原理是什么？
 
 **答案**：
 
 - Spring Boot 使用 `@EnableAutoConfiguration` 注解，根据类路径下的依赖自动配置 Bean。
 - 通过 **`spring.factories`** 文件来加载自动配置类，每个配置类包含条件注解（如 `@ConditionalOnClass`、`@ConditionalOnMissingBean`）来判断是否应该应用某个自动配置。
 
-## 8. **Spring MVC 的常见注解有哪些？**
+## 8. Spring MVC 的常见注解有哪些？
 
 **答案**：
 
@@ -87,7 +87,7 @@
 - **@ResponseBody**：将方法返回的对象序列化为 JSON 或 XML 响应。
 - **@ExceptionHandler**：用于处理异常并返回自定义响应。
 
-## 9. **如何在 Spring MVC 中实现文件上传？**
+## 9. 如何在 Spring MVC 中实现文件上传？
 
 **答案**：
 
@@ -107,7 +107,7 @@
   }
   ```
 
-## 10. **什么是 Spring Data？它如何简化数据访问？**
+## 10. 什么是 Spring Data？它如何简化数据访问？
 
 **答案**：
 
@@ -115,7 +115,7 @@
 - 通过定义仓储接口（如 `JpaRepository`、`MongoRepository` 等），Spring Data 自动提供 CRUD 操作的实现，减少数据访问代码量。
 - 还支持基于方法名的查询、分页和排序等功能。
 
-## 11. **什么是 Spring Cloud？它解决了哪些问题？**
+## 11. 什么是 Spring Cloud？它解决了哪些问题？
 
 **答案**：
 
@@ -128,7 +128,7 @@
   - 熔断器（Hystrix）。
   - 分布式追踪（Zipkin）。
 
-## 12. **Spring Cloud 中的服务发现和注册如何工作？**
+## 12. Spring Cloud 中的服务发现和注册如何工作？
 
 **答案**：
 
@@ -136,7 +136,7 @@
 - **服务发现客户端**将应用实例信息注册到服务中心，并定期发送心跳保持连接。
 - 客户端可以通过服务注册中心获取其他服务的实例列表，实现客户端负载均衡和服务调用。
 
-## 13. **什么是 Spring Cloud Config？如何使用它？**
+## 13. 什么是 Spring Cloud Config？如何使用它？
 
 **答案**：
 
@@ -146,7 +146,7 @@
   - 客户端服务从配置中心读取配置，可以动态更新配置。
   - 可以通过 `@RefreshScope` 注解实现配置的动态刷新。
 
-## 14. **什么是 Hystrix？它的主要功能是什么？**
+## 14. 什么是 Hystrix？它的主要功能是什么？
 
 **答案**：
 
@@ -156,7 +156,7 @@
   - **降级**：提供默认返回或处理逻辑，提高系统的稳定性。
   - **资源隔离**：使用线程池隔离服务调用，防止某个服务调用占用所有资源。
 
-## 15. **什么是 Spring AOP 中的切面（Aspect）？如何定义一个切面？**
+## 15. 什么是 Spring AOP 中的切面（Aspect）？如何定义一个切面？
 
 **答案**：
 
@@ -175,5 +175,63 @@
       }
   }
   ```
+
+## 16. Spring的生命周期？
+
+```plantuml
+@startuml
+title Spring Bean Lifecycle
+
+start
+:实例化 (Instantiation);
+:属性赋值 (Populate Properties);
+
+if (是否实现 BeanNameAware?) then (是)
+    :调用 setBeanName();
+endif
+
+if (是否实现 BeanFactoryAware?) then (是)
+    :调用 setBeanFactory();
+endif
+
+if (是否实现 ApplicationContextAware?) then (是)
+    :调用 setApplicationContext();
+endif
+
+:调用 BeanPostProcessor 的 postProcessBeforeInitialization();
+
+if (是否实现 InitializingBean?) then (是)
+    :调用 afterPropertiesSet();
+endif
+
+if (是否有 @PostConstruct 注解?) then (是)
+    :调用 @PostConstruct 方法;
+endif
+
+if (是否配置 init-method?) then (是)
+    :调用 init-method 方法;
+endif
+
+:调用 BeanPostProcessor 的 postProcessAfterInitialization();
+:Bean 就绪 (Bean Ready);
+
+' stop
+
+' destroy
+if (是否有 @PreDestroy 注解?) then (是)
+    :调用 @PreDestroy 方法;
+endif
+
+if (是否实现 DisposableBean?) then (是)
+    :调用 destroy();
+endif
+
+if (是否配置 destroy-method?) then (是)
+    :调用 destroy-method 方法;
+endif
+
+end
+@enduml
+```
 
 这些问题可以帮助深入理解 Spring 框架及其生态系统。掌握这些知识将有助于在面试中对 Spring 系列问题做出深度解答。

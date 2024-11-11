@@ -27,7 +27,40 @@ Java异常是有层次的，继承被用来区分不同类型的异常。Throwab
 
 **运行时异常**是由不良编程引起的，例如试图从数组中检索一个元素。在尝试检索元素之前，我们应该先检查数组的长度，否则可能会在运行时抛出ArrayIndexOutOfBoundException 。`RuntimeException`是所有运行时异常的父类。
 
-![Java异常层次结构](/gallery/exception-hierarchy.png "Java异常层次结构")
+```plantuml
+@startuml
+' 设置分辨率
+skinparam dpi 60  
+' 设置画布最大宽度
+' skinparam maxWidth 100 
+class Throwable
+class Error
+class Exception
+class RuntimeException
+class IOException
+class FileNotFoundException
+class NullPointerException
+class ArithmeticException
+
+Throwable <|-- Exception
+Throwable <|-- Error
+
+Error <|-- VirtualMachineError
+Error <|-- LinkageError
+VirtualMachineError <|-- OutOfMemoryError
+VirtualMachineError <|-- StackOverflowError
+' VirtualMachineError <|-- InternalError
+' VirtualMachineError <|-- UnknownError
+LinkageError <|-- NoClassDefFoundError
+
+Exception <|-- RuntimeException
+Exception <|-- IOException 
+IOException <|-- FileNotFoundException: checked exception
+RuntimeException <|-- NullPointerException: unchecked exception
+RuntimeException <|-- ArithmeticException: unchecked exception
+
+@enduml
+```
 
 ## 4. 什么是Java异常类的重要方法？
 
