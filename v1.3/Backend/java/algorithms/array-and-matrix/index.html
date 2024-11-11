@@ -11,10 +11,10 @@
       
       
       
-        <link rel="prev" href="../spring-ecossystem/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../old/java-all/">
+        <link rel="next" href="../../core-java/">
       
       
       <link rel="icon" href="../../../../assets/logo-32x32-white.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Java多线程 - 乐享笔记</title>
+        <title>数组与矩阵类 - 乐享笔记</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#java" class="md-skip">
+        <a href="#_1" class="md-skip">
           跳转至
         </a>
       
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Java多线程
+              数组与矩阵类
             
           </span>
         </div>
@@ -3251,8 +3251,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -3262,11 +3264,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_8" checked>
         
           
           <label class="md-nav__link" for="__nav_3_5_8" id="__nav_3_5_8_label" tabindex="0">
@@ -3280,7 +3282,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_5_8">
             <span class="md-nav__icon md-icon"></span>
             Algorithms
@@ -3294,7 +3296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../algorithms/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3303,6 +3305,247 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    数组与矩阵类
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    数组与矩阵类
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-two-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 两数之和（Two Sum）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-three-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 三数之和（Three Sum）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-4sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 四数之和（4Sum）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-container-with-most-water" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 盛水最多的容器（Container With Most Water）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-remove-duplicates-from-sorted-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 删除排序数组中的重复项（Remove Duplicates from Sorted Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-best-time-to-buy-and-sell-stock" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 买卖股票的最佳时机（Best Time to Buy and Sell Stock）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-maximum-subarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 最大子数组和（Maximum Subarray）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-rotate-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 旋转数组（Rotate Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-merge-sorted-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 合并两个有序数组（Merge Sorted Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-kkth-largest-element-in-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 数组中第K个最大元素（Kth Largest Element in an Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-find-first-and-last-position-of-element-in-sorted-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 在排序数组中查找元素的第一个和最后一个位置（Find First and Last Position of Element in Sorted Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-search-in-rotated-sorted-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. 搜索旋转排序数组（Search in Rotated Sorted Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-sort-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. 颜色分类（Sort Colors）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-merge-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. 合并区间（Merge Intervals）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. 子集（Subsets）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-combination-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. 组合总和（Combination Sum）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-permutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 全排列（Permutations）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-set-matrix-zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. 矩阵置零（Set Matrix Zeroes）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-spiral-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. 螺旋矩阵（Spiral Matrix）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-iispiral-matrix-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 螺旋矩阵 II（Spiral Matrix II）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3683,8 +3926,6 @@
                 
   
   
-    
-  
   
   
     
@@ -3696,11 +3937,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_10" >
         
           
           <label class="md-nav__link" for="__nav_3_5_10" id="__nav_3_5_10_label" tabindex="0">
@@ -3714,7 +3955,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_5_10">
             <span class="md-nav__icon md-icon"></span>
             Interview
@@ -3728,7 +3969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../interview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3749,7 +3990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java-fundamentals/" class="md-nav__link">
+      <a href="../../interview/java-fundamentals/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3770,7 +4011,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java-string/" class="md-nav__link">
+      <a href="../../interview/java-string/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3791,7 +4032,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java-exception/" class="md-nav__link">
+      <a href="../../interview/java-exception/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3812,7 +4053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java-programming/" class="md-nav__link">
+      <a href="../../interview/java-programming/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3833,7 +4074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java-collection-framework/" class="md-nav__link">
+      <a href="../../interview/java-collection-framework/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3854,7 +4095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multithreading-and-concurrency/" class="md-nav__link">
+      <a href="../../interview/multithreading-and-concurrency/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3875,7 +4116,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../multithreading-and-concurrency-2/" class="md-nav__link">
+      <a href="../../interview/multithreading-and-concurrency-2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3896,7 +4137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../jvm/" class="md-nav__link">
+      <a href="../../interview/jvm/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3917,7 +4158,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java-heap-space-vs-stack-memory/" class="md-nav__link">
+      <a href="../../interview/java-heap-space-vs-stack-memory/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3938,7 +4179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../java-io-and-nio/" class="md-nav__link">
+      <a href="../../interview/java-io-and-nio/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3959,7 +4200,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../new-features-in-java8-and-above/" class="md-nav__link">
+      <a href="../../interview/new-features-in-java8-and-above/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -3980,7 +4221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../database-and-orm-frameworks/" class="md-nav__link">
+      <a href="../../interview/database-and-orm-frameworks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4001,7 +4242,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../spring-ecossystem/" class="md-nav__link">
+      <a href="../../interview/spring-ecossystem/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4022,7 +4263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../design-patterns/" class="md-nav__link">
+      <a href="../../interview/design-patterns/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4043,7 +4284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../microservices-architecture/" class="md-nav__link">
+      <a href="../../interview/microservices-architecture/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4064,7 +4305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../distributed-systems-and-middleware/" class="md-nav__link">
+      <a href="../../interview/distributed-systems-and-middleware/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -4085,7 +4326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../performance-optimization-and-tuning/" class="md-nav__link">
+      <a href="../../interview/performance-optimization-and-tuning/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -7505,6 +7746,194 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-two-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 两数之和（Two Sum）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-three-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 三数之和（Three Sum）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-4sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. 四数之和（4Sum）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-container-with-most-water" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 盛水最多的容器（Container With Most Water）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-remove-duplicates-from-sorted-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. 删除排序数组中的重复项（Remove Duplicates from Sorted Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-best-time-to-buy-and-sell-stock" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. 买卖股票的最佳时机（Best Time to Buy and Sell Stock）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-maximum-subarray" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. 最大子数组和（Maximum Subarray）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-rotate-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. 旋转数组（Rotate Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-merge-sorted-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. 合并两个有序数组（Merge Sorted Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-kkth-largest-element-in-an-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. 数组中第K个最大元素（Kth Largest Element in an Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-find-first-and-last-position-of-element-in-sorted-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. 在排序数组中查找元素的第一个和最后一个位置（Find First and Last Position of Element in Sorted Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-search-in-rotated-sorted-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. 搜索旋转排序数组（Search in Rotated Sorted Array）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-sort-colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. 颜色分类（Sort Colors）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-merge-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. 合并区间（Merge Intervals）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. 子集（Subsets）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-combination-sum" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. 组合总和（Combination Sum）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-permutations" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 全排列（Permutations）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-set-matrix-zeroes" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. 矩阵置零（Set Matrix Zeroes）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-spiral-matrix" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. 螺旋矩阵（Spiral Matrix）
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-iispiral-matrix-ii" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 螺旋矩阵 II（Spiral Matrix II）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7521,7 +7950,220 @@
   
 
 
-<h1 id="java">Java多线程<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
+<h1 id="_1">数组与矩阵类<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="1-two-sum">1. 两数之和（Two Sum）<a class="headerlink" href="#1-two-sum" title="Permanent link">&para;</a></h2>
+<p><strong>问题描述：</strong></p>
+<p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那两个整数，并返回他们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，同一个元素不能被重复利用。</p>
+<p><strong>示例：</strong></p>
+<pre><code class="language-bash">输入: nums = [2, 7, 11, 15], target = 9
+输出: [0, 1]
+解释: 因为 nums[0] + nums[1] == 9, 我们返回 [0, 1]。
+</code></pre>
+<p><strong>解答：</strong>
+使用HashMap实现时间复杂度为O(n)</p>
+<pre><code class="language-java">import java.util.HashMap;
+import java.util.Map;
+public class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();        
+        for (int i = 0; i &lt; nums.length; i++) {
+            int complement = target - nums[i];            
+            if (map.containsKey(complement)) {
+                return new int[] { map.get(complement), i };
+            }            
+            map.put(nums[i], i);
+        }        
+        throw new IllegalArgumentException(&quot;No two sum solution&quot;);
+    }
+}
+</code></pre>
+<h2 id="2-three-sum">2. 三数之和（Three Sum）<a class="headerlink" href="#2-three-sum" title="Permanent link">&para;</a></h2>
+<p><strong>问题描述：</strong>
+给定一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a, b, c ，使得 a + b + c = 0 ？找出所有满足条件且不重复的三元组。</p>
+<p>注意：答案中不可以包含重复的三元组。</p>
+<p><strong>示例：</strong></p>
+<p>例如，给定数组 nums = [-1, 0, 1, 2, -1, -4]，</p>
+<p>满足要求的三元组集合为：</p>
+<pre><code class="language-bash">[
+  [-1, 0, 1],
+  [-1, -1, 2]
+]
+</code></pre>
+<p><strong>解答：</strong>
+先排序，后选一个数，另两个数用指针移动</p>
+<pre><code class="language-java">import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; threeSum(int[] nums) {
+        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+        Arrays.sort(nums); // 对数组进行排序
+
+        for (int i = 0; i &lt; nums.length - 2; i++) {
+            // 跳过重复的元素
+            if (i &gt; 0 &amp;&amp; nums[i] == nums[i - 1]) {
+                continue;
+            }
+
+            int left = i + 1, right = nums.length - 1;
+            while (left &lt; right) {
+                int sum = nums[i] + nums[left] + nums[right];
+                if (sum &lt; 0) {
+                    left++; // 和太小了，需要增加左指针来增大总和
+                } else if (sum &gt; 0) {
+                    right--; // 和太大了，需要减少右指针来减小总和
+                } else {
+                    // 找到一个解
+                    result.add(Arrays.asList(nums[i], nums[left], nums[right]));
+
+                    // 跳过重复的元素
+                    while (left &lt; right &amp;&amp; nums[left] == nums[left + 1]) {
+                        left++;
+                    }
+                    while (left &lt; right &amp;&amp; nums[right] == nums[right - 1]) {
+                        right--;
+                    }
+
+                    // 移动指针
+                    left++;
+                    right--;
+                }
+            }
+        }
+
+        return result;
+    }
+}
+</code></pre>
+<h2 id="3-4sum">3. 四数之和（4Sum）<a class="headerlink" href="#3-4sum" title="Permanent link">&para;</a></h2>
+<p><strong>问题描述：</strong></p>
+<p>给定一个包含 n 个整数的数组 nums 和一个目标值 target，判断 nums 中是否存在四个元素 a, b, c, d ，使得 a + b + c + d = target ？找出所有满足条件且不重复的四元组。</p>
+<p>注意：答案中不可以包含重复的四元组。</p>
+<p><strong>示例：</strong></p>
+<p>例如，给定数组 nums = [1, 0, -1, 0, -2, 2] 和目标值 target = 0，</p>
+<p>满足要求的四元组集合为：</p>
+<pre><code class="language-bash">[
+  [-2, -1, 1, 2],
+  [-2, 0, 0, 2],
+  [-1, 0, 0, 1]
+]
+</code></pre>
+<p><strong>解答：</strong></p>
+<p>先排序，后第1层选一个数，第2层循环选一个数，另两个数用指针移动</p>
+<pre><code class="language-java">import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class Solution {
+    public List&lt;List&lt;Integer&gt;&gt; fourSum(int[] nums, int target) {
+        List&lt;List&lt;Integer&gt;&gt; result = new ArrayList&lt;&gt;();
+        Arrays.sort(nums); // 对数组进行排序
+
+        for (int i = 0; i &lt; nums.length - 3; i++) {
+            // 跳过重复的元素
+            if (i &gt; 0 &amp;&amp; nums[i] == nums[i - 1]) {
+                continue;
+            }
+
+            for (int j = i + 1; j &lt; nums.length - 2; j++) {
+                // 跳过重复的元素
+                if (j &gt; i + 1 &amp;&amp; nums[j] == nums[j - 1]) {
+                    continue;
+                }
+
+                int left = j + 1, right = nums.length - 1;
+                while (left &lt; right) {
+                    int sum = nums[i] + nums[j] + nums[left] + nums[right];
+                    if (sum &lt; target) {
+                        left++; // 和太小了，需要增加左指针来增大总和
+                    } else if (sum &gt; target) {
+                        right--; // 和太大了，需要减少右指针来减小总和
+                    } else {
+                        // 找到一个解
+                        result.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
+
+                        // 跳过重复的元素
+                        while (left &lt; right &amp;&amp; nums[left] == nums[left + 1]) {
+                            left++;
+                        }
+                        while (left &lt; right &amp;&amp; nums[right] == nums[right - 1]) {
+                            right--;
+                        }
+
+                        // 移动指针
+                        left++;
+                        right--;
+                    }
+                }
+            }
+        }
+
+        return result;
+    }
+}
+</code></pre>
+<h2 id="4-container-with-most-water">4. 盛水最多的容器（Container With Most Water）<a class="headerlink" href="#4-container-with-most-water" title="Permanent link">&para;</a></h2>
+<p><strong>问题描述：</strong></p>
+<p>给定一个长度为 n 的整数数组 height，其中每个数代表坐标轴中的一个点的高度。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</p>
+<p><strong>示例：</strong></p>
+<p>例如，给定数组 height = [1,8,6,2,5,4,8,3,7]，最大容器的面积为 49。</p>
+<p><strong>解答：</strong></p>
+<p>高度因为是盛水，所以取小的值，宽度为两根柱子这间的距离即索引之差</p>
+<pre><code class="language-java">class Solution {
+    public int maxArea(int[] height) {
+        int maxArea = 0;
+        int left = 0;
+        int right = height.length - 1;
+
+        while (left &lt; right) {
+            // 计算当前容器的面积
+            int currentArea = Math.min(height[left], height[right]) * (right - left);
+
+            // 更新最大面积
+            maxArea = Math.max(maxArea, currentArea);
+
+            // 移动较矮的那个指针
+            if (height[left] &lt; height[right]) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return maxArea;
+    }
+}
+</code></pre>
+<h2 id="5-remove-duplicates-from-sorted-array">5. 删除排序数组中的重复项（Remove Duplicates from Sorted Array）<a class="headerlink" href="#5-remove-duplicates-from-sorted-array" title="Permanent link">&para;</a></h2>
+<p><strong>问题描述：</strong></p>
+<p><strong>示例：</strong></p>
+<pre><code class="language-bash"></code></pre>
+<p><strong>解答：</strong></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="6-best-time-to-buy-and-sell-stock">6. 买卖股票的最佳时机（Best Time to Buy and Sell Stock）<a class="headerlink" href="#6-best-time-to-buy-and-sell-stock" title="Permanent link">&para;</a></h2>
+<p><strong>问题描述：</strong></p>
+<p><strong>示例：</strong></p>
+<pre><code class="language-bash"></code></pre>
+<p><strong>解答：</strong></p>
+<pre><code class="language-java">
+</code></pre>
+<h2 id="7-maximum-subarray">7. 最大子数组和（Maximum Subarray）<a class="headerlink" href="#7-maximum-subarray" title="Permanent link">&para;</a></h2>
+<h2 id="8-rotate-array">8. 旋转数组（Rotate Array）<a class="headerlink" href="#8-rotate-array" title="Permanent link">&para;</a></h2>
+<h2 id="9-merge-sorted-array">9. 合并两个有序数组（Merge Sorted Array）<a class="headerlink" href="#9-merge-sorted-array" title="Permanent link">&para;</a></h2>
+<h2 id="10-kkth-largest-element-in-an-array">10. 数组中第K个最大元素（Kth Largest Element in an Array）<a class="headerlink" href="#10-kkth-largest-element-in-an-array" title="Permanent link">&para;</a></h2>
+<h2 id="11-find-first-and-last-position-of-element-in-sorted-array">11. 在排序数组中查找元素的第一个和最后一个位置（Find First and Last Position of Element in Sorted Array）<a class="headerlink" href="#11-find-first-and-last-position-of-element-in-sorted-array" title="Permanent link">&para;</a></h2>
+<h2 id="12-search-in-rotated-sorted-array">12. 搜索旋转排序数组（Search in Rotated Sorted Array）<a class="headerlink" href="#12-search-in-rotated-sorted-array" title="Permanent link">&para;</a></h2>
+<h2 id="13-sort-colors">13. 颜色分类（Sort Colors）<a class="headerlink" href="#13-sort-colors" title="Permanent link">&para;</a></h2>
+<h2 id="14-merge-intervals">14. 合并区间（Merge Intervals）<a class="headerlink" href="#14-merge-intervals" title="Permanent link">&para;</a></h2>
+<h2 id="15-subsets">15. 子集（Subsets）<a class="headerlink" href="#15-subsets" title="Permanent link">&para;</a></h2>
+<h2 id="16-combination-sum">16. 组合总和（Combination Sum）<a class="headerlink" href="#16-combination-sum" title="Permanent link">&para;</a></h2>
+<h2 id="17-permutations">17. 全排列（Permutations）<a class="headerlink" href="#17-permutations" title="Permanent link">&para;</a></h2>
+<h2 id="18-set-matrix-zeroes">18. 矩阵置零（Set Matrix Zeroes）<a class="headerlink" href="#18-set-matrix-zeroes" title="Permanent link">&para;</a></h2>
+<h2 id="19-spiral-matrix">19. 螺旋矩阵（Spiral Matrix）<a class="headerlink" href="#19-spiral-matrix" title="Permanent link">&para;</a></h2>
+<h2 id="20-iispiral-matrix-ii">20. 螺旋矩阵 II（Spiral Matrix II）<a class="headerlink" href="#20-iispiral-matrix-ii" title="Permanent link">&para;</a></h2>
 
 
 

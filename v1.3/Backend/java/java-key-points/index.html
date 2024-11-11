@@ -4014,6 +4014,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../algorithms/array-and-matrix/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数组与矩阵类
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -8930,8 +8951,8 @@
 <li>数据结构：JDK1.7中ConcurrentHashMap使用分段数组+链表结构，HashTable使用数组+链表结构。链表主要是为解决哈希冲突而存在。到了JDK1.8时ConcurrentHashMap采用Node数组+链表+红黑树的结构。</li>
 <li>线程安全的实现方式：在JDK1.7时，ConcurrentHashMap使用分段锁对整个桶数组进行分段，多线程访问不同数组段就不存在锁竞争，提高了并发效率。到了JDK1.8时直接用Node数组+链表+红黑树实现，并发使用synchronized和CAS来操作。JDK1.8可以看到Segment结构是为了兼容旧版。HashTable是使用synchronized来保证线程安全，效率较低，高并发时可能会进入阻塞和轮询状态。</li>
 </ul>
-<p><a class="glightbox" href="../assets/2021-09-06-22-48-45.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HashTable" src="../assets/2021-09-06-22-48-45.png" /></a></p>
-<p><a class="glightbox" href="../assets/2021-09-06-22-49-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ConcurrentHashMap" src="../assets/2021-09-06-22-49-25.png" /></a></p>
+<p><a class="glightbox" href="assets/2021-09-06-22-48-45.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="HashTable" src="assets/2021-09-06-22-48-45.png" /></a></p>
+<p><a class="glightbox" href="assets/2021-09-06-22-49-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="ConcurrentHashMap" src="assets/2021-09-06-22-49-25.png" /></a></p>
 <h3 id="copyonwritearraylist">CopyOnWriteArrayList是如何做到读取完全不用加锁，而且写入不阻塞读取操作的呢？<a class="headerlink" href="#copyonwritearraylist" title="Permanent link">&para;</a></h3>
 <p>读取不会修改数据，因此没有进行同步控制或加锁操作，通过volatile保证可见性。写入的时候加了ReentrantLock可重入锁来保证同步，避免多线写的时候拷贝多个副本。</p>
 <h3 id="java_1">Java的锁有哪些？<a class="headerlink" href="#java_1" title="Permanent link">&para;</a></h3>
@@ -8960,7 +8981,7 @@
     ReentrantLock用来实现分组唤醒的线程们，可以精确唤醒，而不是synchronized要么随机唤醒一个线程要么唤醒全部线程</li>
 </ol>
 <h3 id="jdk1718">jdk1.7和1.8的区别<a class="headerlink" href="#jdk1718" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../assets/2021-09-05-23-37-45.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="jdk1.7vs1.8" src="../assets/2021-09-05-23-37-45.png" /></a></p>
+<p><a class="glightbox" href="assets/2021-09-05-23-37-45.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="jdk1.7vs1.8" src="assets/2021-09-05-23-37-45.png" /></a></p>
 <ol>
 <li>增加了stream特性，主要基于fork-join框架构建，可以在并行流和顺序流之间进行切换。</li>
 <li>Hashmap性能优化。</li>
@@ -9022,7 +9043,7 @@ ArrayList：自动增长原数组的50%。</p>
     4. dependsOn
     5. beanClass</p>
 <p>实例化-&gt;填充属性-&gt;BeanNameAware绑定Name ID-&gt;BeanFactoryAware绑定Factory-&gt;ApplicationContextAware绑定上下文-&gt; Bean后置处理器预初始化-&gt;InitializingBean的后属性设置-&gt;自定义初始化方法-&gt;Bean后置处理器的后初始化-&gt; 放到单例池待用-&gt; DisposableBean的销毁方法-&gt;自定义销毁方法</p>
-<p><a class="glightbox" href="../assets/2021-09-06-22-50-53.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="spring bean life" src="../assets/2021-09-06-22-50-53.png" /></a></p>
+<p><a class="glightbox" href="assets/2021-09-06-22-50-53.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="spring bean life" src="assets/2021-09-06-22-50-53.png" /></a></p>
 <h3 id="bean">Bean创建的几种方式<a class="headerlink" href="#bean" title="Permanent link">&para;</a></h3>
 <p>@Bean, 配置器创建, BeanFactory.registerSingleton</p>
 <h3 id="applicationcontextbeanfactory">ApplicationContext与BeanFactory的区别<a class="headerlink" href="#applicationcontextbeanfactory" title="Permanent link">&para;</a></h3>
@@ -9095,13 +9116,13 @@ https://blog.csdn.net/zeb_perfect/article/details/54135506</p>
 </ol>
 <h3 id="_5">缓存数据不一致问题怎么解决的？<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <p>解决方案，1. 延时双删除，确保最后一步成功，若不成功采用重试机制和记日志的方式最终解决。2. 串行化</p>
-<p><a class="glightbox" href="../assets/2021-09-06-22-57-04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="延时双删除" src="../assets/2021-09-06-22-57-04.png" /></a></p>
-<p><a class="glightbox" href="../assets/2021-09-06-22-57-42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="串行化" src="../assets/2021-09-06-22-57-42.png" /></a></p>
+<p><a class="glightbox" href="assets/2021-09-06-22-57-04.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="延时双删除" src="assets/2021-09-06-22-57-04.png" /></a></p>
+<p><a class="glightbox" href="assets/2021-09-06-22-57-42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="串行化" src="assets/2021-09-06-22-57-42.png" /></a></p>
 <h2 id="_6">队例<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <h3 id="_7">为什么要用消息队列？<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
 <p>消息队列是一种“先进先出”的数据结构。常用于解耦、异步、削峰（还有经济考量）。</p>
 <h3 id="_8">各种消息队列产品的比较？<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
-<p><a class="glightbox" href="../assets/2021-09-05-23-48-58.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mq copare" src="../assets/2021-09-05-23-48-58.png" /></a></p>
+<p><a class="glightbox" href="assets/2021-09-05-23-48-58.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mq copare" src="assets/2021-09-05-23-48-58.png" /></a></p>
 <h3 id="_9">消息队列的优点和缺点？<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
 <p>优点解耦、异步、削峰。缺点系统可用性降低、系统复杂度提高、一致性问题。</p>
 <h3 id="_10">如何保证消息队列的高可用？<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
@@ -9115,7 +9136,7 @@ https://blog.csdn.net/zeb_perfect/article/details/54135506</p>
 <h3 id="mq">基于MQ的分布式事务实现？<a class="headerlink" href="#mq" title="Permanent link">&para;</a></h3>
 <p>消息发送方：1. 处理业务逻辑；2. 保存消息到本地数据库；3. 发送消息给MQ；4. 监听MQ消息方通知消息，更改消息状态为已处理；5. 定时任务将长期未处理消息得新发送到MQ。</p>
 <p>消息消费方：1. 监听MQ中间件消息；2. 判断消息是否得复，重复就丢弃；3. 消息未重复，执行本地业务；4. 业务处理完毕，写消息记录到本地数据库；5. 发送通知消息到MQ。</p>
-<p><a class="glightbox" href="../assets/2021-09-06-22-44-42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mq transtion" src="../assets/2021-09-06-22-44-42.png" /></a></p>
+<p><a class="glightbox" href="assets/2021-09-06-22-44-42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mq transtion" src="assets/2021-09-06-22-44-42.png" /></a></p>
 <p>Ref:https://www.bilibili.com/video/BV1tK411p71q?from=search&amp;seid=11076650873668614869</p>
 <h2 id="_14">微服务<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h2>
 <h3 id="zookeepereureka">谈谈微服务注册中心Zookeeper&amp;Eureka<a class="headerlink" href="#zookeepereureka" title="Permanent link">&para;</a></h3>
