@@ -2,7 +2,7 @@
 
 以下是 Java 中与数据库操作及 ORM 框架相关的常见面试题及答案，涵盖了 JDBC、Hibernate、MyBatis 等技术：
 
-## 1. **什么是 JDBC？它的工作原理是什么？**
+## 1. 什么是 JDBC？它的工作原理是什么？
 
 **答案**：
 
@@ -24,21 +24,20 @@ stmt.close();
 conn.close();
 ```
 
-## 2. **什么是 ORM？ORM 的优缺点是什么？**
+## 2. 什么是 ORM？ORM 的优缺点是什么？
 
 **答案**：
 
 - **ORM（Object-Relational Mapping）** 是对象关系映射的技术，用于在对象模型与数据库关系模型之间建立映射。
 - **优点**：
-- 提升开发效率：简化数据持久化操作，无需编写大量 SQL 代码。
-- 减少冗余代码：提供了基于对象的方式来操作数据库。
-- 数据库无关性：能够更方便地切换数据库。
+  - 提升开发效率：简化数据持久化操作，无需编写大量 SQL 代码。
+  - 减少冗余代码：提供了基于对象的方式来操作数据库。
+  - 数据库无关性：能够更方便地切换数据库。
 - **缺点**：
-- 性能损耗：在复杂场景下，ORM 生成的 SQL 可能不够优化。
-- 难以实现复杂查询：对于多表连接和复杂业务逻辑，可能需要手写 SQL。
+  - 性能损耗：在复杂场景下，ORM 生成的 SQL 可能不够优化。
+  - 难以实现复杂查询：对于多表连接和复杂业务逻辑，可能需要手写 SQL。
 
-
-## 3. **Hibernate 中有哪些重要注解？**
+## 3. Hibernate 中有哪些重要注解？
 
 **答案**：
 
@@ -66,7 +65,7 @@ public class User {
 }
 ```
 
-## 4. **如何选择 Hibernate 的主键生成策略？**
+## 4. 如何选择 Hibernate 的主键生成策略？
 
 **答案**：
 
@@ -82,7 +81,7 @@ public class User {
 private Long id;
 ```
 
-## 5. **Hibernate 和 MyBatis 的区别是什么？**
+## 5. Hibernate 和 MyBatis 的区别是什么？
 
 **答案**：
 
@@ -94,7 +93,7 @@ private Long id;
 - 灵活性高，可通过 XML 和注解自定义 SQL 语句。
 - **适用场景**：Hibernate 适合结构化、变化少的系统；MyBatis 适合复杂查询、多样化需求的系统。
 
-## 6. **什么是 Hibernate 的 Session 和 SessionFactory？**
+## 6. 什么是 Hibernate 的 Session 和 SessionFactory？
 
 **答案**：
 
@@ -103,7 +102,7 @@ private Long id;
 - **使用方式**：SessionFactory 创建时会根据配置文件读取所有数据库配置，并创建数据库连接池。
 
 
-## 7. **Hibernate 的一级缓存和二级缓存的区别？**
+## 7. Hibernate 的一级缓存和二级缓存的区别？
 
 **答案**：
 
@@ -115,7 +114,7 @@ private Long id;
 - 适用于跨事务和会话的数据缓存，提高读操作性能。
 - 常用实现：EHCache、Infinispan 等。
 
-## 8. **MyBatis 中的 #{} 和 ${} 有什么区别？**
+## 8. MyBatis 中的 #{} 和 ${} 有什么区别？
 
 **答案**：
 
@@ -129,7 +128,7 @@ private Long id;
 </select>
 ```
 
-## 9. **MyBatis 的 XML 配置文件中常见的标签有哪些？**
+## 9. MyBatis 的 XML 配置文件中常见的标签有哪些？
 
 **答案**：
 
@@ -140,7 +139,7 @@ private Long id;
 - **`<resultMap>`**：映射查询结果到 Java 对象。
 - **`<if>`**、**`<choose>`**、**`<foreach>`** 等：用于动态 SQL 生成。
 
-## 10. **什么是 JPA？Hibernate 是 JPA 的实现吗？**
+## 10. 什么是 JPA？Hibernate 是 JPA 的实现吗？
 
 **答案**：
 
@@ -148,7 +147,7 @@ private Long id;
 - Hibernate 是 JPA 的实现之一，除此之外还有 EclipseLink、OpenJPA 等实现。
 - JPA 的优势是规范统一，方便在实现之间切换；劣势是缺乏特性扩展，某些高级功能需特定实现来支持。
 
-## 11. **如何使用 JPA 实现一对多关系？**
+## 11. 如何使用 JPA 实现一对多关系？
 
 **答案**：
 
@@ -178,7 +177,7 @@ public class Order {
 }
 ```
 
-## 12. **如何实现 MyBatis 分页查询？**
+## 12. 如何实现 MyBatis 分页查询？
 
 **答案**：
 
@@ -192,7 +191,7 @@ public class Order {
 ```
 
 
-## 13. **如何在 Spring Boot 中集成 MyBatis？**
+## 13. 如何在 Spring Boot 中集成 MyBatis？
 
 **答案**：
 
@@ -209,7 +208,7 @@ spring:
 ```
 
 
-## 14. **什么是 Hibernate 的 HQL？如何使用？**
+## 14. 什么是 Hibernate 的 HQL？如何使用？
 
 **答案**：
 
@@ -221,7 +220,7 @@ spring:
 List<User> users = session.createQuery("FROM User WHERE age > 18", User.class).list();
 ```
 
-## 15. **如何使用 MyBatis 动态 SQL？**
+## 15. 如何使用 MyBatis 动态 SQL？
 
 **答案**：
 
