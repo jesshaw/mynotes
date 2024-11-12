@@ -43,12 +43,15 @@ Spring Bean 的生命周期主要包含 **实例化**、**依赖注入**、**初
 1. **实例化（Instantiation）**：Spring容器根据配置文件或注解扫描创建Bean实例。
 2. **属性赋值（Populate Properties）**：为Bean的属性注入依赖对象。
 3. **初始化（Initialization）**：
+
    - 首先调用 `BeanNameAware` 和 `BeanFactoryAware` 等接口方法来让 Bean 获得容器的相关信息。
    - 接着调用 `@PostConstruct` 注解标记的方法（如果有）初始化 Bean。
    - 然后调用 `InitializingBean` 接口中的 `afterPropertiesSet()` 方法。
    - 最后调用在配置文件中指定的 `init-method` 方法。
+
 4. **就绪使用（Ready to Use）**：Bean 已初始化完成，可以正常使用。
 5. **销毁（Destruction）**：
+
    - Spring 容器关闭时，首先调用 `@PreDestroy` 注解标记的方法。
    - 然后调用 `DisposableBean` 接口的 `destroy()` 方法。
    - 最后调用配置文件中指定的 `destroy-method`。
