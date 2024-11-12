@@ -7933,14 +7933,26 @@
 <ol>
 <li><strong>实例化（Instantiation）</strong>：Spring容器根据配置文件或注解扫描创建Bean实例。</li>
 <li><strong>属性赋值（Populate Properties）</strong>：为Bean的属性注入依赖对象。</li>
-<li><strong>初始化（Initialization）</strong>：</li>
-<li>首先调用 <code>BeanNameAware</code> 和 <code>BeanFactoryAware</code> 等接口方法来让 Bean 获得容器的相关信息。</li>
+<li>
+<p><strong>初始化（Initialization）</strong>：</p>
+</li>
+<li>
+<p>首先调用 <code>BeanNameAware</code> 和 <code>BeanFactoryAware</code> 等接口方法来让 Bean 获得容器的相关信息。</p>
+</li>
 <li>接着调用 <code>@PostConstruct</code> 注解标记的方法（如果有）初始化 Bean。</li>
 <li>然后调用 <code>InitializingBean</code> 接口中的 <code>afterPropertiesSet()</code> 方法。</li>
-<li>最后调用在配置文件中指定的 <code>init-method</code> 方法。</li>
-<li><strong>就绪使用（Ready to Use）</strong>：Bean 已初始化完成，可以正常使用。</li>
-<li><strong>销毁（Destruction）</strong>：</li>
-<li>Spring 容器关闭时，首先调用 <code>@PreDestroy</code> 注解标记的方法。</li>
+<li>
+<p>最后调用在配置文件中指定的 <code>init-method</code> 方法。</p>
+</li>
+<li>
+<p><strong>就绪使用（Ready to Use）</strong>：Bean 已初始化完成，可以正常使用。</p>
+</li>
+<li>
+<p><strong>销毁（Destruction）</strong>：</p>
+</li>
+<li>
+<p>Spring 容器关闭时，首先调用 <code>@PreDestroy</code> 注解标记的方法。</p>
+</li>
 <li>然后调用 <code>DisposableBean</code> 接口的 <code>destroy()</code> 方法。</li>
 <li>最后调用配置文件中指定的 <code>destroy-method</code>。</li>
 </ol>
