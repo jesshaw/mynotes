@@ -64,6 +64,9 @@ markdown_extensions:
   - pymdownx.emoji:  # 表情和品牌图标支持
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - attr_list # markdown按钮样式支持, 通地属性
   - md_in_html
   - pymdownx.caret
