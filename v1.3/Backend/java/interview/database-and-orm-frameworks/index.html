@@ -7862,7 +7862,7 @@
 
 <h1 id="orm">数据库及ORM框架<a class="headerlink" href="#orm" title="Permanent link">&para;</a></h1>
 <p>以下是 Java 中与数据库操作及 ORM 框架相关的常见面试题及答案，涵盖了 JDBC、Hibernate、MyBatis 等技术：</p>
-<h2 id="1-jdbc">1. <strong>什么是 JDBC？它的工作原理是什么？</strong><a class="headerlink" href="#1-jdbc" title="Permanent link">&para;</a></h2>
+<h2 id="1-jdbc">1. 什么是 JDBC？它的工作原理是什么？<a class="headerlink" href="#1-jdbc" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>JDBC（Java Database Connectivity）</strong> 是 Java 提供的一套 API，允许 Java 应用程序与关系数据库进行交互。</li>
@@ -7881,7 +7881,7 @@ rs.close();
 stmt.close();
 conn.close();
 </code></pre>
-<h2 id="2-ormorm">2. <strong>什么是 ORM？ORM 的优缺点是什么？</strong><a class="headerlink" href="#2-ormorm" title="Permanent link">&para;</a></h2>
+<h2 id="2-ormorm">2. 什么是 ORM？ORM 的优缺点是什么？<a class="headerlink" href="#2-ormorm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>ORM（Object-Relational Mapping）</strong> 是对象关系映射的技术，用于在对象模型与数据库关系模型之间建立映射。</li>
@@ -7893,7 +7893,7 @@ conn.close();
 <li>性能损耗：在复杂场景下，ORM 生成的 SQL 可能不够优化。</li>
 <li>难以实现复杂查询：对于多表连接和复杂业务逻辑，可能需要手写 SQL。</li>
 </ul>
-<h2 id="3-hibernate">3. <strong>Hibernate 中有哪些重要注解？</strong><a class="headerlink" href="#3-hibernate" title="Permanent link">&para;</a></h2>
+<h2 id="3-hibernate">3. Hibernate 中有哪些重要注解？<a class="headerlink" href="#3-hibernate" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>@Entity</strong>：用于将类声明为实体类。</li>
@@ -7918,7 +7918,7 @@ public class User {
     private List&lt;Order&gt; orders;
 }
 </code></pre>
-<h2 id="4-hibernate">4. <strong>如何选择 Hibernate 的主键生成策略？</strong><a class="headerlink" href="#4-hibernate" title="Permanent link">&para;</a></h2>
+<h2 id="4-hibernate">4. 如何选择 Hibernate 的主键生成策略？<a class="headerlink" href="#4-hibernate" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>IDENTITY</strong>：使用数据库的自增字段（如 MySQL 的 <code>AUTO_INCREMENT</code>）。</li>
@@ -7931,7 +7931,7 @@ public class User {
 @GeneratedValue(strategy = GenerationType.SEQUENCE)
 private Long id;
 </code></pre>
-<h2 id="5-hibernate-mybatis">5. <strong>Hibernate 和 MyBatis 的区别是什么？</strong><a class="headerlink" href="#5-hibernate-mybatis" title="Permanent link">&para;</a></h2>
+<h2 id="5-hibernate-mybatis">5. Hibernate 和 MyBatis 的区别是什么？<a class="headerlink" href="#5-hibernate-mybatis" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>Hibernate</strong>：</li>
@@ -7942,14 +7942,14 @@ private Long id;
 <li>灵活性高，可通过 XML 和注解自定义 SQL 语句。</li>
 <li><strong>适用场景</strong>：Hibernate 适合结构化、变化少的系统；MyBatis 适合复杂查询、多样化需求的系统。</li>
 </ul>
-<h2 id="6-hibernate-session-sessionfactory">6. <strong>什么是 Hibernate 的 Session 和 SessionFactory？</strong><a class="headerlink" href="#6-hibernate-session-sessionfactory" title="Permanent link">&para;</a></h2>
+<h2 id="6-hibernate-session-sessionfactory">6. 什么是 Hibernate 的 Session 和 SessionFactory？<a class="headerlink" href="#6-hibernate-session-sessionfactory" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>Session</strong>：用于与数据库进行 CRUD 操作的对象，生命周期通常与事务一致，非线程安全。</li>
 <li><strong>SessionFactory</strong>：Session 的工厂，用于生成 Session 对象，线程安全且在应用中通常为单例。</li>
 <li><strong>使用方式</strong>：SessionFactory 创建时会根据配置文件读取所有数据库配置，并创建数据库连接池。</li>
 </ul>
-<h2 id="7-hibernate">7. <strong>Hibernate 的一级缓存和二级缓存的区别？</strong><a class="headerlink" href="#7-hibernate" title="Permanent link">&para;</a></h2>
+<h2 id="7-hibernate">7. Hibernate 的一级缓存和二级缓存的区别？<a class="headerlink" href="#7-hibernate" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>一级缓存</strong>：</li>
@@ -7960,7 +7960,7 @@ private Long id;
 <li>适用于跨事务和会话的数据缓存，提高读操作性能。</li>
 <li>常用实现：EHCache、Infinispan 等。</li>
 </ul>
-<h2 id="8-mybatis">8. <strong>MyBatis 中的 #{} 和 ${} 有什么区别？</strong><a class="headerlink" href="#8-mybatis" title="Permanent link">&para;</a></h2>
+<h2 id="8-mybatis">8. MyBatis 中的 #{} 和 ${} 有什么区别？<a class="headerlink" href="#8-mybatis" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>#{}</code> 用于预编译的参数占位符，能防止 SQL 注入。</li>
@@ -7971,7 +7971,7 @@ private Long id;
     SELECT * FROM users WHERE username = #{username} AND age &gt; ${age}
 &lt;/select&gt;
 </code></pre>
-<h2 id="9-mybatis-xml">9. <strong>MyBatis 的 XML 配置文件中常见的标签有哪些？</strong><a class="headerlink" href="#9-mybatis-xml" title="Permanent link">&para;</a></h2>
+<h2 id="9-mybatis-xml">9. MyBatis 的 XML 配置文件中常见的标签有哪些？<a class="headerlink" href="#9-mybatis-xml" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong><code>&lt;select&gt;</code></strong>：定义查询语句。</li>
@@ -7981,14 +7981,14 @@ private Long id;
 <li><strong><code>&lt;resultMap&gt;</code></strong>：映射查询结果到 Java 对象。</li>
 <li><strong><code>&lt;if&gt;</code></strong>、<strong><code>&lt;choose&gt;</code></strong>、<strong><code>&lt;foreach&gt;</code></strong> 等：用于动态 SQL 生成。</li>
 </ul>
-<h2 id="10-jpahibernate-jpa">10. <strong>什么是 JPA？Hibernate 是 JPA 的实现吗？</strong><a class="headerlink" href="#10-jpahibernate-jpa" title="Permanent link">&para;</a></h2>
+<h2 id="10-jpahibernate-jpa">10. 什么是 JPA？Hibernate 是 JPA 的实现吗？<a class="headerlink" href="#10-jpahibernate-jpa" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>JPA（Java Persistence API）</strong> 是 Java EE 提供的 ORM 规范，提供了统一的数据持久化标准。</li>
 <li>Hibernate 是 JPA 的实现之一，除此之外还有 EclipseLink、OpenJPA 等实现。</li>
 <li>JPA 的优势是规范统一，方便在实现之间切换；劣势是缺乏特性扩展，某些高级功能需特定实现来支持。</li>
 </ul>
-<h2 id="11-jpa">11. <strong>如何使用 JPA 实现一对多关系？</strong><a class="headerlink" href="#11-jpa" title="Permanent link">&para;</a></h2>
+<h2 id="11-jpa">11. 如何使用 JPA 实现一对多关系？<a class="headerlink" href="#11-jpa" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>使用 <code>@OneToMany</code> 注解定义一对多关系，并在从表上使用 <code>@ManyToOne</code> 注解建立反向关系。</li>
@@ -8015,7 +8015,7 @@ public class Order {
     private User user;
 }
 </code></pre>
-<h2 id="12-mybatis">12. <strong>如何实现 MyBatis 分页查询？</strong><a class="headerlink" href="#12-mybatis" title="Permanent link">&para;</a></h2>
+<h2 id="12-mybatis">12. 如何实现 MyBatis 分页查询？<a class="headerlink" href="#12-mybatis" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>可以在 SQL 中使用 <code>LIMIT</code> 和 <code>OFFSET</code>，也可以通过插件扩展如 PageHelper 实现。</li>
@@ -8025,7 +8025,7 @@ public class Order {
     SELECT * FROM users LIMIT #{limit} OFFSET #{offset}
 &lt;/select&gt;
 </code></pre>
-<h2 id="13-spring-boot-mybatis">13. <strong>如何在 Spring Boot 中集成 MyBatis？</strong><a class="headerlink" href="#13-spring-boot-mybatis" title="Permanent link">&para;</a></h2>
+<h2 id="13-spring-boot-mybatis">13. 如何在 Spring Boot 中集成 MyBatis？<a class="headerlink" href="#13-spring-boot-mybatis" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>需要引入 <code>mybatis-spring-boot-starter</code> 依赖，并在 <code>application.yml</code> 中配置数据源及 MyBatis 相关信息。</li>
@@ -8039,7 +8039,7 @@ public class Order {
     mybatis:
     mapper-locations: classpath:/mappers/*.xml
 </code></pre>
-<h2 id="14-hibernate-hql">14. <strong>什么是 Hibernate 的 HQL？如何使用？</strong><a class="headerlink" href="#14-hibernate-hql" title="Permanent link">&para;</a></h2>
+<h2 id="14-hibernate-hql">14. 什么是 Hibernate 的 HQL？如何使用？<a class="headerlink" href="#14-hibernate-hql" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>HQL（Hibernate Query Language）</strong> 是 Hibernate 提供的面向对象的查询语言，类似于 SQL，但操作的是实体对象。</li>
@@ -8048,7 +8048,7 @@ public class Order {
 </ul>
 <pre><code class="language-java">List&lt;User&gt; users = session.createQuery(&quot;FROM User WHERE age &gt; 18&quot;, User.class).list();
 </code></pre>
-<h2 id="15-mybatis-sql">15. <strong>如何使用 MyBatis 动态 SQL？</strong><a class="headerlink" href="#15-mybatis-sql" title="Permanent link">&para;</a></h2>
+<h2 id="15-mybatis-sql">15. 如何使用 MyBatis 动态 SQL？<a class="headerlink" href="#15-mybatis-sql" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>MyBatis 支持使用 <code>&lt;if&gt;</code>, <code>&lt;choose&gt;</code>, <code>&lt;when&gt;</code>, <code>&lt;otherwise&gt;</code>, <code>&lt;foreach&gt;</code> 等标签动态生成 SQL。</li>
