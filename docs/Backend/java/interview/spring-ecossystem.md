@@ -34,7 +34,38 @@
   - **BeanFactory**：基础的 IoC 容器，延迟初始化，只在对象被调用时创建实例。
   - **ApplicationContext**：功能更丰富，支持事件监听、国际化等。常见实现包括 `ClassPathXmlApplicationContext` 和 `AnnotationConfigApplicationContext`。
 
-## 4. Spring Bean 的作用域有哪些？
+## 4. 说说Spring Bean 的生命周期？
+
+**答案**：
+
+Spring Bean 的生命周期主要包含 **实例化**、**依赖注入**、**初始化**、**销毁** 四个阶段，重点在于 **初始化和销毁的顺序**，具体如下：
+
+1. **实例化（Instantiation）**：Spring容器根据配置文件或注解扫描创建Bean实例。
+2. **属性赋值（Populate Properties）**：为Bean的属性注入依赖对象。
+3. **初始化（Initialization）**：
+   - 首先调用 `BeanNameAware` 和 `BeanFactoryAware` 等接口方法来让 Bean 获得容器的相关信息。
+   - 接着调用 `@PostConstruct` 注解标记的方法（如果有）初始化 Bean。
+   - 然后调用 `InitializingBean` 接口中的 `afterPropertiesSet()` 方法。
+   - 最后调用在配置文件中指定的 `init-method` 方法。
+4. **就绪使用（Ready to Use）**：Bean 已初始化完成，可以正常使用。
+5. **销毁（Destruction）**：
+   - Spring 容器关闭时，首先调用 `@PreDestroy` 注解标记的方法。
+   - 然后调用 `DisposableBean` 接口的 `destroy()` 方法。
+   - 最后调用配置文件中指定的 `destroy-method`。
+
+## 5. 已经实体化了，为什么还要依赖注入和初始化？
+
+**答案**：
+
+实例化之后仍然需要依赖注入和初始化阶段，因为：
+
+1. **依赖注入**：在实例化（创建对象）时，**Bean本身的属性还未配置**。很多情况下，Bean 需要其他组件（比如数据库连接池、服务类等）才能正常工作。依赖注入阶段会**将这些必要的依赖注入进来**，确保 Bean 准备好在容器中协同工作。
+
+2. **初始化阶段**：即使依赖注入完成后，Bean 仍然可能**需要额外的初始化工作来确保其完全准备好**（例如：建立连接，如数据库连接或网络连接；启动内部资源，如线程池；执行一些验证或数据预加载）。这些任务都属于初始化操作，Spring 提供了 `@PostConstruct`、`afterPropertiesSet()`、`init-method` 等回调来完成这些任务，以**确保 Bean 在正式使用前处于最佳状态**。
+
+因此，**依赖注入和初始化阶段**的分离设计，使得 Spring 容器能够以高度的灵活性和可配置性来管理 Bean 生命周期，使得开发者可以在 Bean 的创建过程中分步控制属性注入、依赖配置和资源初始化。
+
+## 6. Spring Bean 的作用域有哪些？
 
 **答案**：
 
@@ -44,7 +75,7 @@
 - **session**：在每个 HTTP 会话中创建一个实例（仅适用于 Web 应用）。
 - **global-session**：跨会话使用单例实例。
 
-## 5. Spring 中的 AOP 是什么？有何作用？
+## 7. Spring 中的 AOP 是什么？有何作用？
 
 **答案**：
 
@@ -56,7 +87,7 @@
   - **Pointcut**：定义在哪里应用 Advice。
   - **Weaving**：将 Advice 应用到 Join Point 的过程。
 
-## 6. 什么是 Spring Boot？Spring Boot 的主要优点是什么？
+## 8. 什么是 Spring Boot？Spring Boot 的主要优点是什么？
 
 **答案**：
 
@@ -68,14 +99,14 @@
   - 丰富的 Spring Boot Starter 依赖，简化了依赖管理。
   - 支持自动配置，根据项目中的依赖自动设置配置。
 
-## 7. Spring Boot 的自动配置原理是什么？
+## 9. Spring Boot 的自动配置原理是什么？
 
 **答案**：
 
 - Spring Boot 使用 `@EnableAutoConfiguration` 注解，根据类路径下的依赖自动配置 Bean。
 - 通过 **`spring.factories`** 文件来加载自动配置类，每个配置类包含条件注解（如 `@ConditionalOnClass`、`@ConditionalOnMissingBean`）来判断是否应该应用某个自动配置。
 
-## 8. Spring MVC 的常见注解有哪些？
+## 10. Spring MVC 的常见注解有哪些？
 
 **答案**：
 
@@ -87,7 +118,7 @@
 - **@ResponseBody**：将方法返回的对象序列化为 JSON 或 XML 响应。
 - **@ExceptionHandler**：用于处理异常并返回自定义响应。
 
-## 9. 如何在 Spring MVC 中实现文件上传？
+## 11. 如何在 Spring MVC 中实现文件上传？
 
 **答案**：
 
@@ -107,7 +138,7 @@
   }
   ```
 
-## 10. 什么是 Spring Data？它如何简化数据访问？
+## 12. 什么是 Spring Data？它如何简化数据访问？
 
 **答案**：
 
@@ -115,7 +146,7 @@
 - 通过定义仓储接口（如 `JpaRepository`、`MongoRepository` 等），Spring Data 自动提供 CRUD 操作的实现，减少数据访问代码量。
 - 还支持基于方法名的查询、分页和排序等功能。
 
-## 11. 什么是 Spring Cloud？它解决了哪些问题？
+## 13. 什么是 Spring Cloud？它解决了哪些问题？
 
 **答案**：
 
@@ -128,7 +159,7 @@
   - 熔断器（Hystrix）。
   - 分布式追踪（Zipkin）。
 
-## 12. Spring Cloud 中的服务发现和注册如何工作？
+## 14. Spring Cloud 中的服务发现和注册如何工作？
 
 **答案**：
 
@@ -136,7 +167,7 @@
 - **服务发现客户端**将应用实例信息注册到服务中心，并定期发送心跳保持连接。
 - 客户端可以通过服务注册中心获取其他服务的实例列表，实现客户端负载均衡和服务调用。
 
-## 13. 什么是 Spring Cloud Config？如何使用它？
+## 15. 什么是 Spring Cloud Config？如何使用它？
 
 **答案**：
 
@@ -146,7 +177,7 @@
   - 客户端服务从配置中心读取配置，可以动态更新配置。
   - 可以通过 `@RefreshScope` 注解实现配置的动态刷新。
 
-## 14. 什么是 Hystrix？它的主要功能是什么？
+## 16. 什么是 Hystrix？它的主要功能是什么？
 
 **答案**：
 
@@ -156,7 +187,7 @@
   - **降级**：提供默认返回或处理逻辑，提高系统的稳定性。
   - **资源隔离**：使用线程池隔离服务调用，防止某个服务调用占用所有资源。
 
-## 15. 什么是 Spring AOP 中的切面（Aspect）？如何定义一个切面？
+## 17. 什么是 Spring AOP 中的切面（Aspect）？如何定义一个切面？
 
 **答案**：
 
@@ -175,63 +206,3 @@
       }
   }
   ```
-
-## 16. Spring的生命周期？
-
-```plantuml
-@startuml
-title Spring Bean Lifecycle
-
-start
-:实例化 (Instantiation);
-:属性赋值 (Populate Properties);
-
-if (是否实现 BeanNameAware?) then (是)
-    :调用 setBeanName();
-endif
-
-if (是否实现 BeanFactoryAware?) then (是)
-    :调用 setBeanFactory();
-endif
-
-if (是否实现 ApplicationContextAware?) then (是)
-    :调用 setApplicationContext();
-endif
-
-:调用 BeanPostProcessor 的 postProcessBeforeInitialization();
-
-if (是否实现 InitializingBean?) then (是)
-    :调用 afterPropertiesSet();
-endif
-
-if (是否有 @PostConstruct 注解?) then (是)
-    :调用 @PostConstruct 方法;
-endif
-
-if (是否配置 init-method?) then (是)
-    :调用 init-method 方法;
-endif
-
-:调用 BeanPostProcessor 的 postProcessAfterInitialization();
-:Bean 就绪 (Bean Ready);
-
-' stop
-
-' destroy
-if (是否有 @PreDestroy 注解?) then (是)
-    :调用 @PreDestroy 方法;
-endif
-
-if (是否实现 DisposableBean?) then (是)
-    :调用 destroy();
-endif
-
-if (是否配置 destroy-method?) then (是)
-    :调用 destroy-method 方法;
-endif
-
-end
-@enduml
-```
-
-这些问题可以帮助深入理解 Spring 框架及其生态系统。掌握这些知识将有助于在面试中对 Spring 系列问题做出深度解答。
