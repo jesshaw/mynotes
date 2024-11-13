@@ -253,13 +253,13 @@ MyBatis-Plus（简称 MP）在 MyBatis 的基础上增加了一些功能，使�
 
 综上所述，MyBatis-Plus 在 MyBatis 的基础上通过这些功能增强了开发效率，减少了样板代码，同时也引入了常见业务需求的插件，降低了开发复杂度。
 
-## 17. 如果让你来实现自动填充你是怎样来做？
+## 17. mybatis plus 是如果让你来实现自动填充你是怎样来做？
 
 **答案**：
 
 MyBatis-Plus 的自动填充功能通常用于在数据库操作时自动填入一些默认值，如创建时间、更新时间、操作用户等。它的设计和实现主要通过拦截和注解的方式来完成。拦截可以通过实现MyBatis的Interceptor接口或Spring AOP定义切面类实现。
 
-## 18. 如果让你来实现乐观锁怎样来做？
+## 18. 如果让你来实现mybatis plus的乐观锁怎样来做？
 
 **答案**：
 
@@ -268,3 +268,63 @@ MyBatis-Plus 的自动填充功能通常用于在数据库操作时自动填入�
 同样是通过实现MyBatis的Interceptor接口，在更新前增加version字段值实现。
 
 在某些场景，也可以根据更新不成功的记录条数，如果受影响行数为 0，则视为更新失败，可以捕获该异常进行相应的重试逻辑或错误提示。
+
+## 19. 结一个更新两条记录的例子，说明MyBatis是如何实现事务的？
+
+在 Spring 中的 MyBatis 事务中，如果一个事务内包含两条更新操作（例如更新两个表），Spring 的事务管理器会确保这两个更新操作在同一事务中进行，保证一致性。具体过程如下：
+
+**假设场景**有一个 `@Transactional` 注解的方法 `updateTwoTables()`，其中包含对两个数据库表的更新操作：
+
+```java
+@Transactional
+public void updateTwoTables(int id1, String newValue1, int id2, String newValue2) {
+    mapper.updateTable1(id1, newValue1);
+    mapper.updateTable2(id2, newValue2);
+}
+```
+
+详细执行过程
+
+1. **代理和事务拦截**：
+      - Spring AOP 代理会拦截对 `updateTwoTables()` 方法的调用，检测到 `@Transactional` 注解后，开始事务管理过程。
+      - AOP 代理会通过 `PlatformTransactionManager` 调用 `getTransaction()`，在数据源上开启一个新事务，并创建一个 `TransactionStatus` 对象来记录事务状态。
+
+2. **获取数据库连接并开启事务**：
+      - 事务管理器 `DataSourceTransactionManager` 向数据源请求一个数据库连接，并设置连接的自动提交为 `false`（关闭自动提交）。
+      - 此时，MyBatis 的 `SqlSession` 也会绑定到该数据库连接上，从而确保同一 `SqlSession` 内的所有操作都在同一事务上下文中进行。
+
+3. **执行第一条更新操作**：
+      - 事务管理器打开事务后，Spring 继续执行 `updateTwoTables()` 方法中的第一条更新操作，即 `mapper.updateTable1(id1, newValue1)`。
+      - `SqlSession` 使用同一个数据库连接执行 `updateTable1` 操作，并缓存或锁定相关的数据行，保持操作的一致性。
+
+4. **执行第二条更新操作**：
+      - 在第一条更新成功执行后，Spring 执行 `updateTwoTables()` 方法中的第二条更新操作，即 `mapper.updateTable2(id2, newValue2)`。
+      - `SqlSession` 仍然使用同一个数据库连接执行 `updateTable2`，同样保持在当前事务中。
+
+5. **提交或回滚事务**：
+      - 如果方法执行完成且没有抛出异常，Spring 事务管理器调用 `commit()` 提交事务，将两条更新操作的结果一并持久化到数据库。
+      - 如果方法中抛出了非检查异常（`RuntimeException` 或 `Error`），事务管理器会调用 `rollback()`，撤销所有操作的更改，包括 `updateTable1` 和 `updateTable2` 的操作结果，确保数据一致性。
+
+6. **释放数据库连接**：
+      - 事务提交或回滚后，事务管理器会释放数据库连接，`SqlSession` 也会关闭该连接。
+      - Spring AOP 代理方法执行完成，将控制权交还给调用者。
+
+总之：
+
+- 在 Spring 的 MyBatis 事务管理中，事务管理器 `DataSourceTransactionManager` 在方法调用前开启事务，并确保 `SqlSession` 的所有数据库操作使用同一数据库连接。
+- 事务提交和回滚逻辑由 Spring AOP 代理和事务管理器控制，确保在异常情况下自动回滚，避免部分更新导致的数据不一致问题。
+
+## 20. Spring注解Transactional有哪些属性？
+
+@Transactional 提供了一些属性，可以进一步控制事务的行为：
+
+- **propagation**：事务传播行为，控制方法是否需要开启新事务，或者加入现有事务。例如：
+    - **REQUIRED（默认）**：如果存在一个事务，则加入该事务；如果没有事务，则创建一个新的事务。
+    - **REQUIRES_NEW**：每次都创建一个新事务，若已有事务，则暂停当前事务。
+- **isolation**：事务的隔离级别，控制事务的隔离程度。常用的隔离级别包括：
+    - **READ_COMMITTED**：已提交读。防止脏读。
+    - **REPEATABLE_READ**：可重复读。防止脏读、不可重复读。
+    - **SERIALIZABLE**：串行化。防止所有并发问题，但性能较差。
+- **timeout**：事务超时时间，指定事务应在多少秒内完成，否则回滚。
+- **rollbackFor**：指定遇到哪些异常类型时，事务需要回滚。
+- **noRollbackFor**：指定遇到哪些异常类型时，事务不回滚。
