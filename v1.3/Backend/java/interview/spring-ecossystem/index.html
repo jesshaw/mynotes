@@ -7902,7 +7902,7 @@
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>Spring 框架</strong>是一个轻量级的开源框架，旨在简化 Java 开发。它提供了面向对象编程、面向方面编程和依赖注入的支持。</li>
-<li>主要特性包括：</li>
+<li>主要特性包括：<ul>
 <li><strong>依赖注入（DI）</strong>和<strong>控制反转（IoC）</strong>：减少了对象间的耦合性。</li>
 <li><strong>面向方面编程（AOP）</strong>：允许在不改变业务代码的情况下应用横切关注点（如日志、事务管理等）。</li>
 <li><strong>数据访问框架</strong>：提供 JDBC 模板、事务管理，支持与 ORM 集成。</li>
@@ -7910,22 +7910,28 @@
 <li><strong>集成测试</strong>：支持单元测试和集成测试。</li>
 <li><strong>Spring Cloud</strong>：提供了分布式系统所需的组件（如注册中心、负载均衡等）。</li>
 </ul>
+</li>
+</ul>
 <h2 id="2-dispring-di">2. 什么是依赖注入（DI）？Spring 框架如何实现 DI？<a class="headerlink" href="#2-dispring-di" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>依赖注入（Dependency Injection）</strong> 是一种设计模式，将对象的依赖交由框架负责注入，从而实现对象的解耦。</li>
-<li>Spring 提供两种方式实现 DI：</li>
+<li>Spring 提供两种方式实现 DI：<ul>
 <li><strong>构造函数注入</strong>：通过构造函数传入依赖对象。</li>
 <li><strong>Setter 注入</strong>：通过 Setter 方法注入依赖对象。</li>
+</ul>
+</li>
 <li>Spring 的 XML 配置文件、注解（如 <code>@Autowired</code>）、Java 配置类都可以实现依赖注入。</li>
 </ul>
 <h2 id="3-spring-ioc-ioc">3. 什么是 Spring 的 IoC 容器？常见的 IoC 容器有哪些？<a class="headerlink" href="#3-spring-ioc-ioc" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>IoC 容器</strong>：管理和配置应用中对象的生命周期和依赖关系的容器，利用依赖注入将依赖对象注入到目标对象中。</li>
-<li><strong>常见的 IoC 容器</strong>：</li>
+<li><strong>常见的 IoC 容器</strong>：<ul>
 <li><strong>BeanFactory</strong>：基础的 IoC 容器，延迟初始化，只在对象被调用时创建实例。</li>
 <li><strong>ApplicationContext</strong>：功能更丰富，支持事件监听、国际化等。常见实现包括 <code>ClassPathXmlApplicationContext</code> 和 <code>AnnotationConfigApplicationContext</code>。</li>
+</ul>
+</li>
 </ul>
 <h2 id="4-spring-bean">4. 说说Spring Bean 的生命周期？<a class="headerlink" href="#4-spring-bean" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
@@ -7933,28 +7939,20 @@
 <ol>
 <li><strong>实例化（Instantiation）</strong>：Spring容器根据配置文件或注解扫描创建Bean实例。</li>
 <li><strong>属性赋值（Populate Properties）</strong>：为Bean的属性注入依赖对象。</li>
-<li>
-<p><strong>初始化（Initialization）</strong>：</p>
-</li>
-<li>
-<p>首先调用 <code>BeanNameAware</code> 和 <code>BeanFactoryAware</code> 等接口方法来让 Bean 获得容器的相关信息。</p>
-</li>
+<li><strong>初始化（Initialization）</strong>：<ol>
+<li>首先调用 <code>BeanNameAware</code> 和 <code>BeanFactoryAware</code> 等接口方法来让 Bean 获得容器的相关信息。</li>
 <li>接着调用 <code>@PostConstruct</code> 注解标记的方法（如果有）初始化 Bean。</li>
 <li>然后调用 <code>InitializingBean</code> 接口中的 <code>afterPropertiesSet()</code> 方法。</li>
-<li>
-<p>最后调用在配置文件中指定的 <code>init-method</code> 方法。</p>
+<li>最后调用在配置文件中指定的 <code>init-method</code> 方法。</li>
+</ol>
 </li>
-<li>
-<p><strong>就绪使用（Ready to Use）</strong>：Bean 已初始化完成，可以正常使用。</p>
-</li>
-<li>
-<p><strong>销毁（Destruction）</strong>：</p>
-</li>
-<li>
-<p>Spring 容器关闭时，首先调用 <code>@PreDestroy</code> 注解标记的方法。</p>
-</li>
+<li><strong>就绪使用（Ready to Use）</strong>：Bean 已初始化完成，可以正常使用。</li>
+<li><strong>销毁（Destruction）</strong>：<ol>
+<li>Spring 容器关闭时，首先调用 <code>@PreDestroy</code> 注解标记的方法。</li>
 <li>然后调用 <code>DisposableBean</code> 接口的 <code>destroy()</code> 方法。</li>
 <li>最后调用配置文件中指定的 <code>destroy-method</code>。</li>
+</ol>
+</li>
 </ol>
 <h2 id="5">5. 已经实体化了，为什么还要依赖注入和初始化？<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
