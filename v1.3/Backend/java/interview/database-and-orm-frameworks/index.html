@@ -3552,6 +3552,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../core-java/java-thread-pool/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    java线程池的原理及应用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../core-java/jvm-tools/" class="md-nav__link">
         
   
@@ -3599,27 +3620,6 @@
   
   <span class="md-ellipsis">
     多线程
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../core-java/oops/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    面向对象
   </span>
   
 
@@ -4211,7 +4211,7 @@
         <li class="md-nav__item">
   <a href="#19-mybatis" class="md-nav__link">
     <span class="md-ellipsis">
-      19. 结一个更新两条记录的例子，说明MyBatis是如何实现事务的？
+      19. 结合一个更新两条记录的例子，说明MyBatis是如何实现事务的？
     </span>
   </a>
   
@@ -7917,7 +7917,7 @@
         <li class="md-nav__item">
   <a href="#19-mybatis" class="md-nav__link">
     <span class="md-ellipsis">
-      19. 结一个更新两条记录的例子，说明MyBatis是如何实现事务的？
+      19. 结合一个更新两条记录的例子，说明MyBatis是如何实现事务的？
     </span>
   </a>
   
@@ -8190,7 +8190,7 @@ MyBatis-Plus（简称 MP）在 MyBatis 的基础上增加了一些功能，使�
 <p>乐观锁的基本思路是：在更新记录时增加一个“version版本号”字段，数据库表中的记录每次被修改时，版本号都会自动递增。如果两个事务同时读取了一条数据并试图更新，则只有版本号符合条件的更新才会成功。更新不成功的事务将接收到更新失败的提示，从而避免了数据的冲突。</p>
 <p>同样是通过实现MyBatis的Interceptor接口，在更新前增加version字段值实现。</p>
 <p>在某些场景，也可以根据更新不成功的记录条数，如果受影响行数为 0，则视为更新失败，可以捕获该异常进行相应的重试逻辑或错误提示。</p>
-<h2 id="19-mybatis">19. 结一个更新两条记录的例子，说明MyBatis是如何实现事务的？<a class="headerlink" href="#19-mybatis" title="Permanent link">&para;</a></h2>
+<h2 id="19-mybatis">19. 结合一个更新两条记录的例子，说明MyBatis是如何实现事务的？<a class="headerlink" href="#19-mybatis" title="Permanent link">&para;</a></h2>
 <p>在 Spring 中的 MyBatis 事务中，如果一个事务内包含两条更新操作（例如更新两个表），Spring 的事务管理器会确保这两个更新操作在同一事务中进行，保证一致性。具体过程如下：</p>
 <p><strong>假设场景</strong>有一个 <code>@Transactional</code> 注解的方法 <code>updateTwoTables()</code>，其中包含对两个数据库表的更新操作：</p>
 <pre><code class="language-java">@Transactional
