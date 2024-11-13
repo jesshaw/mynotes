@@ -13,6 +13,7 @@ nav:
   - new-features-in-java8-and-above.md
   - database-and-orm-frameworks.md
   - spring-ecossystem.md
+  - spring-ecossystem-2.md
   - design-patterns.md
   - microservices-architecture.md
   - distributed-systems-and-middleware.md
