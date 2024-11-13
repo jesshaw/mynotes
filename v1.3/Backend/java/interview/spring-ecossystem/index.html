@@ -7947,11 +7947,11 @@
 </ol>
 </li>
 <li><strong>就绪使用（Ready to Use）</strong>：Bean 已初始化完成，可以正常使用。</li>
-<li><strong>销毁（Destruction）</strong>：<ul>
+<li><strong>销毁（Destruction）</strong>：<ol>
 <li>Spring 容器关闭时，首先调用 <code>@PreDestroy</code> 注解标记的方法。</li>
 <li>然后调用 <code>DisposableBean</code> 接口的 <code>destroy()</code> 方法。</li>
 <li>最后调用配置文件中指定的 <code>destroy-method</code>。</li>
-</ul>
+</ol>
 </li>
 </ol>
 <h2 id="5">5. 已经实体化了，为什么还要依赖注入和初始化？<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
