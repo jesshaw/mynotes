@@ -111,7 +111,6 @@ class BlockTask implements Runnable {
 
 主要利用CAS(compare and swap), volatile和native方法保证原子操作。
 
-
 ## ThreadLocal理解和原理
 
 ThreadLocal可以理解为线程的私有变量。如果创建了一个ThreadLocal变量，那么访问这个变量的每个线程都会有这个变量的本地副本。

@@ -20,7 +20,7 @@
 - Java多线程的基础（线程的创建、线程生命周期、线程同步等）
 - 并发包（`java.util.concurrent`）中的主要组件（如CountDownLatch、CyclicBarrier、Semaphore、ThreadPoolExecutor等）
 - 线程安全问题（synchronized、volatile关键字、锁机制、CAS操作、AQS原理）
-- 线程池的原理及应用
+- [线程池的原理及应用](../core-java/java-thread-pool.md)
 
 ## 4. [JVM（Java虚拟机）](./jvm.md)
 

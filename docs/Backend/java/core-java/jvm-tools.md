@@ -688,7 +688,7 @@ JVM运维与调试工具当然并不是仅仅只有本章节所列举的这些�
 
 而对于开发人员来说，目前最推荐的工具是`arthas`，基本上JVM调试需要的功能它都有。
 
-[jvm工具]](https://segmentfault.com/a/1190000038952613?utm_source=sf-similar-article)
+[jvm工具](https://segmentfault.com/a/1190000038952613?utm_source=sf-similar-article)
 [jstack详情](https://blog.csdn.net/q13554515812/article/details/89712423)
 [jmap详情](https://www.cnblogs.com/sxdcgaq8080/p/11089664.html)
 [jprofiler](https://blog.csdn.net/axin1240101543/article/details/105142141/)
