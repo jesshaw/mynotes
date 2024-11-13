@@ -49,9 +49,9 @@ Spring Bean 的生命周期主要包含 **实例化**、**依赖注入**、**初
     1. 最后调用在配置文件中指定的 `init-method` 方法。
 4. **就绪使用（Ready to Use）**：Bean 已初始化完成，可以正常使用。
 5. **销毁（Destruction）**：
-       - Spring 容器关闭时，首先调用 `@PreDestroy` 注解标记的方法。
-       - 然后调用 `DisposableBean` 接口的 `destroy()` 方法。
-       - 最后调用配置文件中指定的 `destroy-method`。
+    1. Spring 容器关闭时，首先调用 `@PreDestroy` 注解标记的方法。
+    1. 然后调用 `DisposableBean` 接口的 `destroy()` 方法。
+    1. 最后调用配置文件中指定的 `destroy-method`。
 
 ## 5. 已经实体化了，为什么还要依赖注入和初始化？
 
