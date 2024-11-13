@@ -8,12 +8,12 @@
 
 - **Spring 框架**是一个轻量级的开源框架，旨在简化 Java 开发。它提供了面向对象编程、面向方面编程和依赖注入的支持。
 - 主要特性包括：
-  - **依赖注入（DI）**和**控制反转（IoC）**：减少了对象间的耦合性。
-  - **面向方面编程（AOP）**：允许在不改变业务代码的情况下应用横切关注点（如日志、事务管理等）。
-  - **数据访问框架**：提供 JDBC 模板、事务管理，支持与 ORM 集成。
-  - **MVC 框架**：用于构建基于 Web 的应用程序。
-  - **集成测试**：支持单元测试和集成测试。
-  - **Spring Cloud**：提供了分布式系统所需的组件（如注册中心、负载均衡等）。
+      - **依赖注入（DI）**和**控制反转（IoC）**：减少了对象间的耦合性。
+      - **面向方面编程（AOP）**：允许在不改变业务代码的情况下应用横切关注点（如日志、事务管理等）。
+      - **数据访问框架**：提供 JDBC 模板、事务管理，支持与 ORM 集成。
+      - **MVC 框架**：用于构建基于 Web 的应用程序。
+      - **集成测试**：支持单元测试和集成测试。
+      - **Spring Cloud**：提供了分布式系统所需的组件（如注册中心、负载均衡等）。
 
 ## 2. 什么是依赖注入（DI）？Spring 框架如何实现 DI？
 
@@ -21,8 +21,8 @@
 
 - **依赖注入（Dependency Injection）** 是一种设计模式，将对象的依赖交由框架负责注入，从而实现对象的解耦。
 - Spring 提供两种方式实现 DI：
-  - **构造函数注入**：通过构造函数传入依赖对象。
-  - **Setter 注入**：通过 Setter 方法注入依赖对象。
+      - **构造函数注入**：通过构造函数传入依赖对象。
+      - **Setter 注入**：通过 Setter 方法注入依赖对象。
 - Spring 的 XML 配置文件、注解（如 `@Autowired`）、Java 配置类都可以实现依赖注入。
 
 ## 3. 什么是 Spring 的 IoC 容器？常见的 IoC 容器有哪些？
@@ -31,8 +31,8 @@
 
 - **IoC 容器**：管理和配置应用中对象的生命周期和依赖关系的容器，利用依赖注入将依赖对象注入到目标对象中。
 - **常见的 IoC 容器**：
-  - **BeanFactory**：基础的 IoC 容器，延迟初始化，只在对象被调用时创建实例。
-  - **ApplicationContext**：功能更丰富，支持事件监听、国际化等。常见实现包括 `ClassPathXmlApplicationContext` 和 `AnnotationConfigApplicationContext`。
+      - **BeanFactory**：基础的 IoC 容器，延迟初始化，只在对象被调用时创建实例。
+      - **ApplicationContext**：功能更丰富，支持事件监听、国际化等。常见实现包括 `ClassPathXmlApplicationContext` 和 `AnnotationConfigApplicationContext`。
 
 ## 4. 说说Spring Bean 的生命周期？
 
@@ -43,18 +43,15 @@ Spring Bean 的生命周期主要包含 **实例化**、**依赖注入**、**初
 1. **实例化（Instantiation）**：Spring容器根据配置文件或注解扫描创建Bean实例。
 2. **属性赋值（Populate Properties）**：为Bean的属性注入依赖对象。
 3. **初始化（Initialization）**：
-
-   - 首先调用 `BeanNameAware` 和 `BeanFactoryAware` 等接口方法来让 Bean 获得容器的相关信息。
-   - 接着调用 `@PostConstruct` 注解标记的方法（如果有）初始化 Bean。
-   - 然后调用 `InitializingBean` 接口中的 `afterPropertiesSet()` 方法。
-   - 最后调用在配置文件中指定的 `init-method` 方法。
-
+         - 首先调用 `BeanNameAware` 和 `BeanFactoryAware` 等接口方法来让 Bean 获得容器的相关信息。
+         - 接着调用 `@PostConstruct` 注解标记的方法（如果有）初始化 Bean。
+         - 然后调用 `InitializingBean` 接口中的 `afterPropertiesSet()` 方法。
+         - 最后调用在配置文件中指定的 `init-method` 方法。
 4. **就绪使用（Ready to Use）**：Bean 已初始化完成，可以正常使用。
 5. **销毁（Destruction）**：
-
-   - Spring 容器关闭时，首先调用 `@PreDestroy` 注解标记的方法。
-   - 然后调用 `DisposableBean` 接口的 `destroy()` 方法。
-   - 最后调用配置文件中指定的 `destroy-method`。
+         - Spring 容器关闭时，首先调用 `@PreDestroy` 注解标记的方法。
+         - 然后调用 `DisposableBean` 接口的 `destroy()` 方法。
+         - 最后调用配置文件中指定的 `destroy-method`。
 
 ## 5. 已经实体化了，为什么还要依赖注入和初始化？
 
