@@ -7979,23 +7979,27 @@
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>AOP（Aspect-Oriented Programming，面向方面编程）</strong> 用于处理横切关注点（如日志、事务、安全性等）。</li>
-<li>AOP 的核心概念：</li>
+<li>AOP 的核心概念：<ul>
 <li><strong>Aspect</strong>：切面，包含一组横切关注点。</li>
 <li><strong>Join Point</strong>：切点，方法或构造函数执行时的某个点。</li>
 <li><strong>Advice</strong>：通知，表示在 Join Point 之前或之后执行的操作。</li>
 <li><strong>Pointcut</strong>：定义在哪里应用 Advice。</li>
 <li><strong>Weaving</strong>：将 Advice 应用到 Join Point 的过程。</li>
 </ul>
+</li>
+</ul>
 <h2 id="8-spring-bootspring-boot">8. 什么是 Spring Boot？Spring Boot 的主要优点是什么？<a class="headerlink" href="#8-spring-bootspring-boot" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>Spring Boot</strong> 是 Spring 框架的扩展，用于快速创建独立的、生产级别的应用程序。</li>
-<li><strong>主要优点</strong>：</li>
+<li><strong>主要优点</strong>：<ul>
 <li>提供开箱即用的配置，减少手动配置。</li>
 <li>嵌入式服务器（如 Tomcat、Jetty），无需外部部署。</li>
 <li>强大的生产就绪功能（如监控、健康检查、外部化配置）。</li>
 <li>丰富的 Spring Boot Starter 依赖，简化了依赖管理。</li>
 <li>支持自动配置，根据项目中的依赖自动设置配置。</li>
+</ul>
+</li>
 </ul>
 <h2 id="9-spring-boot">9. Spring Boot 的自动配置原理是什么？<a class="headerlink" href="#9-spring-boot" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
@@ -8042,13 +8046,15 @@
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>Spring Cloud</strong> 是一组工具，用于简化分布式系统和微服务的开发。</li>
-<li>解决的问题包括：</li>
+<li>解决的问题包括：<ul>
 <li>服务发现与注册（Eureka、Consul）。</li>
 <li>分布式配置管理（Spring Cloud Config）。</li>
 <li>负载均衡（Ribbon）。</li>
 <li>服务网关（Spring Cloud Gateway）。</li>
 <li>熔断器（Hystrix）。</li>
 <li>分布式追踪（Zipkin）。</li>
+</ul>
+</li>
 </ul>
 <h2 id="14-spring-cloud">14. Spring Cloud 中的服务发现和注册如何工作？<a class="headerlink" href="#14-spring-cloud" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
@@ -8061,19 +8067,23 @@
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>Spring Cloud Config</strong> 提供集中式配置管理，支持配置文件的版本控制（如 Git）。</li>
-<li><strong>使用步骤</strong>：</li>
+<li><strong>使用步骤</strong>：<ul>
 <li>配置中心从配置存储（如 Git）拉取配置文件。</li>
 <li>客户端服务从配置中心读取配置，可以动态更新配置。</li>
 <li>可以通过 <code>@RefreshScope</code> 注解实现配置的动态刷新。</li>
+</ul>
+</li>
 </ul>
 <h2 id="16-hystrix">16. 什么是 Hystrix？它的主要功能是什么？<a class="headerlink" href="#16-hystrix" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>Hystrix</strong> 是一个熔断器组件，用于隔离和管理分布式系统中的服务间调用。</li>
-<li>主要功能：</li>
+<li>主要功能：<ul>
 <li><strong>熔断</strong>：当依赖的服务不稳定或失败时，断开调用链，避免雪崩效应。</li>
 <li><strong>降级</strong>：提供默认返回或处理逻辑，提高系统的稳定性。</li>
 <li><strong>资源隔离</strong>：使用线程池隔离服务调用，防止某个服务调用占用所有资源。</li>
+</ul>
+</li>
 </ul>
 <h2 id="17-spring-aop-aspect">17. 什么是 Spring AOP 中的切面（Aspect）？如何定义一个切面？<a class="headerlink" href="#17-spring-aop-aspect" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
