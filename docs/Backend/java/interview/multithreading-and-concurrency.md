@@ -179,15 +179,47 @@ CAS是Compare-And-Swap的简称，通过比较和交换值确保更新操作的�
 
 **答案**：
 
-线程的生命周期包含以下状态：
+```plantuml
+@startuml
+!define RECTANGLE class
 
-1. **新建（New）**：创建线程后，尚未启动。
-2. **就绪（Runnable）**：调用start方法，线程进入就绪状态，等待CPU调度。
-3. **运行（Running）**：线程获得CPU资源，开始执行任务。
-4. **阻塞（Blocked）**：线程等待资源或条件，如等待锁或其他资源释放。
-5. **等待（Waiting）**：调用wait方法或进入无限等待状态，等待其他线程通知。
-6. **超时等待（Timed Waiting）**：调用sleep或wait(long)等带时间限制的方法。
-7. **终止（Terminated）**：线程任务执行完或发生异常导致线程终止。
+state "New" as NEW #lightblue
+state "Runnable" as RUNNABLE #lightgreen
+state "Running" as RUNNING #yellow
+state "Blocked" as BLOCKED #orange
+state "Waiting" as WAITING #lightpink
+state "Timed Waiting" as TIMED_WAITING #lavender
+state "Terminated" as TERMINATED #grey
+
+NEW --> RUNNABLE : start()
+RUNNABLE --> RUNNING : CPU schedule
+RUNNING --> BLOCKED : Needs lock (synchronized)
+BLOCKED --> RUNNABLE : Lock available
+
+RUNNING --> WAITING : wait() method
+WAITING --> RUNNABLE : notify() / notifyAll()
+RUNNING --> TIMED_WAITING : sleep() / wait(timeout) / join(timeout)
+TIMED_WAITING --> RUNNABLE : Timeout or notify()
+
+RUNNING --> TERMINATED : run completes or exception
+WAITING --> TERMINATED : InterruptedException
+TIMED_WAITING --> TERMINATED : InterruptedException
+
+@enduml
+```
+
+**解释**:
+
+- **New** 到 **Runnable**：调用 `start()` 方法，线程进入就绪状态。
+- **Runnable** 到 **Running**：线程被CPU调度，获得执行权。
+- **Running** 到 **Blocked**：线程尝试获取锁，但锁被其它线程持有，因此进入Blocked状态。
+- **Blocked** 到 **Runnable**：锁被其它线程释放后，Blocked状态的线程重新进入Runnable状态，等待再次调度。
+- **Running** 到 **Waiting**：线程调用`wait()`方法，进入等待状态，直到被通知。
+- **Waiting** 到 **Runnable**：另一个线程调用`notify()`或`notifyAll()`，将线程唤醒，使其重新进入Runnable状态。
+- **Running** 到 **Timed Waiting**：线程调用`sleep()`、`wait(timeout)`或`join(timeout)`方法，进入限时等待状态。
+- **Timed Waiting** 到 **Runnable**：等待超时或被通知后，线程回到Runnable状态。
+- **Running** 到 **Terminated**：线程执行完`run()`方法或发生异常后，进入终止状态。
+- **Waiting**和**Timed Waiting**到**Terminated**：如果线程在等待中被中断（抛出`InterruptedException`），也会进入终止状态。
 
 ## 27. start和run的区别
 
