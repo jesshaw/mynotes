@@ -70,3 +70,8 @@ TOGAF 的 ADM 通过一个循环的流程来持续改进架构，主要阶段包
 - **支持协作**：涵盖了业务、应用、数据和技术的各个层面，促进跨部门协作，确保 IT 与业务的对齐。
 
 TOGAF 架构模型是一个集成的、灵活的框架，帮助企业建立符合业务目标的架构，通过定义明确的流程和方法，支持企业 IT 战略的制定与落地。
+
+## 参考
+
+[The TOGAF® Standard](https://pubs.opengroup.org/togaf-standard/index.html)
+
