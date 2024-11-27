@@ -2478,6 +2478,51 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#17-bean" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 实体bean的有些什么不同状态？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-hibernate-session-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Hibernate Session merge（）用来做什么？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-hibernatesavesaveorupdatepersist" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Hibernate的save（），saveOrUpdate（）和persist（）方法有什么区别？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-entity-bean" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 如果我们在Entity bean中没有无参数构造函数会发生什么？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-sorted-collectionordered-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 排序集合（sorted collection）和有序集合（ordered collection）之间有什么区别，哪一个更好？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#22-hibernate" class="md-nav__link">
     <span class="md-ellipsis">
       22. Hibernate中的有哪些集合类型？
@@ -8067,6 +8112,51 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#17-bean" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. 实体bean的有些什么不同状态？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-hibernate-session-merge" class="md-nav__link">
+    <span class="md-ellipsis">
+      18. Hibernate Session merge（）用来做什么？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-hibernatesavesaveorupdatepersist" class="md-nav__link">
+    <span class="md-ellipsis">
+      19. Hibernate的save（），saveOrUpdate（）和persist（）方法有什么区别？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-entity-bean" class="md-nav__link">
+    <span class="md-ellipsis">
+      20. 如果我们在Entity bean中没有无参数构造函数会发生什么？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-sorted-collectionordered-collection" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. 排序集合（sorted collection）和有序集合（ordered collection）之间有什么区别，哪一个更好？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#22-hibernate" class="md-nav__link">
     <span class="md-ellipsis">
       22. Hibernate中的有哪些集合类型？
@@ -8525,42 +8615,27 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 public class Address {
 
 }
- ```
-
-就是这样，我们完成了 Hibernate将使用EHCache进行二级缓存，请阅读Hibernate EHCache示例以获得完整的解释示例。
-
-## 17. 实体bean的有些什么不同状态？
-
-实体bean实例可以以下三种状态的其中之一。
-
-1. **瞬时态（Transient）** ：当对象永远不会持久或与任何会话无关联时，它处于瞬态状态。通过调用save（），persist（）或saveOrUpdate（），可以使瞬态实例持久化 通过调用delete（）可以使持久性实例成为暂态。
-2. **持久态（Persistent）** ：当对象与唯一会话关联时，它处于持久状态。由get（）或load（）方法返回的任何实例都是持久的。
-3. **游离态（Detached）** ：当一个对象先前是持久性的，但没有与任何会话相关联时，它处于游离状态。游离的实例可以通过调用update（），saveOrUpdate（），lock（）或replicate（）来持久化。通过调用merge（），瞬时或游离实例的状态也可以作为新的持久实例持久化。
-
-## 18. Hibernate Session merge（）用来做什么？
-
-Hibernate合并可以用来更新现有的值，但是这种方法从传递的实体对象中创建一个副本并返回它。返回的对象是持久化上下文的一部分，并对任何更改进行跟踪，传递的对象不被跟踪。 示例程序，阅读Hibernate合并 。
-
-## 19. Hibernate的save（），saveOrUpdate（）和persist（）方法有什么区别？
-
-Hibernate保存可用于将实体保存到数据库。save（）的问题是它可以在没有事务的情况下被调用，如果我们有映射实体，那么只有主对象被保存，导致数据不一致。另外保存立即返回生成的ID。
-
-Hibernate persist与事务保存类似。我觉得它比保存更好，因为我们不能在事务边界外使用它，所以所有的对象映射都被保留下来。此外，persist不会立即返回生成的ID，因此数据持久化发生在需要的时候。
-
-根据提供的数据将Hibernate saveOrUpdate结果插入或更新查询。如果数据存在于数据库中，则执行更新查询。我们也可以在没有事务的情况下使用saveOrUpdate（），但如果会话不刷新，您将再次遇到映射对象未保存的问题。例如使用这些方法，请阅读Hibernate save vs persist 。
-
-## 20. 如果我们在Entity bean中没有无参数构造函数会发生什么？
-
-Hibernate使用Reflection API来创建实体bean的实例，通常在调用get（）或load（）方法时 方法Class.newInstance()用于此，它需要无参数构造函数。因此，如果你在实体bean中没有无参数构造函数，Hibernate将无法实例化它，你将得到HibernateException 。
-
-## 21. 排序集合（sorted collection）和有序集合（ordered collection）之间有什么区别，哪一个更好？
-
-当我们使用Collection API排序算法对一个集合进行排序时，它被称为排序集合。对于小型集合来说，它没有多少开销，但对于较大的集合，它可能导致性能下降和OutOfMemory错误。另外，实体bean应该实现`Comparable`或`Comparator`接口，以便在Java对象列表排序时进行更多的工作。
-
-如果我们使用Hibernate框架从数据库加载集合数据，我们可以使用它的Criteria API来使用“order by”子句来获得有序列表。下面的代码片段显示了如何获取它。
-
-```java
-List&lt;Employee&gt; empList = session.createCriteria(Employee.class)
+</code></pre>
+<p>就是这样，我们完成了 Hibernate将使用EHCache进行二级缓存，请阅读Hibernate EHCache示例以获得完整的解释示例。</p>
+<h2 id="17-bean">17. 实体bean的有些什么不同状态？<a class="headerlink" href="#17-bean" title="Permanent link">&para;</a></h2>
+<p>实体bean实例可以以下三种状态的其中之一。</p>
+<ol>
+<li><strong>瞬时态（Transient）</strong> ：当对象永远不会持久或与任何会话无关联时，它处于瞬态状态。通过调用save（），persist（）或saveOrUpdate（），可以使瞬态实例持久化 通过调用delete（）可以使持久性实例成为暂态。</li>
+<li><strong>持久态（Persistent）</strong> ：当对象与唯一会话关联时，它处于持久状态。由get（）或load（）方法返回的任何实例都是持久的。</li>
+<li><strong>游离态（Detached）</strong> ：当一个对象先前是持久性的，但没有与任何会话相关联时，它处于游离状态。游离的实例可以通过调用update（），saveOrUpdate（），lock（）或replicate（）来持久化。通过调用merge（），瞬时或游离实例的状态也可以作为新的持久实例持久化。</li>
+</ol>
+<h2 id="18-hibernate-session-merge">18. Hibernate Session merge（）用来做什么？<a class="headerlink" href="#18-hibernate-session-merge" title="Permanent link">&para;</a></h2>
+<p>Hibernate合并可以用来更新现有的值，但是这种方法从传递的实体对象中创建一个副本并返回它。返回的对象是持久化上下文的一部分，并对任何更改进行跟踪，传递的对象不被跟踪。 示例程序，阅读Hibernate合并 。</p>
+<h2 id="19-hibernatesavesaveorupdatepersist">19. Hibernate的save（），saveOrUpdate（）和persist（）方法有什么区别？<a class="headerlink" href="#19-hibernatesavesaveorupdatepersist" title="Permanent link">&para;</a></h2>
+<p>Hibernate保存可用于将实体保存到数据库。save（）的问题是它可以在没有事务的情况下被调用，如果我们有映射实体，那么只有主对象被保存，导致数据不一致。另外保存立即返回生成的ID。</p>
+<p>Hibernate persist与事务保存类似。我觉得它比保存更好，因为我们不能在事务边界外使用它，所以所有的对象映射都被保留下来。此外，persist不会立即返回生成的ID，因此数据持久化发生在需要的时候。</p>
+<p>根据提供的数据将Hibernate saveOrUpdate结果插入或更新查询。如果数据存在于数据库中，则执行更新查询。我们也可以在没有事务的情况下使用saveOrUpdate（），但如果会话不刷新，您将再次遇到映射对象未保存的问题。例如使用这些方法，请阅读Hibernate save vs persist 。</p>
+<h2 id="20-entity-bean">20. 如果我们在Entity bean中没有无参数构造函数会发生什么？<a class="headerlink" href="#20-entity-bean" title="Permanent link">&para;</a></h2>
+<p>Hibernate使用Reflection API来创建实体bean的实例，通常在调用get（）或load（）方法时 方法Class.newInstance()用于此，它需要无参数构造函数。因此，如果你在实体bean中没有无参数构造函数，Hibernate将无法实例化它，你将得到HibernateException 。</p>
+<h2 id="21-sorted-collectionordered-collection">21. 排序集合（sorted collection）和有序集合（ordered collection）之间有什么区别，哪一个更好？<a class="headerlink" href="#21-sorted-collectionordered-collection" title="Permanent link">&para;</a></h2>
+<p>当我们使用Collection API排序算法对一个集合进行排序时，它被称为排序集合。对于小型集合来说，它没有多少开销，但对于较大的集合，它可能导致性能下降和OutOfMemory错误。另外，实体bean应该实现<code>Comparable</code>或<code>Comparator</code>接口，以便在Java对象列表排序时进行更多的工作。</p>
+<p>如果我们使用Hibernate框架从数据库加载集合数据，我们可以使用它的Criteria API来使用“order by”子句来获得有序列表。下面的代码片段显示了如何获取它。</p>
+<pre><code class="language-java">List&lt;Employee&gt; empList = session.createCriteria(Employee.class)
 .addOrder(Order.desc(&quot;id&quot;)).list();
 </code></pre>
 <p>有序列表比排序列表要好，因为实际的排序是在数据库级完成的，速度很快并且不会导致内存问题。</p>
