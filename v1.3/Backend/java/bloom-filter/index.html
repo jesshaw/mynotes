@@ -3128,7 +3128,67 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      参考
+      布隆过滤器的特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      布隆过滤器的工作原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      优缺点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="优缺点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见应用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      改进和变种
     </span>
   </a>
   
@@ -7561,7 +7621,67 @@
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      参考
+      布隆过滤器的特点
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      布隆过滤器的工作原理
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      优缺点
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="优缺点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      优点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      缺点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      常见应用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      改进和变种
     </span>
   </a>
   
@@ -7586,8 +7706,79 @@
 
 
 <h1 id="_1">布隆过滤器<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="_2">参考<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><a href="https://developer.aliyun.com/article/773205#slide-16">布隆过滤器，这一篇给你讲的明明白白</a></p>
+<p>布隆过滤器（<strong>Bloom Filter</strong>）是一种基于概率的数据结构，用于判断某个元素是否属于一个集合。它特别适合快速查找，具有较高的空间效率，但允许一定程度的误判（即可能会误认为不存在的元素在集合中）。  </p>
+<h2 id="_2"><strong>布隆过滤器的特点</strong><a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>高效性</strong>：</p>
+<ul>
+<li>插入和查询的时间复杂度为 (O(k))，其中 (k) 是哈希函数的个数。</li>
+<li>占用的空间通常比传统数据结构（如哈希表）要小得多。</li>
+</ul>
+</li>
+<li>
+<p><strong>误判</strong>：</p>
+<ul>
+<li>布隆过滤器可能误判某个元素存在（假阳性），但绝不会漏判（假阴性）。</li>
+</ul>
+</li>
+<li>
+<p><strong>不可删除性</strong>：</p>
+<ul>
+<li>传统布隆过滤器不支持删除操作，因为移除元素可能会导致误删其他元素。</li>
+</ul>
+</li>
+</ol>
+<h2 id="_3"><strong>布隆过滤器的工作原理</strong><a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ol>
+<li>初始化一个大小为 (m) 的位数组，所有位都设置为 0。</li>
+<li>定义 (k) 个独立的哈希函数。</li>
+<li><strong>插入元素</strong>：<ul>
+<li>对要插入的元素，通过 (k) 个哈希函数分别计算 (k) 个哈希值。</li>
+<li>根据这些哈希值，将对应的位数组中的位置置为 1。</li>
+</ul>
+</li>
+<li><strong>查询元素</strong>：<ul>
+<li>对查询的元素，计算同样的 (k) 个哈希值。</li>
+<li>如果这些位置的值全为 1，则判断该元素可能存在；否则，确定不存在。</li>
+</ul>
+</li>
+</ol>
+<h2 id="_4"><strong>优缺点</strong><a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<h3 id="_5"><strong>优点</strong><a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>高效性</strong>：时间和空间效率高，尤其适合需要处理大量数据的场景。</li>
+<li><strong>扩展性强</strong>：可以通过增加位数组大小和哈希函数个数调整精度。</li>
+</ul>
+<h3 id="_6"><strong>缺点</strong><a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>误判</strong>：无法精确判断某个元素是否存在，只能保证不存在。</li>
+<li><strong>不可删除</strong>：无法安全删除特定元素，常需设计额外机制（如计数布隆过滤器）。</li>
+<li><strong>动态性较差</strong>：初始大小 (m) 和哈希函数数量 (k) 一旦确定，扩展不方便。</li>
+</ul>
+<h2 id="_7"><strong>常见应用</strong><a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>网页爬虫</strong>：避免重复抓取已经访问过的 URL。</li>
+<li><strong>缓存系统</strong>：快速判断一个数据是否在缓存中，减少缓存穿透。</li>
+<li><strong>数据库</strong>：过滤不在索引中的数据，减少磁盘 I/O 操作。</li>
+<li><strong>安全与隐私</strong>：用于垃圾邮件检测和黑名单查询等场景。</li>
+<li><strong>区块链</strong>：轻量级节点快速验证交易是否存在。</li>
+</ol>
+<h2 id="_8"><strong>改进和变种</strong><a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>计数布隆过滤器（Counting Bloom Filter）</strong>：<ul>
+<li>使用计数器代替位数组，支持删除操作。</li>
+</ul>
+</li>
+<li><strong>分层布隆过滤器（Scalable Bloom Filter）</strong>：<ul>
+<li>动态扩展布隆过滤器的大小，适应不断增长的数据。</li>
+</ul>
+</li>
+<li><strong>可编码布隆过滤器（Coded Bloom Filter）</strong>：<ul>
+<li>能区分不同数据源的数据集合。</li>
+</ul>
+</li>
+</ol>
 
 
 
