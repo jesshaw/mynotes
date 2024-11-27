@@ -12,11 +12,12 @@
 ![rocketmq架构](../assets/rocketmq-deploy-arch.png)
 
 结合部署结构图，描述集群工作流程：
-1，启动Namesrv，Namesrv起来后监听端口，等待Broker、Produer、Consumer连上来，相当于一个路由控制中心。
-2，Broker启动，跟所有的Namesrv保持长连接，定时发送心跳包。心跳包中包含当前Broker信息(IP+端口等)以及存储所有topic信息。注册成功后，namesrv集群中就有Topic跟Broker的映射关系。
-3，收发消息前，先创建topic，创建topic时需要指定该topic要存储在哪些Broker上。也可以在发送消息时自动创建Topic。
-4，Producer发送消息，启动时先跟Namesrv集群中的其中一台建立长连接，并从Namesrv中获取当前发送的Topic存在哪些Broker上，然后跟对应的Broker建立长连接，直接向Broker发消息。
-5，Consumer跟Producer类似。跟其中一台Namesrv建立长连接，获取当前订阅Topic存在哪些Broker上，然后直接跟Broker建立连接通道，开始消费消息。
+
+1. 启动Namesrv，Namesrv起来后监听端口，等待Broker、Produer、Consumer连上来，相当于一个路由控制中心。
+2. Broker启动，跟所有的Namesrv保持长连接，定时发送心跳包。心跳包中包含当前Broker信息(IP+端口等)以及存储所有topic信息。注册成功后，namesrv集群中就有Topic跟Broker的映射关系。
+3. 收发消息前，先创建topic，创建topic时需要指定该topic要存储在哪些Broker上。也可以在发送消息时自动创建Topic。
+4. Producer发送消息，启动时先跟Namesrv集群中的其中一台建立长连接，并从Namesrv中获取当前发送的Topic存在哪些Broker上，然后跟对应的Broker建立长连接，直接向Broker发消息。
+5. Consumer跟Producer类似。跟其中一台Namesrv建立长连接，获取当前订阅Topic存在哪些Broker上，然后直接跟Broker建立连接通道，开始消费消息。
 
 ## 模块功能特性
 
@@ -78,14 +79,17 @@ Producer启动时，也需要指定Namesrv的地址，从Namesrv集群中选一�
 这里需要注意一点：假如某个Broker宕机，意味生产者最长需要30秒才能感知到。在这期间会向宕机的Broker发送消息。当一条消息发送到某个Broker失败后，会往该broker自动再重发2次，假如还是发送失败，则抛出发送失败异常。业务捕获异常，重新发送即可。客户端里会自动轮询另外一个Broker重新发送，这个对于用户是透明的。
 
 demo演示：
+
+```bash
 git clone https://github.com/apache/rocketmq.git
-创建配置文件conf.properties
+# 创建配置文件conf.properties
 rocketmqHome=/Users/jes/github/rocketmq/distribution
 namesrvAddr=127.0.0.1:9876
 mapedFileSizeCommitLog=52428800
 mapedFileSizeConsumeQueue=30000
 
 -c conf.properties
-依次启动NamesrvStartup,BrokerStartup,Consumer,Producer
+# 依次启动NamesrvStartup,BrokerStartup,Consumer,Producer
+```
 
 扩展 <https://github.com/apache/rocketmq-externals>
