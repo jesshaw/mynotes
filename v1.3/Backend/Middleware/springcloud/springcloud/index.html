@@ -7747,95 +7747,103 @@
 <p><strong>Spring Cloud</strong> 是一个基于 <strong>Spring Boot</strong> 的微服务开发框架，提供了分布式系统开发所需的各种工具和解决方案，如 <strong>服务注册与发现</strong>、<strong>配置管理</strong>、<strong>负载均衡</strong>、<strong>熔断机制</strong>、<strong>API 网关</strong>、<strong>分布式跟踪</strong>等。它简化了微服务架构中的开发与运维难题，使开发者专注于业务逻辑。</p>
 <h2 id="spring-cloud_1">一、Spring Cloud 的核心组件<a class="headerlink" href="#spring-cloud_1" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>Spring Cloud Netflix</strong>  </li>
+<li>
+<p><strong>Spring Cloud Netflix</strong>  </p>
+<ul>
 <li><strong>Eureka</strong>：服务注册与发现。  </li>
 <li><strong>Ribbon</strong>：客户端负载均衡（已被弃用，推荐使用 Spring Cloud LoadBalancer）。  </li>
 <li><strong>Hystrix</strong>：熔断与限流（目前推荐使用 <strong>Resilience4j</strong> 替代）。  </li>
-<li>
-<p><strong>Zuul</strong>：API 网关（新版替代者为 <strong>Spring Cloud Gateway</strong>）。</p>
+<li><strong>Zuul</strong>：API 网关（新版替代者为 <strong>Spring Cloud Gateway</strong>）。</li>
+</ul>
 </li>
 <li>
 <p><strong>Spring Cloud Gateway</strong>  </p>
-</li>
-<li>
-<p>现代化的 API 网关，支持路由转发、认证授权和限流等功能，替代 Netflix Zuul。</p>
+<ul>
+<li>现代化的 API 网关，支持路由转发、认证授权和限流等功能，替代 Netflix Zuul。</li>
+</ul>
 </li>
 <li>
 <p><strong>Spring Cloud Config</strong>  </p>
-</li>
-<li>
-<p>集中式配置管理工具，支持将配置文件存储于 Git、文件系统等地方，动态刷新配置。</p>
+<ul>
+<li>集中式配置管理工具，支持将配置文件存储于 Git、文件系统等地方，动态刷新配置。</li>
+</ul>
 </li>
 <li>
 <p><strong>Spring Cloud LoadBalancer</strong>  </p>
-</li>
-<li>
-<p>用于客户端负载均衡，是 Ribbon 的替代者。</p>
+<ul>
+<li>用于客户端负载均衡，是 Ribbon 的替代者。</li>
+</ul>
 </li>
 <li>
 <p><strong>Spring Cloud OpenFeign</strong>  </p>
-</li>
-<li>
-<p>基于 Feign 的 HTTP 客户端，简化服务之间的通信，支持声明式接口调用。</p>
+<ul>
+<li>基于 Feign 的 HTTP 客户端，简化服务之间的通信，支持声明式接口调用。</li>
+</ul>
 </li>
 <li>
 <p><strong>Spring Cloud Sleuth</strong>  </p>
-</li>
-<li>
-<p>分布式跟踪工具，在不同服务之间传递跟踪信息，与 <strong>Zipkin</strong> 或 <strong>Jaeger</strong> 集成进行链路追踪。</p>
+<ul>
+<li>分布式跟踪工具，在不同服务之间传递跟踪信息，与 <strong>Zipkin</strong> 或 <strong>Jaeger</strong> 集成进行链路追踪。</li>
+</ul>
 </li>
 <li>
 <p><strong>Spring Cloud Bus</strong>  </p>
-</li>
-<li>
-<p>用于微服务间的事件总线，通过消息队列（如 Kafka 或 RabbitMQ）广播配置变更。</p>
+<ul>
+<li>用于微服务间的事件总线，通过消息队列（如 Kafka 或 RabbitMQ）广播配置变更。</li>
+</ul>
 </li>
 <li>
 <p><strong>Spring Cloud Stream</strong>  </p>
-</li>
-<li>
-<p>基于消息的微服务通信框架，支持 Kafka、RabbitMQ 等消息中间件。</p>
+<ul>
+<li>基于消息的微服务通信框架，支持 Kafka、RabbitMQ 等消息中间件。</li>
+</ul>
 </li>
 <li>
 <p><strong>Spring Cloud Kubernetes</strong>  </p>
-</li>
+<ul>
 <li>在 Kubernetes 集群中运行 Spring Cloud 应用时的支持，包括配置、服务发现等。</li>
+</ul>
+</li>
 </ol>
 <h2 id="spring-cloud_2">二、Spring Cloud 微服务架构中的常见模块<a class="headerlink" href="#spring-cloud_2" title="Permanent link">&para;</a></h2>
 <ol>
-<li><strong>服务注册与发现</strong>  </li>
-<li>使用 <strong>Eureka</strong>、<strong>Consul</strong> 或 <strong>Zookeeper</strong> 实现。</li>
 <li>
-<p>每个服务在启动时会注册到注册中心，其他服务可通过注册中心发现它。</p>
+<p><strong>服务注册与发现</strong>  </p>
+<ul>
+<li>使用 <strong>Eureka</strong>、<strong>Consul</strong> 或 <strong>Zookeeper</strong> 实现。</li>
+<li>每个服务在启动时会注册到注册中心，其他服务可通过注册中心发现它。</li>
+</ul>
 </li>
 <li>
 <p><strong>负载均衡</strong>  </p>
-</li>
-<li>
-<p><strong>Ribbon（旧版）</strong> 和 <strong>Spring Cloud LoadBalancer（新版）</strong> 提供客户端负载均衡，选择合适的实例进行请求。</p>
+<ul>
+<li><strong>Ribbon（旧版）</strong> 和 <strong>Spring Cloud LoadBalancer（新版）</strong> 提供客户端负载均衡，选择合适的实例进行请求。</li>
+</ul>
 </li>
 <li>
 <p><strong>熔断与限流</strong>  </p>
-</li>
-<li>
-<p><strong>Hystrix（旧版）</strong>，或 <strong>Resilience4j（新版）</strong> 用于处理依赖服务不可用时的降级策略，避免服务连锁故障。</p>
+<ul>
+<li><strong>Hystrix（旧版）</strong>，或 <strong>Resilience4j（新版）</strong> 用于处理依赖服务不可用时的降级策略，避免服务连锁故障。</li>
+</ul>
 </li>
 <li>
 <p><strong>集中式配置管理</strong>  </p>
-</li>
-<li>
-<p><strong>Spring Cloud Config</strong> 提供统一的配置管理，并支持动态刷新。</p>
+<ul>
+<li><strong>Spring Cloud Config</strong> 提供统一的配置管理，并支持动态刷新。</li>
+</ul>
 </li>
 <li>
 <p><strong>API 网关</strong>  </p>
-</li>
-<li>
-<p>使用 <strong>Spring Cloud Gateway</strong> 作为微服务的网关，进行路由和访问控制。</p>
+<ul>
+<li>使用 <strong>Spring Cloud Gateway</strong> 作为微服务的网关，进行路由和访问控制。</li>
+</ul>
 </li>
 <li>
 <p><strong>分布式跟踪</strong>  </p>
-</li>
+<ul>
 <li>使用 <strong>Sleuth</strong> 和 <strong>Zipkin</strong> 实现调用链追踪，监控各个服务的调用情况和性能。</li>
+</ul>
+</li>
 </ol>
 <h2 id="spring-cloud_3">三、Spring Cloud 的典型架构图<a class="headerlink" href="#spring-cloud_3" title="Permanent link">&para;</a></h2>
 <p>在典型的 Spring Cloud 微服务架构中，通常包括以下组件：</p>
@@ -7865,15 +7873,19 @@
 </ul>
 <h2 id="spring-cloud_5">六、Spring Cloud 的选型建议<a class="headerlink" href="#spring-cloud_5" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>业务场景</strong>：</li>
-<li>如果是小型微服务项目，可使用 <strong>Eureka</strong> 和 <strong>Ribbon</strong> 等轻量组件。</li>
 <li>
-<p>如果是大型微服务系统，推荐使用 <strong>Spring Cloud Gateway</strong> 和 <strong>Resilience4j</strong> 替代旧版组件。</p>
+<p><strong>业务场景</strong>：</p>
+<ul>
+<li>如果是小型微服务项目，可使用 <strong>Eureka</strong> 和 <strong>Ribbon</strong> 等轻量组件。</li>
+<li>如果是大型微服务系统，推荐使用 <strong>Spring Cloud Gateway</strong> 和 <strong>Resilience4j</strong> 替代旧版组件。</li>
+</ul>
 </li>
 <li>
 <p><strong>部署环境</strong>：</p>
-</li>
+<ul>
 <li>在 Kubernetes 中部署时，推荐结合 <strong>Spring Cloud Kubernetes</strong>。</li>
+</ul>
+</li>
 </ul>
 <h2 id="_3">七、总结<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p><strong>Spring Cloud</strong> 提供了一整套微服务架构的解决方案，适用于企业级分布式系统开发。通过模块化的设计，开发者可以根据需要选择不同的组件进行组合。它与 <strong>Spring Boot</strong> 的无缝集成让开发微服务变得更加高效，是 Java 技术栈中构建微服务系统的常用选择。</p>
