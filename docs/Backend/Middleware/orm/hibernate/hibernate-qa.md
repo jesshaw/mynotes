@@ -283,7 +283,7 @@ public class Address {
 
 实体bean实例可以以下三种状态的其中之一。
 
-1. **瞬时态（Transient）** ：当对象永远不会持久或与任何会话无关联时，它处于瞬态状态。通过调用save（），persist（）或saveOrUpdate（），可以使瞬态实例持久化 通过调用delete（）可以使持久性实例成为暂态。
+1. **瞬时态（Transient）** ：当对象永远不会持久或与任何会话无关联时，它处于瞬态状态。通过调用save（），persist（）或saveOrUpdate（），可以使瞬态实例持久化 通过调用delete（）可以使持久性实例成为瞬时态。
 2. **持久态（Persistent）** ：当对象与唯一会话关联时，它处于持久状态。由get（）或load（）方法返回的任何实例都是持久的。
 3. **游离态（Detached）** ：当一个对象先前是持久性的，但没有与任何会话相关联时，它处于游离状态。游离的实例可以通过调用update（），saveOrUpdate（），lock（）或replicate（）来持久化。通过调用merge（），瞬时或游离实例的状态也可以作为新的持久实例持久化。
 
