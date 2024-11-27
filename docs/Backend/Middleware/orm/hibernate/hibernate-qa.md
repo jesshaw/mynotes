@@ -507,10 +507,10 @@ Hibernate与Servlet或Struts2的集成需要使用ServletContextListener完成�
 
 Hibernate框架中使用的一些设计模式是：
 
-领域模型（Domain Model）模式 —— 包含行为和数据的领域的对象模型。
-数据映射器（Data Mapper） —— 一层映射器，它可以在对象和数据库之间移动数据，同时保持对象和映射器本身的独立性。
-代理模式用于延迟加载
-SessionFactory中的工厂模式
+- 领域模型（Domain Model）模式 —— 包含行为和数据的领域的对象模型。
+- 数据映射器（Data Mapper） —— 一层映射器，它可以在对象和数据库之间移动数据，同时保持对象和映射器本身的独立性。
+- 代理模式用于延迟加载
+- SessionFactory中的工厂模式
 
 ## 43. Hibernate框架遵循的最佳实践是什么？
 
@@ -519,7 +519,7 @@ SessionFactory中的工厂模式
 1. 总是检查主键字段的访问权限，如果它是在数据库层生成的，那么你不应该为此设置setter。
 2. 默认情况下，Hibernate直接设置字段值，而不使用setter 所以如果你想让Hibernate使用setter，那么确保正确的访问被定义为`@Access(value=AccessType.PROPERTY)` 。
 3. 如果访问类型是属性，请确保注解与getter方法而不是setter方法一起使用 避免在提交和获取方法上混合使用注解。
-4. 仅当使用原生SQL查询是在无法使用HQL完成时（例如使用数据库特定功能），才使用原生SQL查询。
+4. 仅在查询无法使用HQL完成时（例如使用数据库特定功能），才使用原生SQL查询。
 5. 如果您必须对集合进行排序，请使用有序列表，而不要使用Collection API进行排序。
 6. 明智地使用命名查询，将其保存在一个地方以便于调试 仅将它们用于常用查询 对于特定于实体的查询，您可以将它们保留在实体bean本身中。
 7. 对于Web应用程序，总是尝试使用JNDI DataSource而不是配置来在Hibernate中创建连接。
