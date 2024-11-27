@@ -275,7 +275,7 @@ import org.hibernate.annotations.CacheConcurrencyStrategy;
 public class Address {
 
 }
- ```
+```
 
 就是这样，我们完成了 Hibernate将使用EHCache进行二级缓存，请阅读Hibernate EHCache示例以获得完整的解释示例。
 
