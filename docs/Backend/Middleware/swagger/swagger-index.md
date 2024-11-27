@@ -7,37 +7,37 @@ Swagger 的核心是**开放 API 规范**（**OpenAPI Specification**，简称 O
 ## 一、Swagger 的主要组成部分
 
 1. **OpenAPI Specification (OAS)**  
-   - 是 Swagger 使用的标准格式，用于描述 API 的端点、请求方法、参数、响应格式等信息。
-   - OAS 支持 **JSON** 和 **YAML** 格式。
+      - 是 Swagger 使用的标准格式，用于描述 API 的端点、请求方法、参数、响应格式等信息。
+      - OAS 支持 **JSON** 和 **YAML** 格式。
 
 2. **Swagger UI**  
-   - 一个自动生成的**API 文档页面**，展示 API 的所有端点，并允许用户**在线测试接口**。
-   - 每个端点都显示请求参数、响应模型，并附带 "Try it out" 按钮，供用户测试。
+      - 一个自动生成的**API 文档页面**，展示 API 的所有端点，并允许用户**在线测试接口**。
+      - 每个端点都显示请求参数、响应模型，并附带 "Try it out" 按钮，供用户测试。
 
 3. **Swagger Editor**  
-   - 在线编辑器，用于编写和修改 OpenAPI 规范文件，并实时预览生成的文档。
-   - [访问 Swagger Editor](https://editor.swagger.io)
+      - 在线编辑器，用于编写和修改 OpenAPI 规范文件，并实时预览生成的文档。
+      - [访问 Swagger Editor](https://editor.swagger.io)
 
 4. **Swagger Codegen**  
-   - 自动生成**客户端 SDK**、**服务器端代码**和**API 文档**的工具。
-   - 支持多种编程语言，如 Java、Python、Node.js 等。
+      - 自动生成**客户端 SDK**、**服务器端代码**和**API 文档**的工具。
+      - 支持多种编程语言，如 Java、Python、Node.js 等。
 
 5. **Swagger Hub**  
-   - 一个云平台，用于管理和共享 API 文档，支持团队协作。
+      - 一个云平台，用于管理和共享 API 文档，支持团队协作。
 
 ## 二、Swagger 的主要功能
 
 1. **API 文档自动生成**  
-   - 通过解析代码中的注解，Swagger 可以生成详细的 API 文档，避免手动维护文档的繁琐工作。
+      - 通过解析代码中的注解，Swagger 可以生成详细的 API 文档，避免手动维护文档的繁琐工作。
 
 2. **交互式测试**  
-   - 在 Swagger UI 中可以直接测试接口，而无需编写 Postman 请求或 curl 命令。
+      - 在 Swagger UI 中可以直接测试接口，而无需编写 Postman 请求或 curl 命令。
 
 3. **代码生成**  
-   - Swagger 支持根据 OpenAPI 规范文件自动生成服务端或客户端代码。
+      - Swagger 支持根据 OpenAPI 规范文件自动生成服务端或客户端代码。
 
 4. **版本控制和团队协作**  
-   - 使用 Swagger Hub，可以方便地对 API 文档进行版本管理，并与团队成员共享。
+      - 使用 Swagger Hub，可以方便地对 API 文档进行版本管理，并与团队成员共享。
 
 ## 三、Swagger 的优势
 
