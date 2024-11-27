@@ -8610,9 +8610,9 @@ JVM使用<strong>可达性分析算法</strong>，从GC Roots（如栈中的局�
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>强引用</strong>：不会被GC回收（如普通对象引用）。</li>
-<li><strong>软引用</strong>：在内存不足时回收（<code>SoftReference</code>）。</li>
 <li><strong>弱引用</strong>：在下一次GC时回收（<code>WeakReference</code>）。</li>
-<li><strong>虚引用</strong>：无实际引用关系，仅在对象被GC时收到通知（<code>PhantomReference</code>）。</li>
+<li><strong>软引用</strong>：在内存不足时回收（<code>SoftReference</code>）。</li>
+<li><strong>虚引用</strong>：无实际引用关系，仅在对象被GC时收到通知（<code>PhantomReference</code>），它的主要用途是跟踪对象的回收状态。</li>
 </ul>
 <h2 id="12">12. 类加载的过程包括哪些步骤？<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：类加载分为：</p>
@@ -8652,7 +8652,7 @@ JVM使用<strong>可达性分析算法</strong>，从GC Roots（如栈中的局�
 <li><strong><code>jconsole</code>/<code>VisualVM</code></strong>：图形化监控工具，查看内存、线程等实时信息。</li>
 </ul>
 <h2 id="18">18. 什么是内存泄漏？如何排查内存泄漏？<a class="headerlink" href="#18" title="Permanent link">&para;</a></h2>
-<p><strong>答案</strong>：内存泄漏是指<strong>不再使用的对象未被GC回收</strong>，导致堆内存持续增长，最终引发<code>OutOfMemoryError</code>。排查方法：</p>
+<p><strong>答案</strong>：内存泄漏是指<strong>不再使用的对象未被GC回收</strong>，导致堆内存（主要是堆内存）持续增长，最终引发<code>OutOfMemoryError</code>。排查方法：</p>
 <ul>
 <li>使用<code>jmap</code>生成堆转储文件（heap dump），使用<code>MAT</code>( Eclipse Memory Analyzer Tool)分析堆转储。</li>
 <li>使用<code>jconsole</code>或<code>VisualVM</code>观察对象增长情况。</li>
