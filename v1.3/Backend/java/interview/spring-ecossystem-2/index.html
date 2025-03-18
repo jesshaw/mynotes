@@ -628,6 +628,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Frontend/flutter/resource/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    资源
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -4650,6 +4671,69 @@
   
   
     <li class="md-nav__item">
+      <a href="../redis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    redis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rabbitmq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    RabbitMQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kafaka/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kafaka
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../performance-optimization-and-tuning/" class="md-nav__link">
         
   
@@ -8491,17 +8575,22 @@
 <h2 id="1-spring">1. Spring框架是什么？<a class="headerlink" href="#1-spring" title="Permanent link">&para;</a></h2>
 <p>Spring框架是一个轻量级的开源框架，提供全面的基础设施支持，主要用于构建企业级Java应用程序。它简化了Java开发中的许多重复性工作，特别是依赖管理和事务管理。</p>
 <h2 id="2-spring">2. Spring框架有些什么重要的特性和优势？<a class="headerlink" href="#2-spring" title="Permanent link">&para;</a></h2>
-<p>Spring提供了依赖注入（DI）、面向切面编程（AOP）、声明式事务管理、数据访问抽象和MVC Web框架等特性，使开发更简单、可扩展，并且具备良好的测试性。</p>
+<p>Spring提供了<strong>依赖注入（DI）、面向切面编程（AOP）、声明式事务管理、数据访问抽象和MVC Web框架</strong>等特性，使开发更简单、可扩展，并且具备良好的测试性。</p>
 <h2 id="3">3. 你对依赖注入的理解是什么？<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>依赖注入是一种设计模式，允许对象通过外部注入而非直接实例化来获取所需的依赖。它提高了模块之间的解耦性，并便于单元测试和组件替换。</p>
+<p>依赖注入是<strong>一种设计模式</strong>，允许对象<strong>通过外部注入</strong>而非直接实例化来获取所需的依赖。它提高了模块之间的解耦性，并便于单元测试和组件替换。</p>
 <h2 id="4-spring">4. Spring框架中怎么样实现依赖注入？<a class="headerlink" href="#4-spring" title="Permanent link">&para;</a></h2>
-<p>Spring支持多种依赖注入方式，包括构造器注入、setter方法注入和基于注解的注入（如@Autowired）。</p>
+<p>Spring支持多种依赖注入方式，包括：</p>
+<ul>
+<li>构造器注入</li>
+<li>setter方法注入</li>
+<li>基于注解的注入（如@Autowired）。</li>
+</ul>
 <h2 id="5-spring">5. 使用Spring工具套件有什么好处？<a class="headerlink" href="#5-spring" title="Permanent link">&para;</a></h2>
 <p>Spring工具套件（STS）为Spring应用提供了专用的集成开发环境，支持快速启动项目、自动配置和调试，并优化开发效率。</p>
 <h2 id="6-spring">6. 重要的Spring模块名称有哪些？<a class="headerlink" href="#6-spring" title="Permanent link">&para;</a></h2>
 <p>常见模块包括Spring Core、Spring Context、Spring AOP、Spring Web、Spring MVC、Spring Data和Spring Boot等。</p>
 <h2 id="7">7. 你对面向切面编程的理解是什么？<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
-<p>面向切面编程（AOP）是一种编程范式，允许将横切关注点（如日志记录、事务管理）从核心业务逻辑中分离出来，增强模块化。</p>
+<p>面向切面编程（AOP）是<strong>一种编程范式</strong>，允许将横切关注点（如日志记录、事务管理）从核心业务逻辑中分离出来，增强模块化。</p>
 <h2 id="8-aopaspect-advice-pointcut-joinpoint-and-advice-arguments">8. AOP中的Aspect, Advice, Pointcut, JoinPoint and Advice Arguments是什么？<a class="headerlink" href="#8-aopaspect-advice-pointcut-joinpoint-and-advice-arguments" title="Permanent link">&para;</a></h2>
 <ul>
 <li><strong>Aspect</strong>：一个模块，定义了多个横切关注点的逻辑。</li>
@@ -8519,19 +8608,33 @@
 <h2 id="12-spring-bean">12. Spring Bean配置文件的重要性是什么？<a class="headerlink" href="#12-spring-bean" title="Permanent link">&para;</a></h2>
 <p>Bean配置文件定义了Bean及其依赖关系，帮助Spring容器管理对象的创建和配置。</p>
 <h2 id="13-spring-bean">13. 把一个类配置成Spring Bean有些什么不同方法？<a class="headerlink" href="#13-spring-bean" title="Permanent link">&para;</a></h2>
-<p>可以通过XML配置、Java配置类（@Configuration）、@Component或其派生注解（如@Service、@Repository）等方式来配置。</p>
+<p>可以通过：</p>
+<ul>
+<li>XML配置</li>
+<li>Java配置类（@Configuration</li>
+<li>@Component</li>
+<li>其派生注解（如@Service、@Repository）</li>
+</ul>
+<p>等方式来配置。</p>
 <h2 id="14-spring-bean">14. Spring Bean有些什么不同作用域？<a class="headerlink" href="#14-spring-bean" title="Permanent link">&para;</a></h2>
-<p>常见的作用域有单例（singleton）、原型（prototype）、请求（request）、会话（session）和全局会话（global session）。</p>
+<p>常见的作用域有：</p>
+<ul>
+<li>单例（singleton）</li>
+<li>原型（prototype）</li>
+<li>请求（request）</li>
+<li>会话（session）</li>
+<li>全局会话（global session）</li>
+</ul>
 <h2 id="15-spring-bean">15. Spring Bean生命周期是什么？<a class="headerlink" href="#15-spring-bean" title="Permanent link">&para;</a></h2>
-<p>生命周期包括实例化、属性设置、初始化、销毁等过程，Spring支持自定义初始化和销毁方法。</p>
+<p>生命周期包括<strong>实例化、属性设置、初始化、销毁</strong>等过程，Spring支持自定义初始化和销毁方法。</p>
 <h2 id="16-spring-beanservletcontextservletconfig">16. 在Spring Bean中怎么获得ServletContext和ServletConfig对象<a class="headerlink" href="#16-spring-beanservletcontextservletconfig" title="Permanent link">&para;</a></h2>
 <p>可以通过实现ServletContextAware或ServletConfigAware接口来注入这些对象。</p>
 <h2 id="17-beanautowired">17. Bean装配和@Autowired注解是什么？<a class="headerlink" href="#17-beanautowired" title="Permanent link">&para;</a></h2>
 <p>Bean装配是为Bean提供依赖的过程；@Autowired注解用于自动注入Bean依赖。</p>
 <h2 id="18-spring-bean">18. Spring Bean自动装配有几种不同类型？<a class="headerlink" href="#18-spring-bean" title="Permanent link">&para;</a></h2>
-<p>自动装配类型包括byName、byType和constructor等。</p>
+<p>自动装配类型包括<strong>byName、byType和constructor</strong>等。</p>
 <h2 id="19-spring-bean">19. Spring Bean是线程安全的吗？<a class="headerlink" href="#19-spring-bean" title="Permanent link">&para;</a></h2>
-<p>默认情况下，单例Bean在多线程环境中并非线程安全，需要自行实现同步控制。</p>
+<p>默认情况下，<strong>单例Bean在多线程环境中并非线程安全</strong>，需要自行实现同步控制。</p>
 <h2 id="20-spring-mvccontroller">20. 在Spring MVC的Controller是什么？<a class="headerlink" href="#20-spring-mvccontroller" title="Permanent link">&para;</a></h2>
 <p>Controller是处理HTTP请求的组件，负责业务逻辑处理和视图渲染。</p>
 <h2 id="21-spring-component-repository-service">21. 在Spring中 @Component, @Repository 和 @Service注解有什么区别？<a class="headerlink" href="#21-spring-component-repository-service" title="Permanent link">&para;</a></h2>
@@ -8543,7 +8646,13 @@
 <h2 id="24-multipartresolver">24. MultipartResolver是什么？什么时候使用？<a class="headerlink" href="#24-multipartresolver" title="Permanent link">&para;</a></h2>
 <p>MultipartResolver用于处理文件上传请求；在需要上传文件时使用它。</p>
 <h2 id="25-spring-mvc">25. Spring MVC框架怎样处理异常？<a class="headerlink" href="#25-spring-mvc" title="Permanent link">&para;</a></h2>
-<p>Spring MVC通过@ExceptionHandler注解、@ControllerAdvice和HandlerExceptionResolver等机制处理异常。</p>
+<p>Spring MVC通过：</p>
+<ul>
+<li>@ExceptionHandler注解</li>
+<li>@ControllerAdvice注解</li>
+<li>HandlerExceptionResolver</li>
+</ul>
+<p>等机制处理异常。</p>
 <h2 id="26-javaapplicationcontext">26. 在Java程序中怎样创建ApplicationContext？<a class="headerlink" href="#26-javaapplicationcontext" title="Permanent link">&para;</a></h2>
 <p>可通过ClassPathXmlApplicationContext、AnnotationConfigApplicationContext等类来创建ApplicationContext。</p>
 <h2 id="27-spring">27. 能有多个Spring配置文件吗？<a class="headerlink" href="#27-spring" title="Permanent link">&para;</a></h2>
@@ -8553,7 +8662,7 @@
 <h2 id="29-spring-mvc">29. 为了创建Spring MVC应用，至少需要配置什么？<a class="headerlink" href="#29-spring-mvc" title="Permanent link">&para;</a></h2>
 <p>至少需要DispatcherServlet和相关的映射配置。</p>
 <h2 id="30-mvcspring-mvc">30. 相对与MVC架构，你对Spring MVC框架的理解是怎样的？<a class="headerlink" href="#30-mvcspring-mvc" title="Permanent link">&para;</a></h2>
-<p>Spring MVC遵循MVC设计模式，通过控制器处理请求，将模型数据传递给视图，分离了业务逻辑和视图逻辑。</p>
+<p>Spring MVC <strong>遵循MVC设计模式</strong>，通过控制器处理请求，将模型数据传递给视图，分离了业务逻辑和视图逻辑。</p>
 <h2 id="31-spring-mvc">31. Spring MVC应用怎样实现本地化？<a class="headerlink" href="#31-spring-mvc" title="Permanent link">&para;</a></h2>
 <p>可以使用ResourceBundleMessageSource和LocaleResolver配置实现本地化。</p>
 <h2 id="32-springrestful-webjson">32. 使用Spring怎样创建Restful Web服务并返回JSON？<a class="headerlink" href="#32-springrestful-webjson" title="Permanent link">&para;</a></h2>
@@ -8567,7 +8676,7 @@
 <h2 id="36-spring-web-mvc">36. Spring Web MVC架构怎样验证表单数据？<a class="headerlink" href="#36-spring-web-mvc" title="Permanent link">&para;</a></h2>
 <p>使用JSR-303或JSR-380注解（如@Valid）结合BindingResult对象进行表单验证。</p>
 <h2 id="37-spring-mvcinterceptor">37. Spring MVC拦截器（Interceptor）是什么？怎样使用？<a class="headerlink" href="#37-spring-mvcinterceptor" title="Permanent link">&para;</a></h2>
-<p>拦截器用于在请求处理前后执行操作。可以实现HandlerInterceptor接口并配置在XML或Java中。</p>
+<p>拦截器用于在请求处理前、后执行操作。可以实现HandlerInterceptor接口并配置在XML或Java中。</p>
 <h2 id="38-spring-jdbctemplate">38. Spring JdbcTemplate类是什么？怎样使用？<a class="headerlink" href="#38-spring-jdbctemplate" title="Permanent link">&para;</a></h2>
 <p>JdbcTemplate是Spring的数据访问模板，用于简化JDBC操作。通过依赖注入后可直接执行数据库操作。</p>
 <h2 id="39-spring-webtomcat-jndi">39. Spring Web应用中怎样使用Tomcat JNDI数据资源？<a class="headerlink" href="#39-spring-webtomcat-jndi" title="Permanent link">&para;</a></h2>
