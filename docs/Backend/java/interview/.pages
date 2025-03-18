@@ -17,4 +17,7 @@ nav:
   - design-patterns.md
   - microservices-architecture.md
   - distributed-systems-and-middleware.md
+  - redis.md
+  - rabbitmq.md
+  - kafaka.md
   - performance-optimization-and-tuning.md

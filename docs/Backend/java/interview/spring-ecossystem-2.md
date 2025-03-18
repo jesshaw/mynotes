@@ -6,15 +6,19 @@ Spring框架是一个轻量级的开源框架，提供全面的基础设施支�
 
 ## 2. Spring框架有些什么重要的特性和优势？
 
-Spring提供了依赖注入（DI）、面向切面编程（AOP）、声明式事务管理、数据访问抽象和MVC Web框架等特性，使开发更简单、可扩展，并且具备良好的测试性。
+Spring提供了**依赖注入（DI）、面向切面编程（AOP）、声明式事务管理、数据访问抽象和MVC Web框架**等特性，使开发更简单、可扩展，并且具备良好的测试性。
 
 ## 3. 你对依赖注入的理解是什么？
 
-依赖注入是一种设计模式，允许对象通过外部注入而非直接实例化来获取所需的依赖。它提高了模块之间的解耦性，并便于单元测试和组件替换。
+依赖注入是**一种设计模式**，允许对象**通过外部注入**而非直接实例化来获取所需的依赖。它提高了模块之间的解耦性，并便于单元测试和组件替换。
 
 ## 4. Spring框架中怎么样实现依赖注入？
 
-Spring支持多种依赖注入方式，包括构造器注入、setter方法注入和基于注解的注入（如@Autowired）。
+Spring支持多种依赖注入方式，包括：
+
+- 构造器注入
+- setter方法注入
+- 基于注解的注入（如@Autowired）。
 
 ## 5. 使用Spring工具套件有什么好处？
 
@@ -26,7 +30,7 @@ Spring工具套件（STS）为Spring应用提供了专用的集成开发环境�
 
 ## 7. 你对面向切面编程的理解是什么？
 
-面向切面编程（AOP）是一种编程范式，允许将横切关注点（如日志记录、事务管理）从核心业务逻辑中分离出来，增强模块化。
+面向切面编程（AOP）是**一种编程范式**，允许将横切关注点（如日志记录、事务管理）从核心业务逻辑中分离出来，增强模块化。
 
 ## 8. AOP中的Aspect, Advice, Pointcut, JoinPoint and Advice Arguments是什么？
 
@@ -54,15 +58,28 @@ Bean配置文件定义了Bean及其依赖关系，帮助Spring容器管理对象
 
 ## 13. 把一个类配置成Spring Bean有些什么不同方法？
 
-可以通过XML配置、Java配置类（@Configuration）、@Component或其派生注解（如@Service、@Repository）等方式来配置。
+可以通过：
+
+- XML配置
+- Java配置类（@Configuration
+- @Component
+- 其派生注解（如@Service、@Repository）
+
+等方式来配置。
 
 ## 14. Spring Bean有些什么不同作用域？
 
-常见的作用域有单例（singleton）、原型（prototype）、请求（request）、会话（session）和全局会话（global session）。
+常见的作用域有：
+
+- 单例（singleton）
+- 原型（prototype）
+- 请求（request）
+- 会话（session）
+- 全局会话（global session）
 
 ## 15. Spring Bean生命周期是什么？
 
-生命周期包括实例化、属性设置、初始化、销毁等过程，Spring支持自定义初始化和销毁方法。
+生命周期包括**实例化、属性设置、初始化、销毁**等过程，Spring支持自定义初始化和销毁方法。
 
 ## 16. 在Spring Bean中怎么获得ServletContext和ServletConfig对象
 
@@ -74,11 +91,11 @@ Bean装配是为Bean提供依赖的过程；@Autowired注解用于自动注入Be
 
 ## 18. Spring Bean自动装配有几种不同类型？
 
-自动装配类型包括byName、byType和constructor等。
+自动装配类型包括**byName、byType和constructor**等。
 
 ## 19. Spring Bean是线程安全的吗？
 
-默认情况下，单例Bean在多线程环境中并非线程安全，需要自行实现同步控制。
+默认情况下，**单例Bean在多线程环境中并非线程安全**，需要自行实现同步控制。
 
 ## 20. 在Spring MVC的Controller是什么？
 
@@ -102,7 +119,13 @@ MultipartResolver用于处理文件上传请求；在需要上传文件时使用
 
 ## 25. Spring MVC框架怎样处理异常？
 
-Spring MVC通过@ExceptionHandler注解、@ControllerAdvice和HandlerExceptionResolver等机制处理异常。
+Spring MVC通过：
+
+- @ExceptionHandler注解
+- @ControllerAdvice注解
+- HandlerExceptionResolver
+
+等机制处理异常。
 
 ## 26. 在Java程序中怎样创建ApplicationContext？
 
@@ -122,7 +145,7 @@ Spring MVC通过@ExceptionHandler注解、@ControllerAdvice和HandlerExceptionRe
 
 ## 30. 相对与MVC架构，你对Spring MVC框架的理解是怎样的？
 
-Spring MVC遵循MVC设计模式，通过控制器处理请求，将模型数据传递给视图，分离了业务逻辑和视图逻辑。
+Spring MVC **遵循MVC设计模式**，通过控制器处理请求，将模型数据传递给视图，分离了业务逻辑和视图逻辑。
 
 ## 31. Spring MVC应用怎样实现本地化？
 
@@ -150,7 +173,7 @@ Spring MVC遵循MVC设计模式，通过控制器处理请求，将模型数据�
 
 ## 37. Spring MVC拦截器（Interceptor）是什么？怎样使用？
 
-拦截器用于在请求处理前后执行操作。可以实现HandlerInterceptor接口并配置在XML或Java中。
+拦截器用于在请求处理前、后执行操作。可以实现HandlerInterceptor接口并配置在XML或Java中。
 
 ## 38. Spring JdbcTemplate类是什么？怎样使用？
 

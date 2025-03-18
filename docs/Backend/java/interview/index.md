@@ -74,7 +74,11 @@
 ## 11. [分布式系统与中间件](./distributed-systems-and-middleware.md)
 
 - 分布式系统的基本概念（CAP理论、数据一致性、幂等性）
-- 常用中间件（Redis、消息队列如RabbitMQ、Kafka的工作原理）
+- 常用中间件
+  - [Redis](./redis.md)
+  - 消息队列
+    - [RabbitMQ](./rabbitmq.md)
+    - [Kafka](./kafaka.md)
 - 分布式缓存、分布式锁的实现方式
 - 高并发、高可用系统设计（负载均衡、降级限流、缓存穿透等）
 
