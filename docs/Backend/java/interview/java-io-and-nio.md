@@ -196,6 +196,8 @@ Java I/O 和 NIO 是 Java 中处理输入输出操作的核心部分，这里是
        3. 在主线程中使用 `Selector.select()` 轮询事件，检测到连接事件时，调用 `accept()` 创建 `SocketChannel`。
        4. 检测到读事件时读取数据，然后再将该数据写回 `SocketChannel`，实现 Echo 功能。
 
+[源码示例28](https://github.com/jesshaw/java-sample/blob/master/interview/src/main/java/com/lexiangmiao/sample/interview/javaioandnio/JIOANIO_28_NonBlockingEchoServer.java)
+
 ## 29. **在 NIO 中，如何实现文件锁定机制？**
 
 **答案**：  

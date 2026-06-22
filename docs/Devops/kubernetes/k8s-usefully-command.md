@@ -145,13 +145,13 @@ kubectl logs rocketmq-0 -c rmqbroker
 ```bash
 
 # 进入第一个容器
-kubctl exec -it pod-id sh
+kubctl exec -it pod-id -- sh
 
 # pod为多容器时，默认进入第一个容器
-kubctl exec -it pod-id sh
+kubctl exec -it pod-id -- sh
 
 #  pod为多容器时，-c 指定容器名进入指定容器
-kubctl exec -it pod-id -c container-name sh
+kubctl exec -it pod-id -c container-name -- sh
 ```
 
 ### 检查node，svc，pod的可达性

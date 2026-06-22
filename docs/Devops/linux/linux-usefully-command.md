@@ -1,8 +1,6 @@
 # linux常用命令
 
-![c](https://p1-tt.byteimg.com/origin/pgc-image/4ddf58a99f604fe1a909c4c1627cc457?from=pc)
-
-<article class="syl-article-base syl-page-article syl-device-pc tt-article-content">![Linux的常用命令就是记不住，怎么办？于是推出了这套教程](https://p1-tt.byteimg.com/origin/pgc-image/4ddf58a99f604fe1a909c4c1627cc457?from=pc)
+![c](./luc.png)
 
 ## 1. 帮助命令
 

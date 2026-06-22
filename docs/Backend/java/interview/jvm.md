@@ -57,6 +57,28 @@ JVM（Java Virtual Machine）、JRE（Java Runtime Environment）和JDK（Java D
 垃圾回收主要发生在堆内存的年轻代（包括Eden区和Survivor区）和老年代。此外，方法区的部分实现（如永久代）在类卸载时也会被回收。
 ![jvm gc](../assets/jvm.drawio.svg)
 
+**对象的完整生命周期**
+
+对象 new 出来
+👇
+进入 Eden 区（若超大则直接进老年代）
+👇
+Eden 满 → Minor GC（标记-复制到 Survivor，年龄+1）
+👇
+在 S0/S1 间轮转（每次年龄+1，反复熬过多次 GC）
+👇
+触发晋升条件（年龄达阈值：默认15 / 动态年龄判定 / Survivor 溢出）
+👇
+进入老年代
+👇
+老年代满 → Major GC / Full GC（标记-整理或标记-清除）
+👇
+若从 GC Root 不可达 → 内存被彻底回收（对象消亡）
+
+**特别提醒（致命陷阱）**
+- Full GC 才是“终极杀手”：如果对象大量涌入老年代，导致老年代频繁触发 Full GC，JVM 会暂停所有用户线程（Stop-The-World），这是系统响应变慢、超时的罪魁祸首。
+- Survivor 区太小 = 提前晋升：如果 Survivor 区设置过小（比如 JVM 默认的自动调优在某些场景失效），对象会因“空间溢出”提前进入老年代，导致老年代很快被填满，从而引发频繁的 Full GC。这解释了为什么监控 GC 时，老年代增长过快是一个极其危险的信号。
+
 ## 5. 什么是垃圾回收（GC）？GC的目的是什么？
 
 **答案**：
