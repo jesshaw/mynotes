@@ -3969,7 +3969,7 @@
         
   
   <span class="md-ellipsis">
-    多线程与并发
+    Multithreading and concurrency
   </span>
   
 
@@ -6391,6 +6391,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../Devops/linux/linux-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
         
   
@@ -7536,6 +7557,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../SoftwareEngineering/model/member/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    会员管理系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
@@ -8209,39 +8251,46 @@
 <li>实测 Redis 的 <strong>QPS 可达 10 万级别</strong>，性能足够高。</li>
 </ul>
 <h3 id="3-redis">3. Redis 持久化方式有哪些？各有什么优缺点？<a class="headerlink" href="#3-redis" title="Permanent link">&para;</a></h3>
+<p>Redis 主要提供两种核心持久化方式：<strong>RDB（快照）</strong>和<strong>AOF（追加日志）</strong>。此外，从 4.0 版本开始，Redis 还支持<strong>混合持久化</strong>，可以结合两者的优点。</p>
 <table>
 <thead>
 <tr>
-<th>持久化方式</th>
-<th>RDB（快照）</th>
-<th>AOF（日志）</th>
+<th style="text-align: left;">特性</th>
+<th style="text-align: left;">RDB</th>
+<th style="text-align: left;">AOF</th>
+<th style="text-align: left;">混合持久化</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>触发方式</td>
-<td>定期保存</td>
-<td>记录每次写操作</td>
+<td style="text-align: left;"><strong>数据安全性</strong></td>
+<td style="text-align: left;">较低，可能丢失最后一次快照后的数据</td>
+<td style="text-align: left;">较高，最多丢失一秒数据</td>
+<td style="text-align: left;">高</td>
 </tr>
 <tr>
-<td>性能</td>
-<td>低，影响较小</td>
-<td>高，影响较大</td>
+<td style="text-align: left;"><strong>恢复速度</strong></td>
+<td style="text-align: left;"><strong>快</strong></td>
+<td style="text-align: left;">慢</td>
+<td style="text-align: left;"><strong>快</strong>（得益于RDB部分）</td>
 </tr>
 <tr>
-<td>数据完整性</td>
-<td>可能丢失部分数据</td>
-<td>丢失数据较少</td>
+<td style="text-align: left;"><strong>文件大小</strong></td>
+<td style="text-align: left;"><strong>小</strong></td>
+<td style="text-align: left;">大</td>
+<td style="text-align: left;">适中</td>
 </tr>
 <tr>
-<td>文件大小</td>
-<td>小</td>
-<td>大</td>
+<td style="text-align: left;"><strong>性能影响</strong></td>
+<td style="text-align: left;">小，主要在 <code>fork</code> 瞬间</td>
+<td style="text-align: left;">持续的写入操作有开销</td>
+<td style="text-align: left;">适中</td>
 </tr>
 <tr>
-<td>适用场景</td>
-<td>适用于冷备、故障恢复</td>
-<td>适用于实时数据同步</td>
+<td style="text-align: left;"><strong>适用场景</strong></td>
+<td style="text-align: left;"><strong>数据可丢失、追求极致性能</strong>（如纯缓存场景）</td>
+<td style="text-align: left;"><strong>数据绝对不能丢、对安全性要求极高</strong>（如金融、交易系统）</td>
+<td style="text-align: left;"><strong>希望兼顾性能与数据安全的大多数生产环境</strong></td>
 </tr>
 </tbody>
 </table>

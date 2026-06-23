@@ -4113,9 +4113,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#24-synchronizedsynchronized" class="md-nav__link">
+  <a href="#24-synchronized-synchronized" class="md-nav__link">
     <span class="md-ellipsis">
-      24. synchronized关键字的作用是什么？在哪些场景中需要使用synchronized？
+      24. synchronized 关键字的作用是什么？在哪些场景中需要使用 synchronized？
     </span>
   </a>
   
@@ -4396,7 +4396,7 @@
         
   
   <span class="md-ellipsis">
-    多线程与并发
+    Multithreading and concurrency
   </span>
   
 
@@ -6595,6 +6595,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../Devops/linux/linux-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
         
   
@@ -7740,6 +7761,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../SoftwareEngineering/model/member/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    会员管理系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
@@ -8320,9 +8362,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#24-synchronizedsynchronized" class="md-nav__link">
+  <a href="#24-synchronized-synchronized" class="md-nav__link">
     <span class="md-ellipsis">
-      24. synchronized关键字的作用是什么？在哪些场景中需要使用synchronized？
+      24. synchronized 关键字的作用是什么？在哪些场景中需要使用 synchronized？
     </span>
   </a>
   
@@ -8519,7 +8561,7 @@
 
 <h1 id="java">Java基础<a class="headerlink" href="#java" title="Permanent link">&para;</a></h1>
 <p>以下是Java基础面试问题的简明答案：</p>
-<h2 id="1-java">1. <strong>Java有哪些基本数据类型？它们的字节大小和默认值分别是什么？</strong><a class="headerlink" href="#1-java" title="Permanent link">&para;</a></h2>
+<h2 id="1-java">1. Java有哪些基本数据类型？它们的字节大小和默认值分别是什么？<a class="headerlink" href="#1-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>byte</strong>：1字节，默认值<code>0</code></li>
@@ -8531,13 +8573,13 @@
 <li><strong>char</strong>：2字节，默认值<code>'\u0000'</code></li>
 <li><strong>boolean</strong>：1位，默认值<code>false</code></li>
 </ul>
-<h2 id="2-equals">2. <strong><code>==</code>和<code>equals()</code>的区别是什么？</strong><a class="headerlink" href="#2-equals" title="Permanent link">&para;</a></h2>
+<h2 id="2-equals">2. <code>==</code>和<code>equals()</code>的区别是什么？<a class="headerlink" href="#2-equals" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>==</code> 比较的是内存地址（引用）是否相等。</li>
 <li><code>equals()</code> 比较的是对象内容是否相等，<code>Object</code>类默认实现是比较地址，但通常会重写来比较内容。</li>
 </ul>
-<h2 id="3">3. <strong>面向对象编程的四大特性是什么？</strong><a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h2 id="3">3. 面向对象编程的四大特性是什么？<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>封装</strong>：隐藏实现细节，暴露接口。</li>
@@ -8545,20 +8587,20 @@
 <li><strong>多态</strong>：父类引用指向子类对象，执行子类方法。</li>
 <li><strong>抽象</strong>：定义模板方法，让子类实现具体逻辑。</li>
 </ul>
-<h2 id="4-overloadingoverriding">4. <strong>重载（Overloading）和重写（Overriding）有什么区别？</strong><a class="headerlink" href="#4-overloadingoverriding" title="Permanent link">&para;</a></h2>
+<h2 id="4-overloadingoverriding">4. 重载（Overloading）和重写（Overriding）有什么区别？<a class="headerlink" href="#4-overloadingoverriding" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>重载</strong>：同一类中方法名相同，参数列表不同。</li>
 <li><strong>重写</strong>：子类对父类方法的重新实现，方法签名需一致。</li>
 </ul>
-<h2 id="5-stringstringbuilderstringbuffer">5. <strong>String、StringBuilder、StringBuffer的区别是什么？</strong><a class="headerlink" href="#5-stringstringbuilderstringbuffer" title="Permanent link">&para;</a></h2>
+<h2 id="5-stringstringbuilderstringbuffer">5. String、StringBuilder、StringBuffer的区别是什么？<a class="headerlink" href="#5-stringstringbuilderstringbuffer" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>String</code>：不可变，适合少量字符串操作。</li>
 <li><code>StringBuilder</code>：可变，线程不安全，适合单线程场景。</li>
 <li><code>StringBuffer</code>：可变，线程安全，适合多线程场景。</li>
 </ul>
-<h2 id="6-final">6. <strong><code>final</code>关键字的作用是什么？可以应用于哪些场景？</strong><a class="headerlink" href="#6-final" title="Permanent link">&para;</a></h2>
+<h2 id="6-final">6. <code>final</code>关键字的作用是什么？可以应用于哪些场景？<a class="headerlink" href="#6-final" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>用于修饰类、方法、变量。</li>
@@ -8566,33 +8608,33 @@
 <li><strong>final方法</strong>：不能被重写。</li>
 <li><strong>final变量</strong>：值不可变（常量）。</li>
 </ul>
-<h2 id="7-static">7. <strong><code>static</code>关键字有什么作用？</strong><a class="headerlink" href="#7-static" title="Permanent link">&para;</a></h2>
+<h2 id="7-static">7. <code>static</code>关键字有什么作用？<a class="headerlink" href="#7-static" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>用于修饰类变量和方法，使之属于类本身而非实例。</li>
 <li><strong>static变量</strong>：在类加载时初始化，所有实例共享。</li>
 <li><strong>static方法</strong>：无需实例化类即可调用。</li>
 </ul>
-<h2 id="8-java">8. <strong>Java中的构造方法有什么特点？什么时候会调用构造方法？</strong><a class="headerlink" href="#8-java" title="Permanent link">&para;</a></h2>
+<h2 id="8-java">8. Java中的构造方法有什么特点？什么时候会调用构造方法？<a class="headerlink" href="#8-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>构造方法与类名相同，无返回值，不能声明<code>void</code>。</li>
 <li>在对象创建（<code>new</code>）时调用。</li>
 </ul>
-<h2 id="9">9. <strong>什么是抽象类？什么是接口？它们有什么区别？</strong><a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<h2 id="9">9. 什么是抽象类？什么是接口？它们有什么区别？<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>抽象类</strong>：可包含具体方法，不能实例化，有构造函数。</li>
 <li><strong>接口</strong>：只能包含抽象方法（Java 8后可有<code>default</code>方法），所有方法默认<code>public</code>。</li>
 <li>区别在于接口表示能力，抽象类表示一种层次关系。</li>
 </ul>
-<h2 id="10-thissuper">10. <strong><code>this</code>和<code>super</code>关键字的作用分别是什么？</strong><a class="headerlink" href="#10-thissuper" title="Permanent link">&para;</a></h2>
+<h2 id="10-thissuper">10. <code>this</code>和<code>super</code>关键字的作用分别是什么？<a class="headerlink" href="#10-thissuper" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>this</strong>：引用当前对象，可访问当前类成员。</li>
 <li><strong>super</strong>：引用父类对象，可访问父类成员。</li>
 </ul>
-<h2 id="11-java">11. <strong>什么是Java中的异常？异常的分类有哪些？</strong><a class="headerlink" href="#11-java" title="Permanent link">&para;</a></h2>
+<h2 id="11-java">11. 什么是Java中的异常？异常的分类有哪些？<a class="headerlink" href="#11-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>异常</strong>：程序运行时的错误事件，导致正常流程中断。</li>
@@ -8602,57 +8644,57 @@
 </ul>
 </li>
 </ul>
-<h2 id="12-try-catch-finallyfinallytrycatchreturnfinally">12. <strong><code>try-catch-finally</code>块中，<code>finally</code>是否一定会执行？如果在<code>try</code>或<code>catch</code>中有<code>return</code>语句，<code>finally</code>还会执行吗？</strong><a class="headerlink" href="#12-try-catch-finallyfinallytrycatchreturnfinally" title="Permanent link">&para;</a></h2>
+<h2 id="12-try-catch-finallyfinallytrycatchreturnfinally">12. <code>try-catch-finally</code>块中，<code>finally</code>是否一定会执行？如果在<code>try</code>或<code>catch</code>中有<code>return</code>语句，<code>finally</code>还会执行吗？<a class="headerlink" href="#12-try-catch-finallyfinallytrycatchreturnfinally" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>finally</code>块几乎总会执行，即使<code>try</code>或<code>catch</code>中有<code>return</code>。</li>
 <li>唯一例外是系统退出或线程死亡。</li>
 </ul>
-<h2 id="13">13. <strong>什么是多态？多态的实现方式有哪些？</strong><a class="headerlink" href="#13" title="Permanent link">&para;</a></h2>
+<h2 id="13">13. 什么是多态？多态的实现方式有哪些？<a class="headerlink" href="#13" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>多态</strong>：同一接口多种表现形式。</li>
 <li><strong>实现方式</strong>：方法重载、方法重写。</li>
 </ul>
-<h2 id="14-java-virtual-machinejvmjvm">14. <strong>什么是<code>Java Virtual Machine</code>（JVM）？JVM的主要组成部分有哪些？</strong><a class="headerlink" href="#14-java-virtual-machinejvmjvm" title="Permanent link">&para;</a></h2>
+<h2 id="14-java-virtual-machinejvmjvm">14. 什么是<code>Java Virtual Machine</code>（JVM）？JVM的主要组成部分有哪些？<a class="headerlink" href="#14-java-virtual-machinejvmjvm" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>JVM是Java程序的运行环境，负责内存管理、加载类、解释和执行字节码。</li>
 <li><strong>主要组成</strong>：类加载器、运行时数据区、执行引擎、垃圾回收器等。</li>
 </ul>
-<h2 id="15">15. <strong>什么是包装类？自动装箱和拆箱是什么？</strong><a class="headerlink" href="#15" title="Permanent link">&para;</a></h2>
+<h2 id="15">15. 什么是包装类？自动装箱和拆箱是什么？<a class="headerlink" href="#15" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>包装类将基本数据类型包装成对象（如<code>Integer</code>、<code>Double</code>）。</li>
 <li><strong>自动装箱</strong>：基本类型自动转换为包装类。</li>
 <li><strong>拆箱</strong>：包装类自动转换为基本类型。</li>
 </ul>
-<h2 id="16">16. <strong>什么是泛型？泛型的好处是什么？可以使用基本数据类型作为泛型吗？</strong><a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
+<h2 id="16">16. 什么是泛型？泛型的好处是什么？可以使用基本数据类型作为泛型吗？<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>泛型允许在编译时检查类型安全。</li>
 <li>提高代码复用性，减少类型转换。</li>
 <li>不可以直接使用基本数据类型，需用包装类。</li>
 </ul>
-<h2 id="17-javahashmaphashtable">17. <strong>Java中<code>HashMap</code>和<code>Hashtable</code>的区别是什么？</strong><a class="headerlink" href="#17-javahashmaphashtable" title="Permanent link">&para;</a></h2>
+<h2 id="17-javahashmaphashtable">17. Java中<code>HashMap</code>和<code>Hashtable</code>的区别是什么？<a class="headerlink" href="#17-javahashmaphashtable" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>HashMap</code>是线程不安全的，允许<code>null</code>键值。</li>
 <li><code>Hashtable</code>是线程安全的，不允许<code>null</code>键值。</li>
 </ul>
-<h2 id="18-arraylistlinkedlist">18. <strong><code>ArrayList</code>和<code>LinkedList</code>的区别是什么？</strong><a class="headerlink" href="#18-arraylistlinkedlist" title="Permanent link">&para;</a></h2>
+<h2 id="18-arraylistlinkedlist">18. <code>ArrayList</code>和<code>LinkedList</code>的区别是什么？<a class="headerlink" href="#18-arraylistlinkedlist" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>ArrayList</code>基于动态数组，随机访问快，增删慢。</li>
 <li><code>LinkedList</code>基于链表，增删快，随机访问慢。</li>
 </ul>
-<h2 id="19-arrayarraylist">19. <strong><code>Array</code>和<code>ArrayList</code>有什么区别？</strong><a class="headerlink" href="#19-arrayarraylist" title="Permanent link">&para;</a></h2>
+<h2 id="19-arrayarraylist">19. <code>Array</code>和<code>ArrayList</code>有什么区别？<a class="headerlink" href="#19-arrayarraylist" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>Array</code>是定长的，不能调整大小。</li>
 <li><code>ArrayList</code>是动态数组，长度可变。</li>
 </ul>
-<h2 id="20-java">20. <strong>Java中的访问控制符有哪些？它们的作用范围是什么？</strong><a class="headerlink" href="#20-java" title="Permanent link">&para;</a></h2>
+<h2 id="20-java">20. Java中的访问控制符有哪些？它们的作用范围是什么？<a class="headerlink" href="#20-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>public</strong>：对所有类可见。</li>
@@ -8660,75 +8702,79 @@
 <li><strong>default</strong>（无修饰符）：对同包可见。</li>
 <li><strong>private</strong>：仅对本类可见。</li>
 </ul>
-<h2 id="21-publicprotecteddefaultprivate">21. <strong><code>public</code>、<code>protected</code>、<code>default</code>（无修饰符）、<code>private</code>的区别是什么？</strong><a class="headerlink" href="#21-publicprotecteddefaultprivate" title="Permanent link">&para;</a></h2>
+<h2 id="21-publicprotecteddefaultprivate">21. <code>public</code>、<code>protected</code>、<code>default</code>（无修饰符）、<code>private</code>的区别是什么？<a class="headerlink" href="#21-publicprotecteddefaultprivate" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>见上题。</li>
 </ul>
-<h2 id="22">22. <strong>什么是序列化？为什么需要序列化？如何实现对象的序列化？</strong><a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
+<h2 id="22">22. 什么是序列化？为什么需要序列化？如何实现对象的序列化？<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>序列化是将对象转换为字节流，用于网络传输或持久化。</li>
 <li>需实现<code>Serializable</code>接口，通过<code>ObjectOutputStream</code>序列化。</li>
 </ul>
-<h2 id="23-java">23. <strong>如何在Java中实现单例模式？单例模式有哪些实现方式？</strong><a class="headerlink" href="#23-java" title="Permanent link">&para;</a></h2>
+<h2 id="23-java">23. 如何在Java中实现单例模式？单例模式有哪些实现方式？<a class="headerlink" href="#23-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>饿汉式</strong>、<strong>懒汉式</strong>、<strong>双重检查锁</strong>、<strong>静态内部类</strong>、<strong>枚举单例</strong>。</li>
 <li>最佳方式：枚举实现，防止反序列化和反射攻击。</li>
 </ul>
-<h2 id="24-synchronizedsynchronized">24. <strong><code>synchronized</code>关键字的作用是什么？在哪些场景中需要使用<code>synchronized</code>？</strong><a class="headerlink" href="#24-synchronizedsynchronized" title="Permanent link">&para;</a></h2>
+<h2 id="24-synchronized-synchronized">24. <code>synchronized</code> 关键字的作用是什么？在哪些场景中需要使用 <code>synchronized</code>？<a class="headerlink" href="#24-synchronized-synchronized" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>确保线程安全，锁住方法或代码块。</li>
 <li>在并发环境下保护共享资源。</li>
 </ul>
-<h2 id="25-java">25. <strong>什么是内存泄漏？Java中如何防止内存泄漏？</strong><a class="headerlink" href="#25-java" title="Permanent link">&para;</a></h2>
+<h2 id="25-java">25. 什么是内存泄漏？Java中如何防止内存泄漏？<a class="headerlink" href="#25-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
-<li>内存泄漏指对象占用内存但不可访问。</li>
+<li>对象不再被应用程序使用（即无用），但仍有可达引用链，导致 GC 无法回收，从而长期占用内存。</li>
 <li>防止方法：手动清理、使用弱引用，避免长生命周期对象持有短生命周期对象。</li>
 </ul>
-<h2 id="26-default">26. <strong>接口中能否定义<code>default</code>方法？它的作用是什么？</strong><a class="headerlink" href="#26-default" title="Permanent link">&para;</a></h2>
+<h2 id="26-default">26. 接口中能否定义<code>default</code>方法？它的作用是什么？<a class="headerlink" href="#26-default" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>可以。用于提供默认实现，避免破坏现有实现类。</li>
 </ul>
-<h2 id="27-java-8lambdalambda">27. <strong>Java 8中的Lambda表达式是什么？为什么引入Lambda表达式？</strong><a class="headerlink" href="#27-java-8lambdalambda" title="Permanent link">&para;</a></h2>
+<h2 id="27-java-8lambdalambda">27. Java 8中的Lambda表达式是什么？为什么引入Lambda表达式？<a class="headerlink" href="#27-java-8lambdalambda" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
-<li>Lambda表达式是简化匿名内部类的语法。</li>
+<li>Lambda表达式是简化匿名内部类（它只能替换函数式接口，即只有一个抽象方法的接口）的语法。</li>
 <li>引入Lambda表达式使代码简洁，支持函数式编程。</li>
 </ul>
-<h2 id="28-java-8optional">28. <strong>Java 8中的<code>Optional</code>类是什么？它的主要用途是什么？</strong><a class="headerlink" href="#28-java-8optional" title="Permanent link">&para;</a></h2>
+<h2 id="28-java-8optional">28. Java 8中的<code>Optional</code>类是什么？它的主要用途是什么？<a class="headerlink" href="#28-java-8optional" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>Optional</code>避免<code>null</code>，优雅地处理空值。</li>
 </ul>
-<h2 id="29-abstract">29. <strong><code>abstract</code>关键字的作用是什么？抽象类和普通类有什么区别？</strong><a class="headerlink" href="#29-abstract" title="Permanent link">&para;</a></h2>
+<h2 id="29-abstract">29. <code>abstract</code>关键字的作用是什么？抽象类和普通类有什么区别？<a class="headerlink" href="#29-abstract" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
-<li><code>abstract</code>用于定义抽象类和抽象方法。</li>
+<li><code>abstract</code>用于定义抽象类和抽象方法。（抽象类中可以没有抽象方法）</li>
 <li>抽象类不能实例化，普通类可以。</li>
 </ul>
-<h2 id="30-java">30. <strong>Java中什么是反射？反射的应用场景有哪些？</strong><a class="headerlink" href="#30-java" title="Permanent link">&para;</a></h2>
+<h2 id="30-java">30. Java中什么是反射？反射的应用场景有哪些？<a class="headerlink" href="#30-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li>反射允许在运行时动态获取类的信息。</li>
 <li>场景：框架、注解处理、动态代理等。</li>
 </ul>
-<h2 id="31-java">31. <strong>在Java中如何创建不可变对象？</strong><a class="headerlink" href="#31-java" title="Permanent link">&para;</a></h2>
+<h2 id="31-java">31. 在Java中如何创建不可变对象？<a class="headerlink" href="#31-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
-<ul>
-<li>用<code>final</code>修饰类和所有字段，不提供修改方法。</li>
-</ul>
-<h2 id="32-systemoutprintlnsystemout">32. <strong><code>System.out.println()</code>是怎么实现的？<code>System</code>类中的<code>out</code>是什么？</strong><a class="headerlink" href="#32-systemoutprintlnsystemout" title="Permanent link">&para;</a></h2>
+<ol>
+<li>类 final（防止继承篡改）。</li>
+<li>所有字段 private final（保证引用不可变）。</li>
+<li>不提供 setter（没有修改状态的方法）。</li>
+<li>构造器进行防御性拷贝（避免外部持有可变对象的引用）。</li>
+<li>Getter 返回防御性拷贝或不可变视图（避免内部字段逃逸）</li>
+</ol>
+<h2 id="32-systemoutprintlnsystemout">32. <code>System.out.println()</code>是怎么实现的？<code>System</code>类中的<code>out</code>是什么？<a class="headerlink" href="#32-systemoutprintlnsystemout" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>System.out</code>是<code>PrintStream</code>类型的静态字段。</li>
 <li><code>println()</code>最终调用<code>PrintStream</code>的<code>write()</code>方法。</li>
 </ul>
-<h2 id="33-java">33. <strong>Java中的强引用、软引用、弱引用、虚引用分别是什么？</strong><a class="headerlink" href="#33-java" title="Permanent link">&para;</a></h2>
+<h2 id="33-java">33. Java中的强引用、软引用、弱引用、虚引用分别是什么？<a class="headerlink" href="#33-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>强引用</strong>：不会被回收。</li>
@@ -8736,13 +8782,13 @@
 <li><strong>弱引用</strong>：GC时回收。</li>
 <li><strong>虚引用</strong>：不会决定对象生命周期。</li>
 </ul>
-<h2 id="34-hashcodeequals">34. <strong><code>hashCode()</code>和<code>equals()</code>的关系是什么？为什么要重写这两个方法？</strong><a class="headerlink" href="#34-hashcodeequals" title="Permanent link">&para;</a></h2>
+<h2 id="34-hashcodeequals">34. <code>hashCode()</code>和<code>equals()</code>的关系是什么？为什么要重写这两个方法？<a class="headerlink" href="#34-hashcodeequals" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><code>equals()</code>相等则<code>hashCode()</code>必须相同。</li>
 <li>重写确保对象在<code>HashMap</code>等集合中正确存取。</li>
 </ul>
-<h2 id="35-java">35. <strong>Java中如何实现深拷贝和浅拷贝？</strong><a class="headerlink" href="#35-java" title="Permanent link">&para;</a></h2>
+<h2 id="35-java">35. Java中如何实现深拷贝和浅拷贝？<a class="headerlink" href="#35-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
 <li><strong>浅拷贝</strong>：直接复制对象，原对象字段引用不变。</li>
@@ -8765,7 +8811,7 @@ public class Test {
 }
 </code></pre>
 <p><strong>答案</strong>：
-以上<strong>代码不能编译</strong>。因为所有类对继承根对象类Object。以上会编译错误提示静态方法不能覆盖实例方法。</p>
+以上<strong>代码不能编译</strong>。因为所有类对继承根对象类Object。以上会编译错误提示静态方法不能覆盖实例方法。静态方法不能隐藏父类的实例方法，同样一个类中不能定义同名且同参数的静态方法和实例方法</p>
 <h2 id="36">36. 如下程序将输出什么？<a class="headerlink" href="#36" title="Permanent link">&para;</a></h2>
 <p>静态方法调用</p>
 <pre><code class="language-java">package tests;
@@ -8784,10 +8830,12 @@ public class Test {
 }
 </code></pre>
 <p><strong>答案</strong>：
-<strong>编译器做了编译优化</strong>。在java编译转换成字节码时，它指向的foo()是静态方法，而不是对象方法，因此<strong>编译从<code>obj.foo()</code>调整到<code>Test.foo()</code></strong>，于是就没有了<code>NullPointerException</code>异常。</p>
+Test foo called</p>
+<p><strong>编译器做了编译优化</strong>。在java编译转换成字节码时，它指向的foo()是静态方法，而不是对象方法，因此<strong>编译从<code>obj.foo()</code>调整到<code>Test.foo()</code></strong>，于是就没有了<code>NullPointerException</code>异常。</p>
 <h2 id="37-java">37. java在方法调用时是通过值传递还是引用传递？<a class="headerlink" href="#37-java" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-值传递</p>
+值传递
+<a href="https://github.com/jesshaw/java-sample/blob/master/interview/src/main/java/com/lexiangmiao/sample/interview/JavaFundamentals/JF_37_PassByValueDemo.java">示例37</a></p>
 <h2 id="38-system">38. System类的用途是什么？<a class="headerlink" href="#38-system" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <p>System类是核心类之一，它被声明为final的。因此无法被子类继承和覆盖其行为。也不提供任何公共构造器，因此也不能实例化这个类。也是为什么它的所有方法是静态static的原因。提供了<strong>打印日志、数组拷贝、获取当前时间、读环境变量等助手</strong>的方法</p>

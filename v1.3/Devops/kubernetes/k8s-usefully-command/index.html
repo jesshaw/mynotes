@@ -3948,7 +3948,7 @@
         
   
   <span class="md-ellipsis">
-    多线程与并发
+    Multithreading and concurrency
   </span>
   
 
@@ -6557,6 +6557,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../linux/linux-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../linux/linux-usefully-command/" class="md-nav__link">
         
   
@@ -7717,6 +7738,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../SoftwareEngineering/model/member/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    会员管理系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
@@ -8540,13 +8582,13 @@ kubectl logs rocketmq-0 -c rmqbroker
 <h3 id="k8s_2">进入k8s容器<a class="headerlink" href="#k8s_2" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">
 # 进入第一个容器
-kubctl exec -it pod-id sh
+kubctl exec -it pod-id -- sh
 
 # pod为多容器时，默认进入第一个容器
-kubctl exec -it pod-id sh
+kubctl exec -it pod-id -- sh
 
 #  pod为多容器时，-c 指定容器名进入指定容器
-kubctl exec -it pod-id -c container-name sh
+kubctl exec -it pod-id -c container-name -- sh
 </code></pre>
 <h3 id="nodesvcpod">检查node，svc，pod的可达性<a class="headerlink" href="#nodesvcpod" title="Permanent link">&para;</a></h3>
 <p>进入对应node节点，ping对应ip即可</p>

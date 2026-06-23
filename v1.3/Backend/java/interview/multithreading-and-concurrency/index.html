@@ -22,7 +22,7 @@
     
     
       
-        <title>多线程与并发 - 乐享笔记</title>
+        <title>Multithreading and concurrency - 乐享笔记</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -132,7 +132,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              多线程与并发
+              Multithreading and concurrency
             
           </span>
         </div>
@@ -3971,14 +3971,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    多线程与并发
+    Multithreading and concurrency
   </span>
   
 
@@ -3989,7 +3987,7 @@
         
   
   <span class="md-ellipsis">
-    多线程与并发
+    Multithreading and concurrency
   </span>
   
 
@@ -4000,8 +3998,6 @@
 <nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
-  
-    
   
   
     <label class="md-nav__title" for="__toc">
@@ -4329,15 +4325,6 @@
   <a href="#36-main" class="md-nav__link">
     <span class="md-ellipsis">
       36. 一个普通main方法的执行，是单线程模式还是多线程模式？为什么
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#37" class="md-nav__link">
-    <span class="md-ellipsis">
-      37. 创建线程的方式
     </span>
   </a>
   
@@ -6541,6 +6528,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../Devops/linux/linux-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
         
   
@@ -7686,6 +7694,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../SoftwareEngineering/model/member/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    会员管理系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
@@ -8049,8 +8078,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -8382,15 +8409,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#37" class="md-nav__link">
-    <span class="md-ellipsis">
-      37. 创建线程的方式
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -8409,7 +8427,9 @@
   
 
 
-<h1 id="_1">多线程与并发<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+  <h1>Multithreading and concurrency</h1>
+
+<p>多线程与并发</p>
 <p>以下是Java多线程与并发相关的常见面试题及其答案，涵盖线程基础、并发包、线程安全机制等方面：</p>
 <h2 id="1">1. 什么是线程？线程和进程的区别是什么？<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
@@ -8419,7 +8439,8 @@
 <ul>
 <li><strong>继承Thread类</strong>：重写<code>run()</code>方法。</li>
 <li><strong>实现Runnable接口</strong>：实现<code>run()</code>方法，将实例传给<code>Thread</code>对象。</li>
-<li><strong>实现Callable接口</strong>：实现<code>call()</code>方法，返回一个<code>Future</code>对象。</li>
+<li><strong>实现Callable接口</strong>：实现<code>call()</code>方法，返回一个<code>Future</code>对象。
+<a href="https://github.com/jesshaw/java-sample/blob/master/interview/src/main/java/com/lexiangmiao/sample/interview/MultithreadingAndConcurrency/MAC_2.java">源码示例</a></li>
 </ul>
 <h2 id="3">3. 什么是线程安全？如何保证线程安全？<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
@@ -8460,7 +8481,8 @@
 </ul>
 <h2 id="9-volatile">9. volatile关键字的作用是什么？<a class="headerlink" href="#9-volatile" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
-<code>volatile</code><strong>保证了变量的可见性</strong>，即当一个线程修改了变量的值，其他线程立即可见。<code>volatile</code>不会保证操作的原子性，所以仅在非复合操作的共享变量使用。</p>
+- <code>volatile</code><strong>保证了变量的可见性</strong>，即当一个线程修改了变量的值，其他线程立即可见；。<code>volatile</code>不会保证操作的原子性，所以仅在<strong>非复合操作</strong>（赋值右边是变量的操作）的共享变量使用。
+- volatile 的<strong>有序性</strong>，本质上是禁止了 JVM 和 CPU 对指令的优化重排。它通过内存屏障，确保了‘前面的操作一定先于后面的操作发生’，防止多线程环境下拿到未初始化的对象或过期的上下文数据。</p>
 <h2 id="10">10. 什么是死锁？如何避免死锁？<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：
 死锁是指<strong>两个或多个线程相互持有对方所需的锁</strong>，导致无法继续执行。避免死锁的方法包括：</p>
@@ -8622,15 +8644,10 @@ CAS是Compare-And-Swap的简称，通过比较和交换值确保更新操作的�
 <p><strong>sleep</strong>不会释放锁资源，而<strong>wait</strong>在同步代码块中会释放锁，且需要被notify/notifyAll唤醒。</p>
 <h2 id="36-main">36. 一个普通main方法的执行，是单线程模式还是多线程模式？为什么<a class="headerlink" href="#36-main" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
-<p>普通的main方法执行是<strong>单线程</strong>的，因为main方法由JVM以单个线程（主线程）启动，除非在代码中显式创建新线程。</p>
-<h2 id="37">37. 创建线程的方式<a class="headerlink" href="#37" title="Permanent link">&para;</a></h2>
-<p><strong>答案</strong>：</p>
-<p>Java中创建线程的方式有三种：</p>
-<ol>
-<li><strong>继承Thread类</strong>：重写run方法，调用start启动。</li>
-<li><strong>实现Runnable接口</strong>：实现run方法，避免单继承限制，传入Thread构造函数中。</li>
-<li><strong>实现Callable接口</strong>：实现call方法，有返回值，配合FutureTask使用。</li>
-</ol>
+<ul>
+<li>从Java应用层（开发者视角）看：默认是单线程的。</li>
+<li>从JVM底层（操作系统/运行时视角）看：是多线程的。</li>
+</ul>
 
 
 

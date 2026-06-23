@@ -3969,7 +3969,7 @@
         
   
   <span class="md-ellipsis">
-    多线程与并发
+    Multithreading and concurrency
   </span>
   
 
@@ -4311,6 +4311,15 @@
   <a href="#20-springtransactional" class="md-nav__link">
     <span class="md-ellipsis">
       20. Spring注解Transactional有哪些属性？
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-mybatis" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. mybatis的缓存
     </span>
   </a>
   
@@ -6388,6 +6397,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../Devops/linux/linux-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
         
   
@@ -7533,6 +7563,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../SoftwareEngineering/model/member/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    会员管理系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
@@ -8085,6 +8136,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#21-mybatis" class="md-nav__link">
+    <span class="md-ellipsis">
+      21. mybatis的缓存
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -8108,7 +8168,7 @@
 <h2 id="1-jdbc">1. 什么是 JDBC？它的工作原理是什么？<a class="headerlink" href="#1-jdbc" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
 <ul>
-<li><strong>JDBC（Java Database Connectivity）</strong> 是 Java 提供的一套 API，允许 Java 应用程序与关系数据库进行交互。</li>
+<li><strong>JDBC（Java DataBase Connectivity）</strong> 是 Java 提供的一套 API，允许 Java 应用程序与关系数据库进行交互。</li>
 <li><strong>工作原理</strong>：<ul>
 <li>JDBC 通过驱动程序（如 MySQL、Oracle 等）实现与数据库的连接。</li>
 <li>主要步骤包括：加载驱动、创建连接、创建语句、执行查询或更新、处理结果、关闭连接。</li>
@@ -8298,12 +8358,21 @@ public class Order {
 <li>示例配置：</li>
 </ul>
 <pre><code class="language-yaml">spring:
-    datasource:
-    url: jdbc:mysql://localhost:3306/mydb
+  datasource:
+    url: jdbc:mysql://localhost:3306/your_database?useSSL=false&amp;serverTimezone=UTC&amp;characterEncoding=utf-8
     username: root
-    password: password
-    mybatis:
-    mapper-locations: classpath:/mappers/*.xml
+    password: your_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # HikariCP 是 Spring Boot 默认的连接池，无需额外配置
+
+mybatis:
+  # 配置实体类别名包，这样在 XML 中可以直接使用类名
+  type-aliases-package: com.example.demo.entity
+  # 指定 Mapper XML 文件的位置
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 开启驼峰命名自动映射，例如：数据库字段 user_name 映射到 Java 属性 userName
+    map-underscore-to-camel-case: true
 </code></pre>
 <h2 id="15-mybatis-sql">15. 如何使用 MyBatis 动态 SQL？<a class="headerlink" href="#15-mybatis-sql" title="Permanent link">&para;</a></h2>
 <p><strong>答案</strong>：</p>
@@ -8420,6 +8489,37 @@ public void updateTwoTables(int id1, String newValue1, int id2, String newValue2
 <li><strong>rollbackFor</strong>：指定遇到哪些异常类型时，事务需要回滚。</li>
 <li><strong>noRollbackFor</strong>：指定遇到哪些异常类型时，事务不回滚。</li>
 </ul>
+<h2 id="21-mybatis">21. mybatis的缓存<a class="headerlink" href="#21-mybatis" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>一级缓存：开箱即用，速度快，但作用域小（会话级），适合同一事务内的重复查询。</p>
+</li>
+<li>
+<p>二级缓存：作用域大（跨会话），但配置复杂，且在多表关联时极易产生脏数据。实际生产中，通常选择关闭二级缓存，把缓存控制权交给业务层（Redis），这样更灵活、可控且无副作用。</p>
+</li>
+</ul>
+<p>两个最大的“坑”与避坑指南</p>
+<table>
+<thead>
+<tr>
+<th>痛点</th>
+<th>原因分析</th>
+<th>解决方案</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>一级缓存脏读</strong></td>
+<td>同一 SqlSession 查询后，<strong>其他会话修改了数据库</strong>，当前会话不知道，继续读旧数据。</td>
+<td>在需要实时数据的查询上，使用 <code>flushCache="true"</code> 强制查库；或通过注解 <code>@Options(flushCache = FlushCachePolicy.TRUE)</code>。</td>
+</tr>
+<tr>
+<td><strong>二级缓存数据不一致</strong></td>
+<td>多个 Mapper 关联操作同一张表（如 <code>UserMapper</code> 和 <code>UserRoleMapper</code> 都操作 <code>user</code> 表）。修改 <code>UserRoleMapper</code> 中的 user 数据，<strong>只会清空自己的 namespace</strong>，而 <code>UserMapper</code> 的缓存未清空，导致读取到旧数据。</td>
+<td><strong>不推荐使用 MyBatis 原生二级缓存</strong>。企业级开发中，建议直接<strong>关闭二级缓存</strong>，改用 <strong>Redis 等外部缓存</strong>（通过 Spring Cache 或手动编码），由业务层统一管理缓存生命周期。</td>
+</tr>
+</tbody>
+</table>
 
 
 

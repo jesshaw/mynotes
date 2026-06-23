@@ -3969,7 +3969,7 @@
         
   
   <span class="md-ellipsis">
-    多线程与并发
+    Multithreading and concurrency
   </span>
   
 
@@ -6505,6 +6505,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../Devops/linux/linux-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../Devops/linux/linux-usefully-command/" class="md-nav__link">
         
   
@@ -7650,6 +7671,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../../SoftwareEngineering/model/member/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    会员管理系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
@@ -8384,13 +8426,23 @@ BASE理论是CAP理论的延伸，适用于大规模分布式系统：</p>
 <li><strong>DNS服务发现</strong>：借助DNS解析，实现服务间的发现与调用。</li>
 </ul>
 <h2 id="6">6. 分布式系统如何实现数据的一致性和隔离性？<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<p><strong>回答</strong>：<br />
-在分布式环境中，可以使用多种策略保证一致性和隔离性：</p>
+<p><strong>回答</strong></p>
+<p><strong>1. 强一致性（绝对一致）</strong>
+依靠<strong>共识算法</strong>，这是现代工业的标准答案。</p>
 <ul>
-<li><strong>分布式锁</strong>：使用Redis、ZooKeeper等中间件实现分布式锁。</li>
-<li><strong>数据副本一致性</strong>：采用主从复制、读写分离等方式，通过一致性协议如Paxos、Raft同步数据。</li>
-<li><strong>分布式事务</strong>：使用XA协议、2PC、TCC（Try-Confirm-Cancel）等保证事务一致性。</li>
-<li><strong>隔离性</strong>：通过消息队列将数据处理异步化，实现不同系统之间的隔离，避免数据竞争。</li>
+<li><strong>Raft</strong>（首选，易理解）和 <strong>Paxos</strong>（理论基石）：通过“多数派（Quorum）写入”和“日志复制”来保证集群在节点宕机时仍返回最新数据。</li>
+<li><em>（注：2PC仅解决事务原子性且易阻塞，3PC理论化几乎不用，工业界已抛弃。）</em></li>
+</ul>
+<p><strong>2. 最终一致性（高并发场景）</strong>
+依靠<strong>柔性事务</strong>，牺牲瞬时一致性换取高可用。</p>
+<ul>
+<li><strong>TCC</strong>（预留-确认-取消）或 <strong>Saga</strong>（长事务补偿）：配合<strong>可靠消息队列（如RocketMQ）</strong>，通过异步重试和回滚，保证数据在短时间内最终对齐。</li>
+</ul>
+<p><strong>3. 核心理论边界（CAP定理）</strong></p>
+<ul>
+<li><strong>关键纠正</strong>：<strong>仅在“发生网络分区（P）”时</strong>，才被迫在一致性（C）和可用性（A）之间二选一。<strong>未分区时，系统CA可以兼得</strong>。</li>
+<li>选 <strong>CP</strong>（如ZooKeeper）：分区时宁可停服，也要保数据绝对一致。</li>
+<li>选 <strong>AP</strong>（如Eureka/Cassandra）：分区时宁可返回旧数据，也要保服务不停。</li>
 </ul>
 <h2 id="7">7. 什么是消息队列，常见的消息队列有哪些？<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
 <p><strong>回答</strong>：<br />

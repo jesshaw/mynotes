@@ -11,7 +11,7 @@
       
       
       
-        <link rel="prev" href="../../kvm/kvm-install/">
+        <link rel="prev" href="../linux-code/">
       
       
         <link rel="next" href="../linux/">
@@ -3948,7 +3948,7 @@
         
   
   <span class="md-ellipsis">
-    多线程与并发
+    Multithreading and concurrency
   </span>
   
 
@@ -6172,6 +6172,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../linux-code/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    linux编程
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -6184,6 +6205,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    linux常用命令
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -6193,6 +6225,1246 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 帮助命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 帮助命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      help命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#man" class="md-nav__link">
+    <span class="md-ellipsis">
+      man命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.路径切换及查看
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.路径切换及查看">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 cd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 pwd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 ls命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 find命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.文件|目录操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.文件|目录操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 文件和目录的基本操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 touch命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-ln" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 ln命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3 mkdir 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.4 rm命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.5 mv命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.6 cp命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 文件压缩与解压缩
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-zipinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 zipinfo命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 zip命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-gzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3. gzip命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-unzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 unzip命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-gunzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.5 gunzip命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-tar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.6 tar命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 文件传输
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#331-tftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1 tftp命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2 curl命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-scp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3 scp命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-rcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4 rcp命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 文件属性查看
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#341-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 file命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2 du命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 文件目录权限设置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#351-chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 chmod命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.文本内容查看及过滤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.文本内容查看及过滤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 文本内容查看
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 cat命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 more命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 tail命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4 head命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 文本内容筛选过滤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#421-grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 grep命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 sed命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-awk" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3 awk命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-cut" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.4 cut命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-col" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.5 col命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 文本编辑
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#431-vivim" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1 vi/vim命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 输出到文本文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#441" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 &gt;命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 &gt;&gt;命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-21-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.3 重定向 2&gt;&amp;1 ， 1&gt;&amp;2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#444-tee" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.4 tee命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 文本内容处理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#451-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1 join命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-split" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2 split命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-uniq" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3 uniq命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4 sort命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#455-paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5 paste命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.用户|组操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.用户|组操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 用户增删改
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#511-useradd" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 useradd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-adduser" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 adduser命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-userdel" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 userdel命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514-usermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.4 usermod命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 用户设置密码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#521-passwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 passwd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 组的增删改
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#531-groupadd" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 groupadd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-groupdel" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 groupdel命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-groupmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 groupmod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 文件设置用户权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#541-chown" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1 chown命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 切换用户
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#551-su" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1 su命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.任务管理器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.任务管理器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 进程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-ps" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 ps命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 kill 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 系统资源
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#621-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.1 top命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-vmstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.2 vmstat命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.3 free命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-df" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.4 df命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#625-fdisk" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.5 fdisk命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#626-netstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.6 netstat命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#631-servicerhel6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.1 service命令（RHEL6）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-systemctlrhel7" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.2 systemctl命令（RHEL7）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-chkconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.3 chkconfig命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.网络管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.网络管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ifconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 ifconfig命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 ping命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-firewall-cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 firewall-cmd命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.安装更新配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.安装更新配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-yum" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 yum命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-sh" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 sh命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.系统相关
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.系统相关">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 环境变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#911-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1.1 set命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#912-unset" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1.2 unset命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#913-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1.3 env命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#914-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1.4 export命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 重启与关机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#921-shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.1 shutdown命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#922-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.2 reboot命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#923-poweroff" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.3 poweroff命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#924-halt" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.4 halt命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#925-exit" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.5 exit命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 查看系统信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#931-uname" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.1 uname命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#932-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.2 date命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#933-last" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.3 last命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#934-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.4 history命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#935-who" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.5 who命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 定时任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#941-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4.1 crontab命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 运行管理员权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#951-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.1 sudo命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6 其它
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#961-clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6.1 clear命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#962-echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6.2 echo命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      排序的方式查看进程使用情况
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      ssh几个超时参数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ssh几个超时参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      客户端方案
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务器方案
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      更改密码
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      查看大文本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      查看系统版本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置路由
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -7345,6 +8617,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../SoftwareEngineering/model/member/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    会员管理系统
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../SoftwareEngineering/model/rbac/" class="md-nav__link">
         
   
@@ -7711,6 +9004,1235 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 帮助命令
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 帮助命令">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#help" class="md-nav__link">
+    <span class="md-ellipsis">
+      help命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#man" class="md-nav__link">
+    <span class="md-ellipsis">
+      man命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.路径切换及查看
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.路径切换及查看">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 cd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-pwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 pwd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ls" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 ls命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-find" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 find命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.文件|目录操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.文件|目录操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 文件和目录的基本操作
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#311-touch" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.1 touch命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-ln" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.2 ln命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313-mkdir" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.3 mkdir 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#314-rm" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.4 rm命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#315-mv" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.5 mv命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#316-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1.6 cp命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 文件压缩与解压缩
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-zipinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.1 zipinfo命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-zip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.2 zip命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-gzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.3. gzip命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#324-unzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.4 unzip命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#325-gunzip" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.5 gunzip命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#326-tar" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2.6 tar命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 文件传输
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#331-tftp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.1 tftp命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-curl" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.2 curl命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-scp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.3 scp命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#334-rcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3.4 rcp命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 文件属性查看
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#341-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 file命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-du" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2 du命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5 文件目录权限设置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#351-chmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.5.1 chmod命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.文本内容查看及过滤
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.文本内容查看及过滤">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 文本内容查看
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#411-cat" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 cat命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 more命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-tail" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 tail命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-head" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4 head命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 文本内容筛选过滤
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#421-grep" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 grep命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-sed" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 sed命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-awk" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3 awk命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-cut" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.4 cut命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-col" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.5 col命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 文本编辑
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#431-vivim" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1 vi/vim命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 输出到文本文件
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#441" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 &gt;命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 &gt;&gt;命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-21-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.3 重定向 2&gt;&amp;1 ， 1&gt;&amp;2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#444-tee" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.4 tee命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 文本内容处理
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#451-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1 join命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-split" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2 split命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-uniq" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3 uniq命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#454-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.4 sort命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#455-paste" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5 paste命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.用户|组操作
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.用户|组操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1 用户增删改
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#511-useradd" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.1 useradd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-adduser" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.2 adduser命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#513-userdel" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.3 userdel命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#514-usermod" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1.4 usermod命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2 用户设置密码
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#521-passwd" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2.1 passwd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3 组的增删改
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#531-groupadd" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.1 groupadd命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-groupdel" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.2 groupdel命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-groupmod" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3.3 groupmod
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4 文件设置用户权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#541-chown" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1 chown命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#55" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5 切换用户
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#551-su" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.5.1 su命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.任务管理器
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.任务管理器">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 进程
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#61-ps" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 ps命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-kill" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 kill 命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 系统资源
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#621-top" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.1 top命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-vmstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.2 vmstat命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-free" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.3 free命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-df" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.4 df命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#625-fdisk" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.5 fdisk命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#626-netstat" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.6 netstat命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#63" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 服务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#631-servicerhel6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.1 service命令（RHEL6）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-systemctlrhel7" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.2 systemctl命令（RHEL7）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-chkconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.3 chkconfig命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.网络管理
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.网络管理">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-ifconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1 ifconfig命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.2 ping命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-firewall-cmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.3 firewall-cmd命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.安装更新配置
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.安装更新配置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-yum" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 yum命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-sh" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 sh命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.系统相关
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9.系统相关">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#91" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1 环境变量
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#911-set" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1.1 set命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#912-unset" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1.2 unset命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#913-env" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1.3 env命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#914-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.1.4 export命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#92" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2 重启与关机
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#921-shutdown" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.1 shutdown命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#922-reboot" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.2 reboot命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#923-poweroff" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.3 poweroff命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#924-halt" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.4 halt命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#925-exit" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.2.5 exit命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#93" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3 查看系统信息
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#931-uname" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.1 uname命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#932-date" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.2 date命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#933-last" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.3 last命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#934-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.4 history命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#935-who" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.3.5 who命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#94" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4 定时任务
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#941-crontab" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.4.1 crontab命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#95" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5 运行管理员权限
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#951-sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.5.1 sudo命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#96" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6 其它
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#961-clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6.1 clear命令
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#962-echo" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.6.2 echo命令
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      排序的方式查看进程使用情况
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ssh" class="md-nav__link">
+    <span class="md-ellipsis">
+      ssh几个超时参数
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ssh几个超时参数">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      客户端方案
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      服务器方案
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      更改密码
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      查看大文本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      查看系统版本
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      配置路由
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -7728,38 +10250,24 @@
 
 
 <h1 id="linux">linux常用命令<a class="headerlink" href="#linux" title="Permanent link">&para;</a></h1>
-<p><a class="glightbox" href="https://p1-tt.byteimg.com/origin/pgc-image/4ddf58a99f604fe1a909c4c1627cc457?from=pc" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="c" src="https://p1-tt.byteimg.com/origin/pgc-image/4ddf58a99f604fe1a909c4c1627cc457?from=pc" /></a></p>
-<article class="syl-article-base syl-page-article syl-device-pc tt-article-content">![Linux的常用命令就是记不住，怎么办？于是推出了这套教程](https://p1-tt.byteimg.com/origin/pgc-image/4ddf58a99f604fe1a909c4c1627cc457?from=pc)
-
-## 1. 帮助命令
-
-### help命令
-
-
+<p><a class="glightbox" href="../luc.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="c" src="../luc.png" /></a></p>
+<h2 id="1">1. 帮助命令<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<h3 id="help">help命令<a class="headerlink" href="#help" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： 命令 --help
 #作用: 查看某个命令的帮助信息
 # 示例:
     # ls --help     查看ls命令的帮助信息
     # netstat --help    查看netstat命令的帮助信息
 </code></pre>
-
-
-### man命令
-
-
+<h3 id="man">man命令<a class="headerlink" href="#man" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bashbash">#语法格式： man 命令
 #作用: 查看某个命令的帮助手册
 # 示例:
     # man ls        #查看ls命令的帮助手册
     # man netstat   #查看netstat命令的帮助手册
 </code></pre>
-
-
-## 2.路径切换及查看
-
-### 2.1 cd命令
-
-
+<h2 id="2">2.路径切换及查看<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<h3 id="21-cd">2.1 cd命令<a class="headerlink" href="#21-cd" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： cd 目录
 #作用: 切换到目录中
 # 示例:
@@ -7768,21 +10276,13 @@
     # cd -  切换到上一次访问的目录
     # cd .. 切换到上一次所在的目录
 </code></pre>
-
-
-### 2.2 pwd命令
-
-
+<h3 id="22-pwd">2.2 pwd命令<a class="headerlink" href="#22-pwd" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： pwd
 #作用: 查看当前所在路径
 # 示例:
     # pwd   查看当前路径，会将当前路径回显
 </code></pre>
-
-
-### 2.3 ls命令
-
-
+<h3 id="23-ls">2.3 ls命令<a class="headerlink" href="#23-ls" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： ls [-la] [文件/目录]
 #作用: 查看当前路径下的文件和目录，若后带有文件或目录，则只查看当前文件或目录
 # 示例:
@@ -7791,11 +10291,7 @@
     # ls -a 查看当前路径下所有的文件或目录,将隐藏文件显示出来
     # ls -l a.log   查看当前路径下a.log下的详细信息
 </code></pre>
-
-
-### 2.4 find命令
-
-
+<h3 id="24-find">2.4 find命令<a class="headerlink" href="#24-find" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： find [路径] [参数] [匹配模式]
 #作用: 可以根据给定的路径和表达式查找的文件或目录
 # 示例:
@@ -7807,25 +10303,15 @@
     # find . -type d                查询当前目录下所有目录
     # find . -size 10M
 </code></pre>
-
-
-## 3.文件|目录操作
-
-### 3.1 文件和目录的基本操作
-
-### 3.1.1 touch命令
-
-
+<h2 id="3">3.文件|目录操作<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<h3 id="31">3.1 文件和目录的基本操作<a class="headerlink" href="#31" title="Permanent link">&para;</a></h3>
+<h3 id="311-touch">3.1.1 touch命令<a class="headerlink" href="#311-touch" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： touch 文件名
 #作用: 创建一个文件
 # 示例:
     # touch a.log     创建一个a.log文件。
 </code></pre>
-
-
-### 3.1.2 ln命令
-
-
+<h3 id="312-ln">3.1.2 ln命令<a class="headerlink" href="#312-ln" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式：
     ln 源文件名 硬链接文件名
     ln -s 源文件名 软连接文件名
@@ -7837,11 +10323,7 @@
     软链接文件：就像Windows中快捷方式一样，只是源文件的一个指向，删除软连接文件，源文件任存在。
     硬链接文件：比如当前目录下有2个文件，这2个文件除了名字不一样其他的一模一样，但是占用的实际磁盘空间还是只有1M，改变任何一个文件的内容另一个文件也会跟着改变；
 </code></pre>
-
-
-### 3.1.3 mkdir 命令
-
-
+<h3 id="313-mkdir">3.1.3 mkdir 命令<a class="headerlink" href="#313-mkdir" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： mkdir 目录名
 #作用: 创建一个目录
 # 示例:
@@ -7849,11 +10331,7 @@
     # mkdir -p test  若存在test，则不创建；若不存在，则创建
     # mkidr -p test/a/b  创建test目录，其下再创建a目录，a目录再创建b目录 。
 </code></pre>
-
-
-### 3.1.4 rm命令
-
-
+<h3 id="314-rm">3.1.4 rm命令<a class="headerlink" href="#314-rm" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： rm [-rf] 文件|目录
 #作用: 删除文件或目录
 # 示例:
@@ -7863,11 +10341,7 @@
     # rm -rf test  直接删除test目录，不在询问 。
 # 备注：任何的删除操作都是危险的动作，慎用 。
 </code></pre>
-
-
-### 3.1.5 mv命令
-
-
+<h3 id="315-mv">3.1.5 mv命令<a class="headerlink" href="#315-mv" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： mv 源文件|目录 目标文件|目标目录
 #作用: 有两层意思，分别为：
     1. 进行重命名文件或目录
@@ -7879,11 +10353,7 @@
     # mv abc bcd        重命名目录abc为bcd .
     # mv abc bcd/       移动abc目录到bcd下 。
 </code></pre>
-
-
-### 3.1.6 cp命令
-
-
+<h3 id="316-cp">3.1.6 cp命令<a class="headerlink" href="#316-cp" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： cp [-rf] 源文件|目录 目标文件|目录
 #作用: 拷贝文件或目录为另一个文件或目录 。
 
@@ -7893,13 +10363,8 @@
     # cp -r abc bcd 拷贝abc目录为bcd ,若abc存在，则提示是否继续拷贝 。
     # cp -rf abc bcd 拷贝abc目录为bcd ,即使abc存在，则也是直接覆盖 。
 </code></pre>
-
-
-### 3.2 文件压缩与解压缩
-
-### 3.2.1 zipinfo命令
-
-
+<h3 id="32">3.2 文件压缩与解压缩<a class="headerlink" href="#32" title="Permanent link">&para;</a></h3>
+<h3 id="321-zipinfo">3.2.1 zipinfo命令<a class="headerlink" href="#321-zipinfo" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： zipinfo zip文件
 #作用:  查看zip文件里的信息。
 
@@ -7907,11 +10372,7 @@
     # zipinfo  abc.zip  查看abc.zip里的文件信息 。
     # zipinfo -v abc.zip 显示abc.zip里的每个文件的信息 。
 </code></pre>
-
-
-### 3.2.2 zip命令
-
-
+<h3 id="322-zip">3.2.2 zip命令<a class="headerlink" href="#322-zip" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： zip 压缩文件 文件|目录
 #作用:  将目标文件或目录进行压缩。
 
@@ -7919,11 +10380,7 @@
     # zip a.zip a.txt  将a.txt进行压缩形成a.zip 。
     # zip a.zip test/ 将test目录下的所有文件和目录压缩到a.zip 。
 </code></pre>
-
-
-### 3.2.3\. gzip命令
-
-
+<h3 id="323-gzip">3.2.3. gzip命令<a class="headerlink" href="#323-gzip" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： gzip [-d] 文件|目录
 #作用:  压缩|解压缩文件或目录
 
@@ -7931,11 +10388,7 @@
     # gzip a.txt  将a.txt压缩为a.txt.gz ,注意压缩后源文件已不存在。
     # gzip -d a.txt.gz 解压a.txt.gz文件
 </code></pre>
-
-
-### 3.2.4 unzip命令
-
-
+<h3 id="324-unzip">3.2.4 unzip命令<a class="headerlink" href="#324-unzip" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： unzip  文件
 #作用:  解压缩文件
 
@@ -7943,11 +10396,7 @@
     # unzip  a.zip       解压文件
     # gzip -d a.txt.gz 解压a.txt.g3.2.5 gunzip命令
 </code></pre>
-
-
-### 3.2.5 gunzip命令
-
-
+<h3 id="325-gunzip">3.2.5 gunzip命令<a class="headerlink" href="#325-gunzip" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： gunzip 压缩文件
 #作用:  解压压缩文件
 
@@ -7955,11 +10404,7 @@
     # gunzip a.txt.gz  解压a.txt.gz
     # guzip  test.tar.gz  解压test.tar.gz
 </code></pre>
-
-
-### 3.2.6 tar命令
-
-
+<h3 id="326-tar">3.2.6 tar命令<a class="headerlink" href="#326-tar" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： tar [-c|xzvf] 文件|压缩文件
 #作用:  进行归档并创建压缩文件 或 进行解压归档压缩文档  
 
@@ -7967,13 +10412,8 @@
     # tar -cvzf a.tar  a.txt    # 将文件a.txt进行压缩并归档
     # tar -xvzf a.tar .     解压a.tar文件到当前目录 。
 </code></pre>
-
-
-### 3.3 文件传输
-
-### 3.3.1 tftp命令
-
-
+<h3 id="33">3.3 文件传输<a class="headerlink" href="#33" title="Permanent link">&para;</a></h3>
+<h3 id="331-tftp">3.3.1 tftp命令<a class="headerlink" href="#331-tftp" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： tftp 远程主机
 #作用:  连接远程主机，上传或下载文件
 
@@ -7981,11 +10421,7 @@
     # get a.txt        下载a.txt文件
     # put a.txt        上传a.txt到远程主机
 </code></pre>
-
-
-### 3.3.2 curl命令
-
-
+<h3 id="332-curl">3.3.2 curl命令<a class="headerlink" href="#332-curl" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： curl url
 #作用:  进行文件下载或者请求http协议数据
 
@@ -7993,11 +10429,7 @@
     # curl  http://www.baidu.com     #请求百度
     # curl -o baidu.html http://www.baidu.com    将请求到的数据保存到baidu.html中 。
 </code></pre>
-
-
-### 3.3.3 scp命令
-
-
+<h3 id="333-scp">3.3.3 scp命令<a class="headerlink" href="#333-scp" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： scp 远程主机账号@远程IP地址 本地目录
 #作用:  登录远程主机进行拷贝文件或目录
 
@@ -8005,11 +10437,7 @@
     # scp root@192.168.12.11:/soft/test.tar.gz /tools/    将远程主机目录下的/soft/test.tar.gz 拷贝到本地目录下的tools/下
     # scp root@192.168.12.11:/soft/ /tools/  将远程主机目录soft 拷贝到本地目录的tools/下 。
 </code></pre>
-
-
-### 3.3.4 rcp命令
-
-
+<h3 id="334-rcp">3.3.4 rcp命令<a class="headerlink" href="#334-rcp" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： scp 主机1 主机2
 #作用:  远程主机间的文件或目录相互拷贝
 
@@ -8017,13 +10445,8 @@
     #  rcp test 192.168.128.169:/test    拷贝当前目录下的test 到192.168.128.169的/test目录下
     #  rcp root@192.168.128.169:./test  /test 复制远程目录到本地的/test下
 </code></pre>
-
-
-### 3.4 文件属性查看
-
-### 3.4.1 file命令
-
-
+<h3 id="34">3.4 文件属性查看<a class="headerlink" href="#34" title="Permanent link">&para;</a></h3>
+<h3 id="341-file">3.4.1 file命令<a class="headerlink" href="#341-file" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： file 文件名
 #作用:  查看文件的类型
 
@@ -8031,11 +10454,7 @@
     #  file a.txt   #查看a.txt是什么类型
     #  file abc     #查看abc是什么类型
 </code></pre>
-
-
-### 3.4.2 du命令
-
-
+<h3 id="342-du">3.4.2 du命令<a class="headerlink" href="#342-du" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： du 文件名
 #作用:  查看文件的大小
 
@@ -8043,13 +10462,8 @@
     #  du a.txt    #查看a.txt的文件大小，以k为单位
     #  du -h a.txt      #查看a.txt的文件大小，以M为单位 。
 </code></pre>
-
-
-### 3.5 文件目录权限设置
-
-### 3.5.1 chmod命令
-
-
+<h3 id="35">3.5 文件目录权限设置<a class="headerlink" href="#35" title="Permanent link">&para;</a></h3>
+<h3 id="351-chmod">3.5.1 chmod命令<a class="headerlink" href="#351-chmod" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： 有两种用法
     chmod [u/g/o/a][+/-/=] rwx 文件/目录     +:增加权限，-取消权限， =设定权限
     chmod 数字 文件/目录
@@ -8060,37 +10474,23 @@
     #  chmod a=rw a.txt  为所有者设置读写权限 。
     #  chmod 644 a.txt   为所有者设置读权限，为用户设置写权限。
 </code></pre>
-
-
-## 4.文本内容查看及过滤
-
-### 4.1 文本内容查看
-
-### 4.1.1 cat命令
-
-
+<h2 id="4">4.文本内容查看及过滤<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 文本内容查看<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<h3 id="411-cat">4.1.1 cat命令<a class="headerlink" href="#411-cat" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： cat 文件名
 #作用:  查看文本内容，会将内容全部显示。
 
 # 示例:
     #  cat a.txt  显示a.txt里的内容。
 </code></pre>
-
-
-### 4.1.2 more命令
-
-
+<h3 id="412-more">4.1.2 more命令<a class="headerlink" href="#412-more" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： more 文件名
 #作用:  百分比显示文件内容，按Enter继续。
 
 # 示例:
     #  more a.txt  若只有一页，则全部显示，否则按百分比显示。
 </code></pre>
-
-
-### 4.1.3 tail命令
-
-
+<h3 id="413-tail">4.1.3 tail命令<a class="headerlink" href="#413-tail" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式：
         tail 文件名        #查看文本内容
         tail -n 数量 文件名      #只显示倒数的几行
@@ -8102,11 +10502,7 @@
     #  tail -n 2 a.txt  显示a.txt最后两行
     #  tail -f a.txt    实时监控a.txt文本内容。
 </code></pre>
-
-
-### 4.1.4 head命令
-
-
+<h3 id="414-head">4.1.4 head命令<a class="headerlink" href="#414-head" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式：
     head 文件名
     head -n 数量 文件名
@@ -8115,13 +10511,8 @@
  #  head a.txt    查看文本内容，和cat效果一样。
  #  head -n 2 a.txt  查看文本的前两行 。
 </code></pre>
-
-
-### 4.2 文本内容筛选过滤
-
-### 4.2.1 grep命令
-
-
+<h3 id="42">4.2 文本内容筛选过滤<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<h3 id="421-grep">4.2.1 grep命令<a class="headerlink" href="#421-grep" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： grep [选项] [模式] 文件
 #作用:  文本搜索工具。
 
@@ -8135,11 +10526,7 @@
 
 #备注：grep命令非常强大，详细用法请参考本人另一篇关于grep命令的博文
 </code></pre>
-
-
-### 4.2.2 sed命令
-
-
+<h3 id="422-sed">4.2.2 sed命令<a class="headerlink" href="#422-sed" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： sed [选项]  文件
 #作用:  文本编辑工具。
 
@@ -8150,11 +10537,7 @@
 
 #备注：sed命令非常强大，详细用法请参考本人另一篇关于sed命令的博文
 </code></pre>
-
-
-### 4.2.3 awk命令
-
-
+<h3 id="423-awk">4.2.3 awk命令<a class="headerlink" href="#423-awk" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： awk [选项]  文件
 #作用:  文本分析工具。
 
@@ -8165,11 +10548,7 @@
 
 #备注：awk命令非常强大，详细用法请参考本人另一篇关于awk命令的博文
 </code></pre>
-
-
-### 4.2.4 cut命令
-
-
+<h3 id="424-cut">4.2.4 cut命令<a class="headerlink" href="#424-cut" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： cut 选项 文件
 #作用:  用于剪切字符。
 
@@ -8177,24 +10556,15 @@
     #  cut -c 1-3 a.txt 只输出每行第一到第三的字符
     #  cut -f4 -d&quot; &quot; a.txt 显示第四列，以空格为分隔符
 </code></pre>
-
-
-### 4.2.5 col命令
-
-
+<h3 id="425-col">4.2.5 col命令<a class="headerlink" href="#425-col" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： col 选项 文件
 #作用:  用于过滤字符。
 
 # 示例:
     #  man ls | col-b &gt; ls_help  过滤掉ls手册中的控制字符并输出到文件
 </code></pre>
-
-
-### 4.3 文本编辑
-
-### 4.3.1 vi/vim命令
-
-
+<h3 id="43">4.3 文本编辑<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<h3 id="431-vivim">4.3.1 vi/vim命令<a class="headerlink" href="#431-vivim" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： vi/vim  文件
 #作用:  用于编辑文件。
 
@@ -8206,13 +10576,8 @@ vi和vim的用法基本一样，可以说vim是vi的增加版，就像记事本�
 
 `/`后输入文字，回车进行查找，继续查找输入`n`，向前查找输入`N`
 </code></pre>
-
-
-### 4.4 输出到文本文件
-
-### 4.4.1 >命令
-
-
+<h3 id="44">4.4 输出到文本文件<a class="headerlink" href="#44" title="Permanent link">&para;</a></h3>
+<h3 id="441">4.4.1 &gt;命令<a class="headerlink" href="#441" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： &gt;  文件
 #作用:  将内容输出到文件，若文件中有内容则覆盖。若文件不存在，则创建文件
 
@@ -8220,11 +10585,7 @@ vi和vim的用法基本一样，可以说vim是vi的增加版，就像记事本�
     #  ll &gt; a.txt   查看详细后输出到a.txt 。
     #  cat a.txt &gt; b.txt  将a.txt中的内容添加到b.txt中 。
 </code></pre>
-
-
-### 4.4.2 >>命令
-
-
+<h3 id="442">4.4.2 &gt;&gt;命令<a class="headerlink" href="#442" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： &gt;&gt;  文件
 #作用:  将内容追加到文件，若文件中有内容则追加。若文件不存在，则创建文件
 
@@ -8232,9 +10593,6 @@ vi和vim的用法基本一样，可以说vim是vi的增加版，就像记事本�
     #  ll &gt;&gt; a.txt   查看详细后追加到a.txt 。
     #  cat a.txt &gt;&gt; b.txt  将a.txt中的内容添加到b.txt中 。
 </code></pre>
-
-
-
 <pre><code class="language-bash"># 覆盖写
 cat &gt; a.txt &lt;&lt; EOF
 aa
@@ -8272,80 +10630,49 @@ EOF'
 
 
 </code></pre>
-
-
-### 4.4.3  重定向 2>&1 ， 1>&2
-
-在 shell 程式中，最常使用的 FD (file descriptor) 大概有三个, 分别是:
-
-**0** 是一个文件描述符，**表示标准输入(stdin)**
-**1**是一个文件描述符，**表示标准输出(stdout)**
-
-**2**是一个文件描述符，**表示标准错误(stderr)**
-
-在标准情况下, 这些FD分别跟如下设备关联: 
+<h3 id="443-21-12">4.4.3  重定向 2&gt;&amp;1 ， 1&gt;&amp;2<a class="headerlink" href="#443-21-12" title="Permanent link">&para;</a></h3>
+<p>在 shell 程式中，最常使用的 FD (file descriptor) 大概有三个, 分别是:</p>
+<p><strong>0</strong> 是一个文件描述符，<strong>表示标准输入(stdin)</strong>
+<strong>1</strong>是一个文件描述符，<strong>表示标准输出(stdout)</strong></p>
+<p><strong>2</strong>是一个文件描述符，<strong>表示标准错误(stderr)</strong></p>
+<p>在标准情况下, 这些FD分别跟如下设备关联: 
 stdin(0): keyboard 键盘输入,并返回在前端 
 stdout(1): monitor 正确返回值 输出到前端 
-stderr(2): monitor 错误返回值 输出到前端
-
-1>&2 正确返回值传递给2输出通道 &2表示2输出通道 
-如果此处错写成 1>2, 就表示把1输出重定向到文件2中. 
-2>&1 错误返回值传递给1输出通道, 同样&1表示1输出通道. 
-
- **>** 是重定向符，就是把前面输出的内容重定向到后面指定的位置
-
-**`echo` `"一些内容"` `> filename.txt`**
-
-**>** 前是可以加数字来说明把什么内容重定向到文件中，默认是把标准输出重定向到文件中，所以下面这个例子和上面那个是一样的（例2）：
-
- **`echo` `"一些内容"` `1> filename.txt`**
-
-**& 是一个描述符，如果1或2前不加&，会被当成一个普通文件。**
-
-**1>&2 意思是把标准****输出重定向到标准****错误****.**
-
-**2>&1 意思是把标准错误输出重定向到标准输出。**
-
-**&>filename 意思是把标准输出和标准错误输出都重定向到文件filename****中**
-
-### 4.4.4 tee命令
-
-
+stderr(2): monitor 错误返回值 输出到前端</p>
+<p>1&gt;&amp;2 正确返回值传递给2输出通道 &amp;2表示2输出通道 
+如果此处错写成 1&gt;2, 就表示把1输出重定向到文件2中. 
+2&gt;&amp;1 错误返回值传递给1输出通道, 同样&amp;1表示1输出通道. </p>
+<p><strong>&gt;</strong> 是重定向符，就是把前面输出的内容重定向到后面指定的位置</p>
+<p><strong><code>echo</code> <code>"一些内容"</code> <code>&gt; filename.txt</code></strong></p>
+<p><strong>&gt;</strong> 前是可以加数字来说明把什么内容重定向到文件中，默认是把标准输出重定向到文件中，所以下面这个例子和上面那个是一样的（例2）：</p>
+<p><strong><code>echo</code> <code>"一些内容"</code> <code>1&gt; filename.txt</code></strong></p>
+<p><strong>&amp; 是一个描述符，如果1或2前不加&amp;，会被当成一个普通文件。</strong></p>
+<p><strong>1&gt;&amp;2 意思是把标准</strong><strong>输出重定向到标准</strong><strong>错误</strong><strong>.</strong></p>
+<p><strong>2&gt;&amp;1 意思是把标准错误输出重定向到标准输出。</strong></p>
+<p><strong>&amp;&gt;filename 意思是把标准输出和标准错误输出都重定向到文件filename</strong><strong>中</strong></p>
+<h3 id="444-tee">4.4.4 tee命令<a class="headerlink" href="#444-tee" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： tee  文件
 #作用:  将内容输出到文件并输出内容显示在控制台上。若文件不存在，则创建文件，一般需要和管道符(|)一起使用。
 
 # 示例:  
     #  cat a.txt | tee b.txt  将a.txt中的内容添加到b.txt中，同时将添加内容回显到控制台上 。
 </code></pre>
-
-
-### 4.5 文本内容处理
-
-### 4.5.1 join命令
-
-
+<h3 id="45">4.5 文本内容处理<a class="headerlink" href="#45" title="Permanent link">&para;</a></h3>
+<h3 id="451-join">4.5.1 join命令<a class="headerlink" href="#451-join" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： join  文件1 文件2
 #作用:  用于将两个文件中，指定栏目内容相同的行连接起来
 
 # 示例:  
     #  join a.txt b.txt   若第一行相同，将后面的内容连接起来 。
 </code></pre>
-
-
-### 4.5.2 split命令
-
-
+<h3 id="452-split">4.5.2 split命令<a class="headerlink" href="#452-split" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： split 数量 文件
 #作用:  用于将一个文件分割成数个
 
 # 示例:  
     # split -5 c.txt  按每5行显示分隔出一个文件。
 </code></pre>
-
-
-### 4.5.3 uniq命令
-
-
+<h3 id="453-uniq">4.5.3 uniq命令<a class="headerlink" href="#453-uniq" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： uniq  文件
 #作用:  用于检查及删除文本文件中重复出现的行列，注意：重复的行一定是相邻的行，若不相邻不会删除
 
@@ -8354,11 +10681,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  uniq d.txt | sort  将d.txt中相邻重复的行去掉并排序
 # 备注： 此命令经常和sort命令结合使用，用于去重和排序。
 </code></pre>
-
-
-### 4.5.4 sort命令
-
-
+<h3 id="454-sort">4.5.4 sort命令<a class="headerlink" href="#454-sort" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： sort  文件
 #作用:  对文本内容进行排序
 
@@ -8367,26 +10690,16 @@ stderr(2): monitor 错误返回值 输出到前端
     # sort -r a.txt 将a.txt中的内容进行相反顺序排序
     #  uniq d.txt | sort -r 将d.txt中相邻重复的行去掉并倒序排序
 </code></pre>
-
-
-### 4.5.5 paste命令
-
-
+<h3 id="455-paste">4.5.5 paste命令<a class="headerlink" href="#455-paste" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： paste  文件1 文件2 ...
 #作用:  用于合并文件的列。
 
 # 示例:  
     #  cat a.txt b.txt  将两个文件的列合并起来显示 。
 </code></pre>
-
-
-## 5.用户|组操作
-
-### 5.1 用户增删改
-
-### 5.1.1 useradd命令
-
-
+<h2 id="5">5.用户|组操作<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="51">5.1 用户增删改<a class="headerlink" href="#51" title="Permanent link">&para;</a></h3>
+<h3 id="511-useradd">5.1.1 useradd命令<a class="headerlink" href="#511-useradd" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： useradd 新用户
 #作用:  创建用户
 
@@ -8395,11 +10708,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  useradd -d /home/test  test  创建test用户，并指定test用户的家目录为home/test
     #  useradd -u 666 test   为test用户指定uid为666
 </code></pre>
-
-
-### 5.1.2 adduser命令
-
-
+<h3 id="512-adduser">5.1.2 adduser命令<a class="headerlink" href="#512-adduser" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： adduser 新用户
 #作用:  创建用户
 
@@ -8409,11 +10718,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  adduser -u 666 test   为test用户指定uid为666
 # 备注：useradd和adduser使用上一致，设置两个命令可能就是为了解决用户将字母记错输返。
 </code></pre>
-
-
-### 5.1.3 userdel命令
-
-
+<h3 id="513-userdel">5.1.3 userdel命令<a class="headerlink" href="#513-userdel" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： userdel 用户
 #作用:  删除用户
 
@@ -8421,11 +10726,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  userdel test   删除test用户
     #  userdel -r test  删除test用户及其家目录
 </code></pre>
-
-
-### 5.1.4 usermod命令
-
-
+<h3 id="514-usermod">5.1.4 usermod命令<a class="headerlink" href="#514-usermod" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： usermod 用户
 #作用:  修改用户
 
@@ -8435,26 +10736,16 @@ stderr(2): monitor 错误返回值 输出到前端
     #  usermod -L test      锁定test用户的密码
     #  usermod -U test      解锁test用户的密码
 </code></pre>
-
-
-### 5.2 用户设置密码
-
-### 5.2.1 passwd命令
-
-
+<h3 id="52">5.2 用户设置密码<a class="headerlink" href="#52" title="Permanent link">&para;</a></h3>
+<h3 id="521-passwd">5.2.1 passwd命令<a class="headerlink" href="#521-passwd" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： passwd 用户
 #作用:  修改用户密码，输入命令回车后会引到用户设置新密码 。
 
 # 示例:  
     #  passwd test     修改用户密码
 </code></pre>
-
-
-### 5.3 组的增删改
-
-### 5.3.1 groupadd命令
-
-
+<h3 id="53">5.3 组的增删改<a class="headerlink" href="#53" title="Permanent link">&para;</a></h3>
+<h3 id="531-groupadd">5.3.1 groupadd命令<a class="headerlink" href="#531-groupadd" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： groupadd 用户组
 #作用:  添加用户组
 
@@ -8462,35 +10753,22 @@ stderr(2): monitor 错误返回值 输出到前端
     #  groupadd  test   添加用户组为test
     #  groupadd -g 9999 test  为创建用户组test并设置gid为9999
 </code></pre>
-
-
-### 5.3.2 groupdel命令
-
-
+<h3 id="532-groupdel">5.3.2 groupdel命令<a class="headerlink" href="#532-groupdel" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： groupdel 用户组
 #作用:  删除用户组
 
 # 示例:  
     #  groupdel test  删除用户组test
 </code></pre>
-
-
-### 5.3.3 groupmod
-
-
+<h3 id="533-groupmod">5.3.3 groupmod<a class="headerlink" href="#533-groupmod" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： groupmod 用户组
 #作用:  修改用户组
 
 # 示例:  
     #  groupmod -n root test    更改test用户组为root
 </code></pre>
-
-
-### 5.4 文件设置用户权限
-
-### 5.4.1 chown命令
-
-
+<h3 id="54">5.4 文件设置用户权限<a class="headerlink" href="#54" title="Permanent link">&para;</a></h3>
+<h3 id="541-chown">5.4.1 chown命令<a class="headerlink" href="#541-chown" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： chown 文件|目录 用户|用户组
 #作用:  更改文件目录的用户或用户组
 
@@ -8499,13 +10777,8 @@ stderr(2): monitor 错误返回值 输出到前端
     #  chown root:root /test/a.txt   把a.txt的所有者设置为root,组设置为root
     #  chown -R test:test *    把当前目录下的所有文件都设置为test用户和test用户组
 </code></pre>
-
-
-### 5.5 切换用户
-
-### 5.5.1 su命令
-
-
+<h3 id="55">5.5 切换用户<a class="headerlink" href="#55" title="Permanent link">&para;</a></h3>
+<h3 id="551-su">5.5.1 su命令<a class="headerlink" href="#551-su" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： su [-] 用户
 #作用:  切换用户
 
@@ -8514,15 +10787,9 @@ stderr(2): monitor 错误返回值 输出到前端
     #  su - test 切换当前用户为test用户
 # 备注： 第一次切换时需要输入密码
 </code></pre>
-
-
-## 6.任务管理器
-
-### 6.1 进程
-
-### 6.1 ps命令
-
-
+<h2 id="6">6.任务管理器<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<h3 id="61">6.1 进程<a class="headerlink" href="#61" title="Permanent link">&para;</a></h3>
+<h3 id="61-ps">6.1 ps命令<a class="headerlink" href="#61-ps" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： ps [参数]
 #作用:  显示当前系统的进程状态
 
@@ -8532,11 +10799,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  ps -ef | grep mysql  查看mysql进程
     #  ps -u root 显示root用户进程。
 </code></pre>
-
-
-### 6.2 kill 命令
-
-
+<h3 id="62-kill">6.2 kill 命令<a class="headerlink" href="#62-kill" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： kill [参数]
 #作用:  杀掉系统中执行的程序(进程)
 
@@ -8544,13 +10807,8 @@ stderr(2): monitor 错误返回值 输出到前端
     #  kill 319877   杀掉进程319877
     #  kill -9  319877  强制杀掉进程319877
 </code></pre>
-
-
-### 6.2 系统资源
-
-### 6.2.1 top命令
-
-
+<h3 id="62">6.2 系统资源<a class="headerlink" href="#62" title="Permanent link">&para;</a></h3>
+<h3 id="621-top">6.2.1 top命令<a class="headerlink" href="#621-top" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： top [参数]
 #作用:  显示系统中各个进程的资源占用情况
 
@@ -8559,11 +10817,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #   top -n 5  动态更新5次结束
     #   top -d 5  每隔5秒更新一次
 </code></pre>
-
-
-### 6.2.2 vmstat命令
-
-
+<h3 id="622-vmstat">6.2.2 vmstat命令<a class="headerlink" href="#622-vmstat" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： vmstat [参数]
 #作用:  显示虚拟内存状态
 
@@ -8572,11 +10826,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #     vmstat  -s   以列表形式显示内存
     #     vmstat 2  每隔2秒刷新一次
 </code></pre>
-
-
-### 6.2.3 free命令
-
-
+<h3 id="623-free">6.2.3 free命令<a class="headerlink" href="#623-free" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： free [参数]
 #作用:  查看系统内存信息
 
@@ -8585,11 +10835,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #   free -m   显示内存信息，以mb为单位
     #   free -g   显示内存信息，以gb为单位
 </code></pre>
-
-
-### 6.2.4 df命令
-
-
+<h3 id="624-df">6.2.4 df命令<a class="headerlink" href="#624-df" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式：  df [参数] 分区
 #作用:  查看磁盘占用空间
 
@@ -8598,22 +10844,14 @@ stderr(2): monitor 错误返回值 输出到前端
     #     df -h   以比较容易阅读方式查看磁盘使用情况
     #     df /dev/shm   查看该挂载点下的使用情况
 </code></pre>
-
-
-### 6.2.5 fdisk命令
-
-
+<h3 id="625-fdisk">6.2.5 fdisk命令<a class="headerlink" href="#625-fdisk" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： fdisk [参数]
 #作用:  进行磁盘分区管理
 
 # 示例:  
     #  fdisk -l  查看所有分区情况
 </code></pre>
-
-
-### 6.2.6 netstat命令
-
-
+<h3 id="626-netstat">6.2.6 netstat命令<a class="headerlink" href="#626-netstat" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： netstat [参数]
 #作用:  显示各种网络信息
 
@@ -8621,13 +10859,8 @@ stderr(2): monitor 错误返回值 输出到前端
     #   netstat    查看各网络信息
     #   netstat -an | grep 3306   查看3306端口的使用情况
 </code></pre>
-
-
-### 6.3 服务
-
-### 6.3.1 service命令（RHEL6）
-
-
+<h3 id="63">6.3 服务<a class="headerlink" href="#63" title="Permanent link">&para;</a></h3>
+<h3 id="631-servicerhel6">6.3.1 service命令（RHEL6）<a class="headerlink" href="#631-servicerhel6" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： service [参数]
 #作用:  服务管理
 
@@ -8637,11 +10870,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #   service  mysql  stop    停止mysql
     #   service  mysql  restart   重启mysql
 </code></pre>
-
-
-### 6.3.2 systemctl命令（RHEL7）
-
-
+<h3 id="632-systemctlrhel7">6.3.2 systemctl命令（RHEL7）<a class="headerlink" href="#632-systemctlrhel7" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： systemctl [选项] [服务]
 #作用:  对服务进行管理，如启动/重启/停止/查看服务
 
@@ -8654,11 +10883,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  systemctl start firewalld   开启防火墙
     #  systemctl stop firewalld    关闭防火墙
 </code></pre>
-
-
-### 6.3.3 chkconfig命令
-
-
+<h3 id="633-chkconfig">6.3.3 chkconfig命令<a class="headerlink" href="#633-chkconfig" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： chkconfig [参数]
 #作用:  更新（启动或停止）和查询系统服务的运行级信息
 
@@ -8667,13 +10892,8 @@ stderr(2): monitor 错误返回值 输出到前端
     #     chkconfig --add httpd        增加httpd服务
     #     chkconfig --del httpd        删除httpd服务
 </code></pre>
-
-
-## 7.网络管理
-
-### 7.1 ifconfig命令
-
-
+<h2 id="7">7.网络管理<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
+<h3 id="71-ifconfig">7.1 ifconfig命令<a class="headerlink" href="#71-ifconfig" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式：ifconfig
 #作用:  查看或设置网络设备
 
@@ -8688,11 +10908,7 @@ stderr(2): monitor 错误返回值 输出到前端
     # ifconfig eth0 192.168.128.169 netmask 255.255.255.0    修改IP和子网掩码
     # ifconfig eth0 192.168.1.56 netmask 255.255.255.0 broadcast 192.168.1.255  修改ip，子网掩码及网关
 </code></pre>
-
-
-### 7.2 ping命令
-
-
+<h3 id="72-ping">7.2 ping命令<a class="headerlink" href="#72-ping" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： ping IP地址
 #作用:  确认是否和某主机的网络相同
 
@@ -8702,11 +10918,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  ping -c 4 www.baidu.com  只ping四次
     #  ping -c 4 -i 2 www.baidu.com  只ping四次，每次间隔2s
 </code></pre>
-
-
-### 7.3 firewall-cmd命令
-
-
+<h3 id="73-firewall-cmd">7.3 firewall-cmd命令<a class="headerlink" href="#73-firewall-cmd" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： firewall-cmd [参数]
 #作用:  防火墙端口管理
 
@@ -8744,13 +10956,8 @@ stderr(2): monitor 错误返回值 输出到前端
     #  firewall-cmd --add-port=8888/tcp    开启8888端口通过防火墙
     #  firewall-cmd --permanent --remove-port=123/tcp   关闭123端口
 </code></pre>
-
-
-## 8.安装更新配置
-
-### 8.1 yum命令
-
-
+<h2 id="8">8.安装更新配置<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
+<h3 id="81-yum">8.1 yum命令<a class="headerlink" href="#81-yum" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： yum [选项]
 #作用:  rpm的软件包管理器
 
@@ -8765,11 +10972,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  yum list  mysql       显示mysql安装包信息
     #  yum list              显示所有已安装包和可安装包
 </code></pre>
-
-
-### 8.2 sh命令
-
-
+<h3 id="82-sh">8.2 sh命令<a class="headerlink" href="#82-sh" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： sh  可执行文件
 #作用:  运行可执行文件，一般都是shell脚本
 
@@ -8777,15 +10980,9 @@ stderr(2): monitor 错误返回值 输出到前端
     #  sh a.sh      运行a.sh文件，
     #  sh -x a.sh   运行并调试a.sh脚本
 </code></pre>
-
-
-## 9.系统相关
-
-### 9.1 环境变量
-
-### 9.1.1 set命令
-
-
+<h2 id="9">9.系统相关<a class="headerlink" href="#9" title="Permanent link">&para;</a></h2>
+<h3 id="91">9.1 环境变量<a class="headerlink" href="#91" title="Permanent link">&para;</a></h3>
+<h3 id="911-set">9.1.1 set命令<a class="headerlink" href="#911-set" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： set [参数]
 #作用:  显示当前shell的变量，包括当前用户的变量;
 
@@ -8793,11 +10990,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  abcd=100
     #  set | grep abcd    显示abcd的变量值
 </code></pre>
-
-
-### 9.1.2 unset命令
-
-
+<h3 id="912-unset">9.1.2 unset命令<a class="headerlink" href="#912-unset" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： unset [参数]
 #作用:  删除shell变量的值
 
@@ -8805,11 +10998,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  abcd=100
     #  unset abcd    删除abcd的变量值
 </code></pre>
-
-
-### 9.1.3 env命令
-
-
+<h3 id="913-env">9.1.3 env命令<a class="headerlink" href="#913-env" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： env [参数]
 #作用:  设置或显示当前环境变量
 
@@ -8818,11 +11007,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  env abcd=10    定义环境变量
     #  env -u  abcd   删除已经定义的环境变量abcd
 </code></pre>
-
-
-### 9.1.4 export命令
-
-
+<h3 id="914-export">9.1.4 export命令<a class="headerlink" href="#914-export" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： export [参数]
 #作用:  设置或显示环境变量
 
@@ -8830,13 +11015,8 @@ stderr(2): monitor 错误返回值 输出到前端
     #  export  显示当前环境变量
     #  export abcd=101  定义环境变量
 </code></pre>
-
-
-### 9.2 重启与关机
-
-### 9.2.1 shutdown命令
-
-
+<h3 id="92">9.2 重启与关机<a class="headerlink" href="#92" title="Permanent link">&para;</a></h3>
+<h3 id="921-shutdown">9.2.1 shutdown命令<a class="headerlink" href="#921-shutdown" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： shutdown [参数]
 #作用:  关闭或重启
 
@@ -8845,33 +11025,21 @@ stderr(2): monitor 错误返回值 输出到前端
     #  shutdown -r now      立即重启
     #  shutdown -h 22:30    22:30关机
 </code></pre>
-
-
-### 9.2.2 reboot命令
-
-
+<h3 id="922-reboot">9.2.2 reboot命令<a class="headerlink" href="#922-reboot" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： reboot [参数]
 #作用:  重启计算机
 
 # 示例:  
     #  reboot  重启
 </code></pre>
-
-
-### 9.2.3 poweroff命令
-
-
+<h3 id="923-poweroff">9.2.3 poweroff命令<a class="headerlink" href="#923-poweroff" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： poweroff [参数]
 #作用:  关闭计算机
 
 # 示例:  
     #  poweroff    关闭计算机及电源
 </code></pre>
-
-
-### 9.2.4 halt命令
-
-
+<h3 id="924-halt">9.2.4 halt命令<a class="headerlink" href="#924-halt" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： halt
 #作用:  关闭操作系统
 
@@ -8880,22 +11048,14 @@ stderr(2): monitor 错误返回值 输出到前端
     #  halt -p   关闭计算机及电源，等同于poweroff
     #  halt -f   强制关机
 </code></pre>
-
-
-### 9.2.5 exit命令
-
-
+<h3 id="925-exit">9.2.5 exit命令<a class="headerlink" href="#925-exit" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： exit
 #作用:  退出当前执行的shell
 
 # 示例:  
     #  exit   退出当前shell
 </code></pre>
-
-
-### 9.3 查看系统信息
-
-
+<h3 id="93">9.3 查看系统信息<a class="headerlink" href="#93" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash"># uname -a -- 查看内核/操作系统/CPU信息
 # head -n 1 /etc/issue -- 查看操作系统版本
 # cat /proc/cpuinfo -- 查看CPU信息
@@ -8936,11 +11096,7 @@ stderr(2): monitor 错误返回值 输出到前端
 # rpm -qa -- 查看所有安装的软件包
 # last | more -- 近期用户或终端的登录情况
 </code></pre>
-
-
-### 9.3.1 uname命令
-
-
+<h3 id="931-uname">9.3.1 uname命令<a class="headerlink" href="#931-uname" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： uname [参数]
 #作用:  显示系统相关信息
 
@@ -8950,11 +11106,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  uname -r    显示内核信息
     #  uname -i    显示当前架构
 </code></pre>
-
-
-### 9.3.2 date命令
-
-
+<h3 id="932-date">9.3.2 date命令<a class="headerlink" href="#932-date" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： date [参数]
 #作用:  显示或设定时间
 
@@ -8962,22 +11114,14 @@ stderr(2): monitor 错误返回值 输出到前端
     #  date    查看当前时间
     #  date -s &quot;2021-04-04 22:38:56&quot;   设置时间为2021-04-04 22:38:56
 </code></pre>
-
-
-### 9.3.3 last命令
-
-
+<h3 id="933-last">9.3.3 last命令<a class="headerlink" href="#933-last" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： last
 #作用:  显示最近用户或终端的登录情况
 
 # 示例:  
     #  last    显示最近用户的登录情况
 </code></pre>
-
-
-### 9.3.4 history命令
-
-
+<h3 id="934-history">9.3.4 history命令<a class="headerlink" href="#934-history" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： history [参数]
 #作用:  查看历史输入命令
 
@@ -8986,11 +11130,7 @@ stderr(2): monitor 错误返回值 输出到前端
     #  history  | grep &quot;sed&quot;    查看输入过sed命令
     #  history -5  查看最近的5条命令
 </code></pre>
-
-
-### 9.3.5 who命令
-
-
+<h3 id="935-who">9.3.5 who命令<a class="headerlink" href="#935-who" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： who [参数]
 #作用:  查看当前登录用户信息
 
@@ -8999,13 +11139,8 @@ stderr(2): monitor 错误返回值 输出到前端
     #  who -H  带标题显示
     #  who -b  输出系统最近启动时间
 </code></pre>
-
-
-### 9.4 定时任务
-
-### 9.4.1 crontab命令
-
-
+<h3 id="94">9.4 定时任务<a class="headerlink" href="#94" title="Permanent link">&para;</a></h3>
+<h3 id="941-crontab">9.4.1 crontab命令<a class="headerlink" href="#941-crontab" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式：crontab [参数]
 #作用:  任务调度
  # 示例:
@@ -9025,37 +11160,23 @@ command  要执行的命令，可以是系统命令，也可以是自己编写�
  # 举例：
 * * 1 * *   tar -czvf bk.tar.gz /log_bakup       # 每天进行一次归档备份
 </code></pre>
-
-
-### 9.5 运行管理员权限
-
-### 9.5.1 sudo命令
-
-
+<h3 id="95">9.5 运行管理员权限<a class="headerlink" href="#95" title="Permanent link">&para;</a></h3>
+<h3 id="951-sudo">9.5.1 sudo命令<a class="headerlink" href="#951-sudo" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： sudo [命令]
 #作用:  运行以管理员权限运行命令,一般是非root用户进行操作
 
 # 示例:  (假设当前账号为test)
     #  sudo mkdir abc   创建abc目录 。
 </code></pre>
-
-
-### 9.6 其它
-
-### 9.6.1 clear命令
-
-
+<h3 id="96">9.6 其它<a class="headerlink" href="#96" title="Permanent link">&para;</a></h3>
+<h3 id="961-clear">9.6.1 clear命令<a class="headerlink" href="#961-clear" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">#语法格式： clear
 #作用:  清屏操作，也可以使用快捷键Ctrl + L
 
 # 示例:  
     #  clear  清屏
 </code></pre>
-
-
-### 9.6.2 echo命令
-
-
+<h3 id="962-echo">9.6.2 echo命令<a class="headerlink" href="#962-echo" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bashbash">#语法格式： echo [变量]
 #作用:  输出变量值
 
@@ -9063,56 +11184,28 @@ command  要执行的命令，可以是系统命令，也可以是自己编写�
     #  echo  $abc  输出变量abc的值，需要提前定义abc的值
     #  echo  `pwd`  显示当前路径
 </code></pre>
-
-
-## 排序的方式查看进程使用情况
-
-
+<h2 id="_1">排序的方式查看进程使用情况<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <pre><code class="language-bash">ps aux --sort -rss
 </code></pre>
-
-
-## ssh几个超时参数
-
-### 客户端方案
-Host *
-    ServerAliveInterval 60
-
-### 服务器方案
-
-
+<h2 id="ssh">ssh几个超时参数<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h2>
+<h3 id="_2">客户端方案<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>Host *
+    ServerAliveInterval 60</p>
+<h3 id="_3">服务器方案<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">vim /etc/ssh/sshd_config
 </code></pre>
-
-
-\#ClientAliveInterval 0改为ClientAliveInterval 500     （每500秒往客户端发送会话请求，保持连接）
-
-\#ClientAliveCountMax 3      （去掉注释即可，3表示重连3次失败后，重启SSH会话）
-
-
+<p>#ClientAliveInterval 0改为ClientAliveInterval 500     （每500秒往客户端发送会话请求，保持连接）</p>
+<p>#ClientAliveCountMax 3      （去掉注释即可，3表示重连3次失败后，重启SSH会话）</p>
 <pre><code class="language-bash">systemctl restart sshd   #重启sshd服务
 </code></pre>
-
-
-http://www.361way.com/ssh-autologout/4679.html
-
-## 更改密码
-
-
+<p>http://www.361way.com/ssh-autologout/4679.html</p>
+<h2 id="_4">更改密码<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <pre><code class="language-bash">passwd
 </code></pre>
-
-
-## 查看大文本
-
-
+<h2 id="_5">查看大文本<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <pre><code class="language-bash">more filename
 </code></pre>
-
-
-## 查看系统版本
-
-
+<h2 id="_6">查看系统版本<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <pre><code class="language-bash">more /proc/version
 Linux version 3.10.0-514.26.2.el7.x86_64 (builder@kbuilder.dev.centos.org) (gcc version 4.8.5 20150623 (Red Hat 4.8.5-11) (GCC) ) #1 SMP Tue Jul 4 15:04:05 UTC 2017
 
@@ -9123,21 +11216,14 @@ uname -a
 Linux izbp1hsmr9thgc19em3gl8z 3.10.0-514.26.2.el7.x86_64 #1 SMP Tue Jul 4 15:04:05 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux
 
 </code></pre>
-
-
-## 配置路由
-
-
+<h2 id="_7">配置路由<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <pre><code class="language-bash">wget http://mirrors.163.com/centos/7/os/x86_64/Packages/iptables-1.4.21-33.el7.x86_64.rpm
 vim /etc/sysconfig/iptables-config
 systemctl restart iptables
 
 </code></pre>
-
-
-[linux教程](https://www.runoob.com/linux/linux-tutorial.html)
-
-[基本linux命令](https://gnu-linux.readthedocs.io/zh/latest/preface.html)
+<p><a href="https://www.runoob.com/linux/linux-tutorial.html">linux教程</a></p>
+<p><a href="https://gnu-linux.readthedocs.io/zh/latest/preface.html">基本linux命令</a></p>
 
 
 
