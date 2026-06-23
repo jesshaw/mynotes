@@ -59,7 +59,7 @@ RabbitMQ 通过**Prefetch Count** 机制控制消费者一次获取的最大未�
 - **生产者端**
   - 开启**事务**（transaction），但性能较低。
   - 开启**Confirm 模式**，生产者可确认消息是否被 RabbitMQ 接收。
-- **RabbitMQ 端**
+- **RabbitMQ服务端**
   - **队列持久化**（队列 durable=true）。
   - **消息持久化**（消息属性 `deliveryMode=2`）。
   - **镜像队列**（在集群环境下防止单点故障）。

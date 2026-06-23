@@ -6,7 +6,7 @@
 
 **答案**：
 
-- **JDBC（Java Database Connectivity）** 是 Java 提供的一套 API，允许 Java 应用程序与关系数据库进行交互。
+- **JDBC（Java DataBase Connectivity）** 是 Java 提供的一套 API，允许 Java 应用程序与关系数据库进行交互。
 - **工作原理**：
       - JDBC 通过驱动程序（如 MySQL、Oracle 等）实现与数据库的连接。
       - 主要步骤包括：加载驱动、创建连接、创建语句、执行查询或更新、处理结果、关闭连接。
@@ -210,12 +210,21 @@ public class Order {
 
 ```yaml
 spring:
-    datasource:
-    url: jdbc:mysql://localhost:3306/mydb
+  datasource:
+    url: jdbc:mysql://localhost:3306/your_database?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8
     username: root
-    password: password
-    mybatis:
-    mapper-locations: classpath:/mappers/*.xml
+    password: your_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # HikariCP 是 Spring Boot 默认的连接池，无需额外配置
+
+mybatis:
+  # 配置实体类别名包，这样在 XML 中可以直接使用类名
+  type-aliases-package: com.example.demo.entity
+  # 指定 Mapper XML 文件的位置
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    # 开启驼峰命名自动映射，例如：数据库字段 user_name 映射到 Java 属性 userName
+    map-underscore-to-camel-case: true
 ```
 
 ## 15. 如何使用 MyBatis 动态 SQL？
@@ -328,3 +337,16 @@ public void updateTwoTables(int id1, String newValue1, int id2, String newValue2
 - **timeout**：事务超时时间，指定事务应在多少秒内完成，否则回滚。
 - **rollbackFor**：指定遇到哪些异常类型时，事务需要回滚。
 - **noRollbackFor**：指定遇到哪些异常类型时，事务不回滚。
+
+## 21. mybatis的缓存
+
+- 一级缓存：开箱即用，速度快，但作用域小（会话级），适合同一事务内的重复查询。
+
+- 二级缓存：作用域大（跨会话），但配置复杂，且在多表关联时极易产生脏数据。实际生产中，通常选择关闭二级缓存，把缓存控制权交给业务层（Redis），这样更灵活、可控且无副作用。
+
+两个最大的“坑”与避坑指南
+
+| 痛点 | 原因分析 | 解决方案 |
+| --- | --- | --- |
+| **一级缓存脏读** | 同一 SqlSession 查询后，**其他会话修改了数据库**，当前会话不知道，继续读旧数据。 | 在需要实时数据的查询上，使用 `flushCache="true"` 强制查库；或通过注解 `@Options(flushCache = FlushCachePolicy.TRUE)`。 |
+| **二级缓存数据不一致** | 多个 Mapper 关联操作同一张表（如 `UserMapper` 和 `UserRoleMapper` 都操作 `user` 表）。修改 `UserRoleMapper` 中的 user 数据，**只会清空自己的 namespace**，而 `UserMapper` 的缓存未清空，导致读取到旧数据。 | **不推荐使用 MyBatis 原生二级缓存**。企业级开发中，建议直接**关闭二级缓存**，改用 **Redis 等外部缓存**（通过 Spring Cache 或手动编码），由业务层统一管理缓存生命周期。 |

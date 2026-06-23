@@ -139,6 +139,11 @@ docs/
 
 ## 域名
 
-jesshaw.github.io为bolg.lexiangmiao.com的入口。所以可以以路径方式访问其它文档内容。
+[docs.lexiangmiao.com/mynotes](https://docs.lexiangmiao.com/mynotes)
 
 lexiangmiao.github.io，为froker另一个lexiangmia的账号的源
+
+## 参考同类博客
+
+https://github.com/Snailclimb/JavaGuide
+https://github.com/doocs/advanced-java
